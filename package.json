@@ -1,0 +1,26 @@
+{
+  "name": "stax-elementor",
+  "version": "1.0.0",
+  "description": "Awesome Elementor widgets",
+  "main": "index.js",
+  "scripts": {
+    "build-tw": "postcss assets/scss/admin.scss -o assets/css/admin.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/sq-plugins/stax-elementor.git"
+  },
+  "author": "SeventhQueen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/sq-plugins/stax-elementor/issues"
+  },
+  "homepage": "https://gitlab.com/sq-plugins/stax-elementor#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "postcss": "^7.0.26",
+    "postcss-cli": "^7.1.0",
+    "tailwindcss": "^1.1.4"
+  },
+  "dependencies": {}
+}
