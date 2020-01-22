@@ -32,18 +32,25 @@ class StaxAddons {
 	 * StaxAddons constructor.
 	 */
 	public function __construct() {
-//		require_once STAX_EL_CORE_PATH . '/ThemeInfo.php';
-//		require_once STAX_EL_CORE_PATH . '/Helper.php';
-//		require_once STAX_EL_CORE_PATH . '/carbon/PostOptions.php';
-//		require_once STAX_EL_CORE_PATH . '/customizer/BlogOptions.php';
-//		require_once STAX_EL_CORE_PATH . '/customizer/CommentsOptions.php';
-//		require_once STAX_EL_CORE_PATH . '/customizer/FeaturedContentOptions.php';
-//		require_once STAX_EL_CORE_PATH . '/customizer/PerformanceOptions.php';
-//		require_once STAX_EL_CORE_PATH . '/customizer/PostListingOptions.php';
-//		require_once STAX_EL_CORE_PATH . '/elements/loader.php';
-//		require_once STAX_EL_CORE_PATH . '/settings/Settings.php';
-//		require_once STAX_EL_CORE_PATH . '/settings/Modules.php';
-//		require_once STAX_EL_CORE_PATH . '/settings/modules/AdsManager.php';
+		require_once STAX_EL_CORE_PATH . '/Modules.php';
+
+		add_action( 'admin_menu', [ $this, 'register_menu' ], 20 );
+	}
+
+	public function get_slug() {
+		return 'stax-elementor-addons';
+	}
+
+	public function register_menu() {
+		add_menu_page(
+			esc_html__( 'STAX Addons Settings', 'stax-elementor' ),
+			esc_html__( 'Elementor Addons', 'stax-elementor' ),
+			'manage_options',
+			$this->get_slug(),
+			'',
+			'',
+			'58.7'
+		);
 	}
 
 }

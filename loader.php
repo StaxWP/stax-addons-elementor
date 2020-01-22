@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Plugin Name: Stax - Addons for Elementor
+ * Plugin Name: STAX - Addons for Elementor
  * Description:
  * Plugin URI: https://seventhqueen.com
  * Author: SeventhQueen
@@ -24,6 +24,7 @@ define( 'STAX_EL_PLUGIN_BASE', plugin_basename( STAX_EL_FILE ) );
 define( 'STAX_EL_PATH', plugin_dir_path( STAX_EL_FILE ) );
 define( 'STAX_EL_URL', plugins_url( '/', STAX_EL_FILE ) );
 define( 'STAX_EL_CORE_PATH', STAX_EL_PATH . 'core/' );
+define( 'STAX_EL_WIDGET_PATH', STAX_EL_PATH . 'widgets/' );
 define( 'STAX_EL_ASSETS_URL', STAX_EL_URL . 'assets/' );
 
 // Init plugin
