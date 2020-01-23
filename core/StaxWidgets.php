@@ -10,10 +10,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Class Modules
+ * Class StaxWidgets
  * @package StaxAddons
  */
-class Modules {
+class StaxWidgets {
 
 	/**
 	 * @var null
@@ -21,7 +21,7 @@ class Modules {
 	public static $instance;
 
 	/**
-	 * @return Modules|null
+	 * @return StaxWidgets|null
 	 */
 	public static function instance() {
 		if ( self::$instance === null ) {
@@ -124,4 +124,4 @@ class Modules {
 
 }
 
-Modules::instance();
+StaxWidgets::instance();

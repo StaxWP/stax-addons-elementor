@@ -2,4 +2,148 @@
 
 @tailwind components;
 
+
+.ste_form_input {
+  @apply ste-bg-white ste-appearance-none ste-border ste-border-solid ste-border-gray-300 ste-rounded ste-w-full ste-py-1 ste-px-2 ste-text-gray-700 ste-leading-tight !important;
+}
+
+.ste_form_input_big {
+  @apply ste_form_input ste-py-3 ste-px-4 !important;
+}
+
+.ste_form_label {
+  @apply ste-block ste-text-gray-700 ste-font-medium ste-mb-2 ste-uppercase;
+}
+
+.ste_btn {
+  @apply ste-bg-gray-800 ste-text-white ste-font-bold ste-py-3 ste-px-4 ste-rounded ste-border-0 ste-cursor-pointer;
+}
+
+.ste_btn_md {
+  @apply ste-py-2 ste-px-3 !important;
+}
+
+.ste_btn_sm {
+  @apply ste-py-1 ste-px-2 !important;
+}
+
+.ste_btn_primary {
+  @apply ste_btn ste-bg-green-500;
+}
+
+.ste_btn_primary:hover {
+  @apply ste-bg-green-600;
+}
+
+.ste_btn_intent {
+  @apply ste_btn ste-bg-orange-500;
+}
+
+.ste_btn_intent:hover {
+  @apply ste-bg-orange-600;
+}
+
+.ste_btn_link {
+  @apply ste_btn ste-bg-gray-500 ste-no-underline;
+}
+
+.ste_btn_link:hover {
+  @apply ste-bg-gray-600 ste-text-white;
+}
+
+.ste_box {
+  @apply ste-bg-white ste-border ste-border-solid ste-border-gray-400 ste-mb-4;
+}
+
+.ste_box_title {
+  @apply ste-cursor-default ste-p-4 ste-m-0 ste-text-sm ste-border-solid ste-border-0 ste-border-b ste-border-gray-200;
+}
+
+.ste_box_list {
+  @apply ste-flex ste-flex-wrap ste-m-0;
+}
+
+.ste_box_list_item {
+  @apply ste-flex ste-items-center ste-w-1/2 ste-border-solid ste-border-0 ste-border-b ste-border-gray-200 ste-py-3 ste-m-0;
+}
+
+.ste_box_p {
+  @apply ste-p-0 ste-m-0 ste-mb-4;
+}
+
+.ste_plugin_btn {
+  @apply ste-block ste-px-3 ste-py-5 ste-uppercase ste-no-underline ste-font-bold ste-border-solid ste-border-0 ste-border-t ste-border-gray-300;
+}
+
+.svq-not-installed .ste_plugin_btn {
+  @apply ste-bg-red-100 ste-text-red-600;
+}
+
+.svq-not-installed .ste_plugin_btn:hover {
+  @apply ste-bg-red-600 ste-text-red-100;
+}
+
+.svq-active .ste_plugin_btn {
+  @apply ste-bg-gray-100 ste-text-gray-600;
+}
+
+.svq-active .ste_plugin_btn:hover {
+  @apply ste-bg-gray-600 ste-text-gray-100;
+}
+
+.svq-go-pro .ste_plugin_btn {
+  @apply ste-bg-orange-100 ste-text-orange-600;
+}
+
+.svq-go-pro .ste_plugin_btn:hover {
+  @apply ste-bg-orange-600 ste-text-orange-100;
+}
+
+.svq-inactive .ste_plugin_btn {
+  @apply ste-bg-blue-100 ste-text-blue-600;
+}
+
+.svq-inactive .ste_plugin_btn:hover {
+  @apply ste-bg-blue-600 ste-text-blue-100;
+}
+
+.svq-has-update .ste_plugin_btn {
+  @apply ste-bg-purple-100 ste-text-purple-600;
+}
+
+.svq-has-update .ste_plugin_btn:hover {
+  @apply ste-bg-purple-600 ste-text-purple-100;
+}
+
+.ste_plugin_status {
+  @apply ste-inline-block ste-bg-white ste-px-3 ste-py-1 ste-border ste-border-solid ste-rounded ste-cursor-default;
+}
+
+.svq-not-installed .ste_plugin_status {
+  @apply ste-border-red-400 ste-text-red-400;
+}
+
+.svq-active .ste_plugin_status, .svq-needs-install .ste_plugin_status {
+  @apply ste-border-gray-500 ste-text-gray-500;
+}
+
+.svq-go-pro .ste_plugin_status {
+  @apply ste-border-orange-400 ste-text-orange-400;
+}
+
+.svq-inactive .ste_plugin_status {
+  @apply ste-border-blue-400 ste-text-blue-400;
+}
+
+.svq-has-update .ste_plugin_status {
+  @apply ste-border-purple-400 ste-text-purple-400;
+}
+
+[class*="toplevel_page_stax-elementor-addons"] #wpcontent,
+[class*="elementor-addons_page_stax-elementor-widgets"] #wpcontent,
+[class*="elementor-addons_page_stax-elementor-modules"] #wpcontent,
+[class*="elementor-addons_page_stax-elementor-templates"] #wpcontent {
+  padding: 0;
+}
+
 @tailwind utilities;

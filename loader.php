@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-define( 'STAX_EL_VERSION', '1.4.0' );
+define( 'STAX_EL_VERSION', '1.0.0' );
 
 define( 'STAX_EL_FILE', __FILE__ );
 define( 'STAX_EL_PLUGIN_BASE', plugin_basename( STAX_EL_FILE ) );
@@ -28,4 +28,4 @@ define( 'STAX_EL_WIDGET_PATH', STAX_EL_PATH . 'widgets/' );
 define( 'STAX_EL_ASSETS_URL', STAX_EL_URL . 'assets/' );
 
 // Init plugin
-require_once STAX_EL_CORE_PATH . 'StaxAddons.php';
+require_once STAX_EL_CORE_PATH . 'Plugin.php';

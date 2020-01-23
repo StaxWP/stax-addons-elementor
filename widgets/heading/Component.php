@@ -13,7 +13,7 @@ class Component extends \Elementor\Widget_Base {
 	}
 
 	public function get_title() {
-		return esc_html__( 'Heading', 'stax-elementor' );
+		return __( 'Heading', 'stax-elementor' );
 	}
 
 	public function get_icon() {
