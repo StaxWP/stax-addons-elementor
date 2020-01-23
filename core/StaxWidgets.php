@@ -50,8 +50,9 @@ class StaxWidgets {
 		$widgets = [];
 
 		$widgets['heading'] = [
-			'name' => 'Heading',
-			'slug' => 'stax-el-heading'
+			'name'   => 'Heading',
+			'slug'   => 'stax-el-heading',
+			'status' => true
 		];
 
 		// Remove disabled widgets

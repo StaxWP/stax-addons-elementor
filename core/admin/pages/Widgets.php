@@ -10,26 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Class Widgets
  * @package StaxAddons
  */
-class Widgets {
-
-	/**
-	 * @var null
-	 */
-	public static $instance;
-
-
-	private $current_slug;
-
-	/**
-	 * @return Widgets|null
-	 */
-	public static function instance() {
-		if ( self::$instance === null ) {
-			self::$instance = new self();
-		}
-
-		return self::$instance;
-	}
+class Widgets extends Base {
 
 	/**
 	 * Settings constructor.
@@ -44,31 +25,36 @@ class Widgets {
 		}
 	}
 
-	/**
-	 * @return string
-	 */
-	public function set_page_slug() {
-		return $this->current_slug;
-	}
-
-	/**
-	 * @return array
-	 */
-	public function set_wrapper_classes() {
-		return [ $this->current_slug ];
-	}
-
 	public function panel_content() {
 		?>
         <div class="ste_box">
             <h2 class="ste_box_title"><?php _e( 'Widgets', 'stax-elementor' ); ?></h2>
             <div class="ste-p-4">
-                On/off widgets
+                <form action="<?php echo esc_url( admin_url( 'admin-ajax.php' ) ); ?>" method="POST" id="modules-form">
+                    <ul class="svq-module-list">
+						<?php foreach ( StaxWidgets::instance()->get_widgets() as $key => $widget ) : ?>
+                            <li class="ste-flex ste-items-center ste-justify-between ste-mb-6">
+                                <div>
+                                    <div class="ste-text-lg ste-font-bold">
+										<?php echo $widget['name'] ?>
+                                    </div>
+                                </div>
+                                <label class="svq-switch" for="module-label-<?php echo $key ?>">
+                                    <input type="checkbox" name="<?php echo esc_attr( $widget['slug'] ) ?>"
+                                           id="module-label-<?php echo $key ?>"
+                                           class="svq-check-input toggle-module-status" <?php checked( $widget['status'] ) ?>>
+                                    <span class="svq-slider"></span>
+                                </label>
+                            </li>
+						<?php endforeach; ?>
+                    </ul>
+
+                    <input type="hidden" name="action" value="stax_widget_activation">
+                </form>
             </div>
         </div>
 		<?php
 	}
-
 
 }
 

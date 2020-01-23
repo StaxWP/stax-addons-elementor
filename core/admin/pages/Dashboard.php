@@ -10,26 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Class Dashboard
  * @package StaxAddons
  */
-class Dashboard {
-
-	/**
-	 * @var null
-	 */
-	public static $instance;
-
-
-	private $current_slug;
-
-	/**
-	 * @return Dashboard|null
-	 */
-	public static function instance() {
-		if ( self::$instance === null ) {
-			self::$instance = new self();
-		}
-
-		return self::$instance;
-	}
+class Dashboard extends Base {
 
 	/**
 	 * Settings constructor.
@@ -44,20 +25,6 @@ class Dashboard {
 		}
 	}
 
-	/**
-	 * @return string
-	 */
-	public function set_page_slug() {
-		return $this->current_slug;
-	}
-
-	/**
-	 * @return array
-	 */
-	public function set_wrapper_classes() {
-		return [ $this->current_slug ];
-	}
-
 	public function panel_content() {
 		?>
         <div class="ste_box">
@@ -68,7 +35,6 @@ class Dashboard {
         </div>
 		<?php
 	}
-
 
 }
 

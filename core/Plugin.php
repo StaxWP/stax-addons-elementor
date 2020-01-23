@@ -33,6 +33,7 @@ class Plugin {
 	 */
 	public function __construct() {
 		require_once STAX_EL_CORE_PATH . '/StaxWidgets.php';
+		require_once STAX_EL_CORE_PATH . '/admin/pages/Base.php';
 		require_once STAX_EL_CORE_PATH . '/admin/pages/Dashboard.php';
 		require_once STAX_EL_CORE_PATH . '/admin/pages/Widgets.php';
 		require_once STAX_EL_CORE_PATH . '/admin/pages/Modules.php';
