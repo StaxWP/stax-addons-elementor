@@ -155,8 +155,25 @@ class Settings {
 	 * Load scripts & styles
 	 */
 	public function settings_template_scripts() {
-		wp_register_style( 'stax-addons-tw', STAX_EL_ASSETS_URL . 'css/admin.css', [], STAX_EL_VERSION, 'all' );
+		wp_register_style(
+			'stax-addons-tw',
+			STAX_EL_ASSETS_URL . 'css/admin.css',
+			[],
+			STAX_EL_VERSION,
+			'all'
+		);
+
+		wp_register_script(
+			'stax-addons-js',
+			STAX_EL_ASSETS_URL . 'js/admin.js',
+			[ 'jquery' ],
+			STAX_EL_VERSION,
+			true
+		);
+
 		wp_enqueue_style( 'stax-addons-tw' );
+		wp_enqueue_script( 'stax-addons-js' );
+
 	}
 
 	/**

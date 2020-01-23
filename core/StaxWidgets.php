@@ -43,24 +43,35 @@ class StaxWidgets {
 	 * Get widgets
 	 *
 	 * @param bool $active
+	 * @param bool $withStatus
 	 *
 	 * @return array
 	 */
-	public function get_widgets( $active = false ) {
+	public function get_widgets( $active = false, $withStatus = false ) {
 		$widgets = [];
 
 		$widgets['heading'] = [
-			'name'   => 'Heading',
-			'slug'   => 'stax-el-heading',
-			'status' => true
+			'name' => 'Heading',
+			'slug' => 'stax-el-heading'
 		];
 
 		// Remove disabled widgets
-		if ( $active ) {
+		if ( $active && ! $withStatus ) {
 			$disabled_widgets = get_option( '_stax_addons_disabled_widgets', [] );
 			foreach ( $widgets as $k => $widget ) {
-				if ( isset( $disabled_widgets[ $widget['name'] ] ) ) {
+				if ( isset( $disabled_widgets[ $widget['slug'] ] ) ) {
 					unset( $widgets[ $k ] );
+				}
+			}
+		}
+
+		if ( $withStatus ) {
+			$disabled_widgets = get_option( '_stax_addons_disabled_widgets', [] );
+			foreach ( $widgets as $k => $widget ) {
+				if ( isset( $disabled_widgets[ $widget['slug'] ] ) ) {
+					$widgets[ $k ]['status'] = false;
+				} else {
+					$widgets[ $k ]['status'] = true;
 				}
 			}
 		}
@@ -78,7 +89,7 @@ class StaxWidgets {
 
 			if ( isset( $elementor->widgets_manager ) && method_exists( $elementor->widgets_manager, 'register_widget_type' ) ) {
 
-				$elements = $this->get_widgets();
+				$elements = $this->get_widgets( true );
 				foreach ( $elements as $k => $element ) {
 					if ( $widget_file = $this->get_widget_file( $k ) ) {
 
