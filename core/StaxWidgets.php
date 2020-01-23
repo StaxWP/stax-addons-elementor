@@ -55,6 +55,26 @@ class StaxWidgets {
 			'slug' => 'stax-el-heading'
 		];
 
+		$widgets['info-box'] = [
+			'name' => 'InfoBox',
+			'slug' => 'stax-el-info-box'
+		];
+
+		$widgets['scroll-top'] = [
+			'name' => 'ScrollTop',
+			'slug' => 'stax-el-scroll-top'
+		];
+
+		$widgets['separator'] = [
+			'name' => 'Separator',
+			'slug' => 'stax-el-separator'
+		];
+
+		$widgets['testimonial'] = [
+			'name' => 'Testimonial',
+			'slug' => 'stax-el-testimonial'
+		];
+
 		// Remove disabled widgets
 		if ( $active && ! $withStatus ) {
 			$disabled_widgets = get_option( '_stax_addons_disabled_widgets', [] );
