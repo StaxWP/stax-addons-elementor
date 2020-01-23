@@ -38,4 +38,4 @@ class Templates extends Base {
 
 }
 
-Widgets::instance();
+Templates::instance();
