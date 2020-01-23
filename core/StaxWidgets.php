@@ -51,28 +51,28 @@ class StaxWidgets {
 		$widgets = [];
 
 		$widgets['heading'] = [
-			'name' => 'Heading',
-			'slug' => 'stax-el-heading'
+			'scope' => 'Heading',
+			'slug'  => 'stax-el-heading'
 		];
 
 		$widgets['info-box'] = [
-			'name' => 'InfoBox',
-			'slug' => 'stax-el-info-box'
+			'scope' => 'InfoBox',
+			'slug'  => 'stax-el-info-box'
 		];
 
 		$widgets['scroll-top'] = [
-			'name' => 'ScrollTop',
-			'slug' => 'stax-el-scroll-top'
+			'scope' => 'ScrollTop',
+			'slug'  => 'stax-el-scroll-top'
 		];
 
 		$widgets['separator'] = [
-			'name' => 'Separator',
-			'slug' => 'stax-el-separator'
+			'scope' => 'Separator',
+			'slug'  => 'stax-el-separator'
 		];
 
 		$widgets['testimonial'] = [
-			'name' => 'Testimonial',
-			'slug' => 'stax-el-testimonial'
+			'scope' => 'Testimonial',
+			'slug'  => 'stax-el-testimonial'
 		];
 
 		// Remove disabled widgets
@@ -114,7 +114,7 @@ class StaxWidgets {
 					if ( $widget_file = $this->get_widget_file( $k ) ) {
 
 						require_once $widget_file;
-						$class_name = '\StaxAddons\Widgets\\' . $element['name'] . '\Component';
+						$class_name = '\StaxAddons\Widgets\\' . $element['scope'] . '\Component';
 						$elementor->widgets_manager->register_widget_type( new $class_name );
 					}
 				}
