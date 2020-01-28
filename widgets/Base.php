@@ -8,8 +8,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 use StaxAddons\StaxWidgets;
 
+/**
+ * Class Base
+ * @package StaxAddons\Widgets
+ */
 abstract class Base extends \Elementor\Widget_Base {
 
+	/**
+	 * Base constructor.
+	 *
+	 * @param array $data
+	 * @param null $args
+	 *
+	 * @throws \Exception
+	 */
 	public function __construct( $data = [], $args = null ) {
 		parent::__construct( $data, $args );
 
@@ -22,13 +34,20 @@ abstract class Base extends \Elementor\Widget_Base {
 	public function register_widget_resources() {
 		foreach ( StaxWidgets::instance()->get_widgets( true ) as $folder => $widget ) {
 			if ( $widget['slug'] === $this->get_name() ) {
-				$widget_script = STAX_EL_WIDGET_PATH . $folder . '/component.js';
-				$widget_style  = STAX_EL_WIDGET_PATH . $folder . '/component.css';
+				$suffix = '.min';
+
+				if ( defined( 'STAX_EL_DEV' ) && STAX_EL_DEV === true ) {
+					$suffix = '';
+				}
+
+				$widget_script = STAX_EL_WIDGET_PATH . $folder . '/component' . $suffix . '.js';
+				$widget_style  = STAX_EL_WIDGET_PATH . $folder . '/component' . $suffix . '.css';
+
 
 				if ( file_exists( $widget_script ) ) {
 					wp_register_script(
 						$this->get_widget_script_handle(),
-						STAX_EL_WIDGET_URL . $folder . '/component.js',
+						STAX_EL_WIDGET_URL . $folder . '/component' . $suffix . '.js',
 						[ 'jquery' ],
 						STAX_EL_VERSION,
 						true
@@ -38,7 +57,7 @@ abstract class Base extends \Elementor\Widget_Base {
 				if ( file_exists( $widget_style ) ) {
 					wp_register_style(
 						$this->get_widget_style_handle(),
-						STAX_EL_WIDGET_URL . $folder . '/component.css',
+						STAX_EL_WIDGET_URL . $folder . '/component' . $suffix . '.css',
 						[],
 						STAX_EL_VERSION,
 						'all'

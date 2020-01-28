@@ -19,6 +19,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 define( 'STAX_EL_VERSION', '1.0.0' );
 
+// DEV Mode
+define( 'STAX_EL_DEV', true );
+
 define( 'STAX_EL_FILE', __FILE__ );
 define( 'STAX_EL_PLUGIN_BASE', plugin_basename( STAX_EL_FILE ) );
 define( 'STAX_EL_PATH', plugin_dir_path( STAX_EL_FILE ) );
