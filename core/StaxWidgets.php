@@ -2,12 +2,12 @@
 
 namespace StaxAddons;
 
-use Elementor\Widget_Base;
-use Elementor\Plugin;
-
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
+
+use Elementor\Widget_Base;
+use Elementor\Plugin;
 
 /**
  * Class StaxWidgets
@@ -113,10 +113,12 @@ class StaxWidgets {
 			$elementor = \Elementor\Plugin::instance();
 
 			if ( isset( $elementor->widgets_manager ) && method_exists( $elementor->widgets_manager, 'register_widget_type' ) ) {
+				// Require Base class for widgets
+				require_once STAX_EL_PATH . '/widgets/Base.php';
 
 				$elements = $this->get_widgets( true );
-				foreach ( $elements as $k => $element ) {
-					if ( $widget_file = $this->get_widget_file( $k ) ) {
+				foreach ( $elements as $folder => $element ) {
+					if ( $widget_file = $this->get_widget_file( $folder ) ) {
 
 						require_once $widget_file;
 						$class_name = '\StaxAddons\Widgets\\' . $element['scope'] . '\Component';

@@ -32,6 +32,7 @@ class Plugin {
 	 * StaxAddons constructor.
 	 */
 	public function __construct() {
+		require_once STAX_EL_CORE_PATH . '/Utils.php';
 		require_once STAX_EL_CORE_PATH . '/StaxWidgets.php';
 		require_once STAX_EL_CORE_PATH . '/admin/pages/Base.php';
 		require_once STAX_EL_CORE_PATH . '/admin/pages/Dashboard.php';

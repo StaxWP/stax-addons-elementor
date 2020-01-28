@@ -6,7 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 } // Exit if accessed directly
 
-class Component extends \Elementor\Widget_Base {
+use StaxAddons\Widgets\Base;
+
+class Component extends Base {
 
 	public function get_name() {
 		return 'stax-el-testimonial';
@@ -28,6 +30,8 @@ class Component extends \Elementor\Widget_Base {
 	}
 
 	protected function render() {
+		$this->enqueue_resources();
+
 		$settings = $this->get_settings();
 
 
