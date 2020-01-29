@@ -282,25 +282,26 @@ class Component extends Base {
 		);
 
 		$this->add_responsive_control(
-			'title_align',
+			'content_align',
 			[
-				'label'   => esc_html__( 'Alignment', 'stax-elementor' ),
-				'type'    => Controls_Manager::CHOOSE,
-				'options' => [
-					'stx-align-left'   => [
-						'title' => esc_html__( 'Left', 'stax-elementor' ),
-						'icon'  => 'fa fa-align-left',
+				'label'        => __( 'Alignment', 'stax-elementor' ),
+				'type'         => Controls_Manager::CHOOSE,
+				'options'      => [
+					'left'    => [
+						'title' => __( 'Left', 'stax-elementor' ),
+						'icon'  => 'eicon-text-align-left',
 					],
-					'stx-align-center' => [
-						'title' => esc_html__( 'Center', 'stax-elementor' ),
-						'icon'  => 'fa fa-align-center',
+					'center'  => [
+						'title' => __( 'Center', 'stax-elementor' ),
+						'icon'  => 'eicon-text-align-center',
 					],
-					'stx-align-right'  => [
-						'title' => esc_html__( 'Right', 'stax-elementor' ),
-						'icon'  => 'fa fa-align-right',
+					'right'   => [
+						'title' => __( 'Right', 'stax-elementor' ),
+						'icon'  => 'eicon-text-align-right',
 					],
 				],
-				'default' => 'text_left',
+				'prefix_class' => 'elementor%s-align-',
+				'default'      => '',
 			]
 		);
 
@@ -623,6 +624,52 @@ class Component extends Base {
 
 		$settings = $this->get_settings_for_display();
 
+		$this->add_render_attribute( 'wrapper', 'class', 'stx-title-wrapper' );
+
+		?>
+
+        <div <?php echo $this->get_render_attribute_string( 'wrapper' ); ?>>
+			<?php
+
+			$this->show_separator( 'top' );
+			$this->show_subtitle( 'before_title' );
+			$this->show_separator( 'before' );
+
+			?>
+
+			<?php
+
+			if ( ! empty( $settings['title'] ) ) {
+				echo '<' . $settings['title_tag'] . ' class="stx-title">
+					' . \StaxAddons\Utils::curly( $settings['title'] ) . '
+				</' . $settings['title_tag'] . '>';
+			}
+
+			?>
+
+			<?php
+
+			$this->show_separator( 'after' );
+			$this->show_subtitle( 'after_title' );
+
+			if ( ! empty( $settings['description'] ) && $settings['description_section_show'] === 'yes' ) {
+				?>
+                <div class="stx-description"><?php echo $settings['description']; ?></div>
+				<?php
+			}
+
+			?>
+
+			<?php $this->show_separator( 'bottom' ); ?>
+
+
+        </div>
+		<?php
+	}
+
+	protected function show_separator( $position ) {
+		$settings = $this->get_settings_for_display();
+
 		$image_html = '';
 
 		if ( ! empty( $settings['separator_image']['url'] ) ) {
@@ -633,50 +680,23 @@ class Component extends Base {
 			$image_html = Group_Control_Image_Size::get_attachment_image_html( $settings, 'separator_image_size', 'separator_image' );
 		}
 
-		$separator = '';
 		if ( $settings['separator_style'] !== 'stx-separator-custom' ) {
 			$separator = $settings['show_separator'] === 'yes' ? '<div class="stx-separator-wrapper ' . $settings['separator_style'] . '"><div class="' . $settings['separator_style'] . '"></div></div>' : '';
 		} else {
 			$separator = $settings['show_separator'] === 'yes' ? '<div class="stx-separator-wrapper ' . $settings['separator_style'] . '"><div class="' . $settings['separator_style'] . '">' . $image_html . '</div></div>' : '';
 		}
 
-		echo '<div class="stx-title-wrapper ' . $settings['title_align'] . ' tablet-' . $settings['title_align_tablet'] . ' mobile-' . $settings['title_align_mobile'] . '">';
-
-		if ( $settings['separator_position'] === 'top' ) {
+		if ( $settings['separator_position'] === $position ) {
 			echo $separator;
 		}
+	}
 
-		if ( $settings['subtitle_position'] === 'before_title' && ! empty( $settings['subtitle'] ) && $settings['subtitle_show'] === 'yes' ) {
+	protected function show_subtitle( $position ) {
+		$settings = $this->get_settings_for_display();
+
+		if ( $settings['subtitle_position'] === $position && ! empty( $settings['subtitle'] ) && $settings['subtitle_show'] === 'yes' ) {
 			echo '<' . $settings['subtitle_tag'] . ' class="stx-subtitle">' . esc_html( $settings['subtitle'] ) . '</' . $settings['subtitle_tag'] . '>';
 		}
-
-		if ( $settings['separator_position'] === 'before' ) {
-			echo $separator;
-		}
-
-		if ( ! empty( $settings['title'] ) ) {
-			echo '<' . $settings['title_tag'] . ' class="stx-title">
-					' . \StaxAddons\Utils::curly( $settings['title'] ) . '
-				</' . $settings['title_tag'] . '>';
-		}
-
-		if ( $settings['separator_position'] === 'after' ) {
-			echo $separator;
-		}
-
-		if ( $settings['subtitle_position'] === 'after_title' && ! empty( $settings['subtitle'] ) && $settings['subtitle_show'] === 'yes' ) {
-			echo '<' . $settings['subtitle_tag'] . ' class="stx-subtitle">' . esc_html( $settings['subtitle'] ) . '</' . $settings['subtitle_tag'] . '>';
-		}
-
-		if ( ! empty( $settings['description'] ) && $settings['description_section_show'] === 'yes' ) {
-			echo \StaxAddons\Utils::curly( $settings['description'] );
-		}
-
-		if ( $settings['separator_position'] === 'bottom' ) {
-			echo $separator;
-		}
-
-		echo '</div>';
 	}
 
 	protected function _content_template() {

@@ -50,11 +50,11 @@ class StaxWidgets {
 	public function get_widgets( $active = false, $withStatus = false ) {
 		$widgets = [];
 
-		$widgets['breadcrumbs'] = [
-			'scope' => 'Breadcrumbs',
-			'name'  => 'Breadcrumbs',
-			'slug'  => 'stax-el-breadcrumbs'
-		];
+//		$widgets['breadcrumbs'] = [
+//			'scope' => 'Breadcrumbs',
+//			'name'  => 'Breadcrumbs',
+//			'slug'  => 'stax-el-breadcrumbs'
+//		];
 
 		$widgets['button'] = [
 			'scope' => 'Button',
@@ -62,11 +62,11 @@ class StaxWidgets {
 			'slug'  => 'stax-el-button'
 		];
 
-		$widgets['dropdown'] = [
-			'scope' => 'Dropdown',
-			'name'  => 'Dropdown',
-			'slug'  => 'stax-el-dropdown'
-		];
+//		$widgets['dropdown'] = [
+//			'scope' => 'Dropdown',
+//			'name'  => 'Dropdown',
+//			'slug'  => 'stax-el-dropdown'
+//		];
 
 		$widgets['heading'] = [
 			'scope' => 'Heading',
@@ -74,29 +74,29 @@ class StaxWidgets {
 			'slug'  => 'stax-el-heading'
 		];
 
-		$widgets['info-box'] = [
-			'scope' => 'InfoBox',
-			'name'  => 'Info Box',
-			'slug'  => 'stax-el-info-box'
-		];
-
-		$widgets['scroll-top'] = [
-			'scope' => 'ScrollTop',
-			'name'  => 'Scroll Top',
-			'slug'  => 'stax-el-scroll-top'
-		];
-
-		$widgets['separator'] = [
-			'scope' => 'Separator',
-			'name'  => 'Separator',
-			'slug'  => 'stax-el-separator'
-		];
-
-		$widgets['testimonial'] = [
-			'scope' => 'Testimonial',
-			'name'  => 'Testimonial',
-			'slug'  => 'stax-el-testimonial'
-		];
+//		$widgets['info-box'] = [
+//			'scope' => 'InfoBox',
+//			'name'  => 'Info Box',
+//			'slug'  => 'stax-el-info-box'
+//		];
+//
+//		$widgets['scroll-top'] = [
+//			'scope' => 'ScrollTop',
+//			'name'  => 'Scroll Top',
+//			'slug'  => 'stax-el-scroll-top'
+//		];
+//
+//		$widgets['separator'] = [
+//			'scope' => 'Separator',
+//			'name'  => 'Separator',
+//			'slug'  => 'stax-el-separator'
+//		];
+//
+//		$widgets['testimonial'] = [
+//			'scope' => 'Testimonial',
+//			'name'  => 'Testimonial',
+//			'slug'  => 'stax-el-testimonial'
+//		];
 
 		// Remove disabled widgets
 		if ( $active && ! $withStatus ) {
