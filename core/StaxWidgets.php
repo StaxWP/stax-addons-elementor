@@ -50,11 +50,11 @@ class StaxWidgets {
 	public function get_widgets( $active = false, $withStatus = false ) {
 		$widgets = [];
 
-//		$widgets['breadcrumbs'] = [
-//			'scope' => 'Breadcrumbs',
-//			'name'  => 'Breadcrumbs',
-//			'slug'  => 'stax-el-breadcrumbs'
-//		];
+		$widgets['breadcrumbs'] = [
+			'scope' => 'Breadcrumbs',
+			'name'  => 'Breadcrumbs',
+			'slug'  => 'stax-el-breadcrumbs'
+		];
 
 		$widgets['button'] = [
 			'scope' => 'Button',
