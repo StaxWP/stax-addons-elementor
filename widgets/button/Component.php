@@ -120,7 +120,6 @@ class Component extends Base {
 				'label'            => __( 'Icon', 'stax-elementor' ),
 				'type'             => Controls_Manager::ICONS,
 				'label_block'      => true,
-				'fa4compatibility' => 'icon',
 			]
 		);
 

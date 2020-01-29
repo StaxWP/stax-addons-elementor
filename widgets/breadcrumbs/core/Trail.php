@@ -44,29 +44,21 @@ class Trail {
 		/* Remove the bbPress breadcrumbs. */
 		add_filter( 'bbp_get_breadcrumb', '__return_false' );
 
-		$container_class = 'breadcrumb';
+		$container_class = 'stx-breadcrumb';
 
 		$defaults = [
 			'container'       => 'ol',
 			'container_class' => $container_class,
 			'item_tag'        => 'li',
-			'separator'       => '&#47;',
+			'separator'       => '',
 			'before'          => '',
 			'after'           => '',
 			'show_on_front'   => true,
 			'network'         => false,
-			//'show_edit_link'  => false,
 			'show_title'      => false,
 			'show_browse'     => false,
 			'rich_snippet'    => true,
-
-			/* Post taxonomy (examples follow). */
-			'post_taxonomy'   => [
-				// 'post'  => 'post_tag',
-				// 'book'  => 'genre',
-			],
-
-			/* Labels for text used (see Breadcrumb_Trail::default_labels). */
+			'post_taxonomy'   => [],
 			'labels'          => [],
 		];
 
@@ -115,21 +107,21 @@ class Trail {
 			}
 
 			/* Format the separator. */
-			$separator = ( ! empty( $this->args['separator'] ) ? '<span class="sep">' . $this->args['separator'] . '</span>' : '' );
+			$separator = ( ! empty( $this->args['separator'] ) ? '<span class="stx-separator">' . $this->args['separator'] . '</span>' : '' );
 
 			$count = 0;
 			foreach ( $this->items as &$link ) {
 				$count ++;
-				$class = ' class="breadcrumb__item"';
+				$class = ' class="stx-breadcrumb-item"';
 				if ( count( $this->items ) == $count ) {
-					$class = ' class="breadcrumb__item active"';
+					$class = ' class="stx-breadcrumb-item active"';
 				}
 				if ( true === $this->args['rich_snippet'] && count( $this->items ) > 1 ) {
 					$link = preg_replace( '!rel=".+?"|rel=\'.+?\'|!', '', $link );
 					$link = preg_replace( '!(<a.*?>)(.*?)(</a>)!', '$1<span itemprop="name">$2</span>$3' .
 					                                               '<meta itemprop="position" content="' . $count . '" />', $link );
 
-					$link       = str_replace( '<a ', '<a itemprop="item" class="breadcrumb__link" ', $link, $count_replace );
+					$link       = str_replace( '<a ', '<a itemprop="item" class="stx-breadcrumb-link" ', $link, $count_replace );
 					$micro_data = '';
 					if ( $count_replace > 0 ) {
 						$micro_data = ' itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"';
