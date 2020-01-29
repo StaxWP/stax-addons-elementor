@@ -28,10 +28,6 @@ class Utils {
 		return self::$instance;
 	}
 
-	public function __construct() {
-
-	}
-
 	public static function curly( $raw ) {
 		return str_replace( [ '{{', '}}' ], [ '<span>', '</span>' ], self::kses( $raw ) );
 	}
