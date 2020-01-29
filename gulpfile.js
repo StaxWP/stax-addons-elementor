@@ -2,8 +2,7 @@ const path = require('path'),
     gulp = require('gulp'),
     sass = require('gulp-sass'),
     rename = require('gulp-rename'),
-    csso = require('gulp-csso'),
-    notify = require('gulp-notify');
+    csso = require('gulp-csso');
 
 gulp.task('build:styles', () => {
     return gulp.src('./widgets/**/*.scss')
@@ -15,8 +14,7 @@ gulp.task('build:styles', () => {
                 suffix: ".min"
             })
         )
-        .pipe(gulp.dest(path.join(__dirname, 'widgets')))
-        .pipe(notify({message: 'CSS Compiled'}));
+        .pipe(gulp.dest(path.join(__dirname, 'widgets')));
 });
 
 gulp.task('watch:styles', () => {
