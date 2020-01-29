@@ -11,6 +11,7 @@ use Elementor\Group_Control_Border;
 use Elementor\Group_Control_Box_Shadow;
 use Elementor\Group_Control_Text_Shadow;
 use Elementor\Group_Control_Typography;
+use Elementor\Icons_Manager;
 
 use StaxAddons\Widgets\Base;
 
@@ -356,12 +357,42 @@ class Component extends Base {
 
 		$settings = $this->get_settings();
 
+		$this->add_render_attribute( 'icon', 'class', 'stx-btn-icon' );
+
+		if ( $settings['selected_icon']['value'] ) {
+			$this->add_render_attribute( 'icon', 'class', 'stx-icon-' . $settings['icon_align'] );
+		}
+
+		$this->add_render_attribute( 'button', 'role', 'button' );
+		$this->add_render_attribute( 'button', 'class', 'stx-btn' );
+		$this->add_render_attribute( 'button', 'class', 'stx-btn-' . $settings['size'] );
+
+		if ( ! empty( $settings['link']['url'] ) ) {
+			$this->add_link_attributes( 'button', $settings['link'] );
+		}
+
+		if ( $settings['link']['is_external'] ) {
+			$this->add_render_attribute( 'button', 'target', '_blank' );
+		}
+
+		if ( $settings['link']['nofollow'] ) {
+			$this->add_render_attribute( 'button', 'rel', 'nofollow' );
+		}
+
+		if ( ! empty( $settings['button_css_id'] ) ) {
+			$this->add_render_attribute( 'button', 'id', $settings['button_css_id'] );
+		}
+
 		?>
 
         <div class="stx-btn-wrapper">
-            <a class="stx-btn" href="#" role="button">
+            <a <?php echo $this->get_render_attribute_string( 'button' ); ?>>
 		        <span class="stx-btn-content-wrapper">
-			        <span class="stx-btn-icon"></span>
+			        <span <?php echo $this->get_render_attribute_string( 'icon' ); ?>>
+                        <?php if ( $settings['selected_icon']['value'] ) : ?>
+	                        <?php Icons_Manager::render_icon( $settings['selected_icon'], [ 'aria-hidden' => 'true' ] ); ?>
+                        <?php endif; ?>
+                    </span>
 		            <span class="stx-btn-text"><?php echo $settings['text']; ?></span>
 		        </span>
             </a>

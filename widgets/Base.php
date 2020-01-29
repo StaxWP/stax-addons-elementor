@@ -43,7 +43,6 @@ abstract class Base extends \Elementor\Widget_Base {
 				$widget_script = STAX_EL_WIDGET_PATH . $folder . '/component' . $suffix . '.js';
 				$widget_style  = STAX_EL_WIDGET_PATH . $folder . '/component' . $suffix . '.css';
 
-
 				if ( file_exists( $widget_script ) ) {
 					wp_register_script(
 						$this->get_widget_script_handle(),
@@ -72,7 +71,7 @@ abstract class Base extends \Elementor\Widget_Base {
 	 */
 	protected function enqueue_resources() {
 		wp_enqueue_script( $this->get_widget_script_handle() );
-		wp_enqueue_style( $this->get_widget_style_handle() );
+		wp_print_styles( $this->get_widget_style_handle() );
 	}
 
 	/**

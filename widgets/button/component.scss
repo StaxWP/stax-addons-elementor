@@ -14,6 +14,31 @@
       color: #fff;
     }
 
+    .stx-btn-content-wrapper {
+      display: flex;
+      justify-content: center;
+
+      .stx-btn-icon {
+        flex-grow: 0;
+
+        &.stx-icon-left {
+          margin-right: 5px;
+          order: 5;
+        }
+
+        &.stx-icon-right {
+          margin-left: 5px;
+          order: 15;
+        }
+      }
+
+      .stx-btn-text {
+        flex-grow: 1;
+        order: 10;
+        display: inline-block;
+      }
+    }
+
     &.stx-btn-xs {
       font-size: 13px;
       padding: 10px 20px;
