@@ -665,7 +665,7 @@ class Component extends Base {
 		}
 
 		if ( $settings['subtitle_position'] === 'after_title' && ! empty( $settings['subtitle'] ) && $settings['subtitle_show'] === 'yes' ) {
-			echo '<' . $settings['subtitle_tag'] . ' class="stx-subtitle ' . $sub_title_border . '">' . esc_html( $settings['subtitle'] ) . '</' . $settings['subtitle_tag'] . '>';
+			echo '<' . $settings['subtitle_tag'] . ' class="stx-subtitle">' . esc_html( $settings['subtitle'] ) . '</' . $settings['subtitle_tag'] . '>';
 		}
 
 		if ( ! empty( $settings['description'] ) && $settings['description_section_show'] === 'yes' ) {
