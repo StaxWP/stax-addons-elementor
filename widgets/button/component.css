@@ -16,10 +16,10 @@
     .stx-btn-wrapper .stx-btn .stx-btn-content-wrapper .stx-btn-icon {
       flex-grow: 0; }
       .stx-btn-wrapper .stx-btn .stx-btn-content-wrapper .stx-btn-icon.stx-icon-left {
-        margin-right: 15px;
+        margin-right: 5px;
         order: 5; }
       .stx-btn-wrapper .stx-btn .stx-btn-content-wrapper .stx-btn-icon.stx-icon-right {
-        margin-left: 15px;
+        margin-left: 5px;
         order: 15; }
     .stx-btn-wrapper .stx-btn .stx-btn-content-wrapper .stx-btn-text {
       flex-grow: 1;
