@@ -28,6 +28,7 @@ define( 'STAX_EL_PATH', plugin_dir_path( STAX_EL_FILE ) );
 define( 'STAX_EL_URL', plugins_url( '/', STAX_EL_FILE ) );
 define( 'STAX_EL_CORE_PATH', STAX_EL_PATH . 'core/' );
 define( 'STAX_EL_WIDGET_PATH', STAX_EL_PATH . 'widgets/' );
+define( 'STAX_EL_ENH_PATH', STAX_EL_PATH . 'enhancements/' );
 define( 'STAX_EL_WIDGET_URL', STAX_EL_URL . 'widgets/' );
 define( 'STAX_EL_ASSETS_URL', STAX_EL_URL . 'assets/' );
 

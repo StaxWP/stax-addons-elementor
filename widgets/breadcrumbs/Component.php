@@ -258,9 +258,9 @@ class Component extends Base {
 	}
 
 	protected function require_extra_classes() {
-		require_once STAX_EL_PATH . '/widgets/breadcrumbs/core/Trail.php';
-		require_once STAX_EL_PATH . '/widgets/breadcrumbs/core/Bbpress_Trail.php';
-		require_once STAX_EL_PATH . '/widgets/breadcrumbs/core/Buddypress_Trail.php';
+		require_once STAX_EL_WIDGET_PATH . '/breadcrumbs/core/Trail.php';
+		require_once STAX_EL_WIDGET_PATH . '/breadcrumbs/core/Bbpress_Trail.php';
+		require_once STAX_EL_WIDGET_PATH . '/breadcrumbs/core/Buddypress_Trail.php';
 	}
 
 }

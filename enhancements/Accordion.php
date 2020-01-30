@@ -2,9 +2,14 @@
 
 namespace StaxAddons\Enhancements;
 
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 } // Exit if accessed directly
+
+use Elementor\Controls_Manager;
+use Elementor\Group_Control_Border;
+use Elementor\Group_Control_Box_Shadow;
 
 /**
  * Class Accordion
@@ -13,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Accordion {
 
 	/**
-	 * @var
+	 * @var null
 	 */
 	public static $instance;
 
@@ -29,23 +34,59 @@ class Accordion {
 	}
 
 	public function __construct() {
-		add_action( 'elementor/element/before_section_end', static function ( $element, $section_id, $args ) {
-			if ( $element->get_name() === 'image-gallery' && $section_id === 'section_gallery' ) {
+		add_action( 'elementor/element/accordion/section_title_style/before_section_end', static function ( $element, $args ) {
+			$element->add_control(
+				'hr',
+				[
+					'type' => Controls_Manager::DIVIDER,
+				]
+			);
 
-				$element->add_control(
-					'image_stretch',
-					[
-						'label'   => __( 'Image Stretch', 'elementor' ),
-						'type'    => \Elementor\Controls_Manager::SELECT,
-						'default' => 'no',
-						'options' => [
-							'no'  => __( 'No', 'elementor' ),
-							'yes' => __( 'Yes', 'elementor' ),
+			$element->add_control(
+				'accordion_item_spacing',
+				[
+					'label'     => __( 'Item Spacing', 'stax-elementor' ),
+					'type'      => Controls_Manager::SLIDER,
+					'range'     => [
+						'px' => [
+							'max' => 100,
 						],
-					]
-				);
+					],
+					'selectors' => [
+						'{{WRAPPER}} .elementor-accordion-item'            => 'margin-bottom: {{SIZE}}{{UNIT}};',
+						'{{WRAPPER}} .elementor-accordion-item:last-child' => 'margin-bottom: 0;',
+					],
+				]
+			);
 
-			}
+			$element->add_group_control(
+				Group_Control_Border::get_type(),
+				[
+					'name'     => 'accordion_item_border',
+					'label'    => __( 'Item Border', 'stax-elementor' ),
+					'selector' => '{{WRAPPER}} .elementor-accordion-item',
+				]
+			);
+
+			$element->add_control(
+				'accordion_item_border_radius',
+				[
+					'label'      => __( 'Item Border Radius', 'stax-elementor' ),
+					'type'       => Controls_Manager::DIMENSIONS,
+					'size_units' => [ 'px', '%' ],
+					'selectors'  => [
+						'{{WRAPPER}} .elementor-accordion-item' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					],
+				]
+			);
+
+			$element->add_group_control(
+				Group_Control_Box_Shadow::get_type(),
+				[
+					'name'     => 'accordion_item_shadow',
+					'selector' => '{{WRAPPER}} .elementor-accordion-item',
+				]
+			);
 		}, 10, 3 );
 	}
 

@@ -40,6 +40,10 @@ class Plugin {
 		require_once STAX_EL_CORE_PATH . '/admin/pages/Modules.php';
 		require_once STAX_EL_CORE_PATH . '/admin/pages/Templates.php';
 		require_once STAX_EL_CORE_PATH . '/admin/Settings.php';
+
+		// Enhancements
+
+		require_once STAX_EL_ENH_PATH . '/Accordion.php';
 	}
 
 	/**
