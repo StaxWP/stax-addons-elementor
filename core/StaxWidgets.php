@@ -62,11 +62,11 @@ class StaxWidgets {
 			'slug'  => 'stax-el-button'
 		];
 
-//		$widgets['dropdown'] = [
-//			'scope' => 'Dropdown',
-//			'name'  => 'Dropdown',
-//			'slug'  => 'stax-el-dropdown'
-//		];
+		$widgets['dropdown'] = [
+			'scope' => 'Dropdown',
+			'name'  => 'Dropdown',
+			'slug'  => 'stax-el-dropdown'
+		];
 
 		$widgets['heading'] = [
 			'scope' => 'Heading',
