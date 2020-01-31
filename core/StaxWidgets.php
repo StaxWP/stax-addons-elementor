@@ -80,11 +80,11 @@ class StaxWidgets {
 //			'slug'  => 'stax-el-info-box'
 //		];
 //
-//		$widgets['scroll-top'] = [
-//			'scope' => 'ScrollTop',
-//			'name'  => 'Scroll Top',
-//			'slug'  => 'stax-el-scroll-top'
-//		];
+		$widgets['scroll-top'] = [
+			'scope' => 'ScrollTop',
+			'name'  => 'Scroll Top',
+			'slug'  => 'stax-el-scroll-top'
+		];
 //
 //		$widgets['separator'] = [
 //			'scope' => 'Separator',
