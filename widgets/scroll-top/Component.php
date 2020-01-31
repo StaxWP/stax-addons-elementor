@@ -105,13 +105,13 @@ class Component extends Base {
 		$this->add_control(
 			'selected_icon',
 			[
-				'label'       => __( 'Icon', 'stax-elementor' ),
-				'type'        => Controls_Manager::ICONS,
-				'default'     => [
+				'label'            => __( 'Icon', 'stax-elementor' ),
+				'type'             => Controls_Manager::ICONS,
+				'default'          => [
 					'value'   => 'fas fa-angle-up',
 					'library' => 'solid',
 				],
-				'label_block' => true,
+				'label_block'      => true,
 			]
 		);
 
