@@ -48,5 +48,5 @@
     padding: 25px 50px;
     border-radius: 6px; }
 
-.elementor-align-justify .stx-btn {
-  width: 100%; }
+.elementor-widget-stax-el-scroll-top .stx-btn-wrapper .stx-btn {
+  display: inline-block; }

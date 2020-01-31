@@ -107,6 +107,10 @@ class Component extends Base {
 			[
 				'label'       => __( 'Icon', 'stax-elementor' ),
 				'type'        => Controls_Manager::ICONS,
+				'default'     => [
+					'value'   => 'fas fa-angle-up',
+					'library' => 'solid',
+				],
 				'label_block' => true,
 			]
 		);
@@ -377,9 +381,6 @@ class Component extends Base {
         </div>
 
 		<?php
-	}
-
-	protected function _content_template() {
 	}
 
 }
