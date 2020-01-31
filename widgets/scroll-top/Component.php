@@ -42,6 +42,18 @@ class Component extends Base {
 		);
 
 		$this->add_control(
+			'scroll_speed',
+			[
+				'label'   => __( 'Scroll Speed (ms)', 'stax-elementor' ),
+				'type'    => Controls_Manager::NUMBER,
+				'min'     => 1,
+				'max'     => 5000,
+				'step'    => 10,
+				'default' => 800,
+			]
+		);
+
+		$this->add_control(
 			'text',
 			[
 				'label'       => __( 'Text', 'stax-elementor' ),
@@ -318,6 +330,7 @@ class Component extends Base {
 			$this->add_render_attribute( 'icon', 'class', 'stx-icon-' . $settings['icon_align'] );
 		}
 
+		$this->add_render_attribute( 'button', 'data-speed', $settings['scroll_speed'] );
 		$this->add_render_attribute( 'button', 'class', 'stx-btn' );
 		$this->add_render_attribute( 'button', 'class', 'stx-btn-' . $settings['size'] );
 		$this->add_render_attribute( 'button', 'class', 'stx-scroll-top' );

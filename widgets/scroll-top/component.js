@@ -14,9 +14,10 @@ var ScrollTop = ScrollTop || {};
             $('.stx-scroll-top').on('click', function (e) {
                 e.preventDefault();
 
+                var btn = $(this);
                 $("html, body").animate({
                     scrollTop: 0
-                }, 800);
+                }, btn.data('speed'));
                 return false;
             });
         }
