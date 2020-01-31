@@ -11,14 +11,35 @@ var ScrollTop = ScrollTop || {};
         },
 
         initButton: function () {
-            $('.stx-scroll-top').on('click', function (e) {
-                e.preventDefault();
+            var btns = $('.stx-scroll-top');
 
-                var btn = $(this);
-                $("html, body").animate({
-                    scrollTop: 0
-                }, btn.data('speed'));
-                return false;
+            btns.each(function (index, btn) {
+                btn = $(btn);
+                var btn_offset = btn.data('offset');
+
+                if (btn_offset === 0) {
+                    btn.show();
+                } else {
+                    $(document).on('scroll', function () {
+                        var scroll = $(this).scrollTop();
+                        if (scroll > btn_offset || scroll === btn_offset) {
+                            btn.fadeIn();
+                        } else {
+                            btn.fadeOut();
+                        }
+                    });
+                }
+
+                btn.on('click', function (e) {
+                    e.preventDefault();
+
+                    var btn = $(this);
+
+                    $('html, body').animate({
+                        scrollTop: 0
+                    }, btn.data('speed'));
+                    return false;
+                });
             });
         }
     };
