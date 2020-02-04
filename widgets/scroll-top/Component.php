@@ -26,7 +26,7 @@ class Component extends Base {
 	}
 
 	public function get_icon() {
-		return 'eicon-post-slider';
+		return 'stax-icon-up';
 	}
 
 	public function get_categories() {

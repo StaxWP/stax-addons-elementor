@@ -37,6 +37,7 @@ class StaxWidgets {
 	public function __construct() {
 		add_action( 'elementor/elements/categories_registered', [ $this, 'register_elementor_category' ] );
 		add_action( 'elementor/widgets/widgets_registered', [ $this, 'register_widgets' ] );
+		add_action( 'elementor/editor/after_enqueue_styles', [ $this, 'editor_css' ] );
 	}
 
 	/**
@@ -177,6 +178,18 @@ class StaxWidgets {
 		}
 
 		return false;
+	}
+
+	/**
+	 * Enqueue Elementor Editor CSS
+	 */
+	public function editor_css() {
+		wp_enqueue_style(
+			'stax-elementor-panel-style',
+			STAX_EL_ASSETS_URL . 'css/editor.css',
+			null,
+			STAX_EL_VERSION
+		);
 	}
 
 }
