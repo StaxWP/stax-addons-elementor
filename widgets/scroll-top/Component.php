@@ -360,6 +360,8 @@ class Component extends Base {
 		$this->add_render_attribute( 'button', 'class', 'stx-btn' );
 		$this->add_render_attribute( 'button', 'class', 'stx-btn-' . $settings['size'] );
 		$this->add_render_attribute( 'button', 'class', 'stx-scroll-top' );
+		$this->add_render_attribute( 'button', 'href', '#' );
+		$this->add_render_attribute( 'button', 'role', 'button' );
 
 		if ( ! empty( $settings['button_css_id'] ) ) {
 			$this->add_render_attribute( 'button', 'id', $settings['button_css_id'] );
@@ -368,7 +370,7 @@ class Component extends Base {
 		?>
 
         <div class="stx-btn-wrapper">
-            <button <?php echo $this->get_render_attribute_string( 'button' ); ?>>
+            <a <?php echo $this->get_render_attribute_string( 'button' ); ?>>
 		        <span class="stx-btn-content-wrapper">
 			        <span <?php echo $this->get_render_attribute_string( 'icon' ); ?>>
                         <?php if ( $settings['selected_icon']['value'] ) : ?>
@@ -377,7 +379,7 @@ class Component extends Base {
                     </span>
 		            <span class="stx-btn-text"><?php echo $settings['text']; ?></span>
 		        </span>
-            </button>
+            </a>
         </div>
 
 		<?php
