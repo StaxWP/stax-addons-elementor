@@ -32,6 +32,8 @@ class Plugin {
 	 * StaxAddons constructor.
 	 */
 	public function __construct() {
+		register_activation_hook( __FILE__, [ $this, 'enable_fa4_support' ] );
+
 		require_once STAX_EL_CORE_PATH . '/Utils.php';
 		require_once STAX_EL_CORE_PATH . '/StaxWidgets.php';
 		require_once STAX_EL_CORE_PATH . '/admin/pages/Base.php';
@@ -67,6 +69,13 @@ class Plugin {
 		$page = 'stax-elementor-' . $page;
 
 		return isset( $_GET['page'] ) && $_GET['page'] === $page;
+	}
+
+	/**
+	 * Enable FontAwesome 4 Support for Elementor
+	 */
+	public function enable_fa4_support() {
+		update_option( 'elementor_load_fa4_shim', 'yes' );
 	}
 
 }

@@ -1,9 +1,9 @@
 /*
 .stx-btn-wrapper {
   .stx-btn {
+    display: none;
     background-color: #5cb85c;
     color: #fff;
-    display: inline-block;
     fill: #fff;
     line-height: 1;
     text-align: center;
@@ -74,8 +74,12 @@
   }
 }
 
-.elementor-align-justify .stx-btn {
-  width: 100%;
+.elementor-widget-stax-el-scroll-top {
+  .stx-btn-wrapper {
+    .stx-btn {
+      display: inline-block;
+    }
+  }
 }
 */
 

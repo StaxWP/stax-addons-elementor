@@ -54,6 +54,26 @@ class Component extends Base {
 		);
 
 		$this->add_control(
+			'show_offset',
+			[
+				'label'       => __( 'Show Top Offset', 'stax-elementor' ),
+				'description' => __( 'Show button when top offset is grated than the set value.', 'stax-elementor' ),
+				'type'        => Controls_Manager::SLIDER,
+				'range'       => [
+					'px' => [
+						'min'  => 0,
+						'max'  => 500,
+						'step' => 5
+					]
+				],
+				'default'     => [
+					'unit' => 'px',
+					'size' => 0
+				]
+			]
+		);
+
+		$this->add_control(
 			'text',
 			[
 				'label'       => __( 'Text', 'stax-elementor' ),
@@ -85,9 +105,13 @@ class Component extends Base {
 		$this->add_control(
 			'selected_icon',
 			[
-				'label'       => __( 'Icon', 'stax-elementor' ),
-				'type'        => Controls_Manager::ICONS,
-				'label_block' => true,
+				'label'            => __( 'Icon', 'stax-elementor' ),
+				'type'             => Controls_Manager::ICONS,
+				'default'          => [
+					'value'   => 'fas fa-angle-up',
+					'library' => 'solid',
+				],
+				'label_block'      => true,
 			]
 		);
 
@@ -331,6 +355,8 @@ class Component extends Base {
 		}
 
 		$this->add_render_attribute( 'button', 'data-speed', $settings['scroll_speed'] );
+		$this->add_render_attribute( 'button', 'data-offset', $settings['show_offset']['size'] );
+		$this->add_render_attribute( 'button', 'data-offset-unit', $settings['show_offset']['unit'] );
 		$this->add_render_attribute( 'button', 'class', 'stx-btn' );
 		$this->add_render_attribute( 'button', 'class', 'stx-btn-' . $settings['size'] );
 		$this->add_render_attribute( 'button', 'class', 'stx-scroll-top' );
@@ -357,9 +383,6 @@ class Component extends Base {
         </div>
 
 		<?php
-	}
-
-	protected function _content_template() {
 	}
 
 }
