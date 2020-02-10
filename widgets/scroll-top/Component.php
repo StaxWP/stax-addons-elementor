@@ -292,6 +292,7 @@ class Component extends Base {
 		$this->add_render_attribute( 'button', 'data-offset', $settings['show_offset']['size'] );
 		$this->add_render_attribute( 'button', 'data-offset-unit', $settings['show_offset']['unit'] );
 		$this->add_render_attribute( 'button', 'class', 'stx-btn' );
+		$this->add_render_attribute( 'button', 'class', 'stx-btn-hidden' );
 		$this->add_render_attribute( 'button', 'class', 'stx-btn-' . $settings['size'] );
 		$this->add_render_attribute( 'button', 'class', 'stx-scroll-top' );
 		$this->add_render_attribute( 'button', 'href', '#' );

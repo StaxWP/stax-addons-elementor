@@ -18,14 +18,14 @@ var ScrollTop = ScrollTop || {};
                 var btn_offset = btn.data('offset');
 
                 if (btn_offset === 0) {
-                    btn.show();
+                    btn.removeClass('stx-btn-hidden');
                 } else {
                     $(document).on('scroll', function () {
                         var scroll = $(this).scrollTop();
                         if (scroll > btn_offset || scroll === btn_offset) {
-                            btn.fadeIn();
+                            btn.removeClass('stx-btn-hidden');
                         } else {
-                            btn.fadeOut();
+                            btn.addClass('stx-btn-hidden');
                         }
                     });
                 }

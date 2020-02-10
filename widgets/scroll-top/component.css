@@ -9,7 +9,12 @@
   transition: all 0.3s;
   width: auto;
   border: 0;
-  cursor: pointer; }
+  cursor: pointer;
+  opacity: 1;
+  visibility: visible; }
+  .stx-btn-wrapper .stx-btn.stx-btn-hidden {
+    visibility: hidden;
+    opacity: 0; }
   .stx-btn-wrapper .stx-btn:hover, .stx-btn-wrapper .stx-btn:visited, .stx-btn-wrapper .stx-btn:focus {
     color: #fff; }
   .stx-btn-wrapper .stx-btn .stx-btn-content-wrapper {
@@ -17,12 +22,6 @@
     justify-content: center; }
     .stx-btn-wrapper .stx-btn .stx-btn-content-wrapper .stx-btn-icon {
       flex-grow: 0; }
-      .stx-btn-wrapper .stx-btn .stx-btn-content-wrapper .stx-btn-icon.stx-icon-left {
-        margin-right: 5px;
-        order: 5; }
-      .stx-btn-wrapper .stx-btn .stx-btn-content-wrapper .stx-btn-icon.stx-icon-right {
-        margin-left: 5px;
-        order: 15; }
   .stx-btn-wrapper .stx-btn.stx-btn-xs {
     font-size: 13px;
     padding: 10px 20px; }
@@ -38,3 +37,7 @@
   .stx-btn-wrapper .stx-btn.stx-btn-xl {
     font-size: 20px;
     padding: 25px 50px; }
+
+.elementor-editor-active .stx-btn.stx-btn-hidden {
+  visibility: visible !important;
+  opacity: 1 !important; }
