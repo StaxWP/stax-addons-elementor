@@ -1,7 +1,6 @@
-/*
 .stx-btn-wrapper {
   .stx-btn {
-    display: none;
+    display: inline-block;
     background-color: #5cb85c;
     color: #fff;
     fill: #fff;
@@ -23,22 +22,6 @@
 
       .stx-btn-icon {
         flex-grow: 0;
-
-        &.stx-icon-left {
-          margin-right: 5px;
-          order: 5;
-        }
-
-        &.stx-icon-right {
-          margin-left: 5px;
-          order: 15;
-        }
-      }
-
-      .stx-btn-text {
-        flex-grow: 1;
-        order: 10;
-        display: inline-block;
       }
     }
 
@@ -72,23 +55,4 @@
       // border-radius: 6px;
     }
   }
-}
-
-.elementor-widget-stax-el-scroll-top {
-  .stx-btn-wrapper {
-    .stx-btn {
-      display: inline-block;
-    }
-  }
-}
-*/
-
-.stx-btn-wrapper {
-  .stx-btn {
-    &.stx-scroll-top {
-      // border-radius: 50%;
-      // padding: 10px;
-    }
-  }
-  .stx-btn-icon {}
 }

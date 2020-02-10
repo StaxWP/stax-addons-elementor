@@ -74,18 +74,6 @@ class Component extends Base {
 		);
 
 		$this->add_control(
-			'text',
-			[
-				'label'       => __( 'Text', 'stax-elementor' ),
-				'type'        => Controls_Manager::TEXT,
-				'dynamic'     => [
-					'active' => true,
-				],
-				'placeholder' => __( 'Scroll Top', 'stax-elementor' ),
-			]
-		);
-
-		$this->add_control(
 			'size',
 			[
 				'label'          => __( 'Size', 'elementor' ),
@@ -105,46 +93,13 @@ class Component extends Base {
 		$this->add_control(
 			'selected_icon',
 			[
-				'label'            => __( 'Icon', 'stax-elementor' ),
-				'type'             => Controls_Manager::ICONS,
-				'default'          => [
+				'label'       => __( 'Icon', 'stax-elementor' ),
+				'type'        => Controls_Manager::ICONS,
+				'default'     => [
 					'value'   => 'fas fa-angle-up',
 					'library' => 'solid',
 				],
-				'label_block'      => true,
-			]
-		);
-
-		$this->add_control(
-			'icon_align',
-			[
-				'label'     => __( 'Icon Position', 'stax-elementor' ),
-				'type'      => Controls_Manager::SELECT,
-				'default'   => 'left',
-				'options'   => [
-					'left'  => __( 'Before', 'stax-elementor' ),
-					'right' => __( 'After', 'stax-elementor' ),
-				],
-				'condition' => [
-					'selected_icon[value]!' => '',
-				],
-			]
-		);
-
-		$this->add_control(
-			'icon_indent',
-			[
-				'label'     => __( 'Icon Spacing', 'stax-elementor' ),
-				'type'      => Controls_Manager::SLIDER,
-				'range'     => [
-					'px' => [
-						'max' => 50,
-					],
-				],
-				'selectors' => [
-					'{{WRAPPER}} .stx-btn .stx-icon-right' => 'margin-left: {{SIZE}}{{UNIT}};',
-					'{{WRAPPER}} .stx-btn .stx-icon-left'  => 'margin-right: {{SIZE}}{{UNIT}};',
-				],
+				'label_block' => true,
 			]
 		);
 
@@ -181,22 +136,6 @@ class Component extends Base {
 			[
 				'label' => __( 'Button', 'stax-elementor' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
-			]
-		);
-
-		$this->add_group_control(
-			Group_Control_Typography::get_type(),
-			[
-				'name'     => 'typography',
-				'selector' => '{{WRAPPER}} a.stx-btn, {{WRAPPER}} .stx-btn',
-			]
-		);
-
-		$this->add_group_control(
-			Group_Control_Text_Shadow::get_type(),
-			[
-				'name'     => 'text_shadow',
-				'selector' => '{{WRAPPER}} a.stx-btn, {{WRAPPER}} .stx-btn',
 			]
 		);
 
@@ -349,11 +288,6 @@ class Component extends Base {
 		$settings = $this->get_settings_for_display();
 
 		$this->add_render_attribute( 'icon', 'class', 'stx-btn-icon' );
-
-		if ( $settings['selected_icon']['value'] ) {
-			$this->add_render_attribute( 'icon', 'class', 'stx-icon-' . $settings['icon_align'] );
-		}
-
 		$this->add_render_attribute( 'button', 'data-speed', $settings['scroll_speed'] );
 		$this->add_render_attribute( 'button', 'data-offset', $settings['show_offset']['size'] );
 		$this->add_render_attribute( 'button', 'data-offset-unit', $settings['show_offset']['unit'] );
@@ -377,7 +311,6 @@ class Component extends Base {
 	                        <?php Icons_Manager::render_icon( $settings['selected_icon'], [ 'aria-hidden' => 'true' ] ); ?>
                         <?php endif; ?>
                     </span>
-		            <span class="stx-btn-text"><?php echo $settings['text']; ?></span>
 		        </span>
             </a>
         </div>
