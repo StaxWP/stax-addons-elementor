@@ -83,11 +83,41 @@ class Component extends Base {
 			]
 		);
 
+		$this->add_responsive_control(
+			'align',
+			[
+				'label'        => __( 'Alignment', 'stax-elementor' ),
+				'type'         => Controls_Manager::CHOOSE,
+				'options'      => [
+					'flex-start'    => [
+						'title' => __( 'Left', 'stax-elementor' ),
+						'icon'  => 'eicon-text-align-left',
+					],
+					'center'  => [
+						'title' => __( 'Center', 'stax-elementor' ),
+						'icon'  => 'eicon-text-align-center',
+					],
+					'flex-end'   => [
+						'title' => __( 'Right', 'stax-elementor' ),
+						'icon'  => 'eicon-text-align-right',
+					],
+					'space-between' => [
+						'title' => __( 'Justified', 'stax-elementor' ),
+						'icon'  => 'eicon-text-align-justify',
+					],
+				],
+				'default'      => '',
+                'selectors' => [
+                        '{{WRAPPER}} .stx-breadcrumb' => 'justify-content: {{VALUE}};'
+                ]
+			]
+		);
+
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
 				'name'     => 'typography',
-				'selector' => '{{WRAPPER}} .stx-breadcrumb-item a.stx-breadcrumb-link',
+				'selector' => '{{WRAPPER}} .stx-breadcrumb-item a, {{WRAPPER}} .stx-breadcrumb-item.active',
 			]
 		);
 
@@ -95,7 +125,7 @@ class Component extends Base {
 			Group_Control_Text_Shadow::get_type(),
 			[
 				'name'     => 'text_shadow',
-				'selector' => '{{WRAPPER}} .stx-breadcrumb-item a.stx-breadcrumb-link',
+				'selector' => '{{WRAPPER}} .stx-breadcrumb-item a, {{WRAPPER}} .stx-breadcrumb-item.active',
 			]
 		);
 
@@ -115,7 +145,7 @@ class Component extends Base {
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
-					'{{WRAPPER}} .stx-breadcrumb-item a.stx-breadcrumb-link' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .stx-breadcrumb-item a' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -136,7 +166,7 @@ class Component extends Base {
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
-					'{{WRAPPER}} .stx-breadcrumb-item a.stx-breadcrumb-link:hover' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .stx-breadcrumb-item a:hover' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -157,7 +187,7 @@ class Component extends Base {
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
-					'{{WRAPPER}} .stx-breadcrumb-item.active a.stx-breadcrumb-link' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .stx-breadcrumb-item.active' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -237,7 +267,8 @@ class Component extends Base {
 		}
 
 		$args = [
-			'separator' => $icon
+			'separator'  => $icon,
+			'show_title' => true
 		];
 
 		if ( function_exists( 'bp_is_active' ) && ! bp_is_blog_page() ) {
