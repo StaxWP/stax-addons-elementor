@@ -44,7 +44,7 @@ class Widgets extends Base {
 				}
 			}
 
-			if ( $valid ) {
+			if ( ! $valid ) {
 				$options[ $key ] = true;
 			}
 		}

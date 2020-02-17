@@ -52,56 +52,56 @@ class Settings {
 			__( 'STAX Elementor Dashboard', 'stax-elementor' ),
 			__( 'Elementor Addons', 'stax-elementor' ),
 			'manage_options',
-			Plugin::instance()->get_slug(),
+			'stax-elementor-widgets', /*Plugin::instance()->get_slug(),*/
 			[ $this, 'settings_template' ],
 			'',
 			'58.7'
 		);
 
-		add_submenu_page(
+		/*add_submenu_page(
 			Plugin::instance()->get_slug(),
 			__( 'STAX Elementor Widgets Settings', 'stax-elementor' ),
 			__( 'Widgets', 'stax-elementor' ),
 			'manage_options',
 			'stax-elementor-widgets',
 			[ $this, 'settings_template' ]
-		);
+		);*/
 
-		add_submenu_page(
+		/*add_submenu_page(
 			Plugin::instance()->get_slug(),
 			__( 'STAX Elementor Modules Settings', 'stax-elementor' ),
 			__( 'Modules', 'stax-elementor' ),
 			'manage_options',
 			'stax-elementor-modules',
 			[ $this, 'settings_template' ]
-		);
+		);*/
 
-		add_submenu_page(
+		/*add_submenu_page(
 			Plugin::instance()->get_slug(),
 			__( 'STAX Elementor Templates', 'stax-elementor' ),
 			__( 'Templates', 'stax-elementor' ),
 			'manage_options',
 			'stax-elementor-templates',
 			[ $this, 'settings_template' ]
-		);
+		);*/
 
-		add_submenu_page(
+		/*add_submenu_page(
 			Plugin::instance()->get_slug(),
 			__( 'STAX Elementor Support', 'stax-elementor' ),
 			__( 'Support', 'stax-elementor' ),
 			'manage_options',
 			'stax-elementor-support',
 			[ $this, 'external_redirect_handler' ]
-		);
+		);*/
 
-		add_submenu_page(
+		/*add_submenu_page(
 			Plugin::instance()->get_slug(),
 			'',
 			'<span class="dashicons dashicons-star-filled" style="font-size: 17px"></span> ' . __( 'Go Pro', 'stax-elementor' ),
 			'manage_options',
 			'stax-elementor-pro',
 			[ $this, 'external_redirect_handler' ]
-		);
+		);*/
 
 	}
 

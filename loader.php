@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Plugin Name: STAX - Addons for Elementor
+ * Plugin Name: Addons Kit for Elementor - Stax
  * Description:
  * Plugin URI: https://seventhqueen.com
  * Author: SeventhQueen
