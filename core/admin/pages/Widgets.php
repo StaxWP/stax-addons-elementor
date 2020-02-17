@@ -36,16 +36,15 @@ class Widgets extends Base {
 
 		$widgets = StaxWidgets::instance()->get_widgets();
 
-		foreach ( $_POST as $key => $value ) {
+		foreach ( $widgets as $widget ) {
 			$valid = false;
-			foreach ( $widgets as $widget ) {
-				if ( $widget['slug'] === $key ) {
-					$valid = true;
-				}
+
+			if ( isset( $_POST[ $widget['slug'] ] ) ) {
+				$valid = true;
 			}
 
 			if ( ! $valid ) {
-				$options[ $key ] = true;
+				$options[ $widget['slug'] ] = true;
 			}
 		}
 
