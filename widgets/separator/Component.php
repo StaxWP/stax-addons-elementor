@@ -15,7 +15,7 @@ class Component extends Base {
 	}
 
 	public function get_title() {
-		return __( 'Separator', 'stax-elementor' );
+		return __( 'Separator', 'stax-elementor-kit' );
 	}
 
 	public function get_icon() {

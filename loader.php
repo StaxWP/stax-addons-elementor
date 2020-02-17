@@ -1,14 +1,13 @@
 <?php
-
 /**
- * Plugin Name: Addons Kit for Elementor - Stax
+ * Plugin Name: Stax - Elementor Kit
  * Description:
  * Plugin URI: https://seventhqueen.com
  * Author: SeventhQueen
  * Version: 1.0.0
  * Author URI: https://seventhqueen.com
  *
- * Text Domain: stax-elementor
+ * Text Domain: stax-elementor-kit
  * Domain Path: /languages
  */
 

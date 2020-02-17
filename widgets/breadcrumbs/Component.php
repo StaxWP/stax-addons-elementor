@@ -29,7 +29,7 @@ class Component extends Base {
 	}
 
 	public function get_title() {
-		return __( 'Breadcrumbs', 'stax-elementor' );
+		return __( 'Breadcrumbs', 'stax-elementor-kit' );
 	}
 
 	public function get_icon() {
@@ -44,14 +44,14 @@ class Component extends Base {
 		$this->start_controls_section(
 			'section_button',
 			[
-				'label' => __( 'Separator', 'stax-elementor' ),
+				'label' => __( 'Separator', 'stax-elementor-kit' ),
 			]
 		);
 
 		$this->add_control(
 			'selected_icon',
 			[
-				'label'       => __( 'Icon', 'stax-elementor' ),
+				'label'       => __( 'Icon', 'stax-elementor-kit' ),
 				'type'        => Controls_Manager::ICONS,
 				'label_block' => true,
 			]
@@ -60,7 +60,7 @@ class Component extends Base {
 		$this->add_control(
 			'icon_indent',
 			[
-				'label'     => __( 'Spacing', 'stax-elementor' ),
+				'label'     => __( 'Spacing', 'stax-elementor-kit' ),
 				'type'      => Controls_Manager::SLIDER,
 				'range'     => [
 					'px' => [
@@ -78,7 +78,7 @@ class Component extends Base {
 		$this->start_controls_section(
 			'links_style',
 			[
-				'label' => __( 'Links', 'stax-elementor' ),
+				'label' => __( 'Links', 'stax-elementor-kit' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -86,23 +86,23 @@ class Component extends Base {
 		$this->add_responsive_control(
 			'align',
 			[
-				'label'        => __( 'Alignment', 'stax-elementor' ),
+				'label'        => __( 'Alignment', 'stax-elementor-kit' ),
 				'type'         => Controls_Manager::CHOOSE,
 				'options'      => [
 					'flex-start'    => [
-						'title' => __( 'Left', 'stax-elementor' ),
+						'title' => __( 'Left', 'stax-elementor-kit' ),
 						'icon'  => 'eicon-text-align-left',
 					],
 					'center'  => [
-						'title' => __( 'Center', 'stax-elementor' ),
+						'title' => __( 'Center', 'stax-elementor-kit' ),
 						'icon'  => 'eicon-text-align-center',
 					],
 					'flex-end'   => [
-						'title' => __( 'Right', 'stax-elementor' ),
+						'title' => __( 'Right', 'stax-elementor-kit' ),
 						'icon'  => 'eicon-text-align-right',
 					],
 					'space-between' => [
-						'title' => __( 'Justified', 'stax-elementor' ),
+						'title' => __( 'Justified', 'stax-elementor-kit' ),
 						'icon'  => 'eicon-text-align-justify',
 					],
 				],
@@ -134,14 +134,14 @@ class Component extends Base {
 		$this->start_controls_tab(
 			'tab_link_normal',
 			[
-				'label' => __( 'Normal', 'stax-elementor' ),
+				'label' => __( 'Normal', 'stax-elementor-kit' ),
 			]
 		);
 
 		$this->add_control(
 			'link_text_color',
 			[
-				'label'     => __( 'Text Color', 'stax-elementor' ),
+				'label'     => __( 'Text Color', 'stax-elementor-kit' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -155,14 +155,14 @@ class Component extends Base {
 		$this->start_controls_tab(
 			'tab_link_hover',
 			[
-				'label' => __( 'Hover', 'stax-elementor' ),
+				'label' => __( 'Hover', 'stax-elementor-kit' ),
 			]
 		);
 
 		$this->add_control(
 			'link_text_color_hover',
 			[
-				'label'     => __( 'Text Color', 'stax-elementor' ),
+				'label'     => __( 'Text Color', 'stax-elementor-kit' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -176,14 +176,14 @@ class Component extends Base {
 		$this->start_controls_tab(
 			'tab_link_active',
 			[
-				'label' => __( 'Active', 'stax-elementor' ),
+				'label' => __( 'Active', 'stax-elementor-kit' ),
 			]
 		);
 
 		$this->add_control(
 			'link_text_color_active',
 			[
-				'label'     => __( 'Text Color', 'stax-elementor' ),
+				'label'     => __( 'Text Color', 'stax-elementor-kit' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -201,7 +201,7 @@ class Component extends Base {
 		$this->start_controls_section(
 			'separator_style',
 			[
-				'label' => __( 'Separator', 'stax-elementor' ),
+				'label' => __( 'Separator', 'stax-elementor-kit' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -209,7 +209,7 @@ class Component extends Base {
 		$this->add_control(
 			'icon_size',
 			[
-				'label'     => __( 'Size', 'stax-elementor' ),
+				'label'     => __( 'Size', 'stax-elementor-kit' ),
 				'type'      => Controls_Manager::SLIDER,
 				'range'     => [
 					'px' => [
@@ -225,7 +225,7 @@ class Component extends Base {
 		$this->add_control(
 			'icon_color',
 			[
-				'label'     => __( 'Color', 'stax-elementor' ),
+				'label'     => __( 'Color', 'stax-elementor-kit' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [

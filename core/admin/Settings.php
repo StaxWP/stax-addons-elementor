@@ -49,8 +49,8 @@ class Settings {
 	 */
 	public function register_menu() {
 		add_menu_page(
-			__( 'STAX Elementor Dashboard', 'stax-elementor' ),
-			__( 'Elementor Addons', 'stax-elementor' ),
+			__( 'STAX Elementor Dashboard', 'stax-elementor-kit' ),
+			__( 'Elementor Addons', 'stax-elementor-kit' ),
 			'manage_options',
 			'stax-elementor-widgets', /*Plugin::instance()->get_slug(),*/
 			[ $this, 'settings_template' ],
@@ -60,8 +60,8 @@ class Settings {
 
 		/*add_submenu_page(
 			Plugin::instance()->get_slug(),
-			__( 'STAX Elementor Widgets Settings', 'stax-elementor' ),
-			__( 'Widgets', 'stax-elementor' ),
+			__( 'STAX Elementor Widgets Settings', 'stax-elementor-kit' ),
+			__( 'Widgets', 'stax-elementor-kit' ),
 			'manage_options',
 			'stax-elementor-widgets',
 			[ $this, 'settings_template' ]
@@ -69,8 +69,8 @@ class Settings {
 
 		/*add_submenu_page(
 			Plugin::instance()->get_slug(),
-			__( 'STAX Elementor Modules Settings', 'stax-elementor' ),
-			__( 'Modules', 'stax-elementor' ),
+			__( 'STAX Elementor Modules Settings', 'stax-elementor-kit' ),
+			__( 'Modules', 'stax-elementor-kit' ),
 			'manage_options',
 			'stax-elementor-modules',
 			[ $this, 'settings_template' ]
@@ -78,8 +78,8 @@ class Settings {
 
 		/*add_submenu_page(
 			Plugin::instance()->get_slug(),
-			__( 'STAX Elementor Templates', 'stax-elementor' ),
-			__( 'Templates', 'stax-elementor' ),
+			__( 'STAX Elementor Templates', 'stax-elementor-kit' ),
+			__( 'Templates', 'stax-elementor-kit' ),
 			'manage_options',
 			'stax-elementor-templates',
 			[ $this, 'settings_template' ]
@@ -87,8 +87,8 @@ class Settings {
 
 		/*add_submenu_page(
 			Plugin::instance()->get_slug(),
-			__( 'STAX Elementor Support', 'stax-elementor' ),
-			__( 'Support', 'stax-elementor' ),
+			__( 'STAX Elementor Support', 'stax-elementor-kit' ),
+			__( 'Support', 'stax-elementor-kit' ),
 			'manage_options',
 			'stax-elementor-support',
 			[ $this, 'external_redirect_handler' ]
@@ -97,7 +97,7 @@ class Settings {
 		/*add_submenu_page(
 			Plugin::instance()->get_slug(),
 			'',
-			'<span class="dashicons dashicons-star-filled" style="font-size: 17px"></span> ' . __( 'Go Pro', 'stax-elementor' ),
+			'<span class="dashicons dashicons-star-filled" style="font-size: 17px"></span> ' . __( 'Go Pro', 'stax-elementor-kit' ),
 			'manage_options',
 			'stax-elementor-pro',
 			[ $this, 'external_redirect_handler' ]
@@ -112,7 +112,7 @@ class Settings {
 		global $submenu;
 
 		if ( isset( $submenu[ Plugin::instance()->get_slug() ] ) ) {
-			$submenu[ Plugin::instance()->get_slug() ][0][0] = __( 'Dashboard', 'stax-elementor' );
+			$submenu[ Plugin::instance()->get_slug() ][0][0] = __( 'Dashboard', 'stax-elementor-kit' );
 		}
 	}
 

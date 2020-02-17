@@ -28,7 +28,7 @@ class Modules extends Base {
 	public function panel_content() {
 		?>
         <div class="ste_box">
-            <h2 class="ste_box_title"><?php _e( 'Modules', 'stax-elementor' ); ?></h2>
+            <h2 class="ste_box_title"><?php _e( 'Modules', 'stax-elementor-kit' ); ?></h2>
             <div class="ste-p-4">
                 On/off modules
             </div>

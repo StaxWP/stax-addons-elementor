@@ -60,7 +60,7 @@ class Widgets extends Base {
 	public function panel_content() {
 		?>
         <div class="ste_box">
-            <h2 class="ste_box_title"><?php _e( 'Widgets', 'stax-elementor' ); ?></h2>
+            <h2 class="ste_box_title"><?php _e( 'Widgets', 'stax-elementor-kit' ); ?></h2>
             <div class="ste-p-4">
                 <form action="<?php echo esc_url( admin_url( 'admin-ajax.php' ) ); ?>" method="POST" id="modules-form">
                     <ul class="svq-module-list">

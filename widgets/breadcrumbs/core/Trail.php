@@ -158,18 +158,18 @@ class Trail {
 	public function default_labels() {
 
 		$labels = [
-			'browse'              => __( 'Browse:', 'stax-elementor' ),
-			'home'                => __( 'Home', 'stax-elementor' ),
-			'error_404'           => __( '404 Not Found', 'stax-elementor' ),
-			'archives'            => __( 'Archives', 'stax-elementor' ),
+			'browse'              => __( 'Browse:', 'stax-elementor-kit' ),
+			'home'                => __( 'Home', 'stax-elementor-kit' ),
+			'error_404'           => __( '404 Not Found', 'stax-elementor-kit' ),
+			'archives'            => __( 'Archives', 'stax-elementor-kit' ),
 			/* Translators: %s is the search query. The HTML entities are opening and closing curly quotes. */
-			'search'              => __( 'Search results for &#8220;%s&#8221;', 'stax-elementor' ),
+			'search'              => __( 'Search results for &#8220;%s&#8221;', 'stax-elementor-kit' ),
 			/* Translators: %s is the page number. */
-			'paged'               => __( 'Page %s', 'stax-elementor' ),
+			'paged'               => __( 'Page %s', 'stax-elementor-kit' ),
 			/* Translators: Minute archive title. %s is the minute time format. */
-			'archive_minute'      => __( 'Minute %s', 'stax-elementor' ),
+			'archive_minute'      => __( 'Minute %s', 'stax-elementor-kit' ),
 			/* Translators: Weekly archive title. %s is the week date format. */
-			'archive_week'        => __( 'Week %s', 'stax-elementor' ),
+			'archive_week'        => __( 'Week %s', 'stax-elementor-kit' ),
 
 			/* "%s" is replaced with the translated date/time format. */
 			'archive_minute_hour' => '%s',
@@ -753,7 +753,7 @@ class Trail {
 
 		/* Add the minute + hour item. */
 		if ( true === $this->args['show_title'] ) {
-			$this->items[] = sprintf( $this->args['labels']['archive_minute_hour'], get_the_time( _x( 'g:i a', 'minute and hour archives time format', 'stax-elementor' ) ) );
+			$this->items[] = sprintf( $this->args['labels']['archive_minute_hour'], get_the_time( _x( 'g:i a', 'minute and hour archives time format', 'stax-elementor-kit' ) ) );
 		}
 	}
 
@@ -771,7 +771,7 @@ class Trail {
 
 		/* Add the minute item. */
 		if ( true === $this->args['show_title'] ) {
-			$this->items[] = sprintf( $this->args['labels']['archive_minute'], get_the_time( _x( 'i', 'minute archives time format', 'stax-elementor' ) ) );
+			$this->items[] = sprintf( $this->args['labels']['archive_minute'], get_the_time( _x( 'i', 'minute archives time format', 'stax-elementor-kit' ) ) );
 		}
 	}
 
@@ -789,7 +789,7 @@ class Trail {
 
 		/* Add the hour item. */
 		if ( true === $this->args['show_title'] ) {
-			$this->items[] = sprintf( $this->args['labels']['archive_hour'], get_the_time( _x( 'g a', 'hour archives time format', 'stax-elementor' ) ) );
+			$this->items[] = sprintf( $this->args['labels']['archive_hour'], get_the_time( _x( 'g a', 'hour archives time format', 'stax-elementor-kit' ) ) );
 		}
 	}
 
@@ -806,9 +806,9 @@ class Trail {
 		$this->do_rewrite_front_items();
 
 		/* Get year, month, and day. */
-		$year  = sprintf( $this->args['labels']['archive_year'], get_the_time( _x( 'Y', 'yearly archives date format', 'stax-elementor' ) ) );
-		$month = sprintf( $this->args['labels']['archive_month'], get_the_time( _x( 'F', 'monthly archives date format', 'stax-elementor' ) ) );
-		$day   = sprintf( $this->args['labels']['archive_day'], get_the_time( _x( 'j', 'daily archives date format', 'stax-elementor' ) ) );
+		$year  = sprintf( $this->args['labels']['archive_year'], get_the_time( _x( 'Y', 'yearly archives date format', 'stax-elementor-kit' ) ) );
+		$month = sprintf( $this->args['labels']['archive_month'], get_the_time( _x( 'F', 'monthly archives date format', 'stax-elementor-kit' ) ) );
+		$day   = sprintf( $this->args['labels']['archive_day'], get_the_time( _x( 'j', 'daily archives date format', 'stax-elementor-kit' ) ) );
 
 		/* Add the year and month items. */
 		$this->items[] = '<a href="' . get_year_link( get_the_time( 'Y' ) ) . '" title="' . esc_attr( $year ) . '">' . $year . '</a>';
@@ -835,8 +835,8 @@ class Trail {
 		$this->do_rewrite_front_items();
 
 		/* Get the year and week. */
-		$year = sprintf( $this->args['labels']['archive_year'], get_the_time( _x( 'Y', 'yearly archives date format', 'stax-elementor' ) ) );
-		$week = sprintf( $this->args['labels']['archive_week'], get_the_time( _x( 'W', 'weekly archives date format', 'stax-elementor' ) ) );
+		$year = sprintf( $this->args['labels']['archive_year'], get_the_time( _x( 'Y', 'yearly archives date format', 'stax-elementor-kit' ) ) );
+		$week = sprintf( $this->args['labels']['archive_week'], get_the_time( _x( 'W', 'weekly archives date format', 'stax-elementor-kit' ) ) );
 
 		/* Add the year item. */
 		$this->items[] = '<a href="' . get_year_link( get_the_time( 'Y' ) ) . '" title="' . esc_attr( $year ) . '">' . $year . '</a>';
@@ -865,8 +865,8 @@ class Trail {
 		$this->do_rewrite_front_items();
 
 		/* Get the year and month. */
-		$year  = sprintf( $this->args['labels']['archive_year'], get_the_time( _x( 'Y', 'yearly archives date format', 'stax-elementor' ) ) );
-		$month = sprintf( $this->args['labels']['archive_month'], get_the_time( _x( 'F', 'monthly archives date format', 'stax-elementor' ) ) );
+		$year  = sprintf( $this->args['labels']['archive_year'], get_the_time( _x( 'Y', 'yearly archives date format', 'stax-elementor-kit' ) ) );
+		$month = sprintf( $this->args['labels']['archive_month'], get_the_time( _x( 'F', 'monthly archives date format', 'stax-elementor-kit' ) ) );
 
 		/* Add the year item. */
 		$this->items[] = '<a href="' . get_year_link( get_the_time( 'Y' ) ) . '" title="' . esc_attr( $year ) . '">' . $year . '</a>';
@@ -892,7 +892,7 @@ class Trail {
 		$this->do_rewrite_front_items();
 
 		/* Get the year. */
-		$year = sprintf( $this->args['labels']['archive_year'], get_the_time( _x( 'Y', 'yearly archives date format', 'stax-elementor' ) ) );
+		$year = sprintf( $this->args['labels']['archive_year'], get_the_time( _x( 'Y', 'yearly archives date format', 'stax-elementor-kit' ) ) );
 
 		/* Add the year item. */
 		if ( is_paged() ) {
@@ -1090,13 +1090,13 @@ class Trail {
 
 				/* If using the %year% tag, add a link to the yearly archive. */
 				if ( '%year%' == $tag ) {
-					$this->items[] = '<a href="' . get_year_link( get_the_time( 'Y', $post_id ) ) . '">' . sprintf( $this->args['labels']['archive_year'], get_the_time( _x( 'Y', 'yearly archives date format', 'stax-elementor' ) ) ) . '</a>';
+					$this->items[] = '<a href="' . get_year_link( get_the_time( 'Y', $post_id ) ) . '">' . sprintf( $this->args['labels']['archive_year'], get_the_time( _x( 'Y', 'yearly archives date format', 'stax-elementor-kit' ) ) ) . '</a>';
 				} /* If using the %monthnum% tag, add a link to the monthly archive. */
 				elseif ( '%monthnum%' == $tag ) {
-					$this->items[] = '<a href="' . get_month_link( get_the_time( 'Y', $post_id ), get_the_time( 'm', $post_id ) ) . '">' . sprintf( $this->args['labels']['archive_month'], get_the_time( _x( 'F', 'monthly archives date format', 'stax-elementor' ) ) ) . '</a>';
+					$this->items[] = '<a href="' . get_month_link( get_the_time( 'Y', $post_id ), get_the_time( 'm', $post_id ) ) . '">' . sprintf( $this->args['labels']['archive_month'], get_the_time( _x( 'F', 'monthly archives date format', 'stax-elementor-kit' ) ) ) . '</a>';
 				} /* If using the %day% tag, add a link to the daily archive. */
 				elseif ( '%day%' == $tag ) {
-					$this->items[] = '<a href="' . get_day_link( get_the_time( 'Y', $post_id ), get_the_time( 'm', $post_id ), get_the_time( 'd', $post_id ) ) . '">' . sprintf( $this->args['labels']['archive_day'], get_the_time( _x( 'j', 'daily archives date format', 'stax-elementor' ) ) ) . '</a>';
+					$this->items[] = '<a href="' . get_day_link( get_the_time( 'Y', $post_id ), get_the_time( 'm', $post_id ), get_the_time( 'd', $post_id ) ) . '">' . sprintf( $this->args['labels']['archive_day'], get_the_time( _x( 'j', 'daily archives date format', 'stax-elementor-kit' ) ) ) . '</a>';
 				} /* If using the %author% tag, add a link to the post author archive. */
 				elseif ( '%author%' == $tag ) {
 					$this->items[] = '<a href="' . get_author_posts_url( $post->post_author ) . '" title="' . esc_attr( get_the_author_meta( 'display_name', $post->post_author ) ) . '">' . get_the_author_meta( 'display_name', $post->post_author ) . '</a>';
