@@ -1,4 +1,4 @@
-=== Stax - Elementor Kit ===
+=== Stax Addons for Elementor ===
 Contributors: seventhqueen, codezz, geowrge
 
 Tags: elementor, elementor addons, elementor enhancements, elementor widgets, light addons

@@ -28,7 +28,7 @@ class Dashboard extends Base {
 	public function panel_content() {
 		?>
         <div class="ste_box">
-            <h2 class="ste_box_title"><?php _e( 'Dashboard', 'stax-elementor-kit' ); ?></h2>
+            <h2 class="ste_box_title"><?php _e( 'Dashboard', 'stax-addons-for-elementor' ); ?></h2>
             <div class="ste-p-4">
                 Some welcome dashboard
             </div>

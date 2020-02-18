@@ -1,13 +1,13 @@
 <?php
 /**
- * Plugin Name: Stax - Elementor Kit
+ * Plugin Name: Stax Addons for Elementor
  * Description:
- * Plugin URI: https://seventhqueen.com
+ * Plugin URI: https://staxbuilder.com
  * Author: SeventhQueen
  * Version: 1.0.0
  * Author URI: https://seventhqueen.com
  *
- * Text Domain: stax-elementor-kit
+ * Text Domain: stax-addons-for-elementor
  * Domain Path: /languages
  */
 
@@ -35,7 +35,7 @@ define( 'STAX_EL_ASSETS_URL', STAX_EL_URL . 'assets/' );
  * Localization
  */
 function stax_elementor_load_plugin_textdomain() {
-	load_plugin_textdomain( 'stax-elementor-kit', false, basename( __DIR__ ) . '/languages/' );
+	load_plugin_textdomain( 'stax-addons-for-elementor', false, basename( __DIR__ ) . '/languages/' );
 }
 
 add_action( 'plugins_loaded', 'stax_elementor_load_plugin_textdomain' );

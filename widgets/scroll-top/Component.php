@@ -22,7 +22,7 @@ class Component extends Base {
 	}
 
 	public function get_title() {
-		return __( 'Scroll Top', 'stax-elementor-kit' );
+		return __( 'Scroll Top', 'stax-addons-for-elementor' );
 	}
 
 	public function get_icon() {
@@ -37,14 +37,14 @@ class Component extends Base {
 		$this->start_controls_section(
 			'section_button',
 			[
-				'label' => __( 'Button', 'stax-elementor-kit' ),
+				'label' => __( 'Button', 'stax-addons-for-elementor' ),
 			]
 		);
 
 		$this->add_control(
 			'scroll_speed',
 			[
-				'label'   => __( 'Scroll Speed (ms)', 'stax-elementor-kit' ),
+				'label'   => __( 'Scroll Speed (ms)', 'stax-addons-for-elementor' ),
 				'type'    => Controls_Manager::NUMBER,
 				'min'     => 1,
 				'max'     => 5000,
@@ -56,8 +56,8 @@ class Component extends Base {
 		$this->add_control(
 			'show_offset',
 			[
-				'label'       => __( 'Show Top Offset', 'stax-elementor-kit' ),
-				'description' => __( 'Show button when top offset is grated than the set value.', 'stax-elementor-kit' ),
+				'label'       => __( 'Show Top Offset', 'stax-addons-for-elementor' ),
+				'description' => __( 'Show button when top offset is grated than the set value.', 'stax-addons-for-elementor' ),
 				'type'        => Controls_Manager::SLIDER,
 				'range'       => [
 					'px' => [
@@ -93,7 +93,7 @@ class Component extends Base {
 		$this->add_control(
 			'selected_icon',
 			[
-				'label'       => __( 'Icon', 'stax-elementor-kit' ),
+				'label'       => __( 'Icon', 'stax-addons-for-elementor' ),
 				'type'        => Controls_Manager::ICONS,
 				'default'     => [
 					'value'   => 'fas fa-angle-up',
@@ -106,7 +106,7 @@ class Component extends Base {
 		$this->add_control(
 			'view',
 			[
-				'label'   => __( 'View', 'stax-elementor-kit' ),
+				'label'   => __( 'View', 'stax-addons-for-elementor' ),
 				'type'    => Controls_Manager::HIDDEN,
 				'default' => 'traditional',
 			]
@@ -115,15 +115,15 @@ class Component extends Base {
 		$this->add_control(
 			'button_css_id',
 			[
-				'label'       => __( 'Button ID', 'stax-elementor-kit' ),
+				'label'       => __( 'Button ID', 'stax-addons-for-elementor' ),
 				'type'        => Controls_Manager::TEXT,
 				'dynamic'     => [
 					'active' => true,
 				],
 				'default'     => '',
-				'title'       => __( 'Add your custom id WITHOUT the Pound key. e.g: my-id', 'stax-elementor-kit' ),
+				'title'       => __( 'Add your custom id WITHOUT the Pound key. e.g: my-id', 'stax-addons-for-elementor' ),
 				'label_block' => false,
-				'description' => __( 'Please make sure the ID is unique and not used elsewhere on the page this form is displayed. This field allows <code>A-z 0-9</code> & underscore chars without spaces.', 'stax-elementor-kit' ),
+				'description' => __( 'Please make sure the ID is unique and not used elsewhere on the page this form is displayed. This field allows <code>A-z 0-9</code> & underscore chars without spaces.', 'stax-addons-for-elementor' ),
 				'separator'   => 'before',
 
 			]
@@ -134,7 +134,7 @@ class Component extends Base {
 		$this->start_controls_section(
 			'section_style',
 			[
-				'label' => __( 'Button', 'stax-elementor-kit' ),
+				'label' => __( 'Button', 'stax-addons-for-elementor' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -144,14 +144,14 @@ class Component extends Base {
 		$this->start_controls_tab(
 			'tab_button_normal',
 			[
-				'label' => __( 'Normal', 'stax-elementor-kit' ),
+				'label' => __( 'Normal', 'stax-addons-for-elementor' ),
 			]
 		);
 
 		$this->add_control(
 			'button_text_color',
 			[
-				'label'     => __( 'Text Color', 'stax-elementor-kit' ),
+				'label'     => __( 'Text Color', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -163,7 +163,7 @@ class Component extends Base {
 		$this->add_control(
 			'background_color',
 			[
-				'label'     => __( 'Background Color', 'stax-elementor-kit' ),
+				'label'     => __( 'Background Color', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} a.stx-btn, {{WRAPPER}} .stx-btn' => 'background-color: {{VALUE}};',
@@ -184,14 +184,14 @@ class Component extends Base {
 		$this->start_controls_tab(
 			'tab_button_hover',
 			[
-				'label' => __( 'Hover', 'stax-elementor-kit' ),
+				'label' => __( 'Hover', 'stax-addons-for-elementor' ),
 			]
 		);
 
 		$this->add_control(
 			'hover_color',
 			[
-				'label'     => __( 'Text Color', 'stax-elementor-kit' ),
+				'label'     => __( 'Text Color', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} a.stx-btn:hover, {{WRAPPER}} .stx-btn:hover, {{WRAPPER}} a.stx-btn:focus, {{WRAPPER}} .stx-btn:focus'                 => 'color: {{VALUE}};',
@@ -203,7 +203,7 @@ class Component extends Base {
 		$this->add_control(
 			'button_background_hover_color',
 			[
-				'label'     => __( 'Background Color', 'stax-elementor-kit' ),
+				'label'     => __( 'Background Color', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} a.stx-btn:hover, {{WRAPPER}} .stx-btn:hover, {{WRAPPER}} a.stx-btn:focus, {{WRAPPER}} .stx-btn:focus' => 'background-color: {{VALUE}};',
@@ -214,7 +214,7 @@ class Component extends Base {
 		$this->add_control(
 			'button_hover_border_color',
 			[
-				'label'     => __( 'Border Color', 'stax-elementor-kit' ),
+				'label'     => __( 'Border Color', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'condition' => [
 					'border_border!' => '',
@@ -236,7 +236,7 @@ class Component extends Base {
 		$this->add_control(
 			'hover_animation',
 			[
-				'label' => __( 'Hover Animation', 'stax-elementor-kit' ),
+				'label' => __( 'Hover Animation', 'stax-addons-for-elementor' ),
 				'type'  => Controls_Manager::HOVER_ANIMATION,
 			]
 		);
@@ -257,7 +257,7 @@ class Component extends Base {
 		$this->add_control(
 			'border_radius',
 			[
-				'label'      => __( 'Border Radius', 'stax-elementor-kit' ),
+				'label'      => __( 'Border Radius', 'stax-addons-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors'  => [
@@ -269,7 +269,7 @@ class Component extends Base {
 		$this->add_responsive_control(
 			'text_padding',
 			[
-				'label'      => __( 'Padding', 'stax-elementor-kit' ),
+				'label'      => __( 'Padding', 'stax-addons-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors'  => [

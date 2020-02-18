@@ -45,7 +45,7 @@ class Accordion {
 			$element->add_control(
 				'accordion_item_spacing',
 				[
-					'label'     => __( 'Item Spacing', 'stax-elementor-kit' ),
+					'label'     => __( 'Item Spacing', 'stax-addons-for-elementor' ),
 					'type'      => Controls_Manager::SLIDER,
 					'range'     => [
 						'px' => [
@@ -63,7 +63,7 @@ class Accordion {
 				Group_Control_Border::get_type(),
 				[
 					'name'     => 'accordion_item_border',
-					'label'    => __( 'Item Border', 'stax-elementor-kit' ),
+					'label'    => __( 'Item Border', 'stax-addons-for-elementor' ),
 					'selector' => '{{WRAPPER}} .elementor-accordion-item',
 				]
 			);
@@ -71,7 +71,7 @@ class Accordion {
 			$element->add_control(
 				'accordion_item_border_radius',
 				[
-					'label'      => __( 'Item Border Radius', 'stax-elementor-kit' ),
+					'label'      => __( 'Item Border Radius', 'stax-addons-for-elementor' ),
 					'type'       => Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', '%' ],
 					'selectors'  => [

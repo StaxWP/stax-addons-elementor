@@ -44,19 +44,19 @@ class Counter {
 			$element->add_responsive_control(
 				'content_align',
 				[
-					'label'        => __( 'Alignment', 'stax-elementor-kit' ),
+					'label'        => __( 'Alignment', 'stax-addons-for-elementor' ),
 					'type'         => Controls_Manager::CHOOSE,
 					'options'      => [
 						'left'   => [
-							'title' => __( 'Left', 'stax-elementor-kit' ),
+							'title' => __( 'Left', 'stax-addons-for-elementor' ),
 							'icon'  => 'eicon-text-align-left',
 						],
 						'center' => [
-							'title' => __( 'Center', 'stax-elementor-kit' ),
+							'title' => __( 'Center', 'stax-addons-for-elementor' ),
 							'icon'  => 'eicon-text-align-center',
 						],
 						'right'  => [
-							'title' => __( 'Right', 'stax-elementor-kit' ),
+							'title' => __( 'Right', 'stax-addons-for-elementor' ),
 							'icon'  => 'eicon-text-align-right',
 						],
 					],

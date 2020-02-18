@@ -28,7 +28,7 @@ class Templates extends Base {
 	public function panel_content() {
 		?>
         <div class="ste_box">
-            <h2 class="ste_box_title"><?php _e( 'Templates', 'stax-elementor-kit' ); ?></h2>
+            <h2 class="ste_box_title"><?php _e( 'Templates', 'stax-addons-for-elementor' ); ?></h2>
             <div class="ste-p-4">
                 templates
             </div>
