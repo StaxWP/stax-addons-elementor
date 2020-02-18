@@ -22,7 +22,7 @@ class Component extends Base {
 	}
 
 	public function get_title() {
-		return __( 'Heading', 'stax-elementor-kit' );
+		return __( 'Heading (Stax)', 'stax-elementor-kit' );
 	}
 
 	public function get_icon() {
@@ -325,6 +325,13 @@ class Component extends Base {
 		);
 
 		$this->add_group_control(
+			Group_Control_Typography::get_type(), [
+				'name'     => 'title_typography',
+				'selector' => '{{WRAPPER}} .stx-title-wrapper .stx-title',
+			]
+		);
+
+		$this->add_group_control(
 			Group_Control_Text_Shadow::get_type(),
 			[
 				'name'     => 'title_shadow',
@@ -341,13 +348,6 @@ class Component extends Base {
 				'selectors'  => [
 					'{{WRAPPER}} .stx-title-wrapper .stx-title' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
-			]
-		);
-
-		$this->add_group_control(
-			Group_Control_Typography::get_type(), [
-				'name'     => 'title_typography',
-				'selector' => '{{WRAPPER}} .stx-title-wrapper .stx-title',
 			]
 		);
 

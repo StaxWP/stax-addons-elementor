@@ -84,6 +84,26 @@ class Component extends Base {
 		);
 
 		$this->add_control(
+			'trigger',
+			[
+				'label'        => __( 'Dropdown Trigger', 'stax-elementor-kit' ),
+				'type'         => Controls_Manager::CHOOSE,
+				'options'      => [
+					'hover'    => [
+						'title' => __( 'Hover', 'stax-elementor-kit' ),
+						'icon'  => 'eicon-drag-n-drop',
+					],
+					'click'  => [
+						'title' => __( 'Click', 'stax-elementor-kit' ),
+						'icon'  => 'eicon-click',
+					]
+				],
+				'prefix_class' => 'stx-trigger-',
+				'default'      => 'hover',
+			]
+		);
+
+		$this->add_control(
 			'size',
 			[
 				'label'          => __( 'Size', 'elementor' ),
@@ -106,10 +126,6 @@ class Component extends Base {
 				'label'       => __( 'Icon', 'stax-elementor-kit' ),
 				'type'        => Controls_Manager::ICONS,
 				'label_block' => true,
-				'default'     => [
-					'value'   => 'fas fa-chevron-down',
-					'library' => 'solid'
-				]
 			]
 		);
 
@@ -118,11 +134,11 @@ class Component extends Base {
 			[
 				'label'     => __( 'Icon Position', 'stax-elementor-kit' ),
 				'type'      => Controls_Manager::SELECT,
-				'default'   => 'right',
 				'options'   => [
 					'left'  => __( 'Before', 'stax-elementor-kit' ),
 					'right' => __( 'After', 'stax-elementor-kit' ),
 				],
+				'default'   => 'right',
 				'condition' => [
 					'selected_icon[value]!' => '',
 				],
@@ -372,6 +388,7 @@ class Component extends Base {
 				],
 				'selectors' => [
 					'{{WRAPPER}} .stx-dropdown-content ul'            => 'margin-left: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .stx-dropdown-content ul:first-child' => 'margin-left: 0;',
 					'{{WRAPPER}} .stx-dropdown-content ul:last-child' => 'margin-right: 0;',
 				],
 			]

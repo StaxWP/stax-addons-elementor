@@ -1,8 +1,8 @@
-=== Stax Kit - Elementor  ===
+=== Stax - Elementor Kit ===
 Contributors: seventhqueen, codezz, geowrge
 
 Tags: elementor, elementor addons, elementor enhancements, elementor widgets, light addons
-Requires at least: 3.0
+Requires at least: 4.0
 Requires PHP: 5.6
 Tested up to: 5.3.2
 Stable tag: 1.0.0
@@ -47,6 +47,6 @@ When editing a page with Elementor you will see the New elements added at the en
 * Initial release
 
 = Be a contributor =
-If you want to contribute, go to our [GitHub Repository](https://github.com/seventhqueen/addons-kit-elementor-stax).
+If you want to contribute, go to our [GitHub Repository](https://github.com/seventhqueen/stax-elementor-kit).
 
-You can also add a new language via [translate.wordpress.org](https://translate.wordpress.org/projects/wp-plugins/addons-kit-elementor-stax).
+You can also add a new language via [translate.wordpress.org](https://translate.wordpress.org/projects/wp-plugins/stax-elementor-kit).

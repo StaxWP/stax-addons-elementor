@@ -31,5 +31,14 @@ define( 'STAX_EL_ENH_PATH', STAX_EL_PATH . 'enhancements/' );
 define( 'STAX_EL_WIDGET_URL', STAX_EL_URL . 'widgets/' );
 define( 'STAX_EL_ASSETS_URL', STAX_EL_URL . 'assets/' );
 
+/*
+ * Localization
+ */
+function stax_elementor_load_plugin_textdomain() {
+	load_plugin_textdomain( 'stax-elementor-kit', false, basename( __DIR__ ) . '/languages/' );
+}
+
+add_action( 'plugins_loaded', 'stax_elementor_load_plugin_textdomain' );
+
 // Init plugin
 require_once STAX_EL_CORE_PATH . 'Plugin.php';

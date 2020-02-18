@@ -22,7 +22,7 @@ class Component extends Base {
 	}
 
 	public function get_title() {
-		return __( 'Button', 'stax-elementor-kit' );
+		return __( 'Button (Stax)', 'stax-elementor-kit' );
 	}
 
 	public function get_icon() {
