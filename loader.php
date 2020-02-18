@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Stax Addons for Elementor
- * Description:
+ * Description: Premium quality widgets for Elementor. Enhance your site building experience with Stax Addons for Elementor
  * Plugin URI: https://staxbuilder.com
  * Author: SeventhQueen
  * Version: 1.0.0
@@ -17,9 +17,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 define( 'STAX_EL_VERSION', '1.0.0' );
-
-// DEV Mode
-define( 'STAX_EL_DEV', true );
 
 define( 'STAX_EL_FILE', __FILE__ );
 define( 'STAX_EL_PLUGIN_BASE', plugin_basename( STAX_EL_FILE ) );

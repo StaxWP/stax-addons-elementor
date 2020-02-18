@@ -8,7 +8,7 @@ Tested up to: 5.3.2
 Stable tag: 1.0.0
 License: GLPv2 or later
 
-Premium quality addons for Elementor. Enhance your site building experience with addons
+Premium quality widgets for Elementor. Enhance your site building experience with Stax Addons for Elementor
 
 == Description ==
 Addons Kit for Elementor is a very fast and lightweight plugin that adds new widgets and enhancements to existing Elementor.
