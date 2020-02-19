@@ -9,8 +9,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Border;
 use Elementor\Group_Control_Box_Shadow;
-use Elementor\Group_Control_Text_Shadow;
-use Elementor\Group_Control_Typography;
 use Elementor\Icons_Manager;
 
 use StaxAddons\Widgets\Base;
@@ -283,7 +281,7 @@ class Component extends Base {
 	}
 
 	protected function render() {
-		$this->enqueue_resources();
+		parent::render();
 
 		$settings = $this->get_settings_for_display();
 

@@ -32,12 +32,7 @@ class Component extends Base {
 	protected function render() {
 		$this->enqueue_resources();
 
-		$settings = $this->get_settings();
-
-
-	}
-
-	protected function _content_template() {
+		$settings = $this->get_settings_for_display();
 	}
 
 }

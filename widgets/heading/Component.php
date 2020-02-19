@@ -620,7 +620,7 @@ class Component extends Base {
 	}
 
 	protected function render() {
-		$this->enqueue_resources();
+		parent::render();
 
 		$settings = $this->get_settings_for_display();
 
@@ -697,9 +697,6 @@ class Component extends Base {
 		if ( $settings['subtitle_position'] === $position && ! empty( $settings['subtitle'] ) && $settings['subtitle_show'] === 'yes' ) {
 			echo '<' . $settings['subtitle_tag'] . ' class="stx-subtitle">' . esc_html( $settings['subtitle'] ) . '</' . $settings['subtitle_tag'] . '>';
 		}
-	}
-
-	protected function _content_template() {
 	}
 
 }

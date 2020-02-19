@@ -70,7 +70,7 @@
     width: 100%; }
 
 .stx-trigger-hover .stx-dropdown-wrapper:hover .stx-dropdown-content {
-  display: block !important; }
+  display: flex !important; }
 
 .elementor-element-editable .stx-dropdown-wrapper .stx-dropdown-content {
-  display: inline-block !important; }
+  display: flex !important; }

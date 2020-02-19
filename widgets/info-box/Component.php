@@ -30,14 +30,8 @@ class Component extends Base {
 	}
 
 	protected function render() {
-		$this->enqueue_resources();
-
-		$settings = $this->get_settings();
-
-		echo 'qweqe';
-	}
-
-	protected function _content_template() {
+		parent::render();
+		$settings = $this->get_settings_for_display();
 	}
 
 }

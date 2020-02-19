@@ -352,7 +352,7 @@ class Component extends Base {
 	}
 
 	protected function render() {
-		$this->enqueue_resources();
+		parent::render();
 
 		$settings = $this->get_settings_for_display();
 
@@ -398,9 +398,6 @@ class Component extends Base {
         </div>
 
 		<?php
-	}
-
-	protected function _content_template() {
 	}
 
 }

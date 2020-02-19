@@ -19,19 +19,24 @@ abstract class Base extends \Elementor\Widget_Base {
 	 *
 	 * @param array $data
 	 * @param null $args
+	 * @param bool $resources
 	 *
 	 * @throws \Exception
 	 */
-	public function __construct( $data = [], $args = null ) {
+	public function __construct( $data = [], $args = null, $resources = true ) {
 		parent::__construct( $data, $args );
 
-		$this->register_widget_resources();
+		if ( $resources ) {
+			$this->register_widget_resources();
+		}
 	}
 
 	/**
 	 * Register widget resources (CSS/JS)
+	 *
+	 * @param array $dependencies
 	 */
-	public function register_widget_resources() {
+	public function register_widget_resources( $dependencies = [] ) {
 		foreach ( StaxWidgets::instance()->get_widgets( true ) as $folder => $widget ) {
 			if ( $widget['slug'] === $this->get_name() ) {
 				$suffix = '.min';
@@ -44,26 +49,51 @@ abstract class Base extends \Elementor\Widget_Base {
 				$widget_style  = STAX_EL_WIDGET_PATH . $folder . '/component' . $suffix . '.css';
 
 				if ( file_exists( $widget_script ) ) {
+					$js_dep = [ 'jquery' ];
+
+					if ( isset( $dependencies['js'] ) && is_array( $dependencies['js'] ) ) {
+						$js_dep = $dependencies['js'];
+					}
+
 					wp_register_script(
 						$this->get_widget_script_handle(),
 						STAX_EL_WIDGET_URL . $folder . '/component' . $suffix . '.js',
-						[ 'jquery' ],
+						$js_dep,
 						STAX_EL_VERSION,
 						true
 					);
 				}
 
 				if ( file_exists( $widget_style ) ) {
+					$css_dep = [];
+
+					if ( isset( $dependencies['css'] ) && is_array( $dependencies['css'] ) ) {
+						$css_dep = $dependencies['css'];
+					}
+
 					wp_register_style(
 						$this->get_widget_style_handle(),
 						STAX_EL_WIDGET_URL . $folder . '/component' . $suffix . '.css',
-						[],
+						$css_dep,
 						STAX_EL_VERSION,
 						'all'
 					);
 				}
 			}
 		}
+	}
+
+	/**
+	 * Render content
+	 */
+	protected function render() {
+		$this->enqueue_resources();
+	}
+
+	/**
+	 * Content template
+	 */
+	protected function _content_template() {
 	}
 
 	/**

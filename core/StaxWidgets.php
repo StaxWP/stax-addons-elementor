@@ -92,7 +92,13 @@ class StaxWidgets {
 //			'name'  => 'Separator',
 //			'slug'  => 'stax-el-separator'
 //		];
-//
+
+		$widgets['slider'] = [
+			'scope' => 'Slider',
+			'name'  => 'Slider',
+			'slug'  => 'stax-el-slider'
+		];
+
 //		$widgets['testimonial'] = [
 //			'scope' => 'Testimonial',
 //			'name'  => 'Testimonial',

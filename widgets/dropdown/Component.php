@@ -601,9 +601,9 @@ class Component extends Base {
 	}
 
 	protected function render() {
-		$this->enqueue_resources();
+		parent::render();
 
-		$settings = $this->get_settings();
+		$settings = $this->get_settings_for_display();
 
 		$this->add_render_attribute( 'icon', 'class', 'stx-btn-icon' );
 
@@ -670,9 +670,6 @@ class Component extends Base {
         </div>
 
 		<?php
-	}
-
-	protected function _content_template() {
 	}
 
 }
