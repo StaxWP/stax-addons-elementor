@@ -43,9 +43,11 @@ class Plugin {
 		require_once STAX_EL_CORE_PATH . '/admin/Settings.php';
 
 		// Enhancements
-
 		require_once STAX_EL_ENH_PATH . '/Accordion.php';
 		require_once STAX_EL_ENH_PATH . '/Counter.php';
+
+		// Extra
+		require_once STAX_EL_EXTRA_PATH . '/Rotate.php';
 	}
 
 	/**
