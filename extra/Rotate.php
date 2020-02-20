@@ -47,11 +47,11 @@ class Rotate {
 					'type'    => Controls_Manager::SELECT,
 					'default' => 'center',
 					'options' => [
-						'center'       => __( 'Center', 'plugin-domain' ),
-						'top-left'     => __( 'Top Left', 'plugin-domain' ),
-						'top-right'    => __( 'Top Right', 'plugin-domain' ),
-						'bottom-right' => __( 'Bottom Right', 'plugin-domain' ),
-						'bottom-left'  => __( 'Bottom Left', 'plugin-domain' ),
+						'center'       => __( 'Center', 'stax-addons-for-elementor' ),
+						'top-left'     => __( 'Top Left', 'stax-addons-for-elementor' ),
+						'top-right'    => __( 'Top Right', 'stax-addons-for-elementor' ),
+						'bottom-right' => __( 'Bottom Right', 'stax-addons-for-elementor' ),
+						'bottom-left'  => __( 'Bottom Left', 'stax-addons-for-elementor' ),
 					],
 				]
 			);
@@ -59,7 +59,7 @@ class Rotate {
 			$element->add_control(
 				'reference_center',
 				[
-					'label'     => __( 'Center', 'plugin-domain' ),
+					'label'     => __( 'Center', 'stax-addons-for-elementor' ),
 					'type'      => Controls_Manager::HIDDEN,
 					'default'   => '1',
 					'selectors' => [
@@ -74,7 +74,7 @@ class Rotate {
 			$element->add_control(
 				'reference_top_left',
 				[
-					'label'     => __( 'Top Left', 'plugin-domain' ),
+					'label'     => __( 'Top Left', 'stax-addons-for-elementor' ),
 					'type'      => Controls_Manager::HIDDEN,
 					'default'   => '1',
 					'selectors' => [
@@ -89,7 +89,7 @@ class Rotate {
 			$element->add_control(
 				'reference_top_right',
 				[
-					'label'     => __( 'Top Right', 'plugin-domain' ),
+					'label'     => __( 'Top Right', 'stax-addons-for-elementor' ),
 					'type'      => Controls_Manager::HIDDEN,
 					'default'   => '1',
 					'selectors' => [
@@ -104,7 +104,7 @@ class Rotate {
 			$element->add_control(
 				'reference_bottom_right',
 				[
-					'label'     => __( 'Bottom Right', 'plugin-domain' ),
+					'label'     => __( 'Bottom Right', 'stax-addons-for-elementor' ),
 					'type'      => Controls_Manager::HIDDEN,
 					'default'   => '1',
 					'selectors' => [
@@ -119,7 +119,7 @@ class Rotate {
 			$element->add_control(
 				'reference_bottom_left',
 				[
-					'label'     => __( 'Bottom Left', 'plugin-domain' ),
+					'label'     => __( 'Bottom Left', 'stax-addons-for-elementor' ),
 					'type'      => Controls_Manager::HIDDEN,
 					'default'   => '1',
 					'selectors' => [

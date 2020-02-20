@@ -77,6 +77,40 @@ class Component extends Base {
 			]
 		);
 
+		$this->add_control(
+			'slider_base_style', [
+				'label'     => __( 'Base Style', 'stax-addons-for-elementor' ),
+				'type'      => Controls_Manager::HIDDEN,
+				'default'   => '1',
+				'selectors' => [
+					'{{WRAPPER}} .swiper-pagination' => 'display: block !important;'
+				]
+			]
+		);
+
+		$this->add_control(
+			'nav_arrows',
+			[
+				'label'     => __( 'Nav Arrows', 'stax-addons-for-elementor' ),
+				'type'      => Controls_Manager::SWITCHER,
+				'label_on'  => __( 'Show', 'stax-addons-for-elementor' ),
+				'label_off' => __( 'Hide', 'stax-addons-for-elementor' ),
+				'default'   => 'yes',
+			]
+		);
+
+
+		$this->add_control(
+			'nav_pagination',
+			[
+				'label'     => __( 'Pagination', 'stax-addons-for-elementor' ),
+				'type'      => Controls_Manager::SWITCHER,
+				'label_on'  => __( 'Show', 'stax-addons-for-elementor' ),
+				'label_off' => __( 'Hide', 'stax-addons-for-elementor' ),
+				'default'   => 'yes',
+			]
+		);
+
 		$repeater = new Repeater();
 
 		$repeater->start_controls_tabs( 'slides_repeater' );
@@ -454,10 +488,14 @@ class Component extends Base {
                     </div>
 				<?php endforeach; ?>
             </div>
-            <div class="swiper-pagination"></div>
+			<?php if ( $settings['nav_pagination'] ) : ?>
+                <div class="swiper-pagination"></div>
+			<?php endif; ?>
 
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+			<?php if ( $settings['nav_arrows'] ) : ?>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+			<?php endif; ?>
         </div>
         <style>
 
