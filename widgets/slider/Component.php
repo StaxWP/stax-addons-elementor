@@ -89,6 +89,32 @@ class Component extends Base {
 		);
 
 		$this->add_control(
+			'autoplay',
+			[
+				'label'     => __( 'Autoplay', 'stax-addons-for-elementor' ),
+				'type'      => Controls_Manager::SWITCHER,
+				'label_on'  => __( 'Yes', 'stax-addons-for-elementor' ),
+				'label_off' => __( 'No', 'stax-addons-for-elementor' ),
+				'default'   => '',
+			]
+		);
+
+		$this->add_control(
+			'autoplay_speed',
+			[
+				'label'     => __( 'Autoplay Speed (ms)', 'stax-addons-for-elementor' ),
+				'type'      => Controls_Manager::NUMBER,
+				'min'       => 0,
+				'max'       => 100000,
+				'step'      => 10,
+				'default'   => 5000,
+				'condition' => [
+					'autoplay' => 'yes'
+				]
+			]
+		);
+
+		$this->add_control(
 			'nav_arrows',
 			[
 				'label'     => __( 'Nav Arrows', 'stax-addons-for-elementor' ),
@@ -98,7 +124,6 @@ class Component extends Base {
 				'default'   => 'yes',
 			]
 		);
-
 
 		$this->add_control(
 			'nav_pagination',
@@ -469,8 +494,14 @@ class Component extends Base {
 			return;
 		}
 
+		$autoplay = '';
+
+		if ( $settings['autoplay'] === 'yes' ) {
+			$autoplay = 'data-autoplay="true" data-autoplay-speed="' . $settings['autoplay_speed'] . '"';
+		}
+
 		?>
-        <div class="swiper-container">
+        <div class="swiper-container" <?php echo $autoplay; ?>>
             <div class="swiper-wrapper">
 				<?php foreach ( $settings['list'] as $item ): ?>
                     <div class="swiper-slide elementor-repeater-item-<?php echo $item['_id']; ?>">

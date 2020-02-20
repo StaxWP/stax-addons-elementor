@@ -11,7 +11,9 @@ var StaxSlider = StaxSlider || {};
         },
 
         initSlider: function () {
-            var mySwiper = new Swiper('.swiper-container', {
+            var container = $('.swiper-container');
+
+            var data = {
                 loop: true,
                 pagination: {
                     el: '.swiper-pagination',
@@ -21,7 +23,15 @@ var StaxSlider = StaxSlider || {};
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
                 },
-            });
+            };
+
+            if (container.data('autoplay')) {
+                data.autoplay = {
+                    delay: container.data('autoplay-speed')
+                };
+            }
+
+            var mySwiper = new Swiper('.swiper-container', data);
         }
     };
 

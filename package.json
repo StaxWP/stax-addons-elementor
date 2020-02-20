@@ -6,7 +6,8 @@
   "scripts": {
     "build-tw": "postcss assets/scss/admin.scss -o assets/css/admin.css",
     "watch-scss": "gulp watch:styles",
-    "build-scss": "gulp build:styles"
+    "build-scss": "gulp build:styles",
+    "build-js": "gulp build:scripts"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
     "gulp-notify": "^3.2.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
     "path": "^0.12.7",
     "postcss": "^7.0.26",
     "postcss-cli": "^7.1.0",
