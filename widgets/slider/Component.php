@@ -8,6 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Background;
+use Elementor\Group_Control_Border;
 use Elementor\Group_Control_Text_Shadow;
 use Elementor\Group_Control_Typography;
 use Elementor\Repeater;
@@ -193,6 +194,30 @@ class Component extends Base {
 			]
 		);
 
+		$repeater->add_control(
+			'list_btn_text', [
+				'label'       => __( 'Button Text', 'stax-addons-for-elementor' ),
+				'type'        => Controls_Manager::TEXT,
+				'default'     => __( 'Click me', 'stax-addons-for-elementor' ),
+				'label_block' => true,
+			]
+		);
+
+		$repeater->add_control(
+			'list_btn_link',
+			[
+				'label'         => __( 'Button Link', 'stax-addons-for-elementor' ),
+				'type'          => Controls_Manager::URL,
+				'placeholder'   => __( 'https://your-link.com', 'stax-addons-for-elementor' ),
+				'show_external' => true,
+				'default'       => [
+					'url'         => '',
+					'is_external' => false,
+					'nofollow'    => false,
+				],
+			]
+		);
+
 		$repeater->end_controls_tab();
 
 		$repeater->start_controls_tab( 'style', [ 'label' => __( 'Style', 'stax-addons-for-elementor' ) ] );
@@ -309,6 +334,72 @@ class Component extends Base {
 			]
 		);
 
+		$repeater->add_control(
+			'list_btn_color',
+			[
+				'label'     => __( 'Button Color', 'stax-addons-for-elementor' ),
+				'type'      => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} {{CURRENT_ITEM}} .slide-btn a' => 'color: {{VALUE}}'
+				],
+			]
+		);
+
+		$repeater->add_control(
+			'list_btn_hover_color',
+			[
+				'label'     => __( 'Button Hover Color', 'stax-addons-for-elementor' ),
+				'type'      => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} {{CURRENT_ITEM}} .slide-btn a:hover' => 'color: {{VALUE}}'
+				],
+			]
+		);
+
+		$repeater->add_control(
+			'list_btn_bg_color',
+			[
+				'label'     => __( 'Button Background', 'stax-addons-for-elementor' ),
+				'type'      => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} {{CURRENT_ITEM}} .slide-btn a' => 'background-color: {{VALUE}}'
+				],
+			]
+		);
+
+		$repeater->add_control(
+			'list_btn_hover_bg_color',
+			[
+				'label'     => __( 'Button Hover Bg', 'stax-addons-for-elementor' ),
+				'type'      => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} {{CURRENT_ITEM}} .slide-btn a:hover' => 'background-color: {{VALUE}}'
+				],
+			]
+		);
+
+		$repeater->add_control(
+			'list_btn_border_color',
+			[
+				'label'     => __( 'Button Border Color', 'stax-addons-for-elementor' ),
+				'type'      => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} {{CURRENT_ITEM}} .slide-btn a' => 'border-color: {{VALUE}}'
+				],
+			]
+		);
+
+		$repeater->add_control(
+			'list_btn_hover_border_color',
+			[
+				'label'     => __( 'Button Border Hover Color', 'stax-addons-for-elementor' ),
+				'type'      => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} {{CURRENT_ITEM}} .slide-btn a:hover' => 'border-color: {{VALUE}}'
+				],
+			]
+		);
+
 		$repeater->end_controls_tab();
 
 		$repeater->end_controls_tabs();
@@ -324,6 +415,7 @@ class Component extends Base {
 						'list_title'       => __( 'Demo title', 'stax-addons-for-elementor' ),
 						'list_sub_title'   => __( 'Demo sub-title', 'stax-addons-for-elementor' ),
 						'list_description' => __( 'Demo description', 'stax-addons-for-elementor' ),
+						'list_btn_text'    => __( 'Click me', 'stax-addons-for-elementor' ),
 					],
 				],
 				'title_field' => '{{{ list_title }}}',
@@ -483,6 +575,70 @@ class Component extends Base {
 
 		$this->end_controls_section();
 
+		$this->start_controls_section(
+			'section_btn_style',
+			[
+				'label' => __( 'Button', 'stax-addons-for-elementor' ),
+				'tab'   => Controls_Manager::TAB_STYLE,
+			]
+		);
+
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'label'    => __( 'Typography', 'stax-addons-for-elementor' ),
+				'name'     => 'btn_typography',
+				'selector' => '{{WRAPPER}} .slide-btn a',
+			]
+		);
+
+		$this->add_group_control(
+			Group_Control_Border::get_type(),
+			[
+				'name'      => 'btn_border',
+				'selector'  => '{{WRAPPER}} .slide-btn a',
+				'separator' => 'before',
+			]
+		);
+
+		$this->add_control(
+			'btn_border_radius',
+			[
+				'label'      => __( 'Border Radius', 'stax-addons-for-elementor' ),
+				'type'       => Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', '%' ],
+				'selectors'  => [
+					'{{WRAPPER}} .slide-btn a' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'btn_margin',
+			[
+				'label'      => __( 'Margin', 'stax-addons-for-elementor' ),
+				'type'       => Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', 'em', '%' ],
+				'selectors'  => [
+					'{{WRAPPER}} .slide-btn a' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'btn_padding',
+			[
+				'label'      => __( 'Padding', 'stax-addons-for-elementor' ),
+				'type'       => Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', 'em', '%' ],
+				'selectors'  => [
+					'{{WRAPPER}} .slide-btn a' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->end_controls_section();
+
 	}
 
 	protected function render() {
@@ -504,6 +660,12 @@ class Component extends Base {
         <div class="swiper-container" <?php echo $autoplay; ?>>
             <div class="swiper-wrapper">
 				<?php foreach ( $settings['list'] as $item ): ?>
+					<?php
+
+					$target   = $item['list_btn_link']['is_external'] ? ' target="_blank"' : '';
+					$nofollow = $item['list_btn_link']['nofollow'] ? ' rel="nofollow"' : '';
+
+					?>
                     <div class="swiper-slide elementor-repeater-item-<?php echo $item['_id']; ?>">
 						<?php if ( $item['list_title'] ) : ?>
                             <h3><?php echo $item['list_title']; ?></h3>
@@ -515,6 +677,15 @@ class Component extends Base {
 
 						<?php if ( $item['list_description'] ) : ?>
                             <div class="slide-description"><?php echo $item['list_description']; ?></div>
+						<?php endif; ?>
+
+						<?php if ( $item['list_btn_text'] ): ?>
+                            <div class="slide-btn">
+                                <a href="<?php echo $item['list_btn_link']['url']; ?>" <?php echo $target;
+								echo $nofollow; ?>>
+									<?php echo $item['list_btn_text']; ?>
+                                </a>
+                            </div>
 						<?php endif; ?>
                     </div>
 				<?php endforeach; ?>

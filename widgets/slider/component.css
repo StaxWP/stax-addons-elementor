@@ -5,3 +5,5 @@
     display: flex;
     justify-content: center;
     flex-direction: column; }
+    .swiper-container .swiper-slide a {
+      display: inline-block; }
