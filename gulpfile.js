@@ -3,7 +3,8 @@ const path = require('path'),
     sass = require('gulp-sass'),
     rename = require('gulp-rename'),
     uglify = require('gulp-uglify'),
-    csso = require('gulp-csso');
+    csso = require('gulp-csso'),
+    babel = require('gulp-babel');
 
 gulp.task('build:styles', () => {
     return gulp.src('./widgets/**/*.scss')
@@ -21,6 +22,9 @@ gulp.task('build:styles', () => {
 gulp.task('build:scripts', () => {
     return gulp.src(['./widgets/**/*.js', '!./widgets/**/*.min.js'])
         .pipe(rename({suffix: '.min'}))
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
         .pipe(uglify())
         .pipe(gulp.dest(path.join(__dirname, 'widgets')));
 });
