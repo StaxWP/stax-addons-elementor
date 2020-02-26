@@ -45,6 +45,9 @@ When editing a page with Elementor you will see the New elements added at the en
 
 == Changelog ==
 
+ 1.1.0 =
+* Added Read more(Expand text) widget
+
 = 1.0.0 =
 * Initial release
 
