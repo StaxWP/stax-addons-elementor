@@ -195,16 +195,20 @@ class StaxWidgets {
 	 * Enqueue Elementor Editor CSS
 	 */
 	public function editor_css() {
-		wp_enqueue_style(
-			'stax-elementor-panel-style',
-			STAX_EL_ASSETS_URL . 'css/editor.css',
-			null,
-			STAX_EL_VERSION
-		);
+		$this->enqueue_icons();
 
 		wp_enqueue_style(
 			'stax-elementor-panel-label-style',
 			STAX_EL_ASSETS_URL . 'css/label.css',
+			null,
+			STAX_EL_VERSION
+		);
+	}
+
+	public function enqueue_icons() {
+		wp_enqueue_style(
+			'stax-elementor-panel-style',
+			STAX_EL_ASSETS_URL . 'css/editor.css',
 			null,
 			STAX_EL_VERSION
 		);

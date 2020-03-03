@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'sq-icons';
-    src: url('../fonts/sq-icons.eot?5a3e62');
-    src: url('../fonts/sq-icons.eot?5a3e62#iefix') format('embedded-opentype'),
-    url('../fonts/sq-icons.ttf?5a3e62') format('truetype'),
-    url('../fonts/sq-icons.woff?5a3e62') format('woff'),
-    url('../fonts/sq-icons.svg?5a3e62#sq-icons') format('svg');
+    src: url('../fonts/sq-icons.eot?64qbn8');
+    src: url('../fonts/sq-icons.eot?64qbn8#iefix') format('embedded-opentype'),
+    url('../fonts/sq-icons.ttf?64qbn8') format('truetype'),
+    url('../fonts/sq-icons.woff?64qbn8') format('woff'),
+    url('../fonts/sq-icons.svg?64qbn8#sq-icons') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -23,6 +23,18 @@
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.sq-icon-bp_buddypress:before {
+    content: "\e90c";
+}
+
+.sq-icon-bp_visibility:before {
+    content: "\e90d";
+}
+
+.sq-icon-bp_stax:before {
+    content: "\e90e";
 }
 
 .sq-icon-bp_image:before {
