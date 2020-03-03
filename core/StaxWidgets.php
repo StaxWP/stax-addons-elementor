@@ -75,6 +75,12 @@ class StaxWidgets {
 			'slug'  => 'stax-el-heading'
 		];
 
+		$widgets['read-more'] = [
+			'scope' => 'ReadMore',
+			'name'  => 'Read More',
+			'slug'  => 'stax-el-read-more'
+		];
+
 //		$widgets['info-box'] = [
 //			'scope' => 'InfoBox',
 //			'name'  => 'Info Box',
@@ -101,7 +107,6 @@ class StaxWidgets {
 
 //		$widgets['testimonial'] = [
 //			'scope' => 'Testimonial',
-//			'name'  => 'Testimonial',
 //			'slug'  => 'stax-el-testimonial'
 //		];
 

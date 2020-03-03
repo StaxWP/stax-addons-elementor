@@ -83,11 +83,12 @@ abstract class Base extends \Elementor\Widget_Base {
 		}
 	}
 
-	/**
-	 * Render content
-	 */
-	protected function render() {
-		$this->enqueue_resources();
+	public function get_script_depends() {
+		return [ $this->get_widget_script_handle() ];
+	}
+
+	public function get_style_depends() {
+		return [ $this->get_widget_style_handle() ];
 	}
 
 	/**

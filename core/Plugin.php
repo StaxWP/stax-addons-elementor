@@ -45,6 +45,7 @@ class Plugin {
 		// Enhancements
 		require_once STAX_EL_ENH_PATH . '/Accordion.php';
 		require_once STAX_EL_ENH_PATH . '/Counter.php';
+		require_once STAX_EL_ENH_PATH . '/TextEditor.php';
 
 		// Extra
 		require_once STAX_EL_EXTRA_PATH . '/Rotate.php';

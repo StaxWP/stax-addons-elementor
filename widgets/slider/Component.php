@@ -642,7 +642,6 @@ class Component extends Base {
 	}
 
 	protected function render() {
-		parent::render();
 
 		$settings = $this->get_settings_for_display();
 

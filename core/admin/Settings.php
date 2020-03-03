@@ -190,7 +190,7 @@ class Settings {
 		}
 
 		if ( 'stax-elementor-support' === $_GET['page'] ) {
-			wp_redirect( 'https://seventhqueen.com' );
+			wp_redirect( 'https://my.seventhqueen.com' );
 			die;
 		}
 	}
