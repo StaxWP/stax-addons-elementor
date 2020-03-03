@@ -1,18 +1,18 @@
 @font-face {
-    font-family: 'stax-el-icons';
-    src: url('../fonts/stax-el-icons.eot?uohgmb');
-    src: url('../fonts/stax-el-icons.eot?uohgmb#iefix') format('embedded-opentype'),
-    url('../fonts/stax-el-icons.ttf?uohgmb') format('truetype'),
-    url('../fonts/stax-el-icons.woff?uohgmb') format('woff'),
-    url('../fonts/stax-el-icons.svg?uohgmb#stax-el-icons') format('svg');
+    font-family: 'sq-icons';
+    src: url('../fonts/sq-icons.eot?5a3e62');
+    src: url('../fonts/sq-icons.eot?5a3e62#iefix') format('embedded-opentype'),
+    url('../fonts/sq-icons.ttf?5a3e62') format('truetype'),
+    url('../fonts/sq-icons.woff?5a3e62') format('woff'),
+    url('../fonts/sq-icons.svg?5a3e62#sq-icons') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
 }
 
-[class^="stax-icon-"], [class*=" stax-icon-"] {
+[class^="sq-icon-"], [class*=" sq-icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'stax-el-icons' !important;
+    font-family: 'sq-icons' !important;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -25,22 +25,90 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.stax-icon-breadcrumb:before {
+.sq-icon-bp_image:before {
+    content: "\e90a";
+}
+
+.sq-icon-bp_slide-down-more:before {
+    content: "\e91b";
+}
+
+.sq-icon-bp_groups:before {
+    content: "\e908";
+}
+
+.sq-icon-bp_chat:before {
+    content: "\e907";
+}
+
+.sq-icon-bp_user:before {
+    content: "\e909";
+}
+
+.sq-icon-bp_actions:before {
+    content: "\e900";
+}
+
+.sq-icon-bp_avatar:before {
+    content: "\e906";
+}
+
+.sq-icon-bp_filter:before {
+    content: "\e90b";
+}
+
+.sq-icon-bp_info:before {
+    content: "\e910";
+}
+
+.sq-icon-bp_listing:before {
+    content: "\e911";
+}
+
+.sq-icon-bp_members:before {
+    content: "\e912";
+}
+
+.sq-icon-bp_menu:before {
+    content: "\e913";
+}
+
+.sq-icon-bp_name:before {
+    content: "\e914";
+}
+
+.sq-icon-bp_section:before {
+    content: "\e915";
+}
+
+.sq-icon-bp_settings:before {
+    content: "\e916";
+}
+
+.sq-icon-bp_time:before {
+    content: "\e917";
+}
+
+.sq-icon-bp_tittle:before {
+    content: "\e918";
+}
+
+.sq-icon-breadcrumb:before {
     content: "\e905";
 }
 
-.stax-icon-button:before {
+.sq-icon-button:before {
     content: "\e901";
 }
 
-.stax-icon-dropdown:before {
+.sq-icon-dropdown:before {
     content: "\e902";
 }
 
-.stax-icon-title:before {
+.sq-icon-title:before {
     content: "\e903";
 }
 
-.stax-icon-up:before {
+.sq-icon-up:before {
     content: "\e904";
 }

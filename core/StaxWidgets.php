@@ -196,6 +196,13 @@ class StaxWidgets {
 			null,
 			STAX_EL_VERSION
 		);
+
+		wp_enqueue_style(
+			'stax-elementor-panel-label-style',
+			STAX_EL_ASSETS_URL . 'css/label.css',
+			null,
+			STAX_EL_VERSION
+		);
 	}
 
 }
