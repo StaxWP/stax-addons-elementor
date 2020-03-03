@@ -13,6 +13,7 @@ use Elementor\Group_Control_Text_Shadow;
 use Elementor\Group_Control_Typography;
 use Elementor\Core\Schemes;
 use Elementor\Icons_Manager;
+
 use StaxAddons\Widgets\Base;
 
 class Component extends Base {
@@ -34,26 +35,15 @@ class Component extends Base {
 	}
 
 	public function get_icon() {
-		return 'eicon-expand';
+		return 'sq-icon-bp_slide-down-more sq-widget-label';
 	}
 
 	public function get_categories() {
 		return [ 'stax-elementor' ];
 	}
 
-
-	/**
-	 * Get widget keywords.
-	 *
-	 * Retrieve the list of keywords the widget belongs to.
-	 *
-	 * @return array Widget keywords.
-	 * @since 2.1.0
-	 * @access public
-	 *
-	 */
 	public function get_keywords() {
-		return [ 'text', 'editor' ];
+		return [ 'text', 'editor', 'more' ];
 	}
 
 	protected function _register_controls() {
@@ -88,34 +78,34 @@ class Component extends Base {
 
 		$this->add_control(
 			'read_more_text', [
-				'label'     => __( 'More text', 'stax-addons-for-elementor' ),
-				'type'      => Controls_Manager::WYSIWYG,
+				'label'   => __( 'More text', 'stax-addons-for-elementor' ),
+				'type'    => Controls_Manager::WYSIWYG,
 				'default' => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.', 'elementor' ),
 			]
 		);
 
 		$this->add_control(
 			'read_more_label', [
-				'label'     => __( 'More Label', 'stax-addons-for-elementor' ),
-				'type'      => Controls_Manager::TEXT,
-				'default'   => 'Read more',
+				'label'   => __( 'More Label', 'stax-addons-for-elementor' ),
+				'type'    => Controls_Manager::TEXT,
+				'default' => 'Read more',
 			]
 		);
 		$this->add_control(
 			'read_more_icon', [
-				'label'     => __( ' More icon', 'stax-addons-for-elementor' ),
-				'type'      => Controls_Manager::ICONS,
+				'label' => __( ' More icon', 'stax-addons-for-elementor' ),
+				'type'  => Controls_Manager::ICONS,
 			]
 		);
 
 		$this->add_control(
 			'read_more_icon_align',
 			[
-				'label' => __( 'Icon Position', 'elementor' ),
-				'type' => Controls_Manager::SELECT,
-				'default' => 'left',
-				'options' => [
-					'left' => __( 'Before', 'elementor' ),
+				'label'     => __( 'Icon Position', 'elementor' ),
+				'type'      => Controls_Manager::SELECT,
+				'default'   => 'left',
+				'options'   => [
+					'left'  => __( 'Before', 'elementor' ),
 					'right' => __( 'After', 'elementor' ),
 				],
 				'condition' => [
@@ -126,25 +116,25 @@ class Component extends Base {
 
 		$this->add_control(
 			'read_less_label', [
-				'label'     => __( 'Less Label', 'stax-addons-for-elementor' ),
-				'type'      => Controls_Manager::TEXT,
-				'default'   => 'Read less',
+				'label'   => __( 'Less Label', 'stax-addons-for-elementor' ),
+				'type'    => Controls_Manager::TEXT,
+				'default' => 'Read less',
 			]
 		);
 		$this->add_control(
 			'read_less_icon', [
-				'label'     => __( 'Less icon', 'stax-addons-for-elementor' ),
-				'type'      => Controls_Manager::ICONS,
+				'label' => __( 'Less icon', 'stax-addons-for-elementor' ),
+				'type'  => Controls_Manager::ICONS,
 			]
 		);
 		$this->add_control(
 			'read_less_icon_align',
 			[
-				'label' => __( 'Icon Position', 'elementor' ),
-				'type' => Controls_Manager::SELECT,
-				'default' => 'left',
-				'options' => [
-					'left' => __( 'Before', 'elementor' ),
+				'label'     => __( 'Icon Position', 'elementor' ),
+				'type'      => Controls_Manager::SELECT,
+				'default'   => 'left',
+				'options'   => [
+					'left'  => __( 'Before', 'elementor' ),
 					'right' => __( 'After', 'elementor' ),
 				],
 				'condition' => [
@@ -478,7 +468,7 @@ class Component extends Base {
 		$this->add_group_control(
 			Group_Control_Text_Shadow::get_type(),
 			[
-				'name' => 'text_shadow',
+				'name'     => 'text_shadow',
 				'selector' => '{{WRAPPER}} .stx-read-more-toggle',
 			]
 		);
@@ -495,9 +485,9 @@ class Component extends Base {
 		$this->add_control(
 			'more_text_color',
 			[
-				'label' => __( 'Text Color', 'elementor' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
+				'label'     => __( 'Text Color', 'elementor' ),
+				'type'      => Controls_Manager::COLOR,
+				'default'   => '',
 				'selectors' => [
 					'{{WRAPPER}} .stx-read-more-toggle' => 'fill: {{VALUE}}; color: {{VALUE}};',
 				],
@@ -507,10 +497,10 @@ class Component extends Base {
 		$this->add_control(
 			'background_color',
 			[
-				'label' => __( 'Background Color', 'elementor' ),
-				'type' => Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => Schemes\Color::get_type(),
+				'label'     => __( 'Background Color', 'elementor' ),
+				'type'      => Controls_Manager::COLOR,
+				'scheme'    => [
+					'type'  => Schemes\Color::get_type(),
 					'value' => Schemes\Color::COLOR_4,
 				],
 				'selectors' => [
@@ -531,10 +521,10 @@ class Component extends Base {
 		$this->add_control(
 			'hover_color',
 			[
-				'label' => __( 'Text Color', 'elementor' ),
-				'type' => Controls_Manager::COLOR,
+				'label'     => __( 'Text Color', 'elementor' ),
+				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .stx-read-more-toggle:hover, {{WRAPPER}} .stx-read-more-toggle:focus' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .stx-read-more-toggle:hover, {{WRAPPER}} .stx-read-more-toggle:focus'         => 'color: {{VALUE}};',
 					'{{WRAPPER}} .stx-read-more-toggle:hover svg, {{WRAPPER}} .stx-read-more-toggle:focus svg' => 'fill: {{VALUE}};',
 				],
 			]
@@ -543,8 +533,8 @@ class Component extends Base {
 		$this->add_control(
 			'more_background_hover_color',
 			[
-				'label' => __( 'Background Color', 'elementor' ),
-				'type' => Controls_Manager::COLOR,
+				'label'     => __( 'Background Color', 'elementor' ),
+				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .stx-read-more-toggle:hover, {{WRAPPER}} .stx-read-more-toggle:focus' => 'background-color: {{VALUE}};',
 				],
@@ -554,8 +544,8 @@ class Component extends Base {
 		$this->add_control(
 			'more_hover_border_color',
 			[
-				'label' => __( 'Border Color', 'elementor' ),
-				'type' => Controls_Manager::COLOR,
+				'label'     => __( 'Border Color', 'elementor' ),
+				'type'      => Controls_Manager::COLOR,
 				'condition' => [
 					'border_border!' => '',
 				],
@@ -572,8 +562,8 @@ class Component extends Base {
 		$this->add_group_control(
 			Group_Control_Border::get_type(),
 			[
-				'name' => 'border',
-				'selector' => '{{WRAPPER}} .stx-read-more-toggle',
+				'name'      => 'border',
+				'selector'  => '{{WRAPPER}} .stx-read-more-toggle',
 				'separator' => 'before',
 			]
 		);
@@ -581,10 +571,10 @@ class Component extends Base {
 		$this->add_control(
 			'border_radius',
 			[
-				'label' => __( 'Border Radius', 'elementor' ),
-				'type' => Controls_Manager::DIMENSIONS,
+				'label'      => __( 'Border Radius', 'elementor' ),
+				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
-				'selectors' => [
+				'selectors'  => [
 					'{{WRAPPER}} .stx-read-more-toggle' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
@@ -593,7 +583,7 @@ class Component extends Base {
 		$this->add_group_control(
 			Group_Control_Box_Shadow::get_type(),
 			[
-				'name' => 'more_box_shadow',
+				'name'     => 'more_box_shadow',
 				'selector' => '{{WRAPPER}} .stx-read-more-toggle',
 			]
 		);
@@ -601,13 +591,13 @@ class Component extends Base {
 		$this->add_responsive_control(
 			'text_padding',
 			[
-				'label' => __( 'Padding', 'elementor' ),
-				'type' => Controls_Manager::DIMENSIONS,
+				'label'      => __( 'Padding', 'elementor' ),
+				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
-				'selectors' => [
+				'selectors'  => [
 					'{{WRAPPER}} .stx-read-more-toggle' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
-				'separator' => 'before',
+				'separator'  => 'before',
 			]
 		);
 
@@ -645,8 +635,8 @@ class Component extends Base {
 		$this->add_render_attribute( 'read_more_label', 'class', [ 'stx-read-more' ] );
 		$this->add_render_attribute( 'read_less_label', 'class', [ 'stx-read-less' ] );
 
-		$this->add_render_attribute( 'read_more_icon_align', 'class', [ 'stx-icon-'. $settings['read_more_icon_align'] ] );
-		$this->add_render_attribute( 'read_less_icon_align', 'class', [ 'stx-icon-'. $settings['read_less_icon_align'] ] );
+		$this->add_render_attribute( 'read_more_icon_align', 'class', [ 'stx-icon-' . $settings['read_more_icon_align'] ] );
+		$this->add_render_attribute( 'read_less_icon_align', 'class', [ 'stx-icon-' . $settings['read_less_icon_align'] ] );
 
 
 		?>
@@ -655,7 +645,7 @@ class Component extends Base {
 				<?php echo $editor_content; ?>
             </div>
 
-	        <div <?php echo $this->get_render_attribute_string( 'read_more_text' ); ?>><?php echo $editor_more_content; ?></div>
+            <div <?php echo $this->get_render_attribute_string( 'read_more_text' ); ?>><?php echo $editor_more_content; ?></div>
 
             <div <?php echo $this->get_render_attribute_string( 'read_more_wrap' ); ?>>
                 <a <?php echo $this->get_render_attribute_string( 'read_more_toggle' ); ?>>
@@ -702,8 +692,8 @@ class Component extends Base {
 	protected function content_template() {
 		?>
         <#
-		var iconMore = elementor.helpers.renderIcon( view, settings.read_more_icon, { 'aria-hidden': true }, 'i' , 'object' );
-		var iconLess = elementor.helpers.renderIcon( view, settings.read_less_icon, { 'aria-hidden': true }, 'i' , 'object' );
+        var iconMore = elementor.helpers.renderIcon( view, settings.read_more_icon, { 'aria-hidden': true }, 'i' , 'object' );
+        var iconLess = elementor.helpers.renderIcon( view, settings.read_less_icon, { 'aria-hidden': true }, 'i' , 'object' );
 
         view.addRenderAttribute( 'editor', 'class', [ 'elementor-text-editor', 'elementor-clearfix' ] );
         view.addInlineEditingAttributes( 'editor', 'advanced' );
@@ -720,31 +710,33 @@ class Component extends Base {
 
         #>
         <div class="stax-read-more-editor">
-            <div {{{ view.getRenderAttributeString( 'editor' ) }}}> {{{ settings.editor }}}</div>
+            <div {{{ view.getRenderAttributeString(
+            'editor' ) }}}> {{{ settings.editor }}}
+        </div>
 
-	        <div {{{ view.getRenderAttributeString( 'read_more_text' ) }}}>{{{ settings.read_more_text }}}</div>
+        <div {{{ view.getRenderAttributeString( 'read_more_text' ) }}}>{{{ settings.read_more_text }}}</div>
 
-	        <div {{{ view.getRenderAttributeString( 'read_more_wrap' ) }}}>
-		        <a {{{ view.getRenderAttributeString( 'read_more_toggle' ) }}}>
-			        <span {{{ view.getRenderAttributeString( 'read_more_label' ) }}}>
-					<# if ( settings.read_more_icon ) { #>
-					<span class="stx-icon-{{ settings.read_more_icon_align }}">
+        <div {{{ view.getRenderAttributeString( 'read_more_wrap' ) }}}>
+        <a {{{ view.getRenderAttributeString( 'read_more_toggle' ) }}}>
+        <span {{{ view.getRenderAttributeString( 'read_more_label' ) }}}>
+        <# if ( settings.read_more_icon ) { #>
+        <span class="stx-icon-{{ settings.read_more_icon_align }}">
 						{{{ iconMore.value }}}
 					</span>
-					<# } #>
-			        {{{ settings.read_more_label }}}
-					</span>
+        <# } #>
+        {{{ settings.read_more_label }}}
+        </span>
 
-			        <span {{{ view.getRenderAttributeString( 'read_less_label' ) }}}>
-					<# if ( settings.read_less_icon ) { #>
-					<span class="stx-icon-{{ settings.read_less_icon_align }}">
+        <span {{{ view.getRenderAttributeString( 'read_less_label' ) }}}>
+        <# if ( settings.read_less_icon ) { #>
+        <span class="stx-icon-{{ settings.read_less_icon_align }}">
 						{{{ iconLess.value }}}
 					</span>
-					<# } #>
-					{{{ settings.read_less_label }}}
-					</span>
-		        </a>
-	        </div>
+        <# } #>
+        {{{ settings.read_less_label }}}
+        </span>
+        </a>
+        </div>
         </div>
 
 		<?php
