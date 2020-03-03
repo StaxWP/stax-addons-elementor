@@ -89,11 +89,11 @@ class Component extends Base {
 				'label'        => __( 'Dropdown Trigger', 'stax-addons-for-elementor' ),
 				'type'         => Controls_Manager::CHOOSE,
 				'options'      => [
-					'hover'    => [
+					'hover' => [
 						'title' => __( 'Hover', 'stax-addons-for-elementor' ),
 						'icon'  => 'eicon-drag-n-drop',
 					],
-					'click'  => [
+					'click' => [
 						'title' => __( 'Click', 'stax-addons-for-elementor' ),
 						'icon'  => 'eicon-click',
 					]
@@ -156,8 +156,8 @@ class Component extends Base {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .stx-btn .stx-icon-right' => 'margin-left: {{SIZE}}{{UNIT}};',
-					'{{WRAPPER}} .stx-btn .stx-icon-left'  => 'margin-right: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .stx-dropdown-wrapper .stx-btn .stx-btn-content-wrapper .stx-btn-icon.stx-icon-right' => 'margin-left: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .stx-dropdown-wrapper .stx-btn .stx-btn-content-wrapper .stx-btn-icon.stx-icon-left'  => 'margin-right: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
@@ -364,6 +364,26 @@ class Component extends Base {
 		);
 
 		$this->add_control(
+			'dropdown_min_width',
+			[
+				'label'      => __( 'Min Width', 'stax-addons-for-elementor' ),
+				'type'       => Controls_Manager::SLIDER,
+				'size_units' => [ 'px', '%' ],
+				'range'      => [
+					'%'  => [
+						'max' => 100,
+					],
+					'px' => [
+						'max' => 2000,
+					],
+				],
+				'selectors'  => [
+					'{{WRAPPER}} .stx-dropdown-wrapper .stx-dropdown-content-wrapper' => 'min-width: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_control(
 			'dropdown_columns',
 			[
 				'label'       => __( 'Columns', 'stax-addons-for-elementor' ),
@@ -387,9 +407,9 @@ class Component extends Base {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .stx-dropdown-content ul'            => 'margin-left: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .stx-dropdown-content ul'             => 'margin-left: {{SIZE}}{{UNIT}};',
 					'{{WRAPPER}} .stx-dropdown-content ul:first-child' => 'margin-left: 0;',
-					'{{WRAPPER}} .stx-dropdown-content ul:last-child' => 'margin-right: 0;',
+					'{{WRAPPER}} .stx-dropdown-content ul:last-child'  => 'margin-right: 0;',
 				],
 			]
 		);
@@ -632,39 +652,41 @@ class Component extends Base {
 		            <span class="stx-btn-text"><?php echo $settings['text']; ?></span>
 		        </span>
             </a>
-            <div class="stx-dropdown-content">
-				<?php for ( $i = 1; $i <= $settings['dropdown_columns']; $i ++ ) : ?>
-					<?php
-					$items = [];
-					foreach ( $settings['dropdown_items'] as $dropdown_item ) {
-						if ( $dropdown_item['dropdown_item_column'] === $i ) {
-							$items[] = $dropdown_item;
+            <div class="stx-dropdown-content-wrapper">
+                <div class="stx-dropdown-content">
+					<?php for ( $i = 1; $i <= $settings['dropdown_columns']; $i ++ ) : ?>
+						<?php
+						$items = [];
+						foreach ( $settings['dropdown_items'] as $dropdown_item ) {
+							if ( $dropdown_item['dropdown_item_column'] === $i ) {
+								$items[] = $dropdown_item;
+							}
 						}
-					}
-					?>
-                    <ul>
-						<?php foreach ( $items as $item ) : ?>
-							<?php
-							$link_attrs = [];
+						?>
+                        <ul>
+							<?php foreach ( $items as $item ) : ?>
+								<?php
+								$link_attrs = [];
 
-							if ( $item['dropdown_item_link']['is_external'] ) {
-								$link_attrs[] = 'target="_blank"';
-							}
+								if ( $item['dropdown_item_link']['is_external'] ) {
+									$link_attrs[] = 'target="_blank"';
+								}
 
-							if ( $item['dropdown_item_link']['nofollow'] ) {
-								$link_attrs[] = 'rel="nofollow"';
-							}
+								if ( $item['dropdown_item_link']['nofollow'] ) {
+									$link_attrs[] = 'rel="nofollow"';
+								}
 
-							$link_attrs = implode( ' ', $link_attrs );
-							?>
-                            <li>
-                                <a href="<?php echo esc_url( $item['dropdown_item_link']['url'] ); ?>" <?php echo esc_attr( $link_attrs ); ?>>
-									<?php echo $item['dropdown_item_text'] ?>
-                                </a>
-                            </li>
-						<?php endforeach; ?>
-                    </ul>
-				<?php endfor; ?>
+								$link_attrs = implode( ' ', $link_attrs );
+								?>
+                                <li>
+                                    <a href="<?php echo esc_url( $item['dropdown_item_link']['url'] ); ?>" <?php echo esc_attr( $link_attrs ); ?>>
+										<?php echo $item['dropdown_item_text'] ?>
+                                    </a>
+                                </li>
+							<?php endforeach; ?>
+                        </ul>
+					<?php endfor; ?>
+                </div>
             </div>
         </div>
 
