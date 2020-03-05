@@ -4,7 +4,7 @@
  * Description: Beautiful & Fast add-ons for Elementor. Enhance your site building experience with Stax Elementor Addons
  * Plugin URI: https://staxbuilder.com
  * Author: SeventhQueen
- * Version: 1.1.0
+ * Version: 1.2.0
  * Author URI: https://seventhqueen.com
  *
  * Text Domain: stax-addons-for-elementor
@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-define( 'STAX_EL_VERSION', '1.1.0' );
+define( 'STAX_EL_VERSION', '1.2.0' );
 define( 'STAX_EL_HOOK_PREFIX', 'stax_el_' );
 
 define( 'STAX_EL_FILE', __FILE__ );

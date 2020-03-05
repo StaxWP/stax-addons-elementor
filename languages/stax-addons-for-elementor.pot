@@ -1,0 +1,828 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Elementor Addons, Widgets and Enhancements - Stax\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-05 14:24+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.3.1; wp-5.3.2"
+
+#: widgets/read-more/Component.php:96
+msgid " More icon"
+msgstr ""
+
+#: widgets/breadcrumbs/core/Trail.php:163
+msgid "404 Not Found"
+msgstr ""
+
+#: widgets/breadcrumbs/core/Buddypress_Trail.php:47
+msgid "Activate your Account"
+msgstr ""
+
+#: widgets/breadcrumbs/Component.php:179
+msgid "Active"
+msgstr ""
+
+#: widgets/dropdown/Component.php:183 widgets/scroll-top/Component.php:122
+#: widgets/button/Component.php:177
+msgid "Add your custom id WITHOUT the Pound key. e.g: my-id"
+msgstr ""
+
+#: widgets/dropdown/Component.php:139 widgets/button/Component.php:134
+msgid "After"
+msgstr ""
+
+#: widgets/heading/Component.php:122
+msgid "After Title"
+msgstr ""
+
+#: enhancements/Counter.php:46 widgets/dropdown/Component.php:61
+#: widgets/heading/Component.php:287 widgets/button/Component.php:75
+#: widgets/breadcrumbs/Component.php:89
+msgid "Alignment"
+msgstr ""
+
+#: extra/Rotate.php:138
+msgid "Angle"
+msgstr ""
+
+#: widgets/breadcrumbs/core/Trail.php:164
+msgid "Archives"
+msgstr ""
+
+#: widgets/dropdown/Component.php:458
+msgid "Attach this item to a column number."
+msgstr ""
+
+#: widgets/slider/Component.php:95
+msgid "Autoplay"
+msgstr ""
+
+#: widgets/slider/Component.php:106
+msgid "Autoplay Speed (ms)"
+msgstr ""
+
+#: widgets/slider/Component.php:144
+msgid "Background"
+msgstr ""
+
+#: widgets/dropdown/Component.php:241 widgets/dropdown/Component.php:281
+#: widgets/dropdown/Component.php:522 widgets/scroll-top/Component.php:164
+#: widgets/scroll-top/Component.php:204 widgets/button/Component.php:235
+#: widgets/button/Component.php:275
+msgid "Background Color"
+msgstr ""
+
+#: widgets/slider/Component.php:83
+msgid "Base Style"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"Beautiful & Fast add-ons for Elementor. Enhance your site building "
+"experience with Stax Elementor Addons"
+msgstr ""
+
+#: widgets/dropdown/Component.php:138 widgets/button/Component.php:133
+msgid "Before"
+msgstr ""
+
+#: widgets/heading/Component.php:121
+msgid "Before Title"
+msgstr ""
+
+#: widgets/dropdown/Component.php:292 widgets/scroll-top/Component.php:215
+#: widgets/button/Component.php:286
+msgid "Border Color"
+msgstr ""
+
+#: widgets/dropdown/Component.php:335 widgets/dropdown/Component.php:586
+#: widgets/heading/Component.php:412 widgets/heading/Component.php:474
+#: widgets/slider/Component.php:607 widgets/scroll-top/Component.php:258
+#: widgets/button/Component.php:329
+msgid "Border Radius"
+msgstr ""
+
+#: widgets/slider/Component.php:266
+msgid "Bottom"
+msgstr ""
+
+#: extra/Rotate.php:54 extra/Rotate.php:122
+msgid "Bottom Left"
+msgstr ""
+
+#: extra/Rotate.php:53 extra/Rotate.php:107
+msgid "Bottom Right"
+msgstr ""
+
+#: widgets/breadcrumbs/Component.php:32
+msgid "Breadcrumbs"
+msgstr ""
+
+#: widgets/breadcrumbs/core/Trail.php:161
+msgid "Browse:"
+msgstr ""
+
+#: widgets/dropdown/Component.php:41 widgets/dropdown/Component.php:196
+#: widgets/slider/Component.php:581 widgets/scroll-top/Component.php:38
+#: widgets/scroll-top/Component.php:135 widgets/button/Component.php:40
+#: widgets/button/Component.php:190
+msgid "Button"
+msgstr ""
+
+#: widgets/button/Component.php:25
+msgid "Button (Stax)"
+msgstr ""
+
+#: widgets/slider/Component.php:362
+msgid "Button Background"
+msgstr ""
+
+#: widgets/slider/Component.php:384
+msgid "Button Border Color"
+msgstr ""
+
+#: widgets/slider/Component.php:395
+msgid "Button Border Hover Color"
+msgstr ""
+
+#: widgets/slider/Component.php:340
+msgid "Button Color"
+msgstr ""
+
+#: widgets/slider/Component.php:373
+msgid "Button Hover Bg"
+msgstr ""
+
+#: widgets/slider/Component.php:351
+msgid "Button Hover Color"
+msgstr ""
+
+#: widgets/dropdown/Component.php:177 widgets/scroll-top/Component.php:116
+#: widgets/button/Component.php:171
+msgid "Button ID"
+msgstr ""
+
+#: widgets/slider/Component.php:209
+msgid "Button Link"
+msgstr ""
+
+#: widgets/slider/Component.php:199
+msgid "Button Text"
+msgstr ""
+
+#: extra/Rotate.php:50 extra/Rotate.php:62 enhancements/Counter.php:54
+#: widgets/dropdown/Component.php:69 widgets/heading/Component.php:295
+#: widgets/slider/Component.php:236 widgets/button/Component.php:83
+#: widgets/breadcrumbs/Component.php:97
+msgid "Center"
+msgstr ""
+
+#: widgets/heading/Component.php:247
+msgid "Choose Image"
+msgstr ""
+
+#: widgets/dropdown/Component.php:97
+msgid "Click"
+msgstr ""
+
+#: widgets/dropdown/Component.php:53 widgets/dropdown/Component.php:54
+#: widgets/button/Component.php:52 widgets/button/Component.php:53
+msgid "Click here"
+msgstr ""
+
+#: widgets/slider/Component.php:201 widgets/slider/Component.php:418
+msgid "Click me"
+msgstr ""
+
+#: widgets/heading/Component.php:319 widgets/heading/Component.php:365
+#: widgets/heading/Component.php:436 widgets/heading/Component.php:499
+#: widgets/heading/Component.php:604 widgets/breadcrumbs/Component.php:228
+msgid "Color"
+msgstr ""
+
+#: widgets/dropdown/Component.php:402
+msgid "Column Spacing"
+msgstr ""
+
+#: widgets/dropdown/Component.php:389
+msgid "Columns"
+msgstr ""
+
+#: widgets/slider/Component.php:157
+msgid "Content"
+msgstr ""
+
+#: widgets/breadcrumbs/core/Buddypress_Trail.php:55
+msgid "Create a Blog"
+msgstr ""
+
+#: widgets/breadcrumbs/core/Buddypress_Trail.php:51
+msgid "Create a Group"
+msgstr ""
+
+#: widgets/breadcrumbs/core/Buddypress_Trail.php:45
+msgid "Create an Account"
+msgstr ""
+
+#: widgets/breadcrumbs/core/Trail.php:811
+#: widgets/breadcrumbs/core/Trail.php:1099
+msgctxt "daily archives date format"
+msgid "j"
+msgstr ""
+
+#: core/admin/Settings.php:115 core/admin/pages/Dashboard.php:36
+#: core/admin/pages/templates/dashboard.php:2
+msgid "Dashboard"
+msgstr ""
+
+#: widgets/slider/Component.php:192 widgets/slider/Component.php:417
+msgid "Demo description"
+msgstr ""
+
+#: widgets/slider/Component.php:183 widgets/slider/Component.php:416
+msgid "Demo sub-title"
+msgstr ""
+
+#: widgets/slider/Component.php:174 widgets/slider/Component.php:415
+msgid "Demo title"
+msgstr ""
+
+#: widgets/heading/Component.php:158 widgets/heading/Component.php:179
+#: widgets/heading/Component.php:488 widgets/slider/Component.php:190
+#: widgets/slider/Component.php:538
+msgid "Description"
+msgstr ""
+
+#: widgets/slider/Component.php:302
+msgid "Description Color"
+msgstr ""
+
+#: widgets/slider/Component.php:331
+msgid "Description Shadow"
+msgstr ""
+
+#: widgets/dropdown/Component.php:26 widgets/dropdown/Component.php:362
+#: widgets/dropdown/Component.php:490
+msgid "Dropdown"
+msgstr ""
+
+#: widgets/dropdown/Component.php:89
+msgid "Dropdown Trigger"
+msgstr ""
+
+#: widgets/breadcrumbs/core/Bbpress_Trail.php:60
+#: widgets/breadcrumbs/core/Bbpress_Trail.php:92
+#: widgets/breadcrumbs/core/Bbpress_Trail.php:108
+#: widgets/breadcrumbs/core/Bbpress_Trail.php:138
+msgid "Edit"
+msgstr ""
+
+#: core/admin/Settings.php:53
+msgid "Elementor Addons"
+msgstr ""
+
+#. Name of the plugin
+msgid "Elementor Addons, Widgets and Enhancements - Stax"
+msgstr ""
+
+#: enhancements/TextEditor.php:38
+msgid "Enable Scroll"
+msgstr ""
+
+#: widgets/heading/Component.php:279
+msgid "General"
+msgstr ""
+
+#: widgets/slider/Component.php:161
+msgid "H3 margin"
+msgstr ""
+
+#: widgets/heading/Component.php:25
+msgid "Heading (Stax)"
+msgstr ""
+
+#: widgets/heading/Component.php:566 widgets/slider/Component.php:57
+msgid "Height"
+msgstr ""
+
+#: core/admin/Settings.php:100 core/admin/pages/Help.php:36
+#: core/admin/pages/templates/help.php:2
+msgid "Help"
+msgstr ""
+
+#: widgets/slider/Component.php:124 widgets/slider/Component.php:135
+msgid "Hide"
+msgstr ""
+
+#: widgets/heading/Component.php:49
+msgid ""
+"Highlight title words by wrapping them in curly brackets like {{beautiful}}"
+msgstr ""
+
+#: widgets/breadcrumbs/core/Trail.php:162
+msgid "Home"
+msgstr ""
+
+#: widgets/slider/Component.php:228
+msgid "Horizontal Align"
+msgstr ""
+
+#: widgets/breadcrumbs/core/Trail.php:792
+msgctxt "hour archives time format"
+msgid "g a"
+msgstr ""
+
+#: widgets/dropdown/Component.php:93 widgets/dropdown/Component.php:262
+#: widgets/dropdown/Component.php:555 widgets/scroll-top/Component.php:185
+#: widgets/button/Component.php:256 widgets/breadcrumbs/Component.php:158
+msgid "Hover"
+msgstr ""
+
+#: widgets/dropdown/Component.php:314 widgets/scroll-top/Component.php:237
+#: widgets/button/Component.php:308
+msgid "Hover Animation"
+msgstr ""
+
+#: widgets/heading/Component.php:62 widgets/heading/Component.php:133
+msgid "HTML Tag"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://seventhqueen.com"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://staxbuilder.com"
+msgstr ""
+
+#: widgets/dropdown/Component.php:447 widgets/slider/Component.php:211
+#: widgets/button/Component.php:65
+msgid "https://your-link.com"
+msgstr ""
+
+#: widgets/dropdown/Component.php:126 widgets/scroll-top/Component.php:94
+#: widgets/button/Component.php:120 widgets/breadcrumbs/Component.php:54
+msgid "Icon"
+msgstr ""
+
+#: widgets/dropdown/Component.php:135 widgets/button/Component.php:129
+msgid "Icon Position"
+msgstr ""
+
+#: widgets/dropdown/Component.php:151 widgets/button/Component.php:145
+msgid "Icon Spacing"
+msgstr ""
+
+#: widgets/info-box/Component.php:18
+msgid "Info Box"
+msgstr ""
+
+#: widgets/dropdown/Component.php:434 widgets/dropdown/Component.php:435
+msgid "Item"
+msgstr ""
+
+#: enhancements/Accordion.php:65
+msgid "Item Border"
+msgstr ""
+
+#: enhancements/Accordion.php:73
+msgid "Item Border Radius"
+msgstr ""
+
+#: widgets/dropdown/Component.php:457
+msgid "Item Column"
+msgstr ""
+
+#: widgets/dropdown/Component.php:442
+msgid "Item Link"
+msgstr ""
+
+#: enhancements/Accordion.php:47
+msgid "Item Spacing"
+msgstr ""
+
+#: widgets/dropdown/Component.php:429
+msgid "Item Text"
+msgstr ""
+
+#: widgets/dropdown/Component.php:77 widgets/button/Component.php:91
+#: widgets/breadcrumbs/Component.php:105
+msgid "Justified"
+msgstr ""
+
+#: widgets/heading/Component.php:103 widgets/heading/Component.php:104
+msgid "Learn from the market leaders"
+msgstr ""
+
+#: enhancements/Counter.php:50 widgets/dropdown/Component.php:65
+#: widgets/heading/Component.php:291 widgets/slider/Component.php:232
+#: widgets/button/Component.php:79 widgets/breadcrumbs/Component.php:93
+msgid "Left"
+msgstr ""
+
+#: widgets/read-more/Component.php:126
+msgid "Less icon"
+msgstr ""
+
+#: widgets/read-more/Component.php:119
+msgid "Less Label"
+msgstr ""
+
+#: widgets/button/Component.php:60
+msgid "Link"
+msgstr ""
+
+#: widgets/dropdown/Component.php:542 widgets/dropdown/Component.php:562
+msgid "Link Color"
+msgstr ""
+
+#: widgets/breadcrumbs/Component.php:81
+msgid "Links"
+msgstr ""
+
+#: widgets/dropdown/Component.php:611 widgets/heading/Component.php:345
+#: widgets/heading/Component.php:454 widgets/heading/Component.php:517
+#: widgets/heading/Component.php:593 widgets/slider/Component.php:469
+#: widgets/slider/Component.php:512 widgets/slider/Component.php:555
+#: widgets/slider/Component.php:619
+msgid "Margin"
+msgstr ""
+
+#: widgets/dropdown/Component.php:390
+msgid "Max 3 columns can be displayed in the dropdown."
+msgstr ""
+
+#: enhancements/TextEditor.php:49
+msgid "Max Height"
+msgstr ""
+
+#: widgets/breadcrumbs/core/Bbpress_Trail.php:89
+msgid "Merge"
+msgstr ""
+
+#: widgets/slider/Component.php:262
+msgid "Middle"
+msgstr ""
+
+#: widgets/dropdown/Component.php:369
+msgid "Min Width"
+msgstr ""
+
+#. Minute archive title. %s is the minute time format.
+#: widgets/breadcrumbs/core/Trail.php:170
+#, php-format
+msgid "Minute %s"
+msgstr ""
+
+#: widgets/breadcrumbs/core/Trail.php:756
+msgctxt "minute and hour archives time format"
+msgid "g:i a"
+msgstr ""
+
+#: widgets/breadcrumbs/core/Trail.php:774
+msgctxt "minute archives time format"
+msgid "i"
+msgstr ""
+
+#: core/admin/Settings.php:91 core/admin/pages/Modules.php:38
+#: core/admin/pages/templates/modules.php:2
+msgid "Modules"
+msgstr ""
+
+#: widgets/breadcrumbs/core/Trail.php:810
+#: widgets/breadcrumbs/core/Trail.php:869
+#: widgets/breadcrumbs/core/Trail.php:1096
+msgctxt "monthly archives date format"
+msgid "F"
+msgstr ""
+
+#: widgets/read-more/Component.php:89
+msgid "More Label"
+msgstr ""
+
+#: widgets/read-more/Component.php:81
+msgid "More text"
+msgstr ""
+
+#: widgets/dropdown/Component.php:475
+msgid "My first item"
+msgstr ""
+
+#: widgets/slider/Component.php:121
+msgid "Nav Arrows"
+msgstr ""
+
+#: widgets/slider/Component.php:98
+msgid "No"
+msgstr ""
+
+#: widgets/dropdown/Component.php:222 widgets/dropdown/Component.php:535
+#: widgets/scroll-top/Component.php:145 widgets/button/Component.php:216
+#: widgets/breadcrumbs/Component.php:137
+msgid "Normal"
+msgstr ""
+
+#: enhancements/TextEditor.php:40
+msgid "Off"
+msgstr ""
+
+#: enhancements/TextEditor.php:41
+msgid "On"
+msgstr ""
+
+#: widgets/dropdown/Component.php:347 widgets/dropdown/Component.php:598
+#: widgets/heading/Component.php:392 widgets/slider/Component.php:438
+#: widgets/slider/Component.php:481 widgets/slider/Component.php:524
+#: widgets/slider/Component.php:567 widgets/slider/Component.php:631
+#: widgets/scroll-top/Component.php:270 widgets/button/Component.php:341
+msgid "Padding"
+msgstr ""
+
+#. %s is the page number.
+#: widgets/breadcrumbs/core/Trail.php:168
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: widgets/slider/Component.php:132
+msgid "Pagination"
+msgstr ""
+
+#: widgets/dropdown/Component.php:185 widgets/scroll-top/Component.php:124
+#: widgets/button/Component.php:179
+msgid ""
+"Please make sure the ID is unique and not used elsewhere on the page this "
+"form is displayed. This field allows <code>A-z 0-9</code> & underscore chars "
+"without spaces."
+msgstr ""
+
+#: core/admin/Settings.php:73 core/admin/pages/Plugins.php:51
+#: core/admin/pages/templates/plugins.php:2
+msgid "Plugins"
+msgstr ""
+
+#: widgets/heading/Component.php:117 widgets/heading/Component.php:210
+msgid "Position"
+msgstr ""
+
+#: widgets/heading/Component.php:178
+msgid ""
+"Read more below and start learning new techniques to grow your business. "
+"Real examples from real people!"
+msgstr ""
+
+#: widgets/read-more/Component.php:34
+msgid "Read more(Expand text)"
+msgstr ""
+
+#: extra/Rotate.php:46
+msgid "Reference Point"
+msgstr ""
+
+#: enhancements/Counter.php:58 widgets/dropdown/Component.php:73
+#: widgets/heading/Component.php:299 widgets/slider/Component.php:240
+#: widgets/button/Component.php:87 widgets/breadcrumbs/Component.php:101
+msgid "Right"
+msgstr ""
+
+#: extra/Rotate.php:39
+msgid "Rotate"
+msgstr ""
+
+#: core/admin/pages/templates/widgets.php:28
+#: core/admin/pages/templates/templates.php:23
+#: core/admin/pages/templates/plugins.php:23
+#: core/admin/pages/templates/modules.php:23
+msgid "Save"
+msgstr ""
+
+#: widgets/scroll-top/Component.php:45
+msgid "Scroll Speed (ms)"
+msgstr ""
+
+#: widgets/scroll-top/Component.php:23
+msgid "Scroll Top"
+msgstr ""
+
+#. %s is the search query. The HTML entities are opening and closing curly quotes.
+#: widgets/breadcrumbs/core/Trail.php:166
+#, php-format
+msgid "Search results for &#8220;%s&#8221;"
+msgstr ""
+
+#: widgets/separator/Component.php:18 widgets/heading/Component.php:195
+#: widgets/heading/Component.php:530 widgets/breadcrumbs/Component.php:47
+#: widgets/breadcrumbs/Component.php:204
+msgid "Separator"
+msgstr ""
+
+#: widgets/read-more/Component.php:54
+msgid "Settings"
+msgstr ""
+
+#. Author of the plugin
+msgid "SeventhQueen"
+msgstr ""
+
+#: widgets/heading/Component.php:91 widgets/heading/Component.php:165
+#: widgets/heading/Component.php:201 widgets/slider/Component.php:123
+#: widgets/slider/Component.php:134
+msgid "Show"
+msgstr ""
+
+#: widgets/scroll-top/Component.php:58
+msgid "Show button when top offset is grated than the set value."
+msgstr ""
+
+#: widgets/scroll-top/Component.php:57
+msgid "Show Top Offset"
+msgstr ""
+
+#: widgets/breadcrumbs/Component.php:212
+msgid "Size"
+msgstr ""
+
+#: widgets/slider/Component.php:33 widgets/slider/Component.php:430
+msgid "Slider"
+msgstr ""
+
+#: widgets/slider/Component.php:49
+msgid "Slides"
+msgstr ""
+
+#: widgets/slider/Component.php:410
+msgid "Slides List"
+msgstr ""
+
+#: widgets/breadcrumbs/Component.php:63
+msgid "Spacing"
+msgstr ""
+
+#: widgets/breadcrumbs/core/Bbpress_Trail.php:86
+msgid "Split"
+msgstr ""
+
+#: core/admin/Settings.php:52
+msgid "STAX Elementor - Dashboard"
+msgstr ""
+
+#: core/admin/Settings.php:99
+msgid "STAX Elementor - Help"
+msgstr ""
+
+#: core/admin/Settings.php:90
+msgid "STAX Elementor - Modules"
+msgstr ""
+
+#: core/admin/Settings.php:72
+msgid "STAX Elementor - Plugins"
+msgstr ""
+
+#: core/admin/Settings.php:81
+msgid "STAX Elementor - Templates"
+msgstr ""
+
+#: core/admin/Settings.php:63
+msgid "STAX Elementor - Widgets"
+msgstr ""
+
+#: widgets/heading/Component.php:228 widgets/slider/Component.php:223
+msgid "Style"
+msgstr ""
+
+#: widgets/slider/Component.php:181
+msgid "Sub Title"
+msgstr ""
+
+#: widgets/slider/Component.php:495
+msgid "Sub-Title"
+msgstr ""
+
+#: widgets/slider/Component.php:291
+msgid "Sub-title Color"
+msgstr ""
+
+#: widgets/slider/Component.php:322
+msgid "Sub-title Shadow"
+msgstr ""
+
+#: widgets/heading/Component.php:84 widgets/heading/Component.php:425
+msgid "Subtitle"
+msgstr ""
+
+#: core/admin/Settings.php:82 core/admin/pages/Templates.php:38
+#: core/admin/pages/templates/templates.php:2
+msgid "Templates"
+msgstr ""
+
+#: widgets/testimonial/Component.php:18
+msgid "Testimonial"
+msgstr ""
+
+#: widgets/dropdown/Component.php:48 widgets/heading/Component.php:47
+#: widgets/heading/Component.php:100 widgets/heading/Component.php:174
+#: widgets/button/Component.php:47
+msgid "Text"
+msgstr ""
+
+#: widgets/dropdown/Component.php:229 widgets/dropdown/Component.php:269
+#: widgets/scroll-top/Component.php:152 widgets/scroll-top/Component.php:192
+#: widgets/button/Component.php:223 widgets/button/Component.php:263
+#: widgets/breadcrumbs/Component.php:144 widgets/breadcrumbs/Component.php:165
+#: widgets/breadcrumbs/Component.php:186
+msgid "Text Color"
+msgstr ""
+
+#: widgets/heading/Component.php:51 widgets/heading/Component.php:52
+msgid "Tips to {{grow}} your business"
+msgstr ""
+
+#: widgets/heading/Component.php:40 widgets/heading/Component.php:312
+#: widgets/slider/Component.php:172 widgets/slider/Component.php:452
+msgid "Title"
+msgstr ""
+
+#: widgets/slider/Component.php:280
+msgid "Title Color"
+msgstr ""
+
+#: widgets/heading/Component.php:358
+msgid "Title highlight"
+msgstr ""
+
+#: widgets/slider/Component.php:313
+msgid "Title Shadow"
+msgstr ""
+
+#: widgets/slider/Component.php:258
+msgid "Top"
+msgstr ""
+
+#: extra/Rotate.php:51 extra/Rotate.php:77
+msgid "Top Left"
+msgstr ""
+
+#: extra/Rotate.php:52 extra/Rotate.php:92
+msgid "Top Right"
+msgstr ""
+
+#: widgets/slider/Component.php:460 widgets/slider/Component.php:503
+#: widgets/slider/Component.php:546 widgets/slider/Component.php:589
+msgid "Typography"
+msgstr ""
+
+#: core/admin/layout.php:51
+#, php-format
+msgid "Version %s"
+msgstr ""
+
+#: widgets/slider/Component.php:254
+msgid "Vertical Align"
+msgstr ""
+
+#: widgets/dropdown/Component.php:168 widgets/scroll-top/Component.php:107
+#: widgets/button/Component.php:162
+msgid "View"
+msgstr ""
+
+#. Weekly archive title. %s is the week date format.
+#: widgets/breadcrumbs/core/Trail.php:172
+#, php-format
+msgid "Week %s"
+msgstr ""
+
+#: widgets/breadcrumbs/core/Trail.php:839
+msgctxt "weekly archives date format"
+msgid "W"
+msgstr ""
+
+#: core/admin/Settings.php:64 core/admin/pages/Widgets.php:69
+#: core/admin/pages/templates/widgets.php:2
+msgid "Widgets"
+msgstr ""
+
+#: widgets/heading/Component.php:540
+msgid "Width"
+msgstr ""
+
+#: widgets/breadcrumbs/core/Trail.php:809
+#: widgets/breadcrumbs/core/Trail.php:838
+#: widgets/breadcrumbs/core/Trail.php:868
+#: widgets/breadcrumbs/core/Trail.php:895
+#: widgets/breadcrumbs/core/Trail.php:1093
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: widgets/slider/Component.php:97
+msgid "Yes"
+msgstr ""

@@ -4,7 +4,7 @@ Tags: elementor addons, elementor enhancements, elementor widgets, elementor, li
 Requires at least: 4.0
 Requires PHP: 5.6
 Tested up to: 5.3.2
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 License: GLPv2 or later
 
 Beautiful & Fast add-ons for Elementor. Enhance your site building experience with Stax Elementor Addons
@@ -44,6 +44,9 @@ Many more elements and options coming soon...
 When editing a page with Elementor you will see the New elements added at the end of default elementor widget area.
 
 == Changelog ==
+
+ 1.2.0 =
+* Refactor the admin dashboard
 
  1.1.0 =
 * Added Read more(Expand text) widget
