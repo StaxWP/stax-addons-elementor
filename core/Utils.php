@@ -28,10 +28,24 @@ class Utils {
 		return self::$instance;
 	}
 
+	/**
+	 * Replace curly with span
+	 *
+	 * @param $raw
+	 *
+	 * @return mixed
+	 */
 	public static function curly( $raw ) {
 		return str_replace( [ '{{', '}}' ], [ '<span>', '</span>' ], self::kses( $raw ) );
 	}
 
+	/**
+	 * Kses
+	 *
+	 * @param $raw
+	 *
+	 * @return string
+	 */
 	public static function kses( $raw ) {
 		$allowed_tags = [
 			'a'                             => [
@@ -136,6 +150,33 @@ class Utils {
 
 		return $raw;
 	}
+
+	/**
+	 * Load template
+	 *
+	 * @param $name
+	 * @param array $args
+	 * @param bool $echo
+	 *
+	 * @return false|string|void
+	 */
+	public static function load_template( $name, $args = [], $echo = true ) {
+		if ( ! $name ) {
+			return;
+		}
+
+		extract( $args );
+
+		ob_start();
+		include( STAX_EL_PATH . trim( $name ) . '.php' );
+
+		if ( $echo ) {
+			echo ob_get_clean();
+		} else {
+			return ob_get_clean();
+		}
+	}
+
 }
 
 Utils::instance();

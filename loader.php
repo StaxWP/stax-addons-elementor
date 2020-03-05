@@ -17,6 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 define( 'STAX_EL_VERSION', '1.1.0' );
+define( 'STAX_EL_HOOK_PREFIX', 'stax_el_' );
 
 define( 'STAX_EL_FILE', __FILE__ );
 define( 'STAX_EL_PLUGIN_BASE', plugin_basename( STAX_EL_FILE ) );

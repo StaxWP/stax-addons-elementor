@@ -7,16 +7,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Class Templates
+ * Class Help
  * @package StaxAddons
  */
-class Templates extends Base {
+class Help extends Base {
 
 	/**
 	 * Settings constructor.
 	 */
 	public function __construct() {
-		$this->current_slug = 'templates';
+		$this->current_slug = 'help';
 
 		if ( Plugin::instance()->is_current_page( $this->current_slug ) ) {
 			add_filter( STAX_EL_HOOK_PREFIX . 'current_slug', [ $this, 'set_page_slug' ] );
@@ -28,16 +28,14 @@ class Templates extends Base {
 	}
 
 	public function panel_content() {
-		Utils::load_template( 'core/admin/pages/templates/templates', [
-			'templates' => []
-		] );
+		Utils::load_template( 'core/admin/pages/templates/help' );
 	}
 
 	public function add_menu_item( $menu ) {
 		$menu[] = [
-			'name'     => __( 'Templates', 'stax-addons-for-elementor' ),
+			'name'     => __( 'Help', 'stax-addons-for-elementor' ),
 			'link'     => admin_url( 'admin.php?page=stax-elementor-' . $this->current_slug ),
-			'priority' => 4
+			'priority' => 6
 		];
 
 		return $menu;
@@ -45,4 +43,4 @@ class Templates extends Base {
 
 }
 
-Templates::instance();
+Help::instance();

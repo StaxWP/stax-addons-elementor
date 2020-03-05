@@ -35,11 +35,16 @@ class Plugin {
 
 		require_once STAX_EL_CORE_PATH . '/Utils.php';
 		require_once STAX_EL_CORE_PATH . '/StaxWidgets.php';
+
+		// Admin pages
 		require_once STAX_EL_CORE_PATH . '/admin/pages/Base.php';
 		require_once STAX_EL_CORE_PATH . '/admin/pages/Dashboard.php';
 		require_once STAX_EL_CORE_PATH . '/admin/pages/Widgets.php';
+		require_once STAX_EL_CORE_PATH . '/admin/pages/Plugins.php';
 		require_once STAX_EL_CORE_PATH . '/admin/pages/Modules.php';
 		require_once STAX_EL_CORE_PATH . '/admin/pages/Templates.php';
+		require_once STAX_EL_CORE_PATH . '/admin/pages/Help.php';
+
 		require_once STAX_EL_CORE_PATH . '/admin/Settings.php';
 
 		// Enhancements
