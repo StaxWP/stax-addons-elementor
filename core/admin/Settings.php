@@ -103,15 +103,6 @@ class Settings {
 			[ $this, 'settings_template' ]
 		);
 
-		/*add_submenu_page(
-			Plugin::instance()->get_slug(),
-			__( 'STAX Elementor Support', 'stax-addons-for-elementor' ),
-			__( 'Support', 'stax-addons-for-elementor' ),
-			'manage_options',
-			'stax-elementor-support',
-			[ $this, 'external_redirect_handler' ]
-		);*/
-
 	}
 
 	/**
