@@ -30,7 +30,7 @@ class Widgets extends Base {
 
 	public function toggle_widget() {
 		if ( ! isset( $_POST['action'] ) || $_POST['action'] !== 'stax_widget_activation' ) {
-			wp_redirect( admin_url( 'admin.php?page=stax-elementor-' . $this->current_slug ) );
+			wp_redirect( admin_url( 'admin.php?page=' . STAX_EL_SLUG_PREFIX . $this->current_slug ) );
 		}
 
 		$options = [];
@@ -51,7 +51,7 @@ class Widgets extends Base {
 
 		update_option( '_stax_addons_disabled_widgets', $options );
 
-		wp_redirect( admin_url( 'admin.php?page=stax-elementor-' . $this->current_slug ) );
+		wp_redirect( admin_url( 'admin.php?page=' . STAX_EL_SLUG_PREFIX . $this->current_slug ) );
 		exit();
 	}
 
@@ -67,7 +67,7 @@ class Widgets extends Base {
 	public function add_menu_item( $menu ) {
 		$menu[] = [
 			'name'     => __( 'Widgets', 'stax-addons-for-elementor' ),
-			'link'     => admin_url( 'admin.php?page=stax-elementor-' . $this->current_slug ),
+			'link'     => admin_url( 'admin.php?page=' . STAX_EL_SLUG_PREFIX . $this->current_slug ),
 			'priority' => 2
 		];
 

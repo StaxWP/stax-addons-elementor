@@ -32,6 +32,11 @@ var STAXAdmin = STAXAdmin || {};
 
             // grab some of the DOM elements needed
             const $rocket = $("#go-pro-rocket-icon");
+
+            if ( $rocket == null ) {
+                return;
+            }
+
             const $top = $rocket.querySelector("*");
             const $flame = $(".rocket-flame");
 

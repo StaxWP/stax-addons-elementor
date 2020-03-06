@@ -1,5 +1,5 @@
 === Elementor Addons, Widgets and Enhancements - Stax ===
-Contributors: seventhqueen, codezz, geowrge, rtynio
+Contributors: seventhqueen, codezz, geowrge, rtynio, staxwp
 Tags: elementor addons, elementor enhancements, elementor widgets, elementor, light addons, fast elementor addons
 Requires at least: 4.0
 Requires PHP: 5.6

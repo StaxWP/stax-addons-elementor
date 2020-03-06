@@ -169,24 +169,27 @@ class Settings {
 	 * Load scripts & styles
 	 */
 	public function admin_scripts() {
-		wp_register_style(
-			'stax-addons-tw',
-			STAX_EL_ASSETS_URL . 'css/admin.css',
-			[],
-			STAX_EL_VERSION,
-			'all'
-		);
 
-		wp_register_script(
-			'stax-addons-js',
-			STAX_EL_ASSETS_URL . 'js/admin.js',
-			[ 'jquery' ],
-			STAX_EL_VERSION,
-			true
-		);
+		if ( isset( $_GET['page'] ) && strpos( $_GET['page'], STAX_EL_SLUG_PREFIX ) !== false ) {
+			wp_register_style(
+				'stax-addons-tw',
+				STAX_EL_ASSETS_URL . 'css/admin.css',
+				[],
+				STAX_EL_VERSION,
+				'all'
+			);
 
-		wp_enqueue_style( 'stax-addons-tw' );
-		wp_enqueue_script( 'stax-addons-js' );
+			wp_register_script(
+				'stax-addons-js',
+				STAX_EL_ASSETS_URL . 'js/admin.js',
+				[ 'jquery' ],
+				STAX_EL_VERSION,
+				true
+			);
+
+			wp_enqueue_style( 'stax-addons-tw' );
+			wp_enqueue_script( 'stax-addons-js' );
+		}
 	}
 
 }
