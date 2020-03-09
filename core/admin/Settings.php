@@ -173,7 +173,7 @@ class Settings {
 		if ( isset( $_GET['page'] ) && strpos( $_GET['page'], STAX_EL_SLUG_PREFIX ) !== false ) {
 			wp_register_style(
 				'stax-addons-tw',
-				STAX_EL_ASSETS_URL . 'css/admin.css',
+				STAX_EL_ASSETS_URL . 'css/admin.min.css',
 				[],
 				STAX_EL_VERSION,
 				'all'
@@ -181,7 +181,7 @@ class Settings {
 
 			wp_register_script(
 				'stax-addons-js',
-				STAX_EL_ASSETS_URL . 'js/admin.js',
+				STAX_EL_ASSETS_URL . 'js/admin.min.js',
 				[ 'jquery' ],
 				STAX_EL_VERSION,
 				true

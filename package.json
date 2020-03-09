@@ -28,6 +28,7 @@
     "gulp-build": "^0.5.3",
     "gulp-csso": "^4.0.1",
     "gulp-notify": "^3.2.0",
+    "gulp-postcss": "^8.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",
@@ -36,5 +37,18 @@
     "postcss-cli": "^7.1.0",
     "tailwindcss": "^1.1.4"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "browserslist": [
+    ">= 0.5%",
+    "chrome >= 42",
+    "and_chr >= 42",
+    "and_ff >= 38",
+    "android >= 4.4",
+    "edge >= 12",
+    "firefox >= 38",
+    "ie >= 11",
+    "ios_saf >= 9",
+    "safari >= 9",
+    "node 10"
+  ]
 }
