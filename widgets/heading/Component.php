@@ -499,7 +499,7 @@ class Component extends Base {
 				'label'     => __( 'Color', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .stx-title-wrapper p' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .stx-description p, {{WRAPPER}} .stx-description' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -507,7 +507,7 @@ class Component extends Base {
 		$this->add_group_control(
 			Group_Control_Typography::get_type(), [
 				'name'     => 'description_typography',
-				'selector' => '{{WRAPPER}} .stx-title-wrapper p',
+				'selector' => '{{WRAPPER}} .stx-description p, {{WRAPPER}} .stx-description',
 			]
 		);
 
@@ -518,7 +518,7 @@ class Component extends Base {
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors'  => [
-					'{{WRAPPER}} .stx-title-wrapper p' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .stx-description' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);
