@@ -2,6 +2,35 @@
   padding: 0;
   margin: 0;
   line-height: 1; }
+  .stx-title-wrapper .stx-title > span, .stx-title-wrapper .stx-subtitle > span {
+    display: inline-block; }
+    .stx-title-wrapper .stx-title > span.stx-line-before:before, .stx-title-wrapper .stx-subtitle > span.stx-line-before:before {
+      content: '';
+      display: inline-block;
+      height: 1px;
+      width: 20px;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      background: #000;
+      vertical-align: middle; }
+    .stx-title-wrapper .stx-title > span.stx-line-after:after, .stx-title-wrapper .stx-subtitle > span.stx-line-after:after {
+      content: '';
+      display: inline-block;
+      height: 1px;
+      width: 20px;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      background: #000;
+      vertical-align: middle; }
+    .stx-title-wrapper .stx-title > span.stx-line-both:before, .stx-title-wrapper .stx-title > span.stx-line-both:after, .stx-title-wrapper .stx-subtitle > span.stx-line-both:before, .stx-title-wrapper .stx-subtitle > span.stx-line-both:after {
+      content: '';
+      display: inline-block;
+      height: 1px;
+      width: 20px;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      background: #000;
+      vertical-align: middle; }
 
 .stx-title-wrapper .stx-subtitle {
   margin-top: 20px; }
@@ -36,11 +65,11 @@
     text-align: right; } }
 
 .stx-title-wrapper .stx-divider {
-  display: flex;
+  display: inline-block;
   margin: 1em 0; }
   .stx-title-wrapper .stx-divider:before {
     content: "";
-    flex: 1; }
+    display: block; }
   .stx-title-wrapper .stx-divider.stx-one-line {
     align-items: center; }
     .stx-title-wrapper .stx-divider.stx-one-line:before {
@@ -54,17 +83,12 @@
       border-radius: 5px; }
     .stx-title-wrapper .stx-divider.stx-glow:before {
       background: linear-gradient(to right, blue, hotpink); }
-  .stx-title-wrapper .stx-divider.stx-gradient {
-    align-items: stretch;
-    height: 2em;
-    line-height: 2em;
-    color: white;
-    background: black; }
-    .stx-title-wrapper .stx-divider.stx-gradient:before {
-      background: linear-gradient(to right, white, black); }
+  .stx-title-wrapper .stx-divider.stx-gradient:before {
+    display: block;
+    height: 10px;
+    background: linear-gradient(to right, white, black); }
   .stx-title-wrapper .stx-divider.stx-donotcross {
     overflow: hidden;
-    align-items: center;
     background: #ffd500;
     color: black;
     height: 2em;

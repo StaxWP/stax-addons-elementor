@@ -3,6 +3,50 @@
     padding: 0;
     margin: 0;
     line-height: 1;
+
+    > span {
+      display: inline-block;
+
+      &.stx-line-before {
+        &:before {
+          content: '';
+          display: inline-block;
+          height: 1px;
+          width: 20px;
+          -ms-flex-positive: 1;
+          flex-grow: 1;
+          background: #000;
+          vertical-align: middle;
+        }
+      }
+
+      &.stx-line-after {
+        &:after {
+          content: '';
+          display: inline-block;
+          height: 1px;
+          width: 20px;
+          -ms-flex-positive: 1;
+          flex-grow: 1;
+          background: #000;
+          vertical-align: middle;
+        }
+      }
+
+      &.stx-line-both {
+        &:before,
+        &:after {
+          content: '';
+          display: inline-block;
+          height: 1px;
+          width: 20px;
+          -ms-flex-positive: 1;
+          flex-grow: 1;
+          background: #000;
+          vertical-align: middle;
+        }
+      }
+    }
   }
 
   .stx-subtitle {
@@ -57,12 +101,12 @@
   }
 
   .stx-divider {
-    display: flex;
+    display: inline-block;
     margin: 1em 0;
 
     &:before {
       content: "";
-      flex: 1;
+      display: block;
     }
 
     &.stx-one-line {
@@ -89,20 +133,15 @@
     }
 
     &.stx-gradient {
-      align-items: stretch;
-      height: 2em;
-      line-height: 2em;
-      color: white;
-      background: black;
-
       &:before {
+        display: block;
+        height: 10px;
         background: linear-gradient(to right, white, black);
       }
     }
 
     &.stx-donotcross {
       overflow: hidden;
-      align-items: center;
       background: hsl(50, 100%, 50%);
       color: black;
       height: 2em;

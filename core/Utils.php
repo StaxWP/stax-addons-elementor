@@ -36,7 +36,7 @@ class Utils {
 	 * @return mixed
 	 */
 	public static function curly( $raw ) {
-		return str_replace( [ '{{', '}}' ], [ '<span>', '</span>' ], self::kses( $raw ) );
+		return str_replace( [ '{{', '}}' ], [ '<span class="stx-highlight">', '</span>' ], self::kses( $raw ) );
 	}
 
 	/**
