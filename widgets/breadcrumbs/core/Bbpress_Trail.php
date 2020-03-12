@@ -57,7 +57,7 @@ class Bbpress_Trail extends Trail {
 			$this->items[] = '<a href="' . bbp_get_topic_tag_link() . '">' . bbp_get_topic_tag_name() . '</a>';
 
 			if ( true === $this->args['show_title'] ) {
-				$this->items[] = __( 'Edit', 'stax-addons-for-elementor' );
+				$this->items[] = __( 'Edit', STAX_EL_DOMAIN );
 			}
 		} /* If viewing a "view" page. */
 		elseif ( bbp_is_single_view() ) {
@@ -83,13 +83,13 @@ class Bbpress_Trail extends Trail {
 
 			/* If viewing a topic split page. */
 			if ( bbp_is_topic_split() && true === $this->args['show_title'] ) {
-				$this->items[] = __( 'Split', 'stax-addons-for-elementor' );
+				$this->items[] = __( 'Split', STAX_EL_DOMAIN );
 			} /* If viewing a topic merge page. */
 			elseif ( bbp_is_topic_merge() && true === $this->args['show_title'] ) {
-				$this->items[] = __( 'Merge', 'stax-addons-for-elementor' );
+				$this->items[] = __( 'Merge', STAX_EL_DOMAIN );
 			} /* If viewing a topic edit page. */
 			elseif ( bbp_is_topic_edit() && true === $this->args['show_title'] ) {
-				$this->items[] = __( 'Edit', 'stax-addons-for-elementor' );
+				$this->items[] = __( 'Edit', STAX_EL_DOMAIN );
 			}
 		} /* If viewing a single reply page. */
 		elseif ( bbp_is_single_reply() ) {
@@ -105,7 +105,7 @@ class Bbpress_Trail extends Trail {
 				$this->items[] = '<a href="' . bbp_get_reply_url( $reply_id ) . '">' . bbp_get_reply_title( $reply_id ) . '</a>';
 
 				if ( true === $this->args['show_title'] ) {
-					$this->items[] = __( 'Edit', 'stax-addons-for-elementor' );
+					$this->items[] = __( 'Edit', STAX_EL_DOMAIN );
 				}
 
 			} elseif ( true === $this->args['show_title'] ) {
@@ -135,7 +135,7 @@ class Bbpress_Trail extends Trail {
 				$this->items[] = '<a href="' . bbp_get_user_profile_url() . '">' . bbp_get_displayed_user_field( 'display_name' ) . '</a>';
 
 				if ( true === $this->args['show_title'] ) {
-					$this->items[] = __( 'Edit', 'stax-addons-for-elementor' );
+					$this->items[] = __( 'Edit', STAX_EL_DOMAIN );
 				}
 			} elseif ( true === $this->args['show_title'] ) {
 				$this->items[] = bbp_get_displayed_user_field( 'display_name' );

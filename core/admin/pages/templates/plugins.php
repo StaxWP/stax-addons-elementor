@@ -1,5 +1,5 @@
 <h2 class="ste-my-0 ste-leading-none ste-text-2xl ste-text-gray-700 ste-font-bold ste-tracking-wide">
-	<?php _e( 'Plugins', 'stax-addons-for-elementor' ); ?>
+	<?php _e( 'Plugins', STAX_EL_DOMAIN ); ?>
 </h2>
 
 <div class="ste-mt-5">
@@ -20,7 +20,7 @@
                     class="ste-bg-green-500 ste-text-md ste-text-white ste-py-2 ste-pl-4 ste-pr-6 ste-rounded ste-border-0 ste-shadow-xl hover:ste-shadow-lg ste-cursor-pointer ste-uppercase">
                 <span class="ste-flex ste-items-center">
                     <span class="dashicons dashicons-yes"></span>
-	                <span class="ste-leading-normal ste-ml-2"><?php _e( 'Save', 'stax-addons-for-elementor' ); ?></span>
+	                <span class="ste-leading-normal ste-ml-2"><?php _e( 'Save', STAX_EL_DOMAIN ); ?></span>
                 </span>
             </button>
         </div>

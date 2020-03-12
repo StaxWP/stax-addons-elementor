@@ -55,4 +55,65 @@
       text-align: right;
     }
   }
+
+  .stx-divider {
+    display: flex;
+    margin: 1em 0;
+
+    &:before {
+      content: "";
+      flex: 1;
+    }
+
+    &.stx-one-line {
+      align-items: center;
+
+      &:before {
+        height: 1px;
+        background: #000;
+      }
+    }
+
+    &.stx-glow {
+      align-items: center;
+
+      &:before {
+        height: 6px;
+        -webkit-filter: blur(5px);
+        border-radius: 5px;
+      }
+
+      &:before {
+        background: linear-gradient(to right, blue, hotpink);
+      }
+    }
+
+    &.stx-gradient {
+      align-items: stretch;
+      height: 2em;
+      line-height: 2em;
+      color: white;
+      background: black;
+
+      &:before {
+        background: linear-gradient(to right, white, black);
+      }
+    }
+
+    &.stx-donotcross {
+      overflow: hidden;
+      align-items: center;
+      background: hsl(50, 100%, 50%);
+      color: black;
+      height: 2em;
+      line-height: 2em;
+
+      &:before {
+        background: white;
+        padding: 50px 0;
+        height: 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
 }

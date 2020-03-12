@@ -42,17 +42,17 @@ class Buddypress_Trail extends Trail {
 		} else if ( $bp->is_directory ) { // this is a top level directory page
 			$trail_end = get_the_title( $bp->pages->{$bp->current_component}->id );
 		} else if ( bp_is_register_page() ) {
-			$trail_end = __( 'Create an Account', 'stax-addons-for-elementor' );
+			$trail_end = __( 'Create an Account', STAX_EL_DOMAIN );
 		} else if ( bp_is_activation_page() ) {
-			$trail_end = __( 'Activate your Account', 'stax-addons-for-elementor' );
+			$trail_end = __( 'Activate your Account', STAX_EL_DOMAIN );
 		} else if ( bp_is_group_create() ) {
 			$this->items[] = '<a href="' . get_permalink( $bp->pages->groups->id ) . '" title="' . esc_attr( get_the_title( $bp->pages->groups->id ) ) . '">' . get_the_title( $bp->pages->groups->id ) . '</a>';
 
-			$trail_end = __( 'Create a Group', 'stax-addons-for-elementor' );
+			$trail_end = __( 'Create a Group', STAX_EL_DOMAIN );
 
 		} else if ( bp_is_create_blog() ) {
 			$this->items[] = '<a href="' . esc_url( home_url( '/' ) . $bp->current_component ) . '" title="' . ucwords( $bp->current_component ) . '">' . ucwords( $bp->current_component ) . '</a>';
-			$trail_end     = __( 'Create a Blog', 'stax-addons-for-elementor' );
+			$trail_end     = __( 'Create a Blog', STAX_EL_DOMAIN );
 		}
 		if ( $trail_end ) {
 			$this->items[] = $trail_end;

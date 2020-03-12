@@ -30,7 +30,7 @@ class Component extends Base {
 	}
 
 	public function get_title() {
-		return __( 'Slider', 'stax-addons-for-elementor' );
+		return __( 'Slider', STAX_EL_DOMAIN );
 	}
 
 	public function get_icon() {
@@ -46,7 +46,7 @@ class Component extends Base {
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Slides', 'stax-addons-for-elementor' ),
+				'label' => __( 'Slides', STAX_EL_DOMAIN ),
 				'tab'   => Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -54,7 +54,7 @@ class Component extends Base {
 		$this->add_control(
 			'slider_height',
 			[
-				'label'      => __( 'Height', 'stax-addons-for-elementor' ),
+				'label'      => __( 'Height', STAX_EL_DOMAIN ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%' ],
 				'range'      => [
@@ -80,7 +80,7 @@ class Component extends Base {
 
 		$this->add_control(
 			'slider_base_style', [
-				'label'     => __( 'Base Style', 'stax-addons-for-elementor' ),
+				'label'     => __( 'Base Style', STAX_EL_DOMAIN ),
 				'type'      => Controls_Manager::HIDDEN,
 				'default'   => '1',
 				'selectors' => [
@@ -92,10 +92,10 @@ class Component extends Base {
 		$this->add_control(
 			'autoplay',
 			[
-				'label'     => __( 'Autoplay', 'stax-addons-for-elementor' ),
+				'label'     => __( 'Autoplay', STAX_EL_DOMAIN ),
 				'type'      => Controls_Manager::SWITCHER,
-				'label_on'  => __( 'Yes', 'stax-addons-for-elementor' ),
-				'label_off' => __( 'No', 'stax-addons-for-elementor' ),
+				'label_on'  => __( 'Yes', STAX_EL_DOMAIN ),
+				'label_off' => __( 'No', STAX_EL_DOMAIN ),
 				'default'   => '',
 			]
 		);
@@ -103,7 +103,7 @@ class Component extends Base {
 		$this->add_control(
 			'autoplay_speed',
 			[
-				'label'     => __( 'Autoplay Speed (ms)', 'stax-addons-for-elementor' ),
+				'label'     => __( 'Autoplay Speed (ms)', STAX_EL_DOMAIN ),
 				'type'      => Controls_Manager::NUMBER,
 				'min'       => 0,
 				'max'       => 100000,
@@ -118,10 +118,10 @@ class Component extends Base {
 		$this->add_control(
 			'nav_arrows',
 			[
-				'label'     => __( 'Nav Arrows', 'stax-addons-for-elementor' ),
+				'label'     => __( 'Nav Arrows', STAX_EL_DOMAIN ),
 				'type'      => Controls_Manager::SWITCHER,
-				'label_on'  => __( 'Show', 'stax-addons-for-elementor' ),
-				'label_off' => __( 'Hide', 'stax-addons-for-elementor' ),
+				'label_on'  => __( 'Show', STAX_EL_DOMAIN ),
+				'label_off' => __( 'Hide', STAX_EL_DOMAIN ),
 				'default'   => 'yes',
 			]
 		);
@@ -129,10 +129,10 @@ class Component extends Base {
 		$this->add_control(
 			'nav_pagination',
 			[
-				'label'     => __( 'Pagination', 'stax-addons-for-elementor' ),
+				'label'     => __( 'Pagination', STAX_EL_DOMAIN ),
 				'type'      => Controls_Manager::SWITCHER,
-				'label_on'  => __( 'Show', 'stax-addons-for-elementor' ),
-				'label_off' => __( 'Hide', 'stax-addons-for-elementor' ),
+				'label_on'  => __( 'Show', STAX_EL_DOMAIN ),
+				'label_off' => __( 'Hide', STAX_EL_DOMAIN ),
 				'default'   => 'yes',
 			]
 		);
@@ -141,7 +141,7 @@ class Component extends Base {
 
 		$repeater->start_controls_tabs( 'slides_repeater' );
 
-		$repeater->start_controls_tab( 'background', [ 'label' => __( 'Background', 'stax-addons-for-elementor' ) ] );
+		$repeater->start_controls_tab( 'background', [ 'label' => __( 'Background', STAX_EL_DOMAIN ) ] );
 
 		$repeater->add_group_control(
 			Group_Control_Background::get_type(),
@@ -154,11 +154,11 @@ class Component extends Base {
 
 		$repeater->end_controls_tab();
 
-		$repeater->start_controls_tab( 'content', [ 'label' => __( 'Content', 'stax-addons-for-elementor' ) ] );
+		$repeater->start_controls_tab( 'content', [ 'label' => __( 'Content', STAX_EL_DOMAIN ) ] );
 
 		$repeater->add_control(
 			'list_default_style', [
-				'label'     => __( 'H3 margin', 'stax-addons-for-elementor' ),
+				'label'     => __( 'H3 margin', STAX_EL_DOMAIN ),
 				'type'      => Controls_Manager::HIDDEN,
 				'default'   => '1',
 				'selectors' => [
@@ -169,36 +169,36 @@ class Component extends Base {
 
 		$repeater->add_control(
 			'list_title', [
-				'label'       => __( 'Title', 'stax-addons-for-elementor' ),
+				'label'       => __( 'Title', STAX_EL_DOMAIN ),
 				'type'        => Controls_Manager::TEXT,
-				'default'     => __( 'Demo title', 'stax-addons-for-elementor' ),
+				'default'     => __( 'Demo title', STAX_EL_DOMAIN ),
 				'label_block' => true,
 			]
 		);
 
 		$repeater->add_control(
 			'list_sub_title', [
-				'label'       => __( 'Sub Title', 'stax-addons-for-elementor' ),
+				'label'       => __( 'Sub Title', STAX_EL_DOMAIN ),
 				'type'        => Controls_Manager::TEXT,
-				'default'     => __( 'Demo sub-title', 'stax-addons-for-elementor' ),
+				'default'     => __( 'Demo sub-title', STAX_EL_DOMAIN ),
 				'label_block' => true,
 			]
 		);
 
 		$repeater->add_control(
 			'list_description', [
-				'label'       => __( 'Description', 'stax-addons-for-elementor' ),
+				'label'       => __( 'Description', STAX_EL_DOMAIN ),
 				'type'        => Controls_Manager::TEXT,
-				'default'     => __( 'Demo description', 'stax-addons-for-elementor' ),
+				'default'     => __( 'Demo description', STAX_EL_DOMAIN ),
 				'label_block' => true,
 			]
 		);
 
 		$repeater->add_control(
 			'list_btn_text', [
-				'label'       => __( 'Button Text', 'stax-addons-for-elementor' ),
+				'label'       => __( 'Button Text', STAX_EL_DOMAIN ),
 				'type'        => Controls_Manager::TEXT,
-				'default'     => __( 'Click me', 'stax-addons-for-elementor' ),
+				'default'     => __( 'Click me', STAX_EL_DOMAIN ),
 				'label_block' => true,
 			]
 		);
@@ -206,9 +206,9 @@ class Component extends Base {
 		$repeater->add_control(
 			'list_btn_link',
 			[
-				'label'         => __( 'Button Link', 'stax-addons-for-elementor' ),
+				'label'         => __( 'Button Link', STAX_EL_DOMAIN ),
 				'type'          => Controls_Manager::URL,
-				'placeholder'   => __( 'https://your-link.com', 'stax-addons-for-elementor' ),
+				'placeholder'   => __( 'https://your-link.com', STAX_EL_DOMAIN ),
 				'show_external' => true,
 				'default'       => [
 					'url'         => '',
@@ -220,24 +220,24 @@ class Component extends Base {
 
 		$repeater->end_controls_tab();
 
-		$repeater->start_controls_tab( 'style', [ 'label' => __( 'Style', 'stax-addons-for-elementor' ) ] );
+		$repeater->start_controls_tab( 'style', [ 'label' => __( 'Style', STAX_EL_DOMAIN ) ] );
 
 		$repeater->add_responsive_control(
 			'align_horizontal',
 			[
-				'label'     => __( 'Horizontal Align', 'stax-addons-for-elementor' ),
+				'label'     => __( 'Horizontal Align', STAX_EL_DOMAIN ),
 				'type'      => Controls_Manager::CHOOSE,
 				'options'   => [
 					'flex-start' => [
-						'title' => __( 'Left', 'stax-addons-for-elementor' ),
+						'title' => __( 'Left', STAX_EL_DOMAIN ),
 						'icon'  => 'eicon-text-align-left',
 					],
 					'center'     => [
-						'title' => __( 'Center', 'stax-addons-for-elementor' ),
+						'title' => __( 'Center', STAX_EL_DOMAIN ),
 						'icon'  => 'eicon-text-align-center',
 					],
 					'flex-end'   => [
-						'title' => __( 'Right', 'stax-addons-for-elementor' ),
+						'title' => __( 'Right', STAX_EL_DOMAIN ),
 						'icon'  => 'eicon-text-align-right',
 					]
 				],
@@ -251,19 +251,19 @@ class Component extends Base {
 		$repeater->add_responsive_control(
 			'align_vertical',
 			[
-				'label'     => __( 'Vertical Align', 'stax-addons-for-elementor' ),
+				'label'     => __( 'Vertical Align', STAX_EL_DOMAIN ),
 				'type'      => Controls_Manager::CHOOSE,
 				'options'   => [
 					'flex-start' => [
-						'title' => __( 'Top', 'stax-addons-for-elementor' ),
+						'title' => __( 'Top', STAX_EL_DOMAIN ),
 						'icon'  => 'eicon-v-align-top',
 					],
 					'center'     => [
-						'title' => __( 'Middle', 'stax-addons-for-elementor' ),
+						'title' => __( 'Middle', STAX_EL_DOMAIN ),
 						'icon'  => 'eicon-v-align-middle',
 					],
 					'flex-end'   => [
-						'title' => __( 'Bottom', 'stax-addons-for-elementor' ),
+						'title' => __( 'Bottom', STAX_EL_DOMAIN ),
 						'icon'  => 'eicon-v-align-bottom',
 					],
 				],
@@ -277,7 +277,7 @@ class Component extends Base {
 		$repeater->add_control(
 			'list_title_color',
 			[
-				'label'     => __( 'Title Color', 'stax-addons-for-elementor' ),
+				'label'     => __( 'Title Color', STAX_EL_DOMAIN ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} {{CURRENT_ITEM}} h3' => 'color: {{VALUE}}'
@@ -288,7 +288,7 @@ class Component extends Base {
 		$repeater->add_control(
 			'list_sub_title_color',
 			[
-				'label'     => __( 'Sub-title Color', 'stax-addons-for-elementor' ),
+				'label'     => __( 'Sub-title Color', STAX_EL_DOMAIN ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} {{CURRENT_ITEM}} .slide-subtitle' => 'color: {{VALUE}}'
@@ -299,7 +299,7 @@ class Component extends Base {
 		$repeater->add_control(
 			'list_description_color',
 			[
-				'label'     => __( 'Description Color', 'stax-addons-for-elementor' ),
+				'label'     => __( 'Description Color', STAX_EL_DOMAIN ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} {{CURRENT_ITEM}} .slide-description' => 'color: {{VALUE}}'
@@ -310,7 +310,7 @@ class Component extends Base {
 		$repeater->add_group_control(
 			Group_Control_Text_Shadow::get_type(),
 			[
-				'label'    => __( 'Title Shadow', 'stax-addons-for-elementor' ),
+				'label'    => __( 'Title Shadow', STAX_EL_DOMAIN ),
 				'name'     => 'list_title_shadow',
 				'selector' => '{{WRAPPER}} {{CURRENT_ITEM}} h3',
 			]
@@ -319,7 +319,7 @@ class Component extends Base {
 		$repeater->add_group_control(
 			Group_Control_Text_Shadow::get_type(),
 			[
-				'label'    => __( 'Sub-title Shadow', 'stax-addons-for-elementor' ),
+				'label'    => __( 'Sub-title Shadow', STAX_EL_DOMAIN ),
 				'name'     => 'list_sub_title_shadow',
 				'selector' => '{{WRAPPER}} {{CURRENT_ITEM}} .slide-subtitle',
 			]
@@ -328,7 +328,7 @@ class Component extends Base {
 		$repeater->add_group_control(
 			Group_Control_Text_Shadow::get_type(),
 			[
-				'label'    => __( 'Description Shadow', 'stax-addons-for-elementor' ),
+				'label'    => __( 'Description Shadow', STAX_EL_DOMAIN ),
 				'name'     => 'list_description_shadow',
 				'selector' => '{{WRAPPER}} {{CURRENT_ITEM}} .slide-description',
 			]
@@ -337,7 +337,7 @@ class Component extends Base {
 		$repeater->add_control(
 			'list_btn_color',
 			[
-				'label'     => __( 'Button Color', 'stax-addons-for-elementor' ),
+				'label'     => __( 'Button Color', STAX_EL_DOMAIN ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} {{CURRENT_ITEM}} .slide-btn a' => 'color: {{VALUE}}'
@@ -348,7 +348,7 @@ class Component extends Base {
 		$repeater->add_control(
 			'list_btn_hover_color',
 			[
-				'label'     => __( 'Button Hover Color', 'stax-addons-for-elementor' ),
+				'label'     => __( 'Button Hover Color', STAX_EL_DOMAIN ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} {{CURRENT_ITEM}} .slide-btn a:hover' => 'color: {{VALUE}}'
@@ -359,7 +359,7 @@ class Component extends Base {
 		$repeater->add_control(
 			'list_btn_bg_color',
 			[
-				'label'     => __( 'Button Background', 'stax-addons-for-elementor' ),
+				'label'     => __( 'Button Background', STAX_EL_DOMAIN ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} {{CURRENT_ITEM}} .slide-btn a' => 'background-color: {{VALUE}}'
@@ -370,7 +370,7 @@ class Component extends Base {
 		$repeater->add_control(
 			'list_btn_hover_bg_color',
 			[
-				'label'     => __( 'Button Hover Bg', 'stax-addons-for-elementor' ),
+				'label'     => __( 'Button Hover Bg', STAX_EL_DOMAIN ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} {{CURRENT_ITEM}} .slide-btn a:hover' => 'background-color: {{VALUE}}'
@@ -381,7 +381,7 @@ class Component extends Base {
 		$repeater->add_control(
 			'list_btn_border_color',
 			[
-				'label'     => __( 'Button Border Color', 'stax-addons-for-elementor' ),
+				'label'     => __( 'Button Border Color', STAX_EL_DOMAIN ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} {{CURRENT_ITEM}} .slide-btn a' => 'border-color: {{VALUE}}'
@@ -392,7 +392,7 @@ class Component extends Base {
 		$repeater->add_control(
 			'list_btn_hover_border_color',
 			[
-				'label'     => __( 'Button Border Hover Color', 'stax-addons-for-elementor' ),
+				'label'     => __( 'Button Border Hover Color', STAX_EL_DOMAIN ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} {{CURRENT_ITEM}} .slide-btn a:hover' => 'border-color: {{VALUE}}'
@@ -407,15 +407,15 @@ class Component extends Base {
 		$this->add_control(
 			'list',
 			[
-				'label'       => __( 'Slides List', 'stax-addons-for-elementor' ),
+				'label'       => __( 'Slides List', STAX_EL_DOMAIN ),
 				'type'        => Controls_Manager::REPEATER,
 				'fields'      => $repeater->get_controls(),
 				'default'     => [
 					[
-						'list_title'       => __( 'Demo title', 'stax-addons-for-elementor' ),
-						'list_sub_title'   => __( 'Demo sub-title', 'stax-addons-for-elementor' ),
-						'list_description' => __( 'Demo description', 'stax-addons-for-elementor' ),
-						'list_btn_text'    => __( 'Click me', 'stax-addons-for-elementor' ),
+						'list_title'       => __( 'Demo title', STAX_EL_DOMAIN ),
+						'list_sub_title'   => __( 'Demo sub-title', STAX_EL_DOMAIN ),
+						'list_description' => __( 'Demo description', STAX_EL_DOMAIN ),
+						'list_btn_text'    => __( 'Click me', STAX_EL_DOMAIN ),
 					],
 				],
 				'title_field' => '{{{ list_title }}}',
@@ -427,7 +427,7 @@ class Component extends Base {
 		$this->start_controls_section(
 			'section_slider_style',
 			[
-				'label' => __( 'Slider', 'stax-addons-for-elementor' ),
+				'label' => __( 'Slider', STAX_EL_DOMAIN ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -435,7 +435,7 @@ class Component extends Base {
 		$this->add_responsive_control(
 			'slide_padding',
 			[
-				'label'      => __( 'Padding', 'stax-addons-for-elementor' ),
+				'label'      => __( 'Padding', STAX_EL_DOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors'  => [
@@ -449,7 +449,7 @@ class Component extends Base {
 		$this->start_controls_section(
 			'section_title_style',
 			[
-				'label' => __( 'Title', 'stax-addons-for-elementor' ),
+				'label' => __( 'Title', STAX_EL_DOMAIN ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -457,7 +457,7 @@ class Component extends Base {
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
-				'label'    => __( 'Typography', 'stax-addons-for-elementor' ),
+				'label'    => __( 'Typography', STAX_EL_DOMAIN ),
 				'name'     => 'title_typography',
 				'selector' => '{{WRAPPER}} .swiper-slide h3',
 			]
@@ -466,7 +466,7 @@ class Component extends Base {
 		$this->add_responsive_control(
 			'title_margin',
 			[
-				'label'      => __( 'Margin', 'stax-addons-for-elementor' ),
+				'label'      => __( 'Margin', STAX_EL_DOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors'  => [
@@ -478,7 +478,7 @@ class Component extends Base {
 		$this->add_responsive_control(
 			'title_padding',
 			[
-				'label'      => __( 'Padding', 'stax-addons-for-elementor' ),
+				'label'      => __( 'Padding', STAX_EL_DOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors'  => [
@@ -492,7 +492,7 @@ class Component extends Base {
 		$this->start_controls_section(
 			'section_sub_title_style',
 			[
-				'label' => __( 'Sub-Title', 'stax-addons-for-elementor' ),
+				'label' => __( 'Sub-Title', STAX_EL_DOMAIN ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -500,7 +500,7 @@ class Component extends Base {
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
-				'label'    => __( 'Typography', 'stax-addons-for-elementor' ),
+				'label'    => __( 'Typography', STAX_EL_DOMAIN ),
 				'name'     => 'subtitle_typography',
 				'selector' => '{{WRAPPER}} .swiper-slide .slide-subtitle',
 			]
@@ -509,7 +509,7 @@ class Component extends Base {
 		$this->add_responsive_control(
 			'subtitle_margin',
 			[
-				'label'      => __( 'Margin', 'stax-addons-for-elementor' ),
+				'label'      => __( 'Margin', STAX_EL_DOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors'  => [
@@ -521,7 +521,7 @@ class Component extends Base {
 		$this->add_responsive_control(
 			'subtitle_padding',
 			[
-				'label'      => __( 'Padding', 'stax-addons-for-elementor' ),
+				'label'      => __( 'Padding', STAX_EL_DOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors'  => [
@@ -535,7 +535,7 @@ class Component extends Base {
 		$this->start_controls_section(
 			'section_description_style',
 			[
-				'label' => __( 'Description', 'stax-addons-for-elementor' ),
+				'label' => __( 'Description', STAX_EL_DOMAIN ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -543,7 +543,7 @@ class Component extends Base {
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
-				'label'    => __( 'Typography', 'stax-addons-for-elementor' ),
+				'label'    => __( 'Typography', STAX_EL_DOMAIN ),
 				'name'     => 'description_typography',
 				'selector' => '{{WRAPPER}} .swiper-slide .slide-description',
 			]
@@ -552,7 +552,7 @@ class Component extends Base {
 		$this->add_responsive_control(
 			'description_margin',
 			[
-				'label'      => __( 'Margin', 'stax-addons-for-elementor' ),
+				'label'      => __( 'Margin', STAX_EL_DOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors'  => [
@@ -564,7 +564,7 @@ class Component extends Base {
 		$this->add_responsive_control(
 			'description_padding',
 			[
-				'label'      => __( 'Padding', 'stax-addons-for-elementor' ),
+				'label'      => __( 'Padding', STAX_EL_DOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors'  => [
@@ -578,7 +578,7 @@ class Component extends Base {
 		$this->start_controls_section(
 			'section_btn_style',
 			[
-				'label' => __( 'Button', 'stax-addons-for-elementor' ),
+				'label' => __( 'Button', STAX_EL_DOMAIN ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -586,7 +586,7 @@ class Component extends Base {
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
-				'label'    => __( 'Typography', 'stax-addons-for-elementor' ),
+				'label'    => __( 'Typography', STAX_EL_DOMAIN ),
 				'name'     => 'btn_typography',
 				'selector' => '{{WRAPPER}} .slide-btn a',
 			]
@@ -604,7 +604,7 @@ class Component extends Base {
 		$this->add_control(
 			'btn_border_radius',
 			[
-				'label'      => __( 'Border Radius', 'stax-addons-for-elementor' ),
+				'label'      => __( 'Border Radius', STAX_EL_DOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors'  => [
@@ -616,7 +616,7 @@ class Component extends Base {
 		$this->add_responsive_control(
 			'btn_margin',
 			[
-				'label'      => __( 'Margin', 'stax-addons-for-elementor' ),
+				'label'      => __( 'Margin', STAX_EL_DOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors'  => [
@@ -628,7 +628,7 @@ class Component extends Base {
 		$this->add_responsive_control(
 			'btn_padding',
 			[
-				'label'      => __( 'Padding', 'stax-addons-for-elementor' ),
+				'label'      => __( 'Padding', STAX_EL_DOMAIN ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors'  => [

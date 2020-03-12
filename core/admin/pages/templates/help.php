@@ -1,5 +1,5 @@
 <h2 class="ste-my-0 ste-leading-none ste-text-2xl ste-text-gray-700 ste-font-bold ste-tracking-wide">
-	<?php _e( 'Help', 'stax-addons-for-elementor' ); ?>
+	<?php _e( 'Help', STAX_EL_DOMAIN ); ?>
 </h2>
 
 <div class="ste-mt-5">

@@ -36,22 +36,22 @@ class Rotate {
 				'stx_rotate_section',
 				[
 					'tab'   => Controls_Manager::TAB_ADVANCED,
-					'label' => __( 'Rotate', 'stax-addons-for-elementor' ),
+					'label' => __( 'Rotate', STAX_EL_DOMAIN ),
 				]
 			);
 
 			$element->add_control(
 				'reference_point',
 				[
-					'label'   => __( 'Reference Point', 'stax-addons-for-elementor' ),
+					'label'   => __( 'Reference Point', STAX_EL_DOMAIN ),
 					'type'    => Controls_Manager::SELECT,
 					'default' => 'center',
 					'options' => [
-						'center'       => __( 'Center', 'stax-addons-for-elementor' ),
-						'top-left'     => __( 'Top Left', 'stax-addons-for-elementor' ),
-						'top-right'    => __( 'Top Right', 'stax-addons-for-elementor' ),
-						'bottom-right' => __( 'Bottom Right', 'stax-addons-for-elementor' ),
-						'bottom-left'  => __( 'Bottom Left', 'stax-addons-for-elementor' ),
+						'center'       => __( 'Center', STAX_EL_DOMAIN ),
+						'top-left'     => __( 'Top Left', STAX_EL_DOMAIN ),
+						'top-right'    => __( 'Top Right', STAX_EL_DOMAIN ),
+						'bottom-right' => __( 'Bottom Right', STAX_EL_DOMAIN ),
+						'bottom-left'  => __( 'Bottom Left', STAX_EL_DOMAIN ),
 					],
 				]
 			);
@@ -59,7 +59,7 @@ class Rotate {
 			$element->add_control(
 				'reference_center',
 				[
-					'label'     => __( 'Center', 'stax-addons-for-elementor' ),
+					'label'     => __( 'Center', STAX_EL_DOMAIN ),
 					'type'      => Controls_Manager::HIDDEN,
 					'default'   => '1',
 					'selectors' => [
@@ -74,7 +74,7 @@ class Rotate {
 			$element->add_control(
 				'reference_top_left',
 				[
-					'label'     => __( 'Top Left', 'stax-addons-for-elementor' ),
+					'label'     => __( 'Top Left', STAX_EL_DOMAIN ),
 					'type'      => Controls_Manager::HIDDEN,
 					'default'   => '1',
 					'selectors' => [
@@ -89,7 +89,7 @@ class Rotate {
 			$element->add_control(
 				'reference_top_right',
 				[
-					'label'     => __( 'Top Right', 'stax-addons-for-elementor' ),
+					'label'     => __( 'Top Right', STAX_EL_DOMAIN ),
 					'type'      => Controls_Manager::HIDDEN,
 					'default'   => '1',
 					'selectors' => [
@@ -104,7 +104,7 @@ class Rotate {
 			$element->add_control(
 				'reference_bottom_right',
 				[
-					'label'     => __( 'Bottom Right', 'stax-addons-for-elementor' ),
+					'label'     => __( 'Bottom Right', STAX_EL_DOMAIN ),
 					'type'      => Controls_Manager::HIDDEN,
 					'default'   => '1',
 					'selectors' => [
@@ -119,7 +119,7 @@ class Rotate {
 			$element->add_control(
 				'reference_bottom_left',
 				[
-					'label'     => __( 'Bottom Left', 'stax-addons-for-elementor' ),
+					'label'     => __( 'Bottom Left', STAX_EL_DOMAIN ),
 					'type'      => Controls_Manager::HIDDEN,
 					'default'   => '1',
 					'selectors' => [
@@ -135,7 +135,7 @@ class Rotate {
 			$element->add_responsive_control(
 				'angle',
 				[
-					'label'      => __( 'Angle', 'stax-addons-for-elementor' ),
+					'label'      => __( 'Angle', STAX_EL_DOMAIN ),
 					'type'       => Controls_Manager::SLIDER,
 					'size_units' => [ 'px' ],
 					'range'      => [

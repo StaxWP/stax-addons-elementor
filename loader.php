@@ -11,12 +11,12 @@
  * Domain Path: /languages
  */
 
-
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
 define( 'STAX_EL_VERSION', '1.2.0' );
+define( 'STAX_EL_DOMAIN', 'stax-addons-for-elementor' );
 define( 'STAX_EL_HOOK_PREFIX', 'stax_el_' );
 define( 'STAX_EL_SLUG_PREFIX', 'stax-elementor-' );
 
@@ -35,7 +35,7 @@ define( 'STAX_EL_ASSETS_URL', STAX_EL_URL . 'assets/' );
  * Localization
  */
 function stax_elementor_load_plugin_textdomain() {
-	load_plugin_textdomain( 'stax-addons-for-elementor', false, basename( __DIR__ ) . '/languages/' );
+	load_plugin_textdomain( STAX_EL_DOMAIN, false, basename( __DIR__ ) . '/languages/' );
 }
 
 add_action( 'plugins_loaded', 'stax_elementor_load_plugin_textdomain' );

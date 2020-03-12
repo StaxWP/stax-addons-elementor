@@ -31,7 +31,7 @@ class Component extends Base {
 	}
 
 	public function get_title() {
-		return __( 'Read more(Expand text)', 'stax-addons-for-elementor' );
+		return __( 'Read more(Expand text)', STAX_EL_DOMAIN );
 	}
 
 	public function get_icon() {
@@ -51,7 +51,7 @@ class Component extends Base {
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Settings', 'stax-addons-for-elementor' ),
+				'label' => __( 'Settings', STAX_EL_DOMAIN ),
 				'tab'   => Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -78,7 +78,7 @@ class Component extends Base {
 
 		$this->add_control(
 			'read_more_text', [
-				'label'   => __( 'More text', 'stax-addons-for-elementor' ),
+				'label'   => __( 'More text', STAX_EL_DOMAIN ),
 				'type'    => Controls_Manager::WYSIWYG,
 				'default' => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.', 'elementor' ),
 			]
@@ -86,14 +86,14 @@ class Component extends Base {
 
 		$this->add_control(
 			'read_more_label', [
-				'label'   => __( 'More Label', 'stax-addons-for-elementor' ),
+				'label'   => __( 'More Label', STAX_EL_DOMAIN ),
 				'type'    => Controls_Manager::TEXT,
 				'default' => 'Read more',
 			]
 		);
 		$this->add_control(
 			'read_more_icon', [
-				'label' => __( ' More icon', 'stax-addons-for-elementor' ),
+				'label' => __( ' More icon', STAX_EL_DOMAIN ),
 				'type'  => Controls_Manager::ICONS,
 			]
 		);
@@ -116,14 +116,14 @@ class Component extends Base {
 
 		$this->add_control(
 			'read_less_label', [
-				'label'   => __( 'Less Label', 'stax-addons-for-elementor' ),
+				'label'   => __( 'Less Label', STAX_EL_DOMAIN ),
 				'type'    => Controls_Manager::TEXT,
 				'default' => 'Read less',
 			]
 		);
 		$this->add_control(
 			'read_less_icon', [
-				'label' => __( 'Less icon', 'stax-addons-for-elementor' ),
+				'label' => __( 'Less icon', STAX_EL_DOMAIN ),
 				'type'  => Controls_Manager::ICONS,
 			]
 		);
