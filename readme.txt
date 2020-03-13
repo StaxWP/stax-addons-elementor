@@ -3,8 +3,8 @@ Contributors: seventhqueen, codezz, geowrge, rtynio, staxwp
 Tags: elementor addons, elementor enhancements, elementor widgets, elementor, light addons, fast elementor addons
 Requires at least: 4.0
 Requires PHP: 5.6
-Tested up to: 5.3.2
-Stable tag: 1.2.0
+Tested up to: 5.4.0
+Stable tag: 1.3.0
 License: GLPv2 or later
 
 Beautiful & Fast add-ons for Elementor. Enhance your site building experience with Stax Elementor Addons
@@ -44,6 +44,9 @@ Many more elements and options coming soon...
 When editing a page with Elementor you will see the New elements added at the end of default elementor widget area.
 
 == Changelog ==
+
+ 1.3.0 =
+* Added header separator styles
 
  1.2.0 =
 * Refactor the admin dashboard
