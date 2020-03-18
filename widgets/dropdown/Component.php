@@ -30,10 +30,6 @@ class Component extends Base {
 		return 'sq-icon-dropdown sq-widget-label';
 	}
 
-	public function get_categories() {
-		return [ 'stax-elementor' ];
-	}
-
 	protected function _register_controls() {
 		$this->start_controls_section(
 			'section_button',

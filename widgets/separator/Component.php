@@ -22,10 +22,6 @@ class Component extends Base {
 		return 'eicon-post-slider sq-widget-label';
 	}
 
-	public function get_categories() {
-		return [ 'stax-elementor' ];
-	}
-
 	protected function _register_controls() {
 	}
 

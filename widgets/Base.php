@@ -6,13 +6,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 } // Exit if accessed directly
 
+use Elementor\Widget_Base;
 use StaxAddons\StaxWidgets;
 
 /**
  * Class Base
  * @package StaxAddons\Widgets
  */
-abstract class Base extends \Elementor\Widget_Base {
+abstract class Base extends Widget_Base {
 
 	/**
 	 * Base constructor.
@@ -83,10 +84,23 @@ abstract class Base extends \Elementor\Widget_Base {
 		}
 	}
 
+	/**
+	 * @return array
+	 */
+	public function get_categories() {
+		return [ 'stax-elementor' ];
+	}
+
+	/**
+	 * @return array
+	 */
 	public function get_script_depends() {
 		return [ $this->get_widget_script_handle() ];
 	}
 
+	/**
+	 * @return array
+	 */
 	public function get_style_depends() {
 		return [ $this->get_widget_style_handle() ];
 	}

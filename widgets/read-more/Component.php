@@ -38,10 +38,6 @@ class Component extends Base {
 		return 'sq-icon-bp_slide-down-more sq-widget-label';
 	}
 
-	public function get_categories() {
-		return [ 'stax-elementor' ];
-	}
-
 	public function get_keywords() {
 		return [ 'text', 'editor', 'more' ];
 	}
