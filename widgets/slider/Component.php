@@ -81,7 +81,7 @@ class Component extends Base {
 				'default'   => '1',
 				'selectors' => [
 					'{{WRAPPER}} .swiper-pagination'                                  => 'display: block !important;',
-					'{{WRAPPER}} .swiper-slide:before'                                => 'content: " "; position: absolute; width: 100%; height: 100%; z-index: 1;',
+					'{{WRAPPER}} .swiper-slide:before'                                => 'content: " "; position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 1;',
 					'{{WRAPPER}} .swiper-slide > div, {{WRAPPER}} .swiper-slide > h3' => 'z-index: 2;'
 				]
 			]
