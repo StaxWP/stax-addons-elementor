@@ -80,7 +80,9 @@ class Component extends Base {
 				'type'      => Controls_Manager::HIDDEN,
 				'default'   => '1',
 				'selectors' => [
-					'{{WRAPPER}} .swiper-pagination' => 'display: block !important;'
+					'{{WRAPPER}} .swiper-pagination'                                  => 'display: block !important;',
+					'{{WRAPPER}} .swiper-slide:before'                                => 'content: " "; position: absolute; width: 100%; height: 100%; z-index: 1;',
+					'{{WRAPPER}} .swiper-slide > div, {{WRAPPER}} .swiper-slide > h3' => 'z-index: 2;'
 				]
 			]
 		);
@@ -267,6 +269,17 @@ class Component extends Base {
 				'selectors' => [
 					'{{WRAPPER}} {{CURRENT_ITEM}}' => 'justify-content: {{VALUE}};'
 				]
+			]
+		);
+
+		$repeater->add_control(
+			'list_overlay_color',
+			[
+				'label'     => __( 'Overlay Color', STAX_EL_DOMAIN ),
+				'type'      => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} {{CURRENT_ITEM}}:before' => 'background-color: {{VALUE}}'
+				],
 			]
 		);
 
