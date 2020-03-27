@@ -10,5 +10,29 @@
     a {
       display: inline-block;
     }
+
+    &.sq-align-flex-start {
+      align-items: flex-start;
+
+      > * {
+        text-align: left;
+      }
+    }
+
+    &.sq-align-center {
+      align-items: center;
+
+      > * {
+        text-align: center;
+      }
+    }
+
+    &.sq-align-flex-end {
+      align-items: flex-end;
+
+      > * {
+        text-align: right;
+      }
+    }
   }
 }

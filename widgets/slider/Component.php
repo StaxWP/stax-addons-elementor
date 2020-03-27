@@ -221,9 +221,9 @@ class Component extends Base {
 		$repeater->add_responsive_control(
 			'align_horizontal',
 			[
-				'label'     => __( 'Horizontal Align', STAX_EL_DOMAIN ),
-				'type'      => Controls_Manager::CHOOSE,
-				'options'   => [
+				'label'   => __( 'Horizontal Align', STAX_EL_DOMAIN ),
+				'type'    => Controls_Manager::CHOOSE,
+				'options' => [
 					'flex-start' => [
 						'title' => __( 'Left', STAX_EL_DOMAIN ),
 						'icon'  => 'eicon-text-align-left',
@@ -237,10 +237,7 @@ class Component extends Base {
 						'icon'  => 'eicon-text-align-right',
 					]
 				],
-				'default'   => '',
-				'selectors' => [
-					'{{WRAPPER}} {{CURRENT_ITEM}}' => 'align-items: {{VALUE}};'
-				]
+				'default' => ''
 			]
 		);
 
@@ -659,9 +656,9 @@ class Component extends Base {
 
 					$target   = $item['list_btn_link']['is_external'] ? ' target="_blank"' : '';
 					$nofollow = $item['list_btn_link']['nofollow'] ? ' rel="nofollow"' : '';
-
+					$align    = $item['align_horizontal'] ? 'sq-align-' . $item['align_horizontal'] : '';
 					?>
-                    <div class="swiper-slide elementor-repeater-item-<?php echo $item['_id']; ?>">
+                    <div class="swiper-slide elementor-repeater-item-<?php echo $item['_id']; ?> <?php echo esc_attr( $align ); ?>">
 						<?php if ( $item['list_title'] ) : ?>
                             <h3><?php echo $item['list_title']; ?></h3>
 						<?php endif; ?>
