@@ -87,6 +87,12 @@ class StaxWidgets {
 //			'slug'  => 'stax-el-info-box'
 //		];
 //
+		$widgets['interval-image'] = [
+			'scope' => 'IntervalImage',
+			'name'  => 'Interval Image',
+			'slug'  => 'stax-el-interval-image'
+		];
+
 		$widgets['scroll-top'] = [
 			'scope' => 'ScrollTop',
 			'name'  => 'Scroll Top',
