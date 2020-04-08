@@ -139,19 +139,6 @@ class Component extends Base {
 
 		$repeater->start_controls_tabs( 'slides_repeater' );
 
-		$repeater->start_controls_tab( 'background', [ 'label' => __( 'Background', STAX_EL_DOMAIN ) ] );
-
-		$repeater->add_group_control(
-			Group_Control_Background::get_type(),
-			[
-				'name'     => 'list_background',
-				'types'    => [ 'classic', 'gradient', 'video' ],
-				'selector' => '{{WRAPPER}} {{CURRENT_ITEM}}',
-			]
-		);
-
-		$repeater->end_controls_tab();
-
 		$repeater->start_controls_tab( 'content', [ 'label' => __( 'Content', STAX_EL_DOMAIN ) ] );
 
 		$repeater->add_control(
@@ -213,6 +200,19 @@ class Component extends Base {
 					'is_external' => false,
 					'nofollow'    => false,
 				],
+			]
+		);
+
+		$repeater->end_controls_tab();
+
+		$repeater->start_controls_tab( 'background', [ 'label' => __( 'Background', STAX_EL_DOMAIN ) ] );
+
+		$repeater->add_group_control(
+			Group_Control_Background::get_type(),
+			[
+				'name'     => 'list_background',
+				'types'    => [ 'classic', 'gradient' ],
+				'selector' => '{{WRAPPER}} {{CURRENT_ITEM}}',
 			]
 		);
 
