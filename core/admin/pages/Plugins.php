@@ -48,7 +48,7 @@ class Plugins extends Base {
 
 	public function add_menu_item( $menu ) {
 		$menu[] = [
-			'name'     => __( 'Plugins', STAX_EL_DOMAIN ),
+			'name'     => __( 'Plugins', 'stax-addons-for-elementor' ),
 			'link'     => admin_url( 'admin.php?page=' . STAX_EL_SLUG_PREFIX . $this->current_slug ),
 			'priority' => 3
 		];

@@ -35,7 +35,7 @@ class Templates extends Base {
 
 	public function add_menu_item( $menu ) {
 		$menu[] = [
-			'name'     => __( 'Templates', STAX_EL_DOMAIN ),
+			'name'     => __( 'Templates', 'stax-addons-for-elementor' ),
 			'link'     => admin_url( 'admin.php?page=' . STAX_EL_SLUG_PREFIX . $this->current_slug ),
 			'priority' => 4
 		];

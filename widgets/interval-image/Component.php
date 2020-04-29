@@ -25,7 +25,7 @@ class Component extends Base {
 	}
 
 	public function get_title() {
-		return esc_html__( 'Interval Image', STAX_EL_DOMAIN );
+		return esc_html__( 'Interval Image', 'stax-addons-for-elementor' );
 	}
 
 	public function get_icon() {
@@ -41,7 +41,7 @@ class Component extends Base {
 		$this->start_controls_section(
 			'general_section',
 			[
-				'label' => __( 'General', STAX_EL_DOMAIN ),
+				'label' => esc_html__( 'General', 'stax-addons-for-elementor' ),
 				'tab'   => Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -49,9 +49,12 @@ class Component extends Base {
 		$this->add_control(
 			'important_note',
 			[
-				'label'           => __( 'Current System Time', STAX_EL_DOMAIN ),
+				'label'           => esc_html__( 'Current System Time', 'stax-addons-for-elementor' ),
 				'type'            => Controls_Manager::RAW_HTML,
-				'raw'             => '<div style="padding: 10px 0; font-weight: bold;">' . ( new DateTime( 'now' ) )->format( 'Y-m-d H:i' ) . '</div>',
+				'raw'             => '<div style="padding: 10px 0; font-weight: bold;">' .
+				                     ( new DateTime( 'now' ) )->format( 'Y-m-d H:i' ) .
+				                     '</div>' .
+				                     esc_html__( 'This Widget allows you to show a different image by different date intervals and also define a default image.', 'stax-addons-for-elementor' ),
 				'content_classes' => '',
 			]
 		);
@@ -66,7 +69,7 @@ class Component extends Base {
 		$this->add_control(
 			'fallback_image',
 			[
-				'label' => __( 'Choose Image', STAX_EL_DOMAIN ),
+				'label' => __( 'Choose Image', 'stax-addons-for-elementor' ),
 				'type'  => Controls_Manager::MEDIA,
 			]
 		);
@@ -82,9 +85,9 @@ class Component extends Base {
 		$this->add_control(
 			'fallback_link',
 			[
-				'label'         => __( 'Link', STAX_EL_DOMAIN ),
+				'label'         => __( 'Link', 'stax-addons-for-elementor' ),
 				'type'          => Controls_Manager::URL,
-				'placeholder'   => __( 'https://your-link.com', STAX_EL_DOMAIN ),
+				'placeholder'   => __( 'https://your-link.com', 'stax-addons-for-elementor' ),
 				'show_external' => true,
 				'default'       => [
 					'url'         => '',
@@ -106,17 +109,17 @@ class Component extends Base {
 		$repeater->add_control(
 			'title',
 			[
-				'label'       => __( 'Title', STAX_EL_DOMAIN ),
+				'label'       => __( 'Title', 'stax-addons-for-elementor' ),
 				'type'        => Controls_Manager::TEXT,
-				'default'     => __( 'Default title', STAX_EL_DOMAIN ),
-				'placeholder' => __( 'Type your title here', STAX_EL_DOMAIN ),
+				'default'     => __( 'Default title', 'stax-addons-for-elementor' ),
+				'placeholder' => __( 'Type your title here', 'stax-addons-for-elementor' ),
 			]
 		);
 
 		$repeater->add_control(
 			'image',
 			[
-				'label' => __( 'Choose Image', STAX_EL_DOMAIN ),
+				'label' => __( 'Choose Image', 'stax-addons-for-elementor' ),
 				'type'  => Controls_Manager::MEDIA,
 			]
 		);
@@ -132,9 +135,9 @@ class Component extends Base {
 		$repeater->add_control(
 			'link',
 			[
-				'label'         => __( 'Link', STAX_EL_DOMAIN ),
+				'label'         => __( 'Link', 'stax-addons-for-elementor' ),
 				'type'          => Controls_Manager::URL,
-				'placeholder'   => __( 'https://your-link.com', STAX_EL_DOMAIN ),
+				'placeholder'   => __( 'https://your-link.com', 'stax-addons-for-elementor' ),
 				'show_external' => true,
 				'default'       => [
 					'url'         => '',
@@ -147,7 +150,7 @@ class Component extends Base {
 		$repeater->add_control(
 			'date_start',
 			[
-				'label'          => __( 'Date Start', STAX_EL_DOMAIN ),
+				'label'          => __( 'Date Start', 'stax-addons-for-elementor' ),
 				'type'           => Controls_Manager::DATE_TIME,
 				'picker_options' => [
 					'dateFormat'  => 'Y-m-d H:i',
@@ -161,7 +164,7 @@ class Component extends Base {
 		$repeater->add_control(
 			'date_end',
 			[
-				'label'          => __( 'Date End', STAX_EL_DOMAIN ),
+				'label'          => __( 'Date End', 'stax-addons-for-elementor' ),
 				'type'           => Controls_Manager::DATE_TIME,
 				'picker_options' => [
 					'dateFormat'  => 'Y-m-d H:i',
@@ -175,12 +178,13 @@ class Component extends Base {
 		$repeater->add_control(
 			'repeat',
 			[
-				'label'        => __( 'Repeat Every Year', STAX_EL_DOMAIN ),
+				'label'        => __( 'Repeat Every Year', 'stax-addons-for-elementor' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => __( 'Yes', STAX_EL_DOMAIN ),
-				'label_off'    => __( 'No', STAX_EL_DOMAIN ),
+				'label_on'     => __( 'Yes', 'stax-addons-for-elementor' ),
+				'label_off'    => __( 'No', 'stax-addons-for-elementor' ),
 				'return_value' => 'yes',
 				'default'      => '',
+				'description'      => esc_html__( 'Apply the above condition to upcoming years too.', 'stax-addons-for-elementor' ),
 			]
 		);
 
@@ -188,7 +192,7 @@ class Component extends Base {
 		$this->add_control(
 			'images_list',
 			[
-				'label'       => __( 'Image List', STAX_EL_DOMAIN ),
+				'label'       => __( 'Image List', 'stax-addons-for-elementor' ),
 				'type'        => Controls_Manager::REPEATER,
 				'fields'      => $repeater->get_controls(),
 				'default'     => [],
@@ -206,12 +210,13 @@ class Component extends Base {
 		$this->add_control(
 			'repeat_general',
 			[
-				'label'        => __( 'Repeat All Every Year', STAX_EL_DOMAIN ),
+				'label'        => __( 'Repeat All Every Year', 'stax-addons-for-elementor' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => __( 'Yes', STAX_EL_DOMAIN ),
-				'label_off'    => __( 'No', STAX_EL_DOMAIN ),
+				'label_on'     => __( 'Yes', 'stax-addons-for-elementor' ),
+				'label_off'    => __( 'No', 'stax-addons-for-elementor' ),
 				'return_value' => 'yes',
 				'default'      => '',
+				'description'      => esc_html__( 'Apply the above conditions to upcoming years too.', 'stax-addons-for-elementor' ),
 			]
 		);
 
@@ -307,4 +312,3 @@ class Component extends Base {
 	}
 
 }
-

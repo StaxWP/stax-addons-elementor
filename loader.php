@@ -4,7 +4,7 @@
  * Description: Beautiful & Fast add-ons for Elementor. Enhance your site building experience with Stax Elementor Addons
  * Plugin URI: https://staxbuilder.com
  * Author: StaxWP
- * Version: 1.3.0
+ * Version: 1.4.0
  * Author URI: https://staxwp.com
  *
  * Text Domain: stax-addons-for-elementor
@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-define( 'STAX_EL_VERSION', '1.3.0' );
+define( 'STAX_EL_VERSION', '1.4.0' );
 define( 'STAX_EL_DOMAIN', 'stax-addons-for-elementor' );
 define( 'STAX_EL_HOOK_PREFIX', 'stax_el_' );
 define( 'STAX_EL_SLUG_PREFIX', 'stax-elementor-' );
@@ -35,7 +35,7 @@ define( 'STAX_EL_ASSETS_URL', STAX_EL_URL . 'assets/' );
  * Localization
  */
 function stax_elementor_load_plugin_textdomain() {
-	load_plugin_textdomain( STAX_EL_DOMAIN, false, basename( __DIR__ ) . '/languages/' );
+	load_plugin_textdomain( 'stax-addons-for-elementor', false, basename( __DIR__ ) . '/languages/' );
 }
 
 add_action( 'plugins_loaded', 'stax_elementor_load_plugin_textdomain' );

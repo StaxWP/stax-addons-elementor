@@ -23,7 +23,7 @@ class Component extends Base {
 	}
 
 	public function get_title() {
-		return __( 'Dropdown', STAX_EL_DOMAIN );
+		return __( 'Dropdown', 'stax-addons-for-elementor' );
 	}
 
 	public function get_icon() {
@@ -34,43 +34,43 @@ class Component extends Base {
 		$this->start_controls_section(
 			'section_button',
 			[
-				'label' => __( 'Button', STAX_EL_DOMAIN ),
+				'label' => __( 'Button', 'stax-addons-for-elementor' ),
 			]
 		);
 
 		$this->add_control(
 			'text',
 			[
-				'label'       => __( 'Text', STAX_EL_DOMAIN ),
+				'label'       => __( 'Text', 'stax-addons-for-elementor' ),
 				'type'        => Controls_Manager::TEXT,
 				'dynamic'     => [
 					'active' => true,
 				],
-				'default'     => __( 'Click here', STAX_EL_DOMAIN ),
-				'placeholder' => __( 'Click here', STAX_EL_DOMAIN ),
+				'default'     => __( 'Click here', 'stax-addons-for-elementor' ),
+				'placeholder' => __( 'Click here', 'stax-addons-for-elementor' ),
 			]
 		);
 
 		$this->add_responsive_control(
 			'align',
 			[
-				'label'        => __( 'Alignment', STAX_EL_DOMAIN ),
+				'label'        => __( 'Alignment', 'stax-addons-for-elementor' ),
 				'type'         => Controls_Manager::CHOOSE,
 				'options'      => [
 					'left'    => [
-						'title' => __( 'Left', STAX_EL_DOMAIN ),
+						'title' => __( 'Left', 'stax-addons-for-elementor' ),
 						'icon'  => 'eicon-text-align-left',
 					],
 					'center'  => [
-						'title' => __( 'Center', STAX_EL_DOMAIN ),
+						'title' => __( 'Center', 'stax-addons-for-elementor' ),
 						'icon'  => 'eicon-text-align-center',
 					],
 					'right'   => [
-						'title' => __( 'Right', STAX_EL_DOMAIN ),
+						'title' => __( 'Right', 'stax-addons-for-elementor' ),
 						'icon'  => 'eicon-text-align-right',
 					],
 					'justify' => [
-						'title' => __( 'Justified', STAX_EL_DOMAIN ),
+						'title' => __( 'Justified', 'stax-addons-for-elementor' ),
 						'icon'  => 'eicon-text-align-justify',
 					],
 				],
@@ -82,15 +82,15 @@ class Component extends Base {
 		$this->add_control(
 			'trigger',
 			[
-				'label'        => __( 'Dropdown Trigger', STAX_EL_DOMAIN ),
+				'label'        => __( 'Dropdown Trigger', 'stax-addons-for-elementor' ),
 				'type'         => Controls_Manager::CHOOSE,
 				'options'      => [
 					'hover' => [
-						'title' => __( 'Hover', STAX_EL_DOMAIN ),
+						'title' => __( 'Hover', 'stax-addons-for-elementor' ),
 						'icon'  => 'eicon-drag-n-drop',
 					],
 					'click' => [
-						'title' => __( 'Click', STAX_EL_DOMAIN ),
+						'title' => __( 'Click', 'stax-addons-for-elementor' ),
 						'icon'  => 'eicon-click',
 					]
 				],
@@ -119,7 +119,7 @@ class Component extends Base {
 		$this->add_control(
 			'selected_icon',
 			[
-				'label'       => __( 'Icon', STAX_EL_DOMAIN ),
+				'label'       => __( 'Icon', 'stax-addons-for-elementor' ),
 				'type'        => Controls_Manager::ICONS,
 				'label_block' => true,
 			]
@@ -128,11 +128,11 @@ class Component extends Base {
 		$this->add_control(
 			'icon_align',
 			[
-				'label'     => __( 'Icon Position', STAX_EL_DOMAIN ),
+				'label'     => __( 'Icon Position', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::SELECT,
 				'options'   => [
-					'left'  => __( 'Before', STAX_EL_DOMAIN ),
-					'right' => __( 'After', STAX_EL_DOMAIN ),
+					'left'  => __( 'Before', 'stax-addons-for-elementor' ),
+					'right' => __( 'After', 'stax-addons-for-elementor' ),
 				],
 				'default'   => 'right',
 				'condition' => [
@@ -144,7 +144,7 @@ class Component extends Base {
 		$this->add_control(
 			'icon_indent',
 			[
-				'label'     => __( 'Icon Spacing', STAX_EL_DOMAIN ),
+				'label'     => __( 'Icon Spacing', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::SLIDER,
 				'range'     => [
 					'px' => [
@@ -161,7 +161,7 @@ class Component extends Base {
 		$this->add_control(
 			'view',
 			[
-				'label'   => __( 'View', STAX_EL_DOMAIN ),
+				'label'   => __( 'View', 'stax-addons-for-elementor' ),
 				'type'    => Controls_Manager::HIDDEN,
 				'default' => 'traditional',
 			]
@@ -170,15 +170,15 @@ class Component extends Base {
 		$this->add_control(
 			'button_css_id',
 			[
-				'label'       => __( 'Button ID', STAX_EL_DOMAIN ),
+				'label'       => __( 'Button ID', 'stax-addons-for-elementor' ),
 				'type'        => Controls_Manager::TEXT,
 				'dynamic'     => [
 					'active' => true,
 				],
 				'default'     => '',
-				'title'       => __( 'Add your custom id WITHOUT the Pound key. e.g: my-id', STAX_EL_DOMAIN ),
+				'title'       => __( 'Add your custom id WITHOUT the Pound key. e.g: my-id', 'stax-addons-for-elementor' ),
 				'label_block' => false,
-				'description' => __( 'Please make sure the ID is unique and not used elsewhere on the page this form is displayed. This field allows <code>A-z 0-9</code> & underscore chars without spaces.', STAX_EL_DOMAIN ),
+				'description' => __( 'Please make sure the ID is unique and not used elsewhere on the page this form is displayed. This field allows <code>A-z 0-9</code> & underscore chars without spaces.', 'stax-addons-for-elementor' ),
 				'separator'   => 'before',
 
 			]
@@ -189,7 +189,7 @@ class Component extends Base {
 		$this->start_controls_section(
 			'section_button_style',
 			[
-				'label' => __( 'Button', STAX_EL_DOMAIN ),
+				'label' => __( 'Button', 'stax-addons-for-elementor' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -215,14 +215,14 @@ class Component extends Base {
 		$this->start_controls_tab(
 			'tab_button_normal',
 			[
-				'label' => __( 'Normal', STAX_EL_DOMAIN ),
+				'label' => __( 'Normal', 'stax-addons-for-elementor' ),
 			]
 		);
 
 		$this->add_control(
 			'button_text_color',
 			[
-				'label'     => __( 'Text Color', STAX_EL_DOMAIN ),
+				'label'     => __( 'Text Color', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -234,7 +234,7 @@ class Component extends Base {
 		$this->add_control(
 			'background_color',
 			[
-				'label'     => __( 'Background Color', STAX_EL_DOMAIN ),
+				'label'     => __( 'Background Color', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} a.stx-btn, {{WRAPPER}} .stx-btn' => 'background-color: {{VALUE}};',
@@ -255,14 +255,14 @@ class Component extends Base {
 		$this->start_controls_tab(
 			'tab_button_hover',
 			[
-				'label' => __( 'Hover', STAX_EL_DOMAIN ),
+				'label' => __( 'Hover', 'stax-addons-for-elementor' ),
 			]
 		);
 
 		$this->add_control(
 			'hover_color',
 			[
-				'label'     => __( 'Text Color', STAX_EL_DOMAIN ),
+				'label'     => __( 'Text Color', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} a.stx-btn:hover, {{WRAPPER}} .stx-btn:hover, {{WRAPPER}} a.stx-btn:focus, {{WRAPPER}} .stx-btn:focus'                 => 'color: {{VALUE}};',
@@ -274,7 +274,7 @@ class Component extends Base {
 		$this->add_control(
 			'button_background_hover_color',
 			[
-				'label'     => __( 'Background Color', STAX_EL_DOMAIN ),
+				'label'     => __( 'Background Color', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} a.stx-btn:hover, {{WRAPPER}} .stx-btn:hover, {{WRAPPER}} a.stx-btn:focus, {{WRAPPER}} .stx-btn:focus' => 'background-color: {{VALUE}};',
@@ -285,7 +285,7 @@ class Component extends Base {
 		$this->add_control(
 			'button_hover_border_color',
 			[
-				'label'     => __( 'Border Color', STAX_EL_DOMAIN ),
+				'label'     => __( 'Border Color', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'condition' => [
 					'border_border!' => '',
@@ -307,7 +307,7 @@ class Component extends Base {
 		$this->add_control(
 			'hover_animation',
 			[
-				'label' => __( 'Hover Animation', STAX_EL_DOMAIN ),
+				'label' => __( 'Hover Animation', 'stax-addons-for-elementor' ),
 				'type'  => Controls_Manager::HOVER_ANIMATION,
 			]
 		);
@@ -328,7 +328,7 @@ class Component extends Base {
 		$this->add_control(
 			'border_radius',
 			[
-				'label'      => __( 'Border Radius', STAX_EL_DOMAIN ),
+				'label'      => __( 'Border Radius', 'stax-addons-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors'  => [
@@ -340,7 +340,7 @@ class Component extends Base {
 		$this->add_responsive_control(
 			'text_padding',
 			[
-				'label'      => __( 'Padding', STAX_EL_DOMAIN ),
+				'label'      => __( 'Padding', 'stax-addons-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors'  => [
@@ -355,14 +355,14 @@ class Component extends Base {
 		$this->start_controls_section(
 			'section_dropdown',
 			[
-				'label' => __( 'Dropdown', STAX_EL_DOMAIN ),
+				'label' => __( 'Dropdown', 'stax-addons-for-elementor' ),
 			]
 		);
 
 		$this->add_control(
 			'dropdown_min_width',
 			[
-				'label'      => __( 'Min Width', STAX_EL_DOMAIN ),
+				'label'      => __( 'Min Width', 'stax-addons-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%' ],
 				'range'      => [
@@ -382,8 +382,8 @@ class Component extends Base {
 		$this->add_control(
 			'dropdown_columns',
 			[
-				'label'       => __( 'Columns', STAX_EL_DOMAIN ),
-				'description' => __( 'Max 3 columns can be displayed in the dropdown.', STAX_EL_DOMAIN ),
+				'label'       => __( 'Columns', 'stax-addons-for-elementor' ),
+				'description' => __( 'Max 3 columns can be displayed in the dropdown.', 'stax-addons-for-elementor' ),
 				'type'        => Controls_Manager::NUMBER,
 				'min'         => 1,
 				'max'         => 3,
@@ -395,7 +395,7 @@ class Component extends Base {
 		$this->add_control(
 			'dropdown_column_spacing',
 			[
-				'label'     => __( 'Column Spacing', STAX_EL_DOMAIN ),
+				'label'     => __( 'Column Spacing', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::SLIDER,
 				'range'     => [
 					'px' => [
@@ -422,25 +422,25 @@ class Component extends Base {
 		$repeater->add_control(
 			'dropdown_item_text',
 			[
-				'label'       => __( 'Item Text', STAX_EL_DOMAIN ),
+				'label'       => __( 'Item Text', 'stax-addons-for-elementor' ),
 				'type'        => Controls_Manager::TEXT,
 				'dynamic'     => [
 					'active' => true,
 				],
-				'default'     => __( 'Item', STAX_EL_DOMAIN ),
-				'placeholder' => __( 'Item', STAX_EL_DOMAIN ),
+				'default'     => __( 'Item', 'stax-addons-for-elementor' ),
+				'placeholder' => __( 'Item', 'stax-addons-for-elementor' ),
 			]
 		);
 
 		$repeater->add_control(
 			'dropdown_item_link',
 			[
-				'label'       => __( 'Item Link', STAX_EL_DOMAIN ),
+				'label'       => __( 'Item Link', 'stax-addons-for-elementor' ),
 				'type'        => Controls_Manager::URL,
 				'dynamic'     => [
 					'active' => true,
 				],
-				'placeholder' => __( 'https://your-link.com', STAX_EL_DOMAIN ),
+				'placeholder' => __( 'https://your-link.com', 'stax-addons-for-elementor' ),
 				'default'     => [
 					'url' => '#',
 				],
@@ -450,8 +450,8 @@ class Component extends Base {
 		$repeater->add_control(
 			'dropdown_item_column',
 			[
-				'label'       => __( 'Item Column', STAX_EL_DOMAIN ),
-				'description' => __( 'Attach this item to a column number.', STAX_EL_DOMAIN ),
+				'label'       => __( 'Item Column', 'stax-addons-for-elementor' ),
+				'description' => __( 'Attach this item to a column number.', 'stax-addons-for-elementor' ),
 				'type'        => Controls_Manager::NUMBER,
 				'min'         => 1,
 				'max'         => 3,
@@ -468,7 +468,7 @@ class Component extends Base {
 				'fields'      => $repeater->get_controls(),
 				'default'     => [
 					[
-						'dropdown_item_text'   => __( 'My first item', STAX_EL_DOMAIN ),
+						'dropdown_item_text'   => __( 'My first item', 'stax-addons-for-elementor' ),
 						'dropdown_item_link'   => '#',
 						'dropdown_item_column' => 1,
 					],
@@ -483,7 +483,7 @@ class Component extends Base {
 		$this->start_controls_section(
 			'section_dropdown_style',
 			[
-				'label' => __( 'Dropdown', STAX_EL_DOMAIN ),
+				'label' => __( 'Dropdown', 'stax-addons-for-elementor' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -515,7 +515,7 @@ class Component extends Base {
 		$this->add_control(
 			'dropdown_background_color',
 			[
-				'label'     => __( 'Background Color', STAX_EL_DOMAIN ),
+				'label'     => __( 'Background Color', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .stx-dropdown-content' => 'background-color: {{VALUE}};',
@@ -528,14 +528,14 @@ class Component extends Base {
 		$this->start_controls_tab(
 			'tab_dropdown_normal',
 			[
-				'label' => __( 'Normal', STAX_EL_DOMAIN ),
+				'label' => __( 'Normal', 'stax-addons-for-elementor' ),
 			]
 		);
 
 		$this->add_control(
 			'dropdown_link_color',
 			[
-				'label'     => __( 'Link Color', STAX_EL_DOMAIN ),
+				'label'     => __( 'Link Color', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .stx-dropdown-content a' => 'color: {{VALUE}};'
@@ -548,14 +548,14 @@ class Component extends Base {
 		$this->start_controls_tab(
 			'tab_dropdown_hover',
 			[
-				'label' => __( 'Hover', STAX_EL_DOMAIN ),
+				'label' => __( 'Hover', 'stax-addons-for-elementor' ),
 			]
 		);
 
 		$this->add_control(
 			'dropdown_link_hover_color',
 			[
-				'label'     => __( 'Link Color', STAX_EL_DOMAIN ),
+				'label'     => __( 'Link Color', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .stx-dropdown-content a:hover, {{WRAPPER}} .stx-dropdown-content a:focus' => 'color: {{VALUE}};'
@@ -579,7 +579,7 @@ class Component extends Base {
 		$this->add_control(
 			'dropdown_border_radius',
 			[
-				'label'      => __( 'Border Radius', STAX_EL_DOMAIN ),
+				'label'      => __( 'Border Radius', 'stax-addons-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors'  => [
@@ -591,7 +591,7 @@ class Component extends Base {
 		$this->add_responsive_control(
 			'dropdown_padding',
 			[
-				'label'      => __( 'Padding', STAX_EL_DOMAIN ),
+				'label'      => __( 'Padding', 'stax-addons-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors'  => [
@@ -604,7 +604,7 @@ class Component extends Base {
 		$this->add_responsive_control(
 			'dropdown_margin',
 			[
-				'label'      => __( 'Margin', STAX_EL_DOMAIN ),
+				'label'      => __( 'Margin', 'stax-addons-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors'  => [

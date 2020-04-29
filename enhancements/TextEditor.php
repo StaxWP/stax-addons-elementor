@@ -35,10 +35,10 @@ class TextEditor {
 
 			$element->add_control(
 				'tiny_scroll', [
-					'label'     => __( 'Enable Scroll', STAX_EL_DOMAIN ),
+					'label'     => __( 'Enable Scroll', 'stax-addons-for-elementor' ),
 					'type'      => Controls_Manager::SWITCHER,
-					'label_off' => __( 'Off', STAX_EL_DOMAIN ),
-					'label_on'  => __( 'On', STAX_EL_DOMAIN ),
+					'label_off' => __( 'Off', 'stax-addons-for-elementor' ),
+					'label_on'  => __( 'On', 'stax-addons-for-elementor' ),
 					'default'   => '',
 				]
 			);
@@ -46,7 +46,7 @@ class TextEditor {
 			$element->add_control(
 				'text_height',
 				[
-					'label'      => __( 'Max Height', STAX_EL_DOMAIN ),
+					'label'      => __( 'Max Height', 'stax-addons-for-elementor' ),
 					'type'       => Controls_Manager::SLIDER,
 					'size_units' => [ 'px' ],
 					'range'      => [

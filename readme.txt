@@ -4,7 +4,7 @@ Tags: elementor addons, elementor enhancements, elementor widgets, elementor, li
 Requires at least: 4.0
 Requires PHP: 5.6
 Tested up to: 5.4.0
-Stable tag: 1.3.0
+Stable tag: 1.4.0
 License: GLPv2 or later
 
 Beautiful & Fast add-ons for Elementor. Enhance your site building experience with Stax Elementor Addons
@@ -22,6 +22,7 @@ Current Elementor add-on widgets:
 - **Dropdown Button Widget** - Allows you to have a button with dropdown functionality. Dropdown entries are added and configured from the widget
 - **Heading Widget** - Allows you to have a highlight word or phrase in your heading. Define different text color/ background. Also you can add a subtitle, description and separator
 - **Button Widget** - Adds Box Shadow on hover option
+- **Image interval Widget** - This Widget allows you to show a different image by different date intervals and also define a default image. Example: Show for Christmas or Easter a different image
 
 Current Elementor widget enhancements:
 * Accordion - Box shadow, Item Spacing, Item border & Border radius
@@ -44,6 +45,11 @@ Many more elements and options coming soon...
 When editing a page with Elementor you will see the New elements added at the end of default elementor widget area.
 
 == Changelog ==
+
+ 1.4.0 =
+ * New element: Image interval
+* Updated font icons
+* Fix slider widget alignment
 
  1.3.0 =
 * Added header separator styles

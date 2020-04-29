@@ -22,7 +22,7 @@ class Component extends Base {
 	}
 
 	public function get_title() {
-		return __( 'Heading (Stax)', STAX_EL_DOMAIN );
+		return __( 'Heading (Stax)', 'stax-addons-for-elementor' );
 	}
 
 	public function get_icon() {
@@ -33,19 +33,19 @@ class Component extends Base {
 		$this->start_controls_section(
 			'title_section',
 			[
-				'label' => __( 'Title', STAX_EL_DOMAIN ),
+				'label' => __( 'Title', 'stax-addons-for-elementor' ),
 			]
 		);
 
 		$this->add_control(
 			'title',
 			[
-				'label'       => __( 'Text', STAX_EL_DOMAIN ),
+				'label'       => __( 'Text', 'stax-addons-for-elementor' ),
 				'type'        => Controls_Manager::TEXT,
-				'description' => __( 'Highlight title words by wrapping them in curly brackets like {{beautiful}}', STAX_EL_DOMAIN ),
+				'description' => __( 'Highlight title words by wrapping them in curly brackets like {{beautiful}}', 'stax-addons-for-elementor' ),
 				'label_block' => true,
-				'placeholder' => __( 'Tips to {{grow}} your business', STAX_EL_DOMAIN ),
-				'default'     => __( 'Tips to {{grow}} your business', STAX_EL_DOMAIN ),
+				'placeholder' => __( 'Tips to {{grow}} your business', 'stax-addons-for-elementor' ),
+				'default'     => __( 'Tips to {{grow}} your business', 'stax-addons-for-elementor' ),
 				'dynamic'     => [
 					'active' => true,
 				],
@@ -55,7 +55,7 @@ class Component extends Base {
 		$this->add_control(
 			'title_tag',
 			[
-				'label'   => __( 'HTML Tag', STAX_EL_DOMAIN ),
+				'label'   => __( 'HTML Tag', 'stax-addons-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'options' => [
 					'h1'   => 'H1',
@@ -75,13 +75,13 @@ class Component extends Base {
 		$this->add_control(
 			'title_ornament',
 			[
-				'label'   => __( 'Show line', STAX_EL_DOMAIN ),
+				'label'   => __( 'Show line', 'stax-addons-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'options' => [
-					''                => __( 'None', STAX_EL_DOMAIN ),
-					'stx-line-before' => __( 'Before', STAX_EL_DOMAIN ),
-					'stx-line-after'  => __( 'After', STAX_EL_DOMAIN ),
-					'stx-line-both'   => __( 'Before & After', STAX_EL_DOMAIN )
+					''                => __( 'None', 'stax-addons-for-elementor' ),
+					'stx-line-before' => __( 'Before', 'stax-addons-for-elementor' ),
+					'stx-line-after'  => __( 'After', 'stax-addons-for-elementor' ),
+					'stx-line-both'   => __( 'Before & After', 'stax-addons-for-elementor' )
 				],
 				'default' => ''
 			]
@@ -92,14 +92,14 @@ class Component extends Base {
 		$this->start_controls_section(
 			'subtitle_section',
 			[
-				'label' => __( 'Subtitle', STAX_EL_DOMAIN ),
+				'label' => __( 'Subtitle', 'stax-addons-for-elementor' ),
 			]
 		);
 
 		$this->add_control(
 			'subtitle_show',
 			[
-				'label'   => __( 'Show', STAX_EL_DOMAIN ),
+				'label'   => __( 'Show', 'stax-addons-for-elementor' ),
 				'type'    => Controls_Manager::SWITCHER,
 				'default' => 'yes',
 			]
@@ -108,11 +108,11 @@ class Component extends Base {
 		$this->add_control(
 			'subtitle',
 			[
-				'label'       => __( 'Text', STAX_EL_DOMAIN ),
+				'label'       => __( 'Text', 'stax-addons-for-elementor' ),
 				'type'        => Controls_Manager::TEXT,
 				'label_block' => true,
-				'placeholder' => __( 'Learn from the market leaders', STAX_EL_DOMAIN ),
-				'default'     => __( 'Learn from the market leaders', STAX_EL_DOMAIN ),
+				'placeholder' => __( 'Learn from the market leaders', 'stax-addons-for-elementor' ),
+				'default'     => __( 'Learn from the market leaders', 'stax-addons-for-elementor' ),
 				'condition'   => [
 					'subtitle_show' => 'yes'
 				],
@@ -125,12 +125,12 @@ class Component extends Base {
 		$this->add_control(
 			'subtitle_position',
 			[
-				'label'     => __( 'Position', STAX_EL_DOMAIN ),
+				'label'     => __( 'Position', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::SELECT,
 				'default'   => 'after_title',
 				'options'   => [
-					'before_title' => __( 'Before Title', STAX_EL_DOMAIN ),
-					'after_title'  => __( 'After Title', STAX_EL_DOMAIN ),
+					'before_title' => __( 'Before Title', 'stax-addons-for-elementor' ),
+					'after_title'  => __( 'After Title', 'stax-addons-for-elementor' ),
 				],
 				'condition' => [
 					'subtitle_show' => 'yes'
@@ -141,7 +141,7 @@ class Component extends Base {
 		$this->add_control(
 			'subtitle_tag',
 			[
-				'label'     => __( 'HTML Tag', STAX_EL_DOMAIN ),
+				'label'     => __( 'HTML Tag', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::SELECT,
 				'options'   => [
 					'h1'   => 'H1',
@@ -166,14 +166,14 @@ class Component extends Base {
 		$this->start_controls_section(
 			'description_section',
 			[
-				'label' => __( 'Description', STAX_EL_DOMAIN ),
+				'label' => __( 'Description', 'stax-addons-for-elementor' ),
 			]
 		);
 
 		$this->add_control(
 			'description_section_show',
 			[
-				'label'   => __( 'Show', STAX_EL_DOMAIN ),
+				'label'   => __( 'Show', 'stax-addons-for-elementor' ),
 				'type'    => Controls_Manager::SWITCHER,
 				'default' => 'yes',
 			]
@@ -182,12 +182,12 @@ class Component extends Base {
 		$this->add_control(
 			'description',
 			[
-				'label'       => __( 'Text', STAX_EL_DOMAIN ),
+				'label'       => __( 'Text', 'stax-addons-for-elementor' ),
 				'type'        => Controls_Manager::WYSIWYG,
 				'rows'        => 10,
 				'label_block' => true,
-				'default'     => __( 'Read more below and start learning new techniques to grow your business. Real examples from real people!', STAX_EL_DOMAIN ),
-				'placeholder' => __( 'Description', STAX_EL_DOMAIN ),
+				'default'     => __( 'Read more below and start learning new techniques to grow your business. Real examples from real people!', 'stax-addons-for-elementor' ),
+				'placeholder' => __( 'Description', 'stax-addons-for-elementor' ),
 				'condition'   => [
 					'description_section_show' => 'yes'
 				],
@@ -203,13 +203,13 @@ class Component extends Base {
 		$this->start_controls_section(
 			'separator_section',
 			[
-				'label' => __( 'Separator', STAX_EL_DOMAIN ),
+				'label' => __( 'Separator', 'stax-addons-for-elementor' ),
 			]
 		);
 
 		$this->add_control(
 			'show_separator', [
-				'label'   => __( 'Show', STAX_EL_DOMAIN ),
+				'label'   => __( 'Show', 'stax-addons-for-elementor' ),
 				'type'    => Controls_Manager::SWITCHER,
 				'default' => 'yes'
 			]
@@ -218,13 +218,13 @@ class Component extends Base {
 		$this->add_control(
 			'separator_position',
 			[
-				'label'     => __( 'Position', STAX_EL_DOMAIN ),
+				'label'     => __( 'Position', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::SELECT,
 				'options'   => [
-					'top'    => __( 'Top', STAX_EL_DOMAIN ),
-					'before' => __( 'Before Title', STAX_EL_DOMAIN ),
-					'after'  => __( 'After Title', STAX_EL_DOMAIN ),
-					'bottom' => __( 'Bottom', STAX_EL_DOMAIN ),
+					'top'    => __( 'Top', 'stax-addons-for-elementor' ),
+					'before' => __( 'Before Title', 'stax-addons-for-elementor' ),
+					'after'  => __( 'After Title', 'stax-addons-for-elementor' ),
+					'bottom' => __( 'Bottom', 'stax-addons-for-elementor' ),
 				],
 				'default'   => 'after',
 				'condition' => [
@@ -236,14 +236,14 @@ class Component extends Base {
 		$this->add_control(
 			'separator_style',
 			[
-				'label'     => __( 'Style', STAX_EL_DOMAIN ),
+				'label'     => __( 'Style', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::SELECT,
 				'options'   => [
-					'stx-one-line'         => __( 'One line', STAX_EL_DOMAIN ),
-					'stx-glow'             => __( 'Glow line', STAX_EL_DOMAIN ),
-					'stx-gradient'         => __( 'Gradient', STAX_EL_DOMAIN ),
-					'stx-donotcross'       => __( 'Cross line', STAX_EL_DOMAIN ),
-					'stx-separator-custom' => __( 'Custom', STAX_EL_DOMAIN ),
+					'stx-one-line'         => __( 'One line', 'stax-addons-for-elementor' ),
+					'stx-glow'             => __( 'Glow line', 'stax-addons-for-elementor' ),
+					'stx-gradient'         => __( 'Gradient', 'stax-addons-for-elementor' ),
+					'stx-donotcross'       => __( 'Cross line', 'stax-addons-for-elementor' ),
+					'stx-separator-custom' => __( 'Custom', 'stax-addons-for-elementor' ),
 				],
 				'default'   => 'stx-one-line',
 				'condition' => [
@@ -255,7 +255,7 @@ class Component extends Base {
 		$this->add_control(
 			'separator_image',
 			[
-				'label'     => __( 'Choose Image', STAX_EL_DOMAIN ),
+				'label'     => __( 'Choose Image', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::MEDIA,
 				'default'   => [
 					'url' => '',
@@ -287,7 +287,7 @@ class Component extends Base {
 		$this->start_controls_section(
 			'general_section',
 			[
-				'label' => __( 'General', STAX_EL_DOMAIN ),
+				'label' => __( 'General', 'stax-addons-for-elementor' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -295,19 +295,19 @@ class Component extends Base {
 		$this->add_responsive_control(
 			'content_align',
 			[
-				'label'        => __( 'Alignment', STAX_EL_DOMAIN ),
+				'label'        => __( 'Alignment', 'stax-addons-for-elementor' ),
 				'type'         => Controls_Manager::CHOOSE,
 				'options'      => [
 					'left'   => [
-						'title' => __( 'Left', STAX_EL_DOMAIN ),
+						'title' => __( 'Left', 'stax-addons-for-elementor' ),
 						'icon'  => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', STAX_EL_DOMAIN ),
+						'title' => __( 'Center', 'stax-addons-for-elementor' ),
 						'icon'  => 'eicon-text-align-center',
 					],
 					'right'  => [
-						'title' => __( 'Right', STAX_EL_DOMAIN ),
+						'title' => __( 'Right', 'stax-addons-for-elementor' ),
 						'icon'  => 'eicon-text-align-right',
 					],
 				],
@@ -320,14 +320,14 @@ class Component extends Base {
 
 		$this->start_controls_section(
 			'title_section_style', [
-				'label' => __( 'Title', STAX_EL_DOMAIN ),
+				'label' => __( 'Title', 'stax-addons-for-elementor' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 
 		$this->add_responsive_control(
 			'title_color', [
-				'label'     => __( 'Color', STAX_EL_DOMAIN ),
+				'label'     => __( 'Color', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .stx-title-wrapper .stx-title' => 'color: {{VALUE}};',
@@ -353,7 +353,7 @@ class Component extends Base {
 		$this->add_responsive_control(
 			'title_margin',
 			[
-				'label'      => __( 'Margin', STAX_EL_DOMAIN ),
+				'label'      => __( 'Margin', 'stax-addons-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors'  => [
@@ -372,7 +372,7 @@ class Component extends Base {
 		$this->add_control(
 			'title_line_width',
 			[
-				'label'     => __( 'Line Width', STAX_EL_DOMAIN ),
+				'label'     => __( 'Line Width', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::SLIDER,
 				'range'     => [
 					'px' => [
@@ -401,7 +401,7 @@ class Component extends Base {
 		$this->add_control(
 			'title_line_height',
 			[
-				'label'     => __( 'Line Height', STAX_EL_DOMAIN ),
+				'label'     => __( 'Line Height', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::SLIDER,
 				'range'     => [
 					'px' => [
@@ -426,7 +426,7 @@ class Component extends Base {
 		$this->add_control(
 			'title_line_spacing',
 			[
-				'label'     => __( 'Spacing', STAX_EL_DOMAIN ),
+				'label'     => __( 'Spacing', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::SLIDER,
 				'range'     => [
 					'px' => [
@@ -453,7 +453,7 @@ class Component extends Base {
 			Group_Control_Background::get_type(),
 			[
 				'name'      => 'title_light_color',
-				'label'     => __( 'Background', STAX_EL_DOMAIN ),
+				'label'     => __( 'Background', 'stax-addons-for-elementor' ),
 				'types'     => [ 'classic', 'gradient' ],
 				'selector'  => '{{WRAPPER}} .stx-title-wrapper .stx-title > span:before, {{WRAPPER}} .stx-title-wrapper .stx-title > span:after',
 				'condition' => [
@@ -465,7 +465,7 @@ class Component extends Base {
 		$this->add_responsive_control(
 			'title_line_radius',
 			[
-				'label'      => __( 'Border Radius', STAX_EL_DOMAIN ),
+				'label'      => __( 'Border Radius', 'stax-addons-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors'  => [
@@ -481,14 +481,14 @@ class Component extends Base {
 
 		$this->start_controls_section(
 			'highlighted_section_title_style', [
-				'label' => __( 'Title highlight', STAX_EL_DOMAIN ),
+				'label' => __( 'Title highlight', 'stax-addons-for-elementor' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 
 		$this->add_responsive_control(
 			'highlighted_title_color', [
-				'label'     => __( 'Color', STAX_EL_DOMAIN ),
+				'label'     => __( 'Color', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '#FF5555',
 				'selectors' => [
@@ -515,7 +515,7 @@ class Component extends Base {
 		$this->add_responsive_control(
 			'highlighted_title_secondary_spacing',
 			[
-				'label'      => __( 'Padding', STAX_EL_DOMAIN ),
+				'label'      => __( 'Padding', 'stax-addons-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors'  => [
@@ -535,7 +535,7 @@ class Component extends Base {
 		$this->add_control(
 			'highlighted_title_secondary_border_radius',
 			[
-				'label'      => __( 'Border Radius', STAX_EL_DOMAIN ),
+				'label'      => __( 'Border Radius', 'stax-addons-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'selectors'  => [
@@ -548,7 +548,7 @@ class Component extends Base {
 
 		$this->start_controls_section(
 			'subtitle_section_style', [
-				'label'     => __( 'Subtitle', STAX_EL_DOMAIN ),
+				'label'     => __( 'Subtitle', 'stax-addons-for-elementor' ),
 				'tab'       => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'subtitle_show' => 'yes',
@@ -559,7 +559,7 @@ class Component extends Base {
 
 		$this->add_responsive_control(
 			'subtitle_color', [
-				'label'     => __( 'Color', STAX_EL_DOMAIN ),
+				'label'     => __( 'Color', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .stx-title-wrapper .stx-subtitle' => 'color: {{VALUE}};',
@@ -577,7 +577,7 @@ class Component extends Base {
 		$this->add_responsive_control(
 			'subtitle_margin',
 			[
-				'label'      => __( 'Margin', STAX_EL_DOMAIN ),
+				'label'      => __( 'Margin', 'stax-addons-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px' ],
 				'selectors'  => [
@@ -597,7 +597,7 @@ class Component extends Base {
 		$this->add_control(
 			'subtitle_border_radius',
 			[
-				'label'      => __( 'Border Radius', STAX_EL_DOMAIN ),
+				'label'      => __( 'Border Radius', 'stax-addons-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'selectors'  => [
@@ -611,7 +611,7 @@ class Component extends Base {
 
 		$this->start_controls_section(
 			'description_section_style', [
-				'label'     => __( 'Description', STAX_EL_DOMAIN ),
+				'label'     => __( 'Description', 'stax-addons-for-elementor' ),
 				'tab'       => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'description_section_show' => 'yes',
@@ -622,7 +622,7 @@ class Component extends Base {
 
 		$this->add_responsive_control(
 			'description_color', [
-				'label'     => __( 'Color', STAX_EL_DOMAIN ),
+				'label'     => __( 'Color', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .stx-description p, {{WRAPPER}} .stx-description' => 'color: {{VALUE}};',
@@ -640,7 +640,7 @@ class Component extends Base {
 		$this->add_responsive_control(
 			'description_margin',
 			[
-				'label'      => __( 'Margin', STAX_EL_DOMAIN ),
+				'label'      => __( 'Margin', 'stax-addons-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors'  => [
@@ -653,7 +653,7 @@ class Component extends Base {
 
 		$this->start_controls_section(
 			'separator_section_style', [
-				'label'     => __( 'Separator', STAX_EL_DOMAIN ),
+				'label'     => __( 'Separator', 'stax-addons-for-elementor' ),
 				'tab'       => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'show_separator' => 'yes'
@@ -663,7 +663,7 @@ class Component extends Base {
 		$this->add_responsive_control(
 			'separator_width',
 			[
-				'label'      => __( 'Width', STAX_EL_DOMAIN ),
+				'label'      => __( 'Width', 'stax-addons-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%' ],
 				'range'      => [
@@ -691,7 +691,7 @@ class Component extends Base {
 
 		$this->add_control(
 			'separator_one_line_color', [
-				'label'     => __( 'Color', STAX_EL_DOMAIN ),
+				'label'     => __( 'Color', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .stx-divider.stx-one-line:before' => 'background: {{VALUE}};',
@@ -705,7 +705,7 @@ class Component extends Base {
 		$this->add_control(
 			'separator_one_line_height',
 			[
-				'label'     => __( 'Height', STAX_EL_DOMAIN ),
+				'label'     => __( 'Height', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::SLIDER,
 				'range'     => [
 					'px' => [
@@ -730,7 +730,7 @@ class Component extends Base {
 		$this->add_responsive_control(
 			'separator_one_line_radius',
 			[
-				'label'      => __( 'Border Radius', STAX_EL_DOMAIN ),
+				'label'      => __( 'Border Radius', 'stax-addons-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors'  => [
@@ -745,7 +745,7 @@ class Component extends Base {
 		$this->add_control(
 			'separator_glow_height',
 			[
-				'label'     => __( 'Height', STAX_EL_DOMAIN ),
+				'label'     => __( 'Height', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::SLIDER,
 				'range'     => [
 					'px' => [
@@ -771,7 +771,7 @@ class Component extends Base {
 			Group_Control_Background::get_type(),
 			[
 				'name'      => 'separator_glow_color',
-				'label'     => __( 'Background', STAX_EL_DOMAIN ),
+				'label'     => __( 'Background', 'stax-addons-for-elementor' ),
 				'types'     => [ 'gradient' ],
 				'selector'  => '{{WRAPPER}} .stx-divider.stx-glow:before',
 				'condition' => [
@@ -783,7 +783,7 @@ class Component extends Base {
 		$this->add_responsive_control(
 			'separator_glow_radius',
 			[
-				'label'      => __( 'Border Radius', STAX_EL_DOMAIN ),
+				'label'      => __( 'Border Radius', 'stax-addons-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors'  => [
@@ -798,7 +798,7 @@ class Component extends Base {
 		$this->add_control(
 			'separator_gradient_height',
 			[
-				'label'     => __( 'Height', STAX_EL_DOMAIN ),
+				'label'     => __( 'Height', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::SLIDER,
 				'range'     => [
 					'px' => [
@@ -824,7 +824,7 @@ class Component extends Base {
 			Group_Control_Background::get_type(),
 			[
 				'name'      => 'separator_gradient_color',
-				'label'     => __( 'Background', STAX_EL_DOMAIN ),
+				'label'     => __( 'Background', 'stax-addons-for-elementor' ),
 				'types'     => [ 'gradient' ],
 				'selector'  => '{{WRAPPER}} .stx-divider.stx-gradient:before',
 				'condition' => [
@@ -836,7 +836,7 @@ class Component extends Base {
 		$this->add_responsive_control(
 			'separator_gradient_radius',
 			[
-				'label'      => __( 'Border Radius', STAX_EL_DOMAIN ),
+				'label'      => __( 'Border Radius', 'stax-addons-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors'  => [
@@ -851,7 +851,7 @@ class Component extends Base {
 		$this->add_control(
 			'separator_donotcross_height',
 			[
-				'label'     => __( 'Height', STAX_EL_DOMAIN ),
+				'label'     => __( 'Height', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::SLIDER,
 				'range'     => [
 					'px' => [
@@ -875,7 +875,7 @@ class Component extends Base {
 
 		$this->add_control(
 			'separator_donotcross_color', [
-				'label'     => __( 'Color', STAX_EL_DOMAIN ),
+				'label'     => __( 'Color', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .stx-divider.stx-donotcross' => 'background: {{VALUE}};',
@@ -888,7 +888,7 @@ class Component extends Base {
 
 		$this->add_control(
 			'separator_donotcross_gap_color', [
-				'label'     => __( 'Gap Color', STAX_EL_DOMAIN ),
+				'label'     => __( 'Gap Color', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .stx-divider.stx-donotcross:before' => 'background: {{VALUE}};',
@@ -902,7 +902,7 @@ class Component extends Base {
 		$this->add_control(
 			'separator_donotcross_gap_size',
 			[
-				'label'     => __( 'Gap Size', STAX_EL_DOMAIN ),
+				'label'     => __( 'Gap Size', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::SLIDER,
 				'range'     => [
 					'px' => [
@@ -927,7 +927,7 @@ class Component extends Base {
 		$this->add_control(
 			'separator_donotcross_gap_rotate',
 			[
-				'label'     => __( 'Gap Rotate', STAX_EL_DOMAIN ),
+				'label'     => __( 'Gap Rotate', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::SLIDER,
 				'range'     => [
 					'px' => [
@@ -952,7 +952,7 @@ class Component extends Base {
 		$this->add_responsive_control(
 			'separator_margin',
 			[
-				'label'      => __( 'Margin', STAX_EL_DOMAIN ),
+				'label'      => __( 'Margin', 'stax-addons-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors'  => [

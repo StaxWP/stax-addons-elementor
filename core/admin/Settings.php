@@ -49,8 +49,8 @@ class Settings {
 	 */
 	public function register_menu() {
 		add_menu_page(
-			__( 'STAX Elementor - Dashboard', STAX_EL_DOMAIN ),
-			__( 'Elementor Addons', STAX_EL_DOMAIN ),
+			__( 'STAX Elementor - Dashboard', 'stax-addons-for-elementor' ),
+			__( 'Elementor Addons', 'stax-addons-for-elementor' ),
 			'manage_options',
 			'stax-elementor-widgets',
 			[ $this, 'settings_template' ],
@@ -60,8 +60,8 @@ class Settings {
 
 		/*add_submenu_page(
 			Plugin::instance()->get_slug(),
-			__( 'STAX Elementor - Widgets', STAX_EL_DOMAIN ),
-			__( 'Widgets', STAX_EL_DOMAIN ),
+			__( 'STAX Elementor - Widgets', 'stax-addons-for-elementor' ),
+			__( 'Widgets', 'stax-addons-for-elementor' ),
 			'manage_options',
 			'stax-elementor-widgets',
 			[ $this, 'settings_template' ]
@@ -69,8 +69,8 @@ class Settings {
 
 		add_submenu_page(
 			Plugin::instance()->get_slug(),
-			__( 'STAX Elementor - Plugins', STAX_EL_DOMAIN ),
-			__( 'Plugins', STAX_EL_DOMAIN ),
+			__( 'STAX Elementor - Plugins', 'stax-addons-for-elementor' ),
+			__( 'Plugins', 'stax-addons-for-elementor' ),
 			'manage_options',
 			'stax-elementor-plugins',
 			[ $this, 'settings_template' ]
@@ -78,8 +78,8 @@ class Settings {
 
 		add_submenu_page(
 			Plugin::instance()->get_slug(),
-			__( 'STAX Elementor - Templates', STAX_EL_DOMAIN ),
-			__( 'Templates', STAX_EL_DOMAIN ),
+			__( 'STAX Elementor - Templates', 'stax-addons-for-elementor' ),
+			__( 'Templates', 'stax-addons-for-elementor' ),
 			'manage_options',
 			'stax-elementor-templates',
 			[ $this, 'settings_template' ]
@@ -87,8 +87,8 @@ class Settings {
 
 		add_submenu_page(
 			Plugin::instance()->get_slug(),
-			__( 'STAX Elementor - Modules', STAX_EL_DOMAIN ),
-			__( 'Modules', STAX_EL_DOMAIN ),
+			__( 'STAX Elementor - Modules', 'stax-addons-for-elementor' ),
+			__( 'Modules', 'stax-addons-for-elementor' ),
 			'manage_options',
 			'stax-elementor-modules',
 			[ $this, 'settings_template' ]
@@ -96,8 +96,8 @@ class Settings {
 
 		add_submenu_page(
 			Plugin::instance()->get_slug(),
-			__( 'STAX Elementor - Help', STAX_EL_DOMAIN ),
-			__( 'Help', STAX_EL_DOMAIN ),
+			__( 'STAX Elementor - Help', 'stax-addons-for-elementor' ),
+			__( 'Help', 'stax-addons-for-elementor' ),
 			'manage_options',
 			'stax-elementor-help',
 			[ $this, 'settings_template' ]
@@ -112,7 +112,7 @@ class Settings {
 		global $submenu;
 
 		if ( isset( $submenu[ Plugin::instance()->get_slug() ] ) ) {
-			$submenu[ Plugin::instance()->get_slug() ][0][0] = __( 'Dashboard', STAX_EL_DOMAIN );
+			$submenu[ Plugin::instance()->get_slug() ][0][0] = __( 'Dashboard', 'stax-addons-for-elementor' );
 		}
 	}
 
