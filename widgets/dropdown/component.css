@@ -76,3 +76,6 @@
 
 .elementor-element-editable .stx-dropdown-wrapper .stx-dropdown-content-wrapper {
   display: flex !important; }
+
+.stx-dropdown-content {
+  width: 100%; }
