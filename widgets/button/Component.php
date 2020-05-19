@@ -150,8 +150,8 @@ class Component extends Base {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .stx-btn .stx-icon-right' => 'margin-left: {{SIZE}}{{UNIT}};',
-					'{{WRAPPER}} .stx-btn .stx-icon-left'  => 'margin-right: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .stx-btn-wrapper .stx-btn .stx-btn-content-wrapper .stx-btn-icon.stx-icon-right' => 'margin-left: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .stx-btn-wrapper .stx-btn .stx-btn-content-wrapper .stx-btn-icon.stx-icon-left'  => 'margin-right: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
