@@ -35,7 +35,7 @@ class Component extends Base {
 	}
 
 	public function get_icon() {
-		return 'sq-icon-bp_slide-down-more sq-widget-label';
+		return 'sq-icon-bp_slide_down_more sq-widget-label';
 	}
 
 	public function get_keywords() {
