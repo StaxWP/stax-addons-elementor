@@ -37,7 +37,7 @@ class Settings {
 	 * Settings constructor.
 	 */
 	public function __construct() {
-		add_action( 'admin_menu', [ $this, 'register_menu' ], 20 );
+		add_action( 'admin_menu', [ $this, 'register_menu' ], 10 );
 		add_action( 'admin_menu', [ $this, 'admin_menu_change_name' ], 200 );
 		add_filter( 'admin_body_class', [ $this, 'add_admin_body_class' ] );
 		add_action( 'admin_enqueue_scripts', [ $this, 'admin_scripts' ] );

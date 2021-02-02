@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Elementor Addons, Widgets and Enhancements - Stax
  * Description: Beautiful & Fast add-ons for Elementor. Enhance your site building experience with Stax Elementor Addons
- * Plugin URI: https://staxbuilder.com
+ * Plugin URI: https://staxwp.com
  * Author: StaxWP
  * Version: 1.4.0
  * Author URI: https://staxwp.com
