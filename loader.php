@@ -7,6 +7,9 @@
  * Version: 1.4.0
  * Author URI: https://staxwp.com
  *
+ * Elementor tested up to: 3.2.1
+ * Elementor Pro tested up to: 3.2.1
+ *
  * Text Domain: stax-addons-for-elementor
  * Domain Path: /languages
  */
