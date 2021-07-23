@@ -7,9 +7,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 } // Exit if accessed directly
 
 use Elementor\Controls_Manager;
-use Elementor\Group_Control_Background;
-use Elementor\Group_Control_Typography;
-use Elementor\Group_Control_Border;
 
 use StaxAddons\Widgets\Base;
 use StaxAddons\Utils;
@@ -259,7 +256,6 @@ class Component extends Base {
 		Utils::load_template(
 			'widgets/icon-with-text/template',
 			[
-				'template' => $settings['layout'],
 				'settings' => $settings,
 			]
 		);

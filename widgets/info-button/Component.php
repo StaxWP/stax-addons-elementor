@@ -1,6 +1,6 @@
 <?php
 
-namespace StaxAddons\Widgets\SectionTitle;
+namespace StaxAddons\Widgets\InfoButton;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -14,11 +14,11 @@ use StaxAddons\Utils;
 class Component extends Base {
 
 	public function get_name() {
-		return 'stax-el-section-title';
+		return 'stax-el-info-button';
 	}
 
 	public function get_title() {
-		return __( 'Section Title', 'stax-addons-for-elementor' );
+		return __( 'Info Button', 'stax-addons-for-elementor' );
 	}
 
 	public function get_icon() {
@@ -35,6 +35,16 @@ class Component extends Base {
 		);
 
 		$this->end_controls_section();
+
+		$this->start_controls_section(
+			'style_container_section',
+			[
+				'label' => __( 'Container', 'stax-addons-for-elementor' ),
+				'tab'   => Controls_Manager::TAB_STYLE,
+			]
+		);
+
+		$this->end_controls_section();
 	}
 
 	protected function render() {
@@ -43,7 +53,7 @@ class Component extends Base {
 		$settings = $this->get_settings_for_display();
 
 		Utils::load_template(
-			'widgets/section-title/template',
+			'widgets/info-button/template',
 			[
 				'settings' => $settings,
 			]

@@ -1,6 +1,6 @@
 <?php
 
-namespace StaxAddons\Widgets\SectionTitle;
+namespace StaxAddons\Widgets\Divider;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -14,11 +14,11 @@ use StaxAddons\Utils;
 class Component extends Base {
 
 	public function get_name() {
-		return 'stax-el-section-title';
+		return 'stax-el-divider';
 	}
 
 	public function get_title() {
-		return __( 'Section Title', 'stax-addons-for-elementor' );
+		return __( 'Divider', 'stax-addons-for-elementor' );
 	}
 
 	public function get_icon() {
@@ -43,7 +43,7 @@ class Component extends Base {
 		$settings = $this->get_settings_for_display();
 
 		Utils::load_template(
-			'widgets/section-title/template',
+			'widgets/divider/template',
 			[
 				'settings' => $settings,
 			]

@@ -8,7 +8,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 use Elementor\Controls_Manager;
 use Elementor\Repeater;
-use Elementor\Group_Control_Typography;
 use Elementor\Group_Control_Background;
 
 use StaxAddons\Widgets\Base;

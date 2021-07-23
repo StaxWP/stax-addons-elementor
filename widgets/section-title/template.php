@@ -1,10 +1,43 @@
-<div class="stx-typeout-text-wrapper" data-strings="<?php echo esc_attr( $items ); ?>" data-cursor="<?php echo esc_attr( $settings['separator'] ); ?>">
-	<<?php echo esc_attr( $settings['text_tag'] ); ?> class="stx-m-text">
-		<?php if ( ! empty( $settings['text'] ) ) : ?>
-			<?php echo esc_html( $settings['text'] ); ?>
-		<?php endif; ?>
-		<span class="stx-typeout-holder">
-			<span class="stx-typeout"></span>
-		</span>
-	</<?php echo esc_attr( $settings['text_tag'] ); ?>>
+<div class="stx-section-title-wrapper">
+	<?php
+	if ( 'above' === $settings['subtitle_position'] ) {
+		\StaxAddons\Utils::load_template(
+			'widgets/section-title/templates/parts/subtitle',
+			[
+				'settings' => $settings,
+			]
+		);
+	}
+
+	\StaxAddons\Utils::load_template(
+		'widgets/section-title/templates/parts/title',
+		[
+			'items'    => $items,
+			'settings' => $settings,
+		]
+	);
+
+	if ( 'below' === $settings['subtitle_position'] ) {
+		\StaxAddons\Utils::load_template(
+			'widgets/section-title/templates/parts/subtitle',
+			[
+				'settings' => $settings,
+			]
+		);
+	}
+
+	\StaxAddons\Utils::load_template(
+		'widgets/section-title/templates/parts/text',
+		[
+			'settings' => $settings,
+		]
+	);
+
+	\StaxAddons\Utils::load_template(
+		'widgets/section-title/templates/parts/button',
+		[
+			'settings' => $settings,
+		]
+	);
+	?>
 </div>
