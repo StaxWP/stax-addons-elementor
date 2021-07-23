@@ -15,6 +15,7 @@ use Elementor\Icons_Manager;
 use Elementor\Repeater;
 
 use StaxAddons\Widgets\Base;
+use StaxAddons\Utils;
 
 class Component extends Base {
 
@@ -92,7 +93,7 @@ class Component extends Base {
 					'click' => [
 						'title' => __( 'Click', 'stax-addons-for-elementor' ),
 						'icon'  => 'eicon-click',
-					]
+					],
 				],
 				'prefix_class' => 'stx-trigger-',
 				'default'      => 'hover',
@@ -403,9 +404,9 @@ class Component extends Base {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .stx-dropdown-content ul'             => 'margin-left: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .stx-dropdown-content ul' => 'margin-left: {{SIZE}}{{UNIT}};',
 					'{{WRAPPER}} .stx-dropdown-content ul:first-child' => 'margin-left: 0;',
-					'{{WRAPPER}} .stx-dropdown-content ul:last-child'  => 'margin-right: 0;',
+					'{{WRAPPER}} .stx-dropdown-content ul:last-child' => 'margin-right: 0;',
 				],
 			]
 		);
@@ -477,7 +478,6 @@ class Component extends Base {
 			]
 		);
 
-
 		$this->end_controls_section();
 
 		$this->start_controls_section(
@@ -538,7 +538,7 @@ class Component extends Base {
 				'label'     => __( 'Link Color', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .stx-dropdown-content a' => 'color: {{VALUE}};'
+					'{{WRAPPER}} .stx-dropdown-content a' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -558,7 +558,7 @@ class Component extends Base {
 				'label'     => __( 'Link Color', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .stx-dropdown-content a:hover, {{WRAPPER}} .stx-dropdown-content a:focus' => 'color: {{VALUE}};'
+					'{{WRAPPER}} .stx-dropdown-content a:hover, {{WRAPPER}} .stx-dropdown-content a:focus' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -635,58 +635,14 @@ class Component extends Base {
 			$this->add_render_attribute( 'button', 'id', $settings['button_css_id'] );
 		}
 
-		?>
-
-        <div class="stx-dropdown-wrapper">
-            <a <?php echo $this->get_render_attribute_string( 'button' ); ?> href="#">
-		        <span class="stx-btn-content-wrapper">
-			        <span <?php echo $this->get_render_attribute_string( 'icon' ); ?>>
-                        <?php if ( $settings['selected_icon']['value'] ) : ?>
-	                        <?php Icons_Manager::render_icon( $settings['selected_icon'], [ 'aria-hidden' => 'true' ] ); ?>
-                        <?php endif; ?>
-                    </span>
-		            <span class="stx-btn-text"><?php echo $settings['text']; ?></span>
-		        </span>
-            </a>
-            <div class="stx-dropdown-content-wrapper">
-                <div class="stx-dropdown-content">
-					<?php for ( $i = 1; $i <= $settings['dropdown_columns']; $i ++ ) : ?>
-						<?php
-						$items = [];
-						foreach ( $settings['dropdown_items'] as $dropdown_item ) {
-							if ( $dropdown_item['dropdown_item_column'] === $i ) {
-								$items[] = $dropdown_item;
-							}
-						}
-						?>
-                        <ul>
-							<?php foreach ( $items as $item ) : ?>
-								<?php
-								$link_attrs = [];
-
-								if ( $item['dropdown_item_link']['is_external'] ) {
-									$link_attrs[] = 'target="_blank"';
-								}
-
-								if ( $item['dropdown_item_link']['nofollow'] ) {
-									$link_attrs[] = 'rel="nofollow"';
-								}
-
-								$link_attrs = implode( ' ', $link_attrs );
-								?>
-                                <li>
-                                    <a href="<?php echo esc_url( $item['dropdown_item_link']['url'] ); ?>" <?php echo esc_attr( $link_attrs ); ?>>
-										<?php echo $item['dropdown_item_text'] ?>
-                                    </a>
-                                </li>
-							<?php endforeach; ?>
-                        </ul>
-					<?php endfor; ?>
-                </div>
-            </div>
-        </div>
-
-		<?php
+		Utils::load_template(
+			'widgets/dropdown/template',
+			[
+				'button_attribute' => $this->get_render_attribute_string( 'button' ),
+				'icon_attribute'   => $this->get_render_attribute_string( 'icon' ),
+				'settings'         => $settings,
+			]
+		);
 	}
 
 }

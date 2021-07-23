@@ -13,9 +13,11 @@ use Elementor\Group_Control_Image_Size;
 use Elementor\Repeater;
 
 use StaxAddons\Widgets\Base;
+use StaxAddons\Utils;
 
 /**
  * Class Component
+ *
  * @package StaxAddons\Widgets\IntervalImage
  */
 class Component extends Base {
@@ -52,9 +54,9 @@ class Component extends Base {
 				'label'           => esc_html__( 'Current System Time', 'stax-addons-for-elementor' ),
 				'type'            => Controls_Manager::RAW_HTML,
 				'raw'             => '<div style="padding: 10px 0; font-weight: bold;">' .
-				                     ( new DateTime( 'now' ) )->format( 'Y-m-d H:i' ) .
-				                     '</div>' .
-				                     esc_html__( 'This Widget allows you to show a different image by different date intervals and also define a default image.', 'stax-addons-for-elementor' ),
+									 ( new DateTime( 'now' ) )->format( 'Y-m-d H:i' ) .
+									 '</div>' .
+									 esc_html__( 'This Widget allows you to show a different image by different date intervals and also define a default image.', 'stax-addons-for-elementor' ),
 				'content_classes' => '',
 			]
 		);
@@ -156,8 +158,8 @@ class Component extends Base {
 					'dateFormat'  => 'Y-m-d H:i',
 					'time_24hr'   => true,
 					'allowInput'  => true,
-					'defaultHour' => 00
-				]
+					'defaultHour' => 00,
+				],
 			]
 		);
 
@@ -170,8 +172,8 @@ class Component extends Base {
 					'dateFormat'  => 'Y-m-d H:i',
 					'time_24hr'   => true,
 					'allowInput'  => true,
-					'defaultHour' => 00
-				]
+					'defaultHour' => 00,
+				],
 			]
 		);
 
@@ -184,10 +186,9 @@ class Component extends Base {
 				'label_off'    => __( 'No', 'stax-addons-for-elementor' ),
 				'return_value' => 'yes',
 				'default'      => '',
-				'description'      => esc_html__( 'Apply the above condition to upcoming years too.', 'stax-addons-for-elementor' ),
+				'description'  => esc_html__( 'Apply the above condition to upcoming years too.', 'stax-addons-for-elementor' ),
 			]
 		);
-
 
 		$this->add_control(
 			'images_list',
@@ -216,7 +217,7 @@ class Component extends Base {
 				'label_off'    => __( 'No', 'stax-addons-for-elementor' ),
 				'return_value' => 'yes',
 				'default'      => '',
-				'description'      => esc_html__( 'Apply the above conditions to upcoming years too.', 'stax-addons-for-elementor' ),
+				'description'  => esc_html__( 'Apply the above conditions to upcoming years too.', 'stax-addons-for-elementor' ),
 			]
 		);
 
@@ -288,8 +289,9 @@ class Component extends Base {
 		}
 
 		if ( ! empty( $data ) ) {
+			$link_extra = '';
+
 			if ( $data['link']['url'] ) {
-				$link_extra = '';
 
 				if ( $data['link']['external'] ) {
 					$link_extra .= 'target=_blank';
@@ -298,16 +300,17 @@ class Component extends Base {
 				if ( $data['link']['nofollow'] ) {
 					$link_extra .= ' rel=nofollow';
 				}
-				?>
-                <a href="<?php echo esc_url( $data['link']['url'] ); ?>" <?php echo esc_attr( $link_extra ); ?>>
-				<?php
 			}
-			echo Group_Control_Image_Size::get_attachment_image_html( $data );
-			if ( $data['link']['url'] ) {
-				?>
-                </a>
-				<?php
-			}
+
+			Utils::load_template(
+				'widgets/interval-image/template',
+				[
+					'link'       => $data['link']['url'],
+					'link_extra' => $link_extra,
+					'image_html' => Group_Control_Image_Size::get_attachment_image_html( $data ),
+					'settings'   => $settings,
+				]
+			);
 		}
 	}
 

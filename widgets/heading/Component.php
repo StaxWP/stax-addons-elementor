@@ -14,6 +14,7 @@ use Elementor\Group_Control_Background;
 use Elementor\Control_Media;
 
 use StaxAddons\Widgets\Base;
+use StaxAddons\Utils;
 
 class Component extends Base {
 
@@ -81,9 +82,9 @@ class Component extends Base {
 					''                => __( 'None', 'stax-addons-for-elementor' ),
 					'stx-line-before' => __( 'Before', 'stax-addons-for-elementor' ),
 					'stx-line-after'  => __( 'After', 'stax-addons-for-elementor' ),
-					'stx-line-both'   => __( 'Before & After', 'stax-addons-for-elementor' )
+					'stx-line-both'   => __( 'Before & After', 'stax-addons-for-elementor' ),
 				],
-				'default' => ''
+				'default' => '',
 			]
 		);
 
@@ -114,7 +115,7 @@ class Component extends Base {
 				'placeholder' => __( 'Learn from the market leaders', 'stax-addons-for-elementor' ),
 				'default'     => __( 'Learn from the market leaders', 'stax-addons-for-elementor' ),
 				'condition'   => [
-					'subtitle_show' => 'yes'
+					'subtitle_show' => 'yes',
 				],
 				'dynamic'     => [
 					'active' => true,
@@ -133,8 +134,8 @@ class Component extends Base {
 					'after_title'  => __( 'After Title', 'stax-addons-for-elementor' ),
 				],
 				'condition' => [
-					'subtitle_show' => 'yes'
-				]
+					'subtitle_show' => 'yes',
+				],
 			]
 		);
 
@@ -156,8 +157,8 @@ class Component extends Base {
 				],
 				'default'   => 'h3',
 				'condition' => [
-					'subtitle_show' => 'yes'
-				]
+					'subtitle_show' => 'yes',
+				],
 			]
 		);
 
@@ -189,14 +190,13 @@ class Component extends Base {
 				'default'     => __( 'Read more below and start learning new techniques to grow your business. Real examples from real people!', 'stax-addons-for-elementor' ),
 				'placeholder' => __( 'Description', 'stax-addons-for-elementor' ),
 				'condition'   => [
-					'description_section_show' => 'yes'
+					'description_section_show' => 'yes',
 				],
 				'dynamic'     => [
 					'active' => true,
 				],
 			]
 		);
-
 
 		$this->end_controls_section();
 
@@ -208,10 +208,11 @@ class Component extends Base {
 		);
 
 		$this->add_control(
-			'show_separator', [
+			'show_separator',
+			[
 				'label'   => __( 'Show', 'stax-addons-for-elementor' ),
 				'type'    => Controls_Manager::SWITCHER,
-				'default' => 'yes'
+				'default' => 'yes',
 			]
 		);
 
@@ -319,14 +320,16 @@ class Component extends Base {
 		$this->end_controls_section();
 
 		$this->start_controls_section(
-			'title_section_style', [
+			'title_section_style',
+			[
 				'label' => __( 'Title', 'stax-addons-for-elementor' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 
 		$this->add_responsive_control(
-			'title_color', [
+			'title_color',
+			[
 				'label'     => __( 'Color', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
@@ -336,7 +339,8 @@ class Component extends Base {
 		);
 
 		$this->add_group_control(
-			Group_Control_Typography::get_type(), [
+			Group_Control_Typography::get_type(),
+			[
 				'name'     => 'title_typography',
 				'selector' => '{{WRAPPER}} .stx-title-wrapper .stx-title',
 			]
@@ -393,8 +397,8 @@ class Component extends Base {
 					'{{WRAPPER}} .stx-title-wrapper .stx-title > span:before, {{WRAPPER}} .stx-title-wrapper .stx-title > span:after' => 'width: {{SIZE}}{{UNIT}};',
 				],
 				'condition' => [
-					'title_ornament!' => ''
-				]
+					'title_ornament!' => '',
+				],
 			]
 		);
 
@@ -408,7 +412,7 @@ class Component extends Base {
 						'min'  => 0,
 						'max'  => 200,
 						'step' => 1,
-					]
+					],
 				],
 				'default'   => [
 					'unit' => 'px',
@@ -418,8 +422,8 @@ class Component extends Base {
 					'{{WRAPPER}} .stx-title-wrapper .stx-title > span:before, {{WRAPPER}} .stx-title-wrapper .stx-title > span:after' => 'height: {{SIZE}}{{UNIT}};',
 				],
 				'condition' => [
-					'title_ornament!' => ''
-				]
+					'title_ornament!' => '',
+				],
 			]
 		);
 
@@ -433,7 +437,7 @@ class Component extends Base {
 						'min'  => 0,
 						'max'  => 100,
 						'step' => 1,
-					]
+					],
 				],
 				'default'   => [
 					'unit' => 'px',
@@ -444,8 +448,8 @@ class Component extends Base {
 					'{{WRAPPER}} .stx-title-wrapper .stx-title > span:after'  => 'margin-left: {{SIZE}}{{UNIT}};',
 				],
 				'condition' => [
-					'title_ornament!' => ''
-				]
+					'title_ornament!' => '',
+				],
 			]
 		);
 
@@ -457,8 +461,8 @@ class Component extends Base {
 				'types'     => [ 'classic', 'gradient' ],
 				'selector'  => '{{WRAPPER}} .stx-title-wrapper .stx-title > span:before, {{WRAPPER}} .stx-title-wrapper .stx-title > span:after',
 				'condition' => [
-					'title_ornament!' => ''
-				]
+					'title_ornament!' => '',
+				],
 			]
 		);
 
@@ -472,22 +476,24 @@ class Component extends Base {
 					'{{WRAPPER}} .stx-title-wrapper .stx-title > span:before, {{WRAPPER}} .stx-title-wrapper .stx-title > span:after' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 				'condition'  => [
-					'title_ornament!' => ''
-				]
+					'title_ornament!' => '',
+				],
 			]
 		);
 
 		$this->end_controls_section();
 
 		$this->start_controls_section(
-			'highlighted_section_title_style', [
+			'highlighted_section_title_style',
+			[
 				'label' => __( 'Title highlight', 'stax-addons-for-elementor' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 
 		$this->add_responsive_control(
-			'highlighted_title_color', [
+			'highlighted_title_color',
+			[
 				'label'     => __( 'Color', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '#FF5555',
@@ -498,7 +504,8 @@ class Component extends Base {
 		);
 
 		$this->add_group_control(
-			Group_Control_Typography::get_type(), [
+			Group_Control_Typography::get_type(),
+			[
 				'name'     => 'highlighted_title_typography',
 				'selector' => '{{WRAPPER}} .stx-title-wrapper .stx-title span.stx-highlight',
 			]
@@ -547,18 +554,20 @@ class Component extends Base {
 		$this->end_controls_section();
 
 		$this->start_controls_section(
-			'subtitle_section_style', [
+			'subtitle_section_style',
+			[
 				'label'     => __( 'Subtitle', 'stax-addons-for-elementor' ),
 				'tab'       => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'subtitle_show' => 'yes',
-					'subtitle!'     => ''
-				]
+					'subtitle!'     => '',
+				],
 			]
 		);
 
 		$this->add_responsive_control(
-			'subtitle_color', [
+			'subtitle_color',
+			[
 				'label'     => __( 'Color', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
@@ -568,7 +577,8 @@ class Component extends Base {
 		);
 
 		$this->add_group_control(
-			Group_Control_Typography::get_type(), [
+			Group_Control_Typography::get_type(),
+			[
 				'name'     => 'subtitle_typography',
 				'selector' => '{{WRAPPER}} .stx-title-wrapper .stx-subtitle',
 			]
@@ -606,22 +616,23 @@ class Component extends Base {
 			]
 		);
 
-
 		$this->end_controls_section();
 
 		$this->start_controls_section(
-			'description_section_style', [
+			'description_section_style',
+			[
 				'label'     => __( 'Description', 'stax-addons-for-elementor' ),
 				'tab'       => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'description_section_show' => 'yes',
-					'description!'             => ''
-				]
+					'description!'             => '',
+				],
 			]
 		);
 
 		$this->add_responsive_control(
-			'description_color', [
+			'description_color',
+			[
 				'label'     => __( 'Color', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
@@ -631,7 +642,8 @@ class Component extends Base {
 		);
 
 		$this->add_group_control(
-			Group_Control_Typography::get_type(), [
+			Group_Control_Typography::get_type(),
+			[
 				'name'     => 'description_typography',
 				'selector' => '{{WRAPPER}} .stx-description p, {{WRAPPER}} .stx-description',
 			]
@@ -652,12 +664,13 @@ class Component extends Base {
 		$this->end_controls_section();
 
 		$this->start_controls_section(
-			'separator_section_style', [
+			'separator_section_style',
+			[
 				'label'     => __( 'Separator', 'stax-addons-for-elementor' ),
 				'tab'       => Controls_Manager::TAB_STYLE,
 				'condition' => [
-					'show_separator' => 'yes'
-				]
+					'show_separator' => 'yes',
+				],
 			]
 		);
 		$this->add_responsive_control(
@@ -681,24 +694,25 @@ class Component extends Base {
 					'size' => 100,
 				],
 				'selectors'  => [
-					'{{WRAPPER}} .stx-separator-wrapper .stx-divider' => 'width: {{SIZE}}{{UNIT}};'
+					'{{WRAPPER}} .stx-separator-wrapper .stx-divider' => 'width: {{SIZE}}{{UNIT}};',
 				],
 				'condition'  => [
-					'separator_style!' => 'stx-separator-custom'
-				]
+					'separator_style!' => 'stx-separator-custom',
+				],
 			]
 		);
 
 		$this->add_control(
-			'separator_one_line_color', [
+			'separator_one_line_color',
+			[
 				'label'     => __( 'Color', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .stx-divider.stx-one-line:before' => 'background: {{VALUE}};',
 				],
 				'condition' => [
-					'separator_style' => 'stx-one-line'
-				]
+					'separator_style' => 'stx-one-line',
+				],
 			]
 		);
 
@@ -712,7 +726,7 @@ class Component extends Base {
 						'min'  => 0,
 						'max'  => 50,
 						'step' => 1,
-					]
+					],
 				],
 				'default'   => [
 					'unit' => 'px',
@@ -722,8 +736,8 @@ class Component extends Base {
 					'{{WRAPPER}} .stx-divider.stx-one-line:before' => 'height: {{SIZE}}{{UNIT}};',
 				],
 				'condition' => [
-					'separator_style' => 'stx-one-line'
-				]
+					'separator_style' => 'stx-one-line',
+				],
 			]
 		);
 
@@ -737,8 +751,8 @@ class Component extends Base {
 					'{{WRAPPER}} .stx-divider.stx-one-line:before' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 				'condition'  => [
-					'separator_style' => 'stx-one-line'
-				]
+					'separator_style' => 'stx-one-line',
+				],
 			]
 		);
 
@@ -752,7 +766,7 @@ class Component extends Base {
 						'min'  => 0,
 						'max'  => 200,
 						'step' => 1,
-					]
+					],
 				],
 				'default'   => [
 					'unit' => 'px',
@@ -762,8 +776,8 @@ class Component extends Base {
 					'{{WRAPPER}} .stx-divider.stx-glow:before' => 'height: {{SIZE}}{{UNIT}};',
 				],
 				'condition' => [
-					'separator_style' => 'stx-glow'
-				]
+					'separator_style' => 'stx-glow',
+				],
 			]
 		);
 
@@ -775,8 +789,8 @@ class Component extends Base {
 				'types'     => [ 'gradient' ],
 				'selector'  => '{{WRAPPER}} .stx-divider.stx-glow:before',
 				'condition' => [
-					'separator_style' => 'stx-glow'
-				]
+					'separator_style' => 'stx-glow',
+				],
 			]
 		);
 
@@ -790,8 +804,8 @@ class Component extends Base {
 					'{{WRAPPER}} .stx-divider.stx-glow:before' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 				'condition'  => [
-					'separator_style' => 'stx-glow'
-				]
+					'separator_style' => 'stx-glow',
+				],
 			]
 		);
 
@@ -805,7 +819,7 @@ class Component extends Base {
 						'min'  => 0,
 						'max'  => 200,
 						'step' => 1,
-					]
+					],
 				],
 				'default'   => [
 					'unit' => 'px',
@@ -815,8 +829,8 @@ class Component extends Base {
 					'{{WRAPPER}} .stx-divider.stx-gradient:before' => 'height: {{SIZE}}{{UNIT}};',
 				],
 				'condition' => [
-					'separator_style' => 'stx-gradient'
-				]
+					'separator_style' => 'stx-gradient',
+				],
 			]
 		);
 
@@ -828,8 +842,8 @@ class Component extends Base {
 				'types'     => [ 'gradient' ],
 				'selector'  => '{{WRAPPER}} .stx-divider.stx-gradient:before',
 				'condition' => [
-					'separator_style' => 'stx-gradient'
-				]
+					'separator_style' => 'stx-gradient',
+				],
 			]
 		);
 
@@ -843,8 +857,8 @@ class Component extends Base {
 					'{{WRAPPER}} .stx-divider.stx-gradient:before' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 				'condition'  => [
-					'separator_style' => 'stx-gradient'
-				]
+					'separator_style' => 'stx-gradient',
+				],
 			]
 		);
 
@@ -858,7 +872,7 @@ class Component extends Base {
 						'min'  => 0,
 						'max'  => 200,
 						'step' => 1,
-					]
+					],
 				],
 				'default'   => [
 					'unit' => 'px',
@@ -868,34 +882,36 @@ class Component extends Base {
 					'{{WRAPPER}} .stx-divider.stx-donotcross' => 'height: {{SIZE}}{{UNIT}};',
 				],
 				'condition' => [
-					'separator_style' => 'stx-donotcross'
-				]
+					'separator_style' => 'stx-donotcross',
+				],
 			]
 		);
 
 		$this->add_control(
-			'separator_donotcross_color', [
+			'separator_donotcross_color',
+			[
 				'label'     => __( 'Color', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .stx-divider.stx-donotcross' => 'background: {{VALUE}};',
 				],
 				'condition' => [
-					'separator_style' => 'stx-donotcross'
-				]
+					'separator_style' => 'stx-donotcross',
+				],
 			]
 		);
 
 		$this->add_control(
-			'separator_donotcross_gap_color', [
+			'separator_donotcross_gap_color',
+			[
 				'label'     => __( 'Gap Color', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .stx-divider.stx-donotcross:before' => 'background: {{VALUE}};',
 				],
 				'condition' => [
-					'separator_style' => 'stx-donotcross'
-				]
+					'separator_style' => 'stx-donotcross',
+				],
 			]
 		);
 
@@ -909,7 +925,7 @@ class Component extends Base {
 						'min'  => 0,
 						'max'  => 100,
 						'step' => 1,
-					]
+					],
 				],
 				'default'   => [
 					'unit' => 'px',
@@ -919,8 +935,8 @@ class Component extends Base {
 					'{{WRAPPER}} .stx-divider.stx-donotcross:before' => 'padding: {{SIZE}}{{UNIT}} 0;',
 				],
 				'condition' => [
-					'separator_style' => 'stx-donotcross'
-				]
+					'separator_style' => 'stx-donotcross',
+				],
 			]
 		);
 
@@ -934,7 +950,7 @@ class Component extends Base {
 						'min'  => 0,
 						'max'  => 180,
 						'step' => 1,
-					]
+					],
 				],
 				'default'   => [
 					'unit' => 'px',
@@ -944,8 +960,8 @@ class Component extends Base {
 					'{{WRAPPER}} .stx-divider.stx-donotcross:before' => 'transform: rotate({{SIZE}}deg);',
 				],
 				'condition' => [
-					'separator_style' => 'stx-donotcross'
-				]
+					'separator_style' => 'stx-donotcross',
+				],
 			]
 		);
 
@@ -965,52 +981,26 @@ class Component extends Base {
 	}
 
 	protected function render() {
-
 		$settings = $this->get_settings_for_display();
 
 		$this->add_render_attribute( 'wrapper', 'class', 'stx-title-wrapper' );
 
-		?>
-
-        <div <?php echo $this->get_render_attribute_string( 'wrapper' ); ?>>
-			<?php
-
-			$this->show_separator( 'top' );
-			$this->show_subtitle( 'before_title' );
-			$this->show_separator( 'before' );
-
-			?>
-
-			<?php
-
-			if ( ! empty( $settings['title'] ) ) {
-				echo '<' . $settings['title_tag'] . ' class="stx-title"><span class="' . esc_attr__( $settings['title_ornament'] ) . '">
-					' . \StaxAddons\Utils::curly( $settings['title'] ) . '
-				</span></' . $settings['title_tag'] . '>';
-			}
-
-			?>
-
-			<?php
-
-			$this->show_separator( 'after' );
-			$this->show_subtitle( 'after_title' );
-
-			if ( ! empty( $settings['description'] ) && $settings['description_section_show'] === 'yes' ) {
-				?>
-                <div class="stx-description"><?php echo $settings['description']; ?></div>
-				<?php
-			}
-
-			?>
-
-			<?php $this->show_separator( 'bottom' ); ?>
-
-        </div>
-		<?php
+		Utils::load_template(
+			'widgets/heading/template',
+			[
+				'wrapper_attribute'     => $this->get_render_attribute_string( 'wrapper' ),
+				'separator_top'         => $this->get_separator( 'top' ),
+				'separator_before'      => $this->get_separator( 'before' ),
+				'separator_after'       => $this->get_separator( 'after' ),
+				'separator_bottom'      => $this->get_separator( 'bottom' ),
+				'subtitle_before_title' => $this->get_subtitle( 'before_title' ),
+				'subtitle_after_title'  => $this->get_subtitle( 'after_title' ),
+				'settings'              => $settings,
+			]
+		);
 	}
 
-	protected function show_separator( $position ) {
+	protected function get_separator( $position ) {
 		$settings = $this->get_settings_for_display();
 
 		$image_html = '';
@@ -1030,15 +1020,15 @@ class Component extends Base {
 		}
 
 		if ( $settings['separator_position'] === $position ) {
-			echo $separator;
+			return $separator;
 		}
 	}
 
-	protected function show_subtitle( $position ) {
+	protected function get_subtitle( $position ) {
 		$settings = $this->get_settings_for_display();
 
 		if ( $settings['subtitle_position'] === $position && ! empty( $settings['subtitle'] ) && $settings['subtitle_show'] === 'yes' ) {
-			echo '<' . $settings['subtitle_tag'] . ' class="stx-subtitle">' . esc_html( $settings['subtitle'] ) . '</' . $settings['subtitle_tag'] . '>';
+			return '<' . $settings['subtitle_tag'] . ' class="stx-subtitle">' . esc_html( $settings['subtitle'] ) . '</' . $settings['subtitle_tag'] . '>';
 		}
 	}
 

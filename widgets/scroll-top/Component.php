@@ -9,9 +9,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Border;
 use Elementor\Group_Control_Box_Shadow;
-use Elementor\Icons_Manager;
 
 use StaxAddons\Widgets\Base;
+use StaxAddons\Utils;
 
 class Component extends Base {
 
@@ -57,13 +57,13 @@ class Component extends Base {
 					'px' => [
 						'min'  => 0,
 						'max'  => 500,
-						'step' => 5
-					]
+						'step' => 5,
+					],
 				],
 				'default'     => [
 					'unit' => 'px',
-					'size' => 0
-				]
+					'size' => 0,
+				],
 			]
 		);
 
@@ -294,21 +294,14 @@ class Component extends Base {
 			$this->add_render_attribute( 'button', 'id', $settings['button_css_id'] );
 		}
 
-		?>
-
-        <div class="stx-btn-wrapper">
-            <a <?php echo $this->get_render_attribute_string( 'button' ); ?>>
-		        <span class="stx-btn-content-wrapper">
-			        <span <?php echo $this->get_render_attribute_string( 'icon' ); ?>>
-                        <?php if ( $settings['selected_icon']['value'] ) : ?>
-	                        <?php Icons_Manager::render_icon( $settings['selected_icon'], [ 'aria-hidden' => 'true' ] ); ?>
-                        <?php endif; ?>
-                    </span>
-		        </span>
-            </a>
-        </div>
-
-		<?php
+		Utils::load_template(
+			'widgets/scroll-top/template',
+			[
+				'button_attribute' => $this->get_render_attribute_string( 'button' ),
+				'icon_attribute'   => $this->get_render_attribute_string( 'icon' ),
+				'settings'         => $settings,
+			]
+		);
 	}
 
 }

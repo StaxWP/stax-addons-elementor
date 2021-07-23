@@ -11,6 +11,7 @@ use Elementor\Plugin;
 
 /**
  * Class StaxWidgets
+ *
  * @package StaxAddons
  */
 class StaxWidgets {
@@ -44,80 +45,87 @@ class StaxWidgets {
 	 * Get widgets
 	 *
 	 * @param bool $active
-	 * @param bool $withStatus
+	 * @param bool $with_status
 	 *
 	 * @return array
 	 */
-	public function get_widgets( $active = false, $withStatus = false ) {
+	public function get_widgets( $active = false, $with_status = false ) {
 		$widgets = [];
 
 		$widgets['breadcrumbs'] = [
 			'scope' => 'Breadcrumbs',
 			'name'  => 'Breadcrumbs',
-			'slug'  => 'stax-el-breadcrumbs'
+			'slug'  => 'stax-el-breadcrumbs',
 		];
 
 		$widgets['button'] = [
 			'scope' => 'Button',
 			'name'  => 'Button',
-			'slug'  => 'stax-el-button'
+			'slug'  => 'stax-el-button',
 		];
 
 		$widgets['dropdown'] = [
 			'scope' => 'Dropdown',
 			'name'  => 'Dropdown',
-			'slug'  => 'stax-el-dropdown'
+			'slug'  => 'stax-el-dropdown',
 		];
 
 		$widgets['heading'] = [
 			'scope' => 'Heading',
 			'name'  => 'Heading',
-			'slug'  => 'stax-el-heading'
+			'slug'  => 'stax-el-heading',
 		];
 
 		$widgets['read-more'] = [
 			'scope' => 'ReadMore',
 			'name'  => 'Read More',
-			'slug'  => 'stax-el-read-more'
+			'slug'  => 'stax-el-read-more',
 		];
 
-//		$widgets['info-box'] = [
-//			'scope' => 'InfoBox',
-//			'name'  => 'Info Box',
-//			'slug'  => 'stax-el-info-box'
-//		];
-//
 		$widgets['interval-image'] = [
 			'scope' => 'IntervalImage',
 			'name'  => 'Interval Image',
-			'slug'  => 'stax-el-interval-image'
+			'slug'  => 'stax-el-interval-image',
 		];
 
 		$widgets['scroll-top'] = [
 			'scope' => 'ScrollTop',
 			'name'  => 'Scroll Top',
-			'slug'  => 'stax-el-scroll-top'
+			'slug'  => 'stax-el-scroll-top',
 		];
-//
-//		$widgets['separator'] = [
-//			'scope' => 'Separator',
-//			'name'  => 'Separator',
-//			'slug'  => 'stax-el-separator'
-//		];
 
 		$widgets['slider'] = [
 			'scope' => 'Slider',
 			'name'  => 'Slider',
-			'slug'  => 'stax-el-slider'
+			'slug'  => 'stax-el-slider',
 		];
 
-//		$widgets['testimonial'] = [
-//			'scope' => 'Testimonial',
-//			'slug'  => 'stax-el-testimonial'
-//		];
+		$widgets['typeout-text'] = [
+			'scope' => 'TypeoutText',
+			'name'  => 'Typeout Text',
+			'slug'  => 'stax-el-typeout-text',
+		];
 
-		// Remove disabled widgets
-		if ( $active && ! $withStatus ) {
+		$widgets['blockquote'] = [
+			'scope' => 'BlockQuote',
+			'name'  => 'Blockquote',
+			'slug'  => 'stax-el-blockquote',
+		];
+
+		$widgets['icon-with-text'] = [
+			'scope' => 'IconWithText',
+			'name'  => 'Icon With Text',
+			'slug'  => 'stax-el-icon-with-text',
+		];
+
+		$widgets['testimonials'] = [
+			'scope' => 'Testimonials',
+			'name'  => 'Testimonials',
+			'slug'  => 'stax-el-testimonials',
+		];
+
+		// Remove disabled widgets.
+		if ( $active && ! $with_status ) {
 			$disabled_widgets = get_option( '_stax_addons_disabled_widgets', [] );
 			foreach ( $widgets as $k => $widget ) {
 				if ( isset( $disabled_widgets[ $widget['slug'] ] ) ) {
@@ -126,7 +134,7 @@ class StaxWidgets {
 			}
 		}
 
-		if ( $withStatus ) {
+		if ( $with_status ) {
 			$disabled_widgets = get_option( '_stax_addons_disabled_widgets', [] );
 			foreach ( $widgets as $k => $widget ) {
 				if ( isset( $disabled_widgets[ $widget['slug'] ] ) ) {
@@ -158,7 +166,7 @@ class StaxWidgets {
 
 						require_once $widget_file;
 						$class_name = '\StaxAddons\Widgets\\' . $element['scope'] . '\Component';
-						$elementor->widgets_manager->register_widget_type( new $class_name );
+						$elementor->widgets_manager->register_widget_type( new $class_name() );
 					}
 				}
 			}
@@ -174,7 +182,7 @@ class StaxWidgets {
 				'stax-elementor',
 				[
 					'title' => 'Stax Elements',
-					'icon'  => 'fa fa-plug'
+					'icon'  => 'fa fa-plug',
 				]
 			);
 		}

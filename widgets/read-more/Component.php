@@ -12,18 +12,20 @@ use Elementor\Group_Control_Box_Shadow;
 use Elementor\Group_Control_Text_Shadow;
 use Elementor\Group_Control_Typography;
 use Elementor\Core\Schemes;
-use Elementor\Icons_Manager;
 
 use StaxAddons\Widgets\Base;
+use StaxAddons\Utils;
 
 class Component extends Base {
 
 	public function __construct( $data = [], $args = null, $resources = false ) {
 		parent::__construct( $data, $args, $resources );
 
-		$this->register_widget_resources( [
-			'js' => [ 'elementor-frontend' ]
-		] );
+		$this->register_widget_resources(
+			[
+				'js' => [ 'elementor-frontend' ],
+			]
+		);
 	}
 
 	public function get_name() {
@@ -62,7 +64,8 @@ class Component extends Base {
 		);
 
 		$this->add_control(
-			'drop_cap', [
+			'drop_cap',
+			[
 				'label'              => __( 'Drop Cap', 'elementor' ),
 				'type'               => Controls_Manager::SWITCHER,
 				'label_off'          => __( 'Off', 'elementor' ),
@@ -73,7 +76,8 @@ class Component extends Base {
 		);
 
 		$this->add_control(
-			'read_more_text', [
+			'read_more_text',
+			[
 				'label'   => __( 'More text', 'stax-addons-for-elementor' ),
 				'type'    => Controls_Manager::WYSIWYG,
 				'default' => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.', 'elementor' ),
@@ -81,14 +85,16 @@ class Component extends Base {
 		);
 
 		$this->add_control(
-			'read_more_label', [
+			'read_more_label',
+			[
 				'label'   => __( 'More Label', 'stax-addons-for-elementor' ),
 				'type'    => Controls_Manager::TEXT,
 				'default' => 'Read more',
 			]
 		);
 		$this->add_control(
-			'read_more_icon', [
+			'read_more_icon',
+			[
 				'label' => __( ' More icon', 'stax-addons-for-elementor' ),
 				'type'  => Controls_Manager::ICONS,
 			]
@@ -111,14 +117,16 @@ class Component extends Base {
 		);
 
 		$this->add_control(
-			'read_less_label', [
+			'read_less_label',
+			[
 				'label'   => __( 'Less Label', 'stax-addons-for-elementor' ),
 				'type'    => Controls_Manager::TEXT,
 				'default' => 'Read less',
 			]
 		);
 		$this->add_control(
-			'read_less_icon', [
+			'read_less_icon',
+			[
 				'label' => __( 'Less icon', 'stax-addons-for-elementor' ),
 				'type'  => Controls_Manager::ICONS,
 			]
@@ -138,7 +146,6 @@ class Component extends Base {
 				],
 			]
 		);
-
 
 		$this->end_controls_section();
 
@@ -371,7 +378,8 @@ class Component extends Base {
 		);
 
 		$this->add_control(
-			'drop_cap_border_width', [
+			'drop_cap_border_width',
+			[
 				'label'     => __( 'Border Width', 'elementor' ),
 				'type'      => Controls_Manager::DIMENSIONS,
 				'selectors' => [
@@ -634,34 +642,22 @@ class Component extends Base {
 		$this->add_render_attribute( 'read_more_icon_align', 'class', [ 'stx-icon-' . $settings['read_more_icon_align'] ] );
 		$this->add_render_attribute( 'read_less_icon_align', 'class', [ 'stx-icon-' . $settings['read_less_icon_align'] ] );
 
-
-		?>
-        <div class="stax-read-more-editor">
-            <div <?php echo $this->get_render_attribute_string( 'editor' ); ?>>
-				<?php echo $editor_content; ?>
-            </div>
-
-            <div <?php echo $this->get_render_attribute_string( 'read_more_text' ); ?>><?php echo $editor_more_content; ?></div>
-
-            <div <?php echo $this->get_render_attribute_string( 'read_more_wrap' ); ?>>
-                <a <?php echo $this->get_render_attribute_string( 'read_more_toggle' ); ?>>
-	                <span <?php echo $this->get_render_attribute_string( 'read_more_label' ); ?>>
-                        <span <?php echo $this->get_render_attribute_string( 'read_more_icon_align' ); ?>>
-		                    <?php Icons_Manager::render_icon( $settings['read_more_icon'], [ 'aria-hidden' => 'true' ] ); ?>
-                        </span>
-                        <?php echo wp_kses_post( $settings['read_more_label'] ); ?>
-	                </span>
-                    <span <?php echo $this->get_render_attribute_string( 'read_less_label' ); ?>>
-                         <span <?php echo $this->get_render_attribute_string( 'read_less_icon_align' ); ?>>
-                            <?php Icons_Manager::render_icon( $settings['read_less_icon'], [ 'aria-hidden' => 'true' ] ); ?>
-                         </span>
-                        <?php echo wp_kses_post( $settings['read_less_label'] ); ?>
-	                </span>
-                </a>
-            </div>
-        </div>
-
-		<?php
+		Utils::load_template(
+			'widgets/read-more/template',
+			[
+				'editor_attribute'               => $this->get_render_attribute_string( 'editor' ),
+				'read_more_text_attribute'       => $this->get_render_attribute_string( 'read_more_text' ),
+				'read_more_wrap_attribute'       => $this->get_render_attribute_string( 'read_more_wrap' ),
+				'read_more_toggle_attribute'     => $this->get_render_attribute_string( 'read_more_toggle' ),
+				'read_more_label_attribute'      => $this->get_render_attribute_string( 'read_more_label' ),
+				'read_more_icon_align_attribute' => $this->get_render_attribute_string( 'read_more_icon_align' ),
+				'read_less_label_attribute'      => $this->get_render_attribute_string( 'read_less_label' ),
+				'read_less_icon_align_attribute' => $this->get_render_attribute_string( 'read_less_icon_align' ),
+				'editor_content'                 => $editor_content,
+				'editor_more_content'            => $editor_more_content,
+				'settings'                       => $settings,
+			]
+		);
 	}
 
 	/**
@@ -687,53 +683,53 @@ class Component extends Base {
 	 */
 	protected function content_template() {
 		?>
-        <#
-        var iconMore = elementor.helpers.renderIcon( view, settings.read_more_icon, { 'aria-hidden': true }, 'i' , 'object' );
-        var iconLess = elementor.helpers.renderIcon( view, settings.read_less_icon, { 'aria-hidden': true }, 'i' , 'object' );
+		<#
+		var iconMore = elementor.helpers.renderIcon( view, settings.read_more_icon, { 'aria-hidden': true }, 'i' , 'object' );
+		var iconLess = elementor.helpers.renderIcon( view, settings.read_less_icon, { 'aria-hidden': true }, 'i' , 'object' );
 
-        view.addRenderAttribute( 'editor', 'class', [ 'elementor-text-editor', 'elementor-clearfix' ] );
-        view.addInlineEditingAttributes( 'editor', 'advanced' );
+		view.addRenderAttribute( 'editor', 'class', [ 'elementor-text-editor', 'elementor-clearfix' ] );
+		view.addInlineEditingAttributes( 'editor', 'advanced' );
 
-        view.addRenderAttribute( 'read_more_wrap', 'class', [ 'read-more-wrap' ] );
-        view.addRenderAttribute( 'read_more_toggle', 'class', [ 'stx-read-more-toggle' ] );
-        view.addRenderAttribute( 'read_more_toggle','href', '#' );
+		view.addRenderAttribute( 'read_more_wrap', 'class', [ 'read-more-wrap' ] );
+		view.addRenderAttribute( 'read_more_toggle', 'class', [ 'stx-read-more-toggle' ] );
+		view.addRenderAttribute( 'read_more_toggle','href', '#' );
 
-        view.addRenderAttribute( 'read_more_label','class', [ 'stx-read-more' ] );
-        view.addRenderAttribute( 'read_less_label','class', [ 'stx-read-less' ] );
+		view.addRenderAttribute( 'read_more_label','class', [ 'stx-read-more' ] );
+		view.addRenderAttribute( 'read_less_label','class', [ 'stx-read-less' ] );
 
-        view.addRenderAttribute( 'read_more_text','class', [ 'elementor-text-editor', 'read-more-text' ] );
-        view.addInlineEditingAttributes( 'read_more_text', 'advanced' );
+		view.addRenderAttribute( 'read_more_text','class', [ 'elementor-text-editor', 'read-more-text' ] );
+		view.addInlineEditingAttributes( 'read_more_text', 'advanced' );
 
-        #>
-        <div class="stax-read-more-editor">
-            <div {{{ view.getRenderAttributeString(
-            'editor' ) }}}> {{{ settings.editor }}}
-        </div>
+		#>
+		<div class="stax-read-more-editor">
+			<div {{{ view.getRenderAttributeString(
+			'editor' ) }}}> {{{ settings.editor }}}
+		</div>
 
-        <div {{{ view.getRenderAttributeString( 'read_more_text' ) }}}>{{{ settings.read_more_text }}}</div>
+		<div {{{ view.getRenderAttributeString( 'read_more_text' ) }}}>{{{ settings.read_more_text }}}</div>
 
-        <div {{{ view.getRenderAttributeString( 'read_more_wrap' ) }}}>
-        <a {{{ view.getRenderAttributeString( 'read_more_toggle' ) }}}>
-        <span {{{ view.getRenderAttributeString( 'read_more_label' ) }}}>
-        <# if ( settings.read_more_icon ) { #>
-        <span class="stx-icon-{{ settings.read_more_icon_align }}">
-						{{{ iconMore.value }}}
-					</span>
-        <# } #>
-        {{{ settings.read_more_label }}}
-        </span>
+		<div {{{ view.getRenderAttributeString( 'read_more_wrap' ) }}}>
+			<a {{{ view.getRenderAttributeString( 'read_more_toggle' ) }}}>
+				<span {{{ view.getRenderAttributeString( 'read_more_label' ) }}}>
+					<# if ( settings.read_more_icon ) { #>
+						<span class="stx-icon-{{ settings.read_more_icon_align }}">
+							{{{ iconMore.value }}}
+						</span>
+					<# } #>
+					{{{ settings.read_more_label }}}
+				</span>
 
-        <span {{{ view.getRenderAttributeString( 'read_less_label' ) }}}>
-        <# if ( settings.read_less_icon ) { #>
-        <span class="stx-icon-{{ settings.read_less_icon_align }}">
-						{{{ iconLess.value }}}
-					</span>
-        <# } #>
-        {{{ settings.read_less_label }}}
-        </span>
-        </a>
-        </div>
-        </div>
+				<span {{{ view.getRenderAttributeString( 'read_less_label' ) }}}>
+					<# if ( settings.read_less_icon ) { #>
+						<span class="stx-icon-{{ settings.read_less_icon_align }}">
+							{{{ iconLess.value }}}
+						</span>
+					<# } #>
+					{{{ settings.read_less_label }}}
+				</span>
+			</a>
+		</div>
+		</div>
 
 		<?php
 	}

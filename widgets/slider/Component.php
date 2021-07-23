@@ -13,6 +13,7 @@ use Elementor\Group_Control_Text_Shadow;
 use Elementor\Group_Control_Typography;
 use Elementor\Repeater;
 
+use StaxAddons\Utils;
 use StaxAddons\Widgets\Base;
 
 class Component extends Base {
@@ -20,9 +21,11 @@ class Component extends Base {
 	public function __construct( $data = [], $args = null, $resources = false ) {
 		parent::__construct( $data, $args, $resources );
 
-		$this->register_widget_resources( [
-			'js' => [ 'jquery', 'swiper' ]
-		] );
+		$this->register_widget_resources(
+			[
+				'js' => [ 'jquery', 'swiper' ],
+			]
+		);
 	}
 
 	public function get_name() {
@@ -57,33 +60,34 @@ class Component extends Base {
 					'px' => [
 						'min'  => 0,
 						'max'  => 1000,
-						'step' => 5
+						'step' => 5,
 					],
 					'%'  => [
 						'min' => 0,
 						'max' => 100,
-					]
+					],
 				],
 				'default'    => [
 					'unit' => 'px',
-					'size' => 300
+					'size' => 300,
 				],
 				'selectors'  => [
-					'{{WRAPPER}} .swiper-container' => 'height: {{SIZE}}{{UNIT}};'
-				]
+					'{{WRAPPER}} .swiper-container' => 'height: {{SIZE}}{{UNIT}};',
+				],
 			]
 		);
 
 		$this->add_control(
-			'slider_base_style', [
+			'slider_base_style',
+			[
 				'label'     => __( 'Base Style', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::HIDDEN,
 				'default'   => '1',
 				'selectors' => [
-					'{{WRAPPER}} .swiper-pagination'                                  => 'display: block !important;',
-					'{{WRAPPER}} .swiper-slide:before'                                => 'content: " "; position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 1;',
-					'{{WRAPPER}} .swiper-slide > div, {{WRAPPER}} .swiper-slide > h3' => 'z-index: 2;'
-				]
+					'{{WRAPPER}} .swiper-pagination'   => 'display: block !important;',
+					'{{WRAPPER}} .swiper-slide:before' => 'content: " "; position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 1;',
+					'{{WRAPPER}} .swiper-slide > div, {{WRAPPER}} .swiper-slide > h3' => 'z-index: 2;',
+				],
 			]
 		);
 
@@ -108,8 +112,8 @@ class Component extends Base {
 				'step'      => 10,
 				'default'   => 5000,
 				'condition' => [
-					'autoplay' => 'yes'
-				]
+					'autoplay' => 'yes',
+				],
 			]
 		);
 
@@ -142,18 +146,20 @@ class Component extends Base {
 		$repeater->start_controls_tab( 'content', [ 'label' => __( 'Content', 'stax-addons-for-elementor' ) ] );
 
 		$repeater->add_control(
-			'list_default_style', [
+			'list_default_style',
+			[
 				'label'     => __( 'H3 margin', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::HIDDEN,
 				'default'   => '1',
 				'selectors' => [
-					'{{WRAPPER}} h3' => 'margin: 0;'
-				]
+					'{{WRAPPER}} h3' => 'margin: 0;',
+				],
 			]
 		);
 
 		$repeater->add_control(
-			'list_title', [
+			'list_title',
+			[
 				'label'       => __( 'Title', 'stax-addons-for-elementor' ),
 				'type'        => Controls_Manager::TEXT,
 				'default'     => __( 'Demo title', 'stax-addons-for-elementor' ),
@@ -162,7 +168,8 @@ class Component extends Base {
 		);
 
 		$repeater->add_control(
-			'list_sub_title', [
+			'list_sub_title',
+			[
 				'label'       => __( 'Sub Title', 'stax-addons-for-elementor' ),
 				'type'        => Controls_Manager::TEXT,
 				'default'     => __( 'Demo sub-title', 'stax-addons-for-elementor' ),
@@ -171,7 +178,8 @@ class Component extends Base {
 		);
 
 		$repeater->add_control(
-			'list_description', [
+			'list_description',
+			[
 				'label'       => __( 'Description', 'stax-addons-for-elementor' ),
 				'type'        => Controls_Manager::TEXT,
 				'default'     => __( 'Demo description', 'stax-addons-for-elementor' ),
@@ -180,7 +188,8 @@ class Component extends Base {
 		);
 
 		$repeater->add_control(
-			'list_btn_text', [
+			'list_btn_text',
+			[
 				'label'       => __( 'Button Text', 'stax-addons-for-elementor' ),
 				'type'        => Controls_Manager::TEXT,
 				'default'     => __( 'Click me', 'stax-addons-for-elementor' ),
@@ -237,9 +246,9 @@ class Component extends Base {
 					'flex-end'   => [
 						'title' => __( 'Right', 'stax-addons-for-elementor' ),
 						'icon'  => 'eicon-text-align-right',
-					]
+					],
 				],
-				'default' => ''
+				'default' => '',
 			]
 		);
 
@@ -264,8 +273,8 @@ class Component extends Base {
 				],
 				'default'   => '',
 				'selectors' => [
-					'{{WRAPPER}} {{CURRENT_ITEM}}' => 'justify-content: {{VALUE}};'
-				]
+					'{{WRAPPER}} {{CURRENT_ITEM}}' => 'justify-content: {{VALUE}};',
+				],
 			]
 		);
 
@@ -275,7 +284,7 @@ class Component extends Base {
 				'label'     => __( 'Overlay Color', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} {{CURRENT_ITEM}}:before' => 'background-color: {{VALUE}}'
+					'{{WRAPPER}} {{CURRENT_ITEM}}:before' => 'background-color: {{VALUE}}',
 				],
 			]
 		);
@@ -286,7 +295,7 @@ class Component extends Base {
 				'label'     => __( 'Title Color', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} {{CURRENT_ITEM}} h3' => 'color: {{VALUE}}'
+					'{{WRAPPER}} {{CURRENT_ITEM}} h3' => 'color: {{VALUE}}',
 				],
 			]
 		);
@@ -297,7 +306,7 @@ class Component extends Base {
 				'label'     => __( 'Sub-title Color', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} {{CURRENT_ITEM}} .slide-subtitle' => 'color: {{VALUE}}'
+					'{{WRAPPER}} {{CURRENT_ITEM}} .slide-subtitle' => 'color: {{VALUE}}',
 				],
 			]
 		);
@@ -308,7 +317,7 @@ class Component extends Base {
 				'label'     => __( 'Description Color', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} {{CURRENT_ITEM}} .slide-description' => 'color: {{VALUE}}'
+					'{{WRAPPER}} {{CURRENT_ITEM}} .slide-description' => 'color: {{VALUE}}',
 				],
 			]
 		);
@@ -346,7 +355,7 @@ class Component extends Base {
 				'label'     => __( 'Button Color', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} {{CURRENT_ITEM}} .slide-btn a' => 'color: {{VALUE}}'
+					'{{WRAPPER}} {{CURRENT_ITEM}} .slide-btn a' => 'color: {{VALUE}}',
 				],
 			]
 		);
@@ -357,7 +366,7 @@ class Component extends Base {
 				'label'     => __( 'Button Hover Color', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} {{CURRENT_ITEM}} .slide-btn a:hover' => 'color: {{VALUE}}'
+					'{{WRAPPER}} {{CURRENT_ITEM}} .slide-btn a:hover' => 'color: {{VALUE}}',
 				],
 			]
 		);
@@ -368,7 +377,7 @@ class Component extends Base {
 				'label'     => __( 'Button Background', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} {{CURRENT_ITEM}} .slide-btn a' => 'background-color: {{VALUE}}'
+					'{{WRAPPER}} {{CURRENT_ITEM}} .slide-btn a' => 'background-color: {{VALUE}}',
 				],
 			]
 		);
@@ -379,7 +388,7 @@ class Component extends Base {
 				'label'     => __( 'Button Hover Bg', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} {{CURRENT_ITEM}} .slide-btn a:hover' => 'background-color: {{VALUE}}'
+					'{{WRAPPER}} {{CURRENT_ITEM}} .slide-btn a:hover' => 'background-color: {{VALUE}}',
 				],
 			]
 		);
@@ -390,7 +399,7 @@ class Component extends Base {
 				'label'     => __( 'Button Border Color', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} {{CURRENT_ITEM}} .slide-btn a' => 'border-color: {{VALUE}}'
+					'{{WRAPPER}} {{CURRENT_ITEM}} .slide-btn a' => 'border-color: {{VALUE}}',
 				],
 			]
 		);
@@ -401,7 +410,7 @@ class Component extends Base {
 				'label'     => __( 'Button Border Hover Color', 'stax-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} {{CURRENT_ITEM}} .slide-btn a:hover' => 'border-color: {{VALUE}}'
+					'{{WRAPPER}} {{CURRENT_ITEM}} .slide-btn a:hover' => 'border-color: {{VALUE}}',
 				],
 			]
 		);
@@ -657,57 +666,17 @@ class Component extends Base {
 
 		$autoplay = '';
 
-		if ( $settings['autoplay'] === 'yes' ) {
+		if ( 'yes' === $settings['autoplay'] ) {
 			$autoplay = 'data-autoplay="true" data-autoplay-speed="' . $settings['autoplay_speed'] . '"';
 		}
 
-		?>
-        <div class="swiper-container" <?php echo $autoplay; ?>>
-            <div class="swiper-wrapper">
-				<?php foreach ( $settings['list'] as $item ): ?>
-					<?php
-
-					$target   = $item['list_btn_link']['is_external'] ? ' target="_blank"' : '';
-					$nofollow = $item['list_btn_link']['nofollow'] ? ' rel="nofollow"' : '';
-					$align    = $item['align_horizontal'] ? 'sq-align-' . $item['align_horizontal'] : '';
-					?>
-                    <div class="swiper-slide elementor-repeater-item-<?php echo $item['_id']; ?> <?php echo esc_attr( $align ); ?>">
-						<?php if ( $item['list_title'] ) : ?>
-                            <h3><?php echo $item['list_title']; ?></h3>
-						<?php endif; ?>
-
-						<?php if ( $item['list_sub_title'] ) : ?>
-                            <div class="slide-subtitle"><?php echo $item['list_sub_title']; ?></div>
-						<?php endif; ?>
-
-						<?php if ( $item['list_description'] ) : ?>
-                            <div class="slide-description"><?php echo $item['list_description']; ?></div>
-						<?php endif; ?>
-
-						<?php if ( $item['list_btn_text'] ): ?>
-                            <div class="slide-btn">
-                                <a href="<?php echo $item['list_btn_link']['url']; ?>" <?php echo $target;
-								echo $nofollow; ?>>
-									<?php echo $item['list_btn_text']; ?>
-                                </a>
-                            </div>
-						<?php endif; ?>
-                    </div>
-				<?php endforeach; ?>
-            </div>
-			<?php if ( $settings['nav_pagination'] ) : ?>
-                <div class="swiper-pagination"></div>
-			<?php endif; ?>
-
-			<?php if ( $settings['nav_arrows'] ) : ?>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-			<?php endif; ?>
-        </div>
-        <style>
-
-        </style>
-		<?php
+		Utils::load_template(
+			'widgets/slider/template',
+			[
+				'autoplay' => $autoplay,
+				'settings' => $settings,
+			]
+		);
 	}
 
 }

@@ -11,9 +11,9 @@ use Elementor\Group_Control_Border;
 use Elementor\Group_Control_Box_Shadow;
 use Elementor\Group_Control_Text_Shadow;
 use Elementor\Group_Control_Typography;
-use Elementor\Icons_Manager;
 
 use StaxAddons\Widgets\Base;
+use StaxAddons\Utils;
 
 class Component extends Base {
 
@@ -100,15 +100,15 @@ class Component extends Base {
 		$this->add_control(
 			'size',
 			[
-				'label'          => __( 'Size', 'elementor' ),
+				'label'          => __( 'Size', 'stax-addons-for-elementor' ),
 				'type'           => Controls_Manager::SELECT,
 				'default'        => 'sm',
 				'options'        => [
-					'xs' => __( 'Extra Small', 'elementor' ),
-					'sm' => __( 'Small', 'elementor' ),
-					'md' => __( 'Medium', 'elementor' ),
-					'lg' => __( 'Large', 'elementor' ),
-					'xl' => __( 'Extra Large', 'elementor' ),
+					'xs' => __( 'Extra Small', 'stax-addons-for-elementor' ),
+					'sm' => __( 'Small', 'stax-addons-for-elementor' ),
+					'md' => __( 'Medium', 'stax-addons-for-elementor' ),
+					'lg' => __( 'Large', 'stax-addons-for-elementor' ),
+					'xl' => __( 'Extra Large', 'stax-addons-for-elementor' ),
 				],
 				'style_transfer' => true,
 			]
@@ -117,9 +117,9 @@ class Component extends Base {
 		$this->add_control(
 			'selected_icon',
 			[
-				'label'            => __( 'Icon', 'stax-addons-for-elementor' ),
-				'type'             => Controls_Manager::ICONS,
-				'label_block'      => true,
+				'label'       => __( 'Icon', 'stax-addons-for-elementor' ),
+				'type'        => Controls_Manager::ICONS,
+				'label_block' => true,
 			]
 		);
 
@@ -380,22 +380,14 @@ class Component extends Base {
 			$this->add_render_attribute( 'button', 'id', $settings['button_css_id'] );
 		}
 
-		?>
-
-        <div class="stx-btn-wrapper">
-            <a <?php echo $this->get_render_attribute_string( 'button' ); ?>>
-		        <span class="stx-btn-content-wrapper">
-			        <span <?php echo $this->get_render_attribute_string( 'icon' ); ?>>
-                        <?php if ( $settings['selected_icon']['value'] ) : ?>
-	                        <?php Icons_Manager::render_icon( $settings['selected_icon'], [ 'aria-hidden' => 'true' ] ); ?>
-                        <?php endif; ?>
-                    </span>
-		            <span class="stx-btn-text"><?php echo $settings['text']; ?></span>
-		        </span>
-            </a>
-        </div>
-
-		<?php
+		Utils::load_template(
+			'widgets/button/template',
+			[
+				'button_attribute' => $this->get_render_attribute_string( 'button' ),
+				'icon_attribute'   => $this->get_render_attribute_string( 'icon' ),
+				'settings'         => $settings,
+			]
+		);
 	}
 
 }

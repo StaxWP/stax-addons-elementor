@@ -11,6 +11,7 @@ use StaxAddons\StaxWidgets;
 
 /**
  * Class Base
+ *
  * @package StaxAddons\Widgets
  */
 abstract class Base extends Widget_Base {
@@ -19,8 +20,8 @@ abstract class Base extends Widget_Base {
 	 * Base constructor.
 	 *
 	 * @param array $data
-	 * @param null $args
-	 * @param bool $resources
+	 * @param null  $args
+	 * @param bool  $resources
 	 *
 	 * @throws \Exception
 	 */
@@ -36,8 +37,9 @@ abstract class Base extends Widget_Base {
 	 * Register widget resources (CSS/JS)
 	 *
 	 * @param array $dependencies
+	 * @param array $extra_scripts
 	 */
-	public function register_widget_resources( $dependencies = [] ) {
+	public function register_widget_resources( $dependencies = [], $extra_scripts = [] ) {
 		foreach ( StaxWidgets::instance()->get_widgets( true ) as $folder => $widget ) {
 			if ( $widget['slug'] === $this->get_name() ) {
 				$suffix = '.min';
@@ -46,16 +48,28 @@ abstract class Base extends Widget_Base {
 					$suffix = '';
 				}
 
+				$js_dep = [ 'jquery' ];
+
+				if ( isset( $dependencies['js'] ) && is_array( $dependencies['js'] ) ) {
+					$js_dep = $dependencies['js'];
+				}
+
+				foreach ( $extra_scripts as $script ) {
+					$js_dep[] = $script['name'];
+
+					wp_register_script(
+						$script['name'],
+						STAX_EL_WIDGET_URL . $folder . '/' . $script['path'] . '.js',
+						$script['depends'],
+						STAX_EL_VERSION,
+						true
+					);
+				}
+
 				$widget_script = STAX_EL_WIDGET_PATH . $folder . '/component' . $suffix . '.js';
 				$widget_style  = STAX_EL_WIDGET_PATH . $folder . '/component' . $suffix . '.css';
 
 				if ( file_exists( $widget_script ) ) {
-					$js_dep = [ 'jquery' ];
-
-					if ( isset( $dependencies['js'] ) && is_array( $dependencies['js'] ) ) {
-						$js_dep = $dependencies['js'];
-					}
-
 					wp_register_script(
 						$this->get_widget_script_handle(),
 						STAX_EL_WIDGET_URL . $folder . '/component' . $suffix . '.js',

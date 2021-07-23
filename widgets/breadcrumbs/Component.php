@@ -16,6 +16,7 @@ use StaxAddons\Widgets\Breadcrumbs\Core\Bbpress_Trail;
 use Elementor\Controls_Manager;
 
 use StaxAddons\Widgets\Base;
+use StaxAddons\Utils;
 
 class Component extends Base {
 
@@ -82,18 +83,18 @@ class Component extends Base {
 		$this->add_responsive_control(
 			'align',
 			[
-				'label'        => __( 'Alignment', 'stax-addons-for-elementor' ),
-				'type'         => Controls_Manager::CHOOSE,
-				'options'      => [
+				'label'     => __( 'Alignment', 'stax-addons-for-elementor' ),
+				'type'      => Controls_Manager::CHOOSE,
+				'options'   => [
 					'flex-start'    => [
 						'title' => __( 'Left', 'stax-addons-for-elementor' ),
 						'icon'  => 'eicon-text-align-left',
 					],
-					'center'  => [
+					'center'        => [
 						'title' => __( 'Center', 'stax-addons-for-elementor' ),
 						'icon'  => 'eicon-text-align-center',
 					],
-					'flex-end'   => [
+					'flex-end'      => [
 						'title' => __( 'Right', 'stax-addons-for-elementor' ),
 						'icon'  => 'eicon-text-align-right',
 					],
@@ -102,10 +103,10 @@ class Component extends Base {
 						'icon'  => 'eicon-text-align-justify',
 					],
 				],
-				'default'      => '',
-                'selectors' => [
-                        '{{WRAPPER}} .stx-breadcrumb' => 'justify-content: {{VALUE}};'
-                ]
+				'default'   => '',
+				'selectors' => [
+					'{{WRAPPER}} .stx-breadcrumb' => 'justify-content: {{VALUE}};',
+				],
 			]
 		);
 
@@ -262,7 +263,7 @@ class Component extends Base {
 
 		$args = [
 			'separator'  => $icon,
-			'show_title' => true
+			'show_title' => true,
 		];
 
 		if ( function_exists( 'bp_is_active' ) && ! bp_is_blog_page() ) {
@@ -272,11 +273,14 @@ class Component extends Base {
 		} else {
 			$breadcrumb = new Trail( $args );
 		}
-		?>
-        <div class="stx-breadcrumb-wrapper">
-			<?php echo $breadcrumb->trail(); ?>
-        </div>
-		<?php
+
+		Utils::load_template(
+			'widgets/breadcrumbs/template',
+			[
+				'breadcrumb' => $breadcrumb,
+				'settings'   => $settings,
+			]
+		);
 	}
 
 	protected function require_extra_classes() {
