@@ -9,14 +9,6 @@
 		);
 		?>
 	</div>
-	<?php
-	\StaxAddons\Utils::load_template(
-		'widgets/divider/templates/parts/separator',
-		[
-			'settings' => $settings,
-		]
-	);
-	?>
 	<div class="stx-m-content">
 		<?php
 		\StaxAddons\Utils::load_template(

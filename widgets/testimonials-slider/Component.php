@@ -1,12 +1,14 @@
 <?php
 
-namespace StaxAddons\Widgets\SectionTitle;
+namespace StaxAddons\Widgets\TestimonialsSlider;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 } // Exit if accessed directly
 
 use Elementor\Controls_Manager;
+use Elementor\Repeater;
+use Elementor\Group_Control_Typography;
 
 use StaxAddons\Widgets\Base;
 use StaxAddons\Utils;
@@ -14,11 +16,11 @@ use StaxAddons\Utils;
 class Component extends Base {
 
 	public function get_name() {
-		return 'stax-el-section-title';
+		return 'stax-el-testimonials-slider';
 	}
 
 	public function get_title() {
-		return __( 'Section Title', 'stax-addons-for-elementor' );
+		return __( 'Testimonials Slider', 'stax-addons-for-elementor' );
 	}
 
 	public function get_icon() {
@@ -41,7 +43,7 @@ class Component extends Base {
 		$settings = $this->get_settings_for_display();
 
 		Utils::load_template(
-			'widgets/section-title/template',
+			'widgets/testimonials-slider/template',
 			[
 				'settings' => $settings,
 			]
