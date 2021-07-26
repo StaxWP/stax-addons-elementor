@@ -55,14 +55,20 @@ class Component extends Base {
 			'columns',
 			[
 				'label'           => __( 'Columns', 'stax-addons-for-elementor' ),
-				'description'     => __( 'Min 1 columns, max 8 column', 'stax-addons-for-elementor' ),
-				'type'            => Controls_Manager::NUMBER,
-				'min'             => 1,
-				'max'             => 8,
-				'step'            => 1,
-				'desktop_default' => 3,
-				'tablet_default'  => 3,
-				'mobile_default'  => 1,
+				'type'            => Controls_Manager::SELECT,
+				'desktop_default' => '3',
+				'tablet_default'  => '3',
+				'mobile_default'  => '1',
+				'options'         => [
+					'1' => __( '1', 'stax-addons-for-elementor' ),
+					'2' => __( '2', 'stax-addons-for-elementor' ),
+					'3' => __( '3', 'stax-addons-for-elementor' ),
+					'4' => __( '4', 'stax-addons-for-elementor' ),
+					'5' => __( '5', 'stax-addons-for-elementor' ),
+					'6' => __( '6', 'stax-addons-for-elementor' ),
+					'7' => __( '7', 'stax-addons-for-elementor' ),
+					'8' => __( '8', 'stax-addons-for-elementor' ),
+				],
 			]
 		);
 

@@ -1,4 +1,4 @@
-<div class="stx-layout-side-quote <?php echo esc_attr( $item['item_classes'] ); ?>">
+<div class="stx-grid-item <?php echo esc_attr( $item['item_classes'] ); ?>">
 	<div class="stx-e-inner">
 		<?php
 		\StaxAddons\Utils::load_template(

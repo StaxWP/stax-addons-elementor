@@ -1,4 +1,4 @@
-<div class="stx-layout-side-with-image <?php echo esc_attr( $item['item_classes'] ); ?>">
+<div class="stx-grid-item <?php echo esc_attr( $item['item_classes'] ); ?>">
 	<div class="stx-e-inner">
 		<div class="stx-e-side">
 			<?php
