@@ -12,7 +12,6 @@
 	\StaxAddons\Utils::load_template(
 		'widgets/section-title/templates/parts/title',
 		[
-			'items'    => $items,
 			'settings' => $settings,
 		]
 	);

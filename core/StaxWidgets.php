@@ -130,6 +130,12 @@ class StaxWidgets {
 			'slug'  => 'stax-el-section-title',
 		];
 
+		$widgets['divider'] = [
+			'scope' => 'Divider',
+			'name'  => 'Divider',
+			'slug'  => 'stax-el-divider',
+		];
+
 		$widgets['testimonials'] = [
 			'scope' => 'Testimonials',
 			'name'  => 'Testimonials',

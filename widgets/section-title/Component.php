@@ -175,6 +175,30 @@ class Component extends Base {
 		);
 
 		$this->end_controls_section();
+
+		$this->start_controls_section(
+			'style_section',
+			[
+				'label' => __( 'General', 'stax-addons-for-elementor' ),
+				'tab'   => Controls_Manager::TAB_STYLE,
+			]
+		);
+
+		$this->add_control(
+			'subtitle_position',
+			[
+				'label'   => __( 'Sub Title Position', 'stax-addons-for-elementor' ),
+				'type'    => Controls_Manager::SELECT,
+				'default' => 'below',
+				'options' => [
+					'above' => __( 'Above', 'stax-addons-for-elementor' ),
+					'below' => __( 'Below', 'stax-addons-for-elementor' ),
+				],
+			]
+		);
+
+		$this->end_controls_section();
+
 	}
 
 	protected function render() {
