@@ -42,7 +42,7 @@ class Component extends Base {
 			[
 				'label'   => __( 'Layout', 'stax-addons-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
-				'default' => 'inline',
+				'default' => 'top',
 				'options' => [
 					'top'    => __( 'Top', 'stax-addons-for-elementor' ),
 					'inline' => __( 'Inline', 'stax-addons-for-elementor' ),
@@ -64,7 +64,7 @@ class Component extends Base {
 			[
 				'label'   => __( 'Text Tag', 'stax-addons-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
-				'default' => 'h2',
+				'default' => 'h4',
 				'options' => [
 					'h1'   => __( 'H1', 'stax-addons-for-elementor' ),
 					'h2'   => __( 'H2', 'stax-addons-for-elementor' ),
