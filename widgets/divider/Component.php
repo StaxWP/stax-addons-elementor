@@ -34,6 +34,43 @@ class Component extends Base {
 			]
 		);
 
+		$this->add_control(
+			'layout',
+			[
+				'label'   => __( 'Layout', 'stax-addons-for-elementor' ),
+				'type'    => Controls_Manager::SELECT,
+				'default' => 'standard',
+				'options' => [
+					'standard'     => __( 'Standard', 'stax-addons-for-elementor' ),
+					'with-icon'    => __( 'With Icon', 'stax-addons-for-elementor' ),
+					'border-image' => __( 'Border Image', 'stax-addons-for-elementor' ),
+				],
+			]
+		);
+
+		$this->add_control(
+			'icon',
+			[
+				'label'       => __( 'Icon', 'stax-addons-for-elementor' ),
+				'type'        => Controls_Manager::ICONS,
+				'label_block' => true,
+				'condition'   => [
+					'layout' => 'with-icon',
+				],
+			]
+		);
+
+		$this->add_control(
+			'border_image',
+			[
+				'label'     => __( 'Choose Image', 'stax-addons-for-elementor' ),
+				'type'      => Controls_Manager::MEDIA,
+				'condition' => [
+					'layout' => 'border-image',
+				],
+			]
+		);
+
 		$this->end_controls_section();
 	}
 
