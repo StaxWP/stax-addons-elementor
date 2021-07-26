@@ -63,7 +63,7 @@ class Component extends Base {
 			[
 				'label'   => __( 'Tag', 'stax-addons-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
-				'default' => 'h2',
+				'default' => 'h4',
 				'options' => [
 					'h1'   => __( 'H1', 'stax-addons-for-elementor' ),
 					'h2'   => __( 'H2', 'stax-addons-for-elementor' ),
