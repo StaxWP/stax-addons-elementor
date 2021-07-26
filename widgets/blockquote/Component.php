@@ -241,7 +241,7 @@ class Component extends Base {
 						'icon'  => 'eicon-text-align-right',
 					],
 				],
-				'default'   => 'left',
+				'default'   => 'center',
 				'selectors' => [
 					'{{WRAPPER}} .stx-blockquote-wrapper .stx-m-icon' => 'text-align: {{VALUE}};',
 				],
