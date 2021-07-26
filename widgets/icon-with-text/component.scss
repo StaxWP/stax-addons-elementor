@@ -31,7 +31,12 @@
   }
 
   // Top
-  &.stx-variation-top {}
+  &.stx-variation-top {
+    text-align: center;
+    .stx-m-title {
+      margin-top: 1.3em;
+    }
+  }
 
   // Content
   .stx-m-content {

@@ -20,6 +20,11 @@
 .stx-icon-with-text.stx-variation-before-title .stx-m-title-text {
   line-height: 1; }
 
+.stx-icon-with-text.stx-variation-top {
+  text-align: center; }
+  .stx-icon-with-text.stx-variation-top .stx-m-title {
+    margin-top: 1.3em; }
+
 .stx-icon-with-text .stx-m-content {
   position: relative;
   display: inline-block;
