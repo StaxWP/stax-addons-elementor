@@ -1,8 +1,11 @@
-<div class="stx-counter-wrapper" data-start-digit="<?php echo (int) esc_html( $settings['start-digit'] ); ?>" data-end-digit="<?php echo (int) esc_html( $settings['end-digit'] ); ?>">
+<div class="stx-counter-wrapper" 
+	data-start-digit="<?php echo (int) esc_html( $settings['start_digit'] ); ?>" 
+	data-end-digit="<?php echo (int) esc_html( $settings['end_digit'] ); ?>"
+	data-digit-label="<?php echo esc_html( $settings['digit_label'] ); ?>">
 	<div class="stx-m-digit-wrapper">
 		<?php
 		\StaxAddons\Utils::load_template(
-			'widgets/divider/templates/parts/digit',
+			'widgets/counter/templates/parts/digit',
 			[
 				'settings' => $settings,
 			]
@@ -12,14 +15,14 @@
 	<div class="stx-m-content">
 		<?php
 		\StaxAddons\Utils::load_template(
-			'widgets/divider/templates/parts/title',
+			'widgets/counter/templates/parts/title',
 			[
 				'settings' => $settings,
 			]
 		);
 
 		\StaxAddons\Utils::load_template(
-			'widgets/divider/templates/parts/text',
+			'widgets/counter/templates/parts/text',
 			[
 				'settings' => $settings,
 			]
