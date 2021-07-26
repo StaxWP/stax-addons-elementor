@@ -118,6 +118,18 @@ class StaxWidgets {
 			'slug'  => 'stax-el-icon-with-text',
 		];
 
+		$widgets['info-button'] = [
+			'scope' => 'InfoButton',
+			'name'  => 'Info Button',
+			'slug'  => 'stax-el-info-button',
+		];
+
+		$widgets['section-title'] = [
+			'scope' => 'SectionTitle',
+			'name'  => 'Section Title',
+			'slug'  => 'stax-el-section-title',
+		];
+
 		$widgets['testimonials'] = [
 			'scope' => 'Testimonials',
 			'name'  => 'Testimonials',
