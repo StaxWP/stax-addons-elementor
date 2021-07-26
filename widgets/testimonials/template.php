@@ -2,6 +2,7 @@
 
 $wrapper_classes   = [];
 $wrapper_classes[] = 'stx-layout-' . $settings['layout'];
+$wrapper_classes[] = 'stx-grid';
 $wrapper_classes[] = 'stx-columns-small-' . $settings['columns_mobile'];
 $wrapper_classes[] = 'stx-columns-medium-' . $settings['columns_tablet'];
 $wrapper_classes[] = 'stx-columns-large-' . $settings['columns'];
