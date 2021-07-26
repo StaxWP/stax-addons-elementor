@@ -37,9 +37,8 @@ abstract class Base extends Widget_Base {
 	 * Register widget resources (CSS/JS)
 	 *
 	 * @param array $dependencies
-	 * @param array $extra_scripts
 	 */
-	public function register_widget_resources( $dependencies = [], $extra_scripts = [] ) {
+	public function register_widget_resources( $dependencies = [] ) {
 		foreach ( StaxWidgets::instance()->get_widgets( true ) as $folder => $widget ) {
 			if ( $widget['slug'] === $this->get_name() ) {
 				$suffix = '.min';
@@ -48,22 +47,42 @@ abstract class Base extends Widget_Base {
 					$suffix = '';
 				}
 
-				$js_dep = [ 'jquery' ];
+				$js_dep  = [ 'jquery' ];
+				$css_dep = [];
 
 				if ( isset( $dependencies['js'] ) && is_array( $dependencies['js'] ) ) {
 					$js_dep = $dependencies['js'];
 				}
 
-				foreach ( $extra_scripts as $script ) {
-					$js_dep[] = $script['name'];
+				if ( isset( $dependencies['extra_scripts'] ) && is_array( $dependencies['extra_scripts'] ) ) {
+					foreach ( $dependencies['extra_scripts'] as $script ) {
+						$js_dep[] = $script['name'];
 
-					wp_register_script(
-						$script['name'],
-						STAX_EL_WIDGET_URL . $folder . '/' . $script['path'] . '.js',
-						$script['depends'],
-						STAX_EL_VERSION,
-						true
-					);
+						wp_register_script(
+							$script['name'],
+							STAX_EL_WIDGET_URL . $folder . '/' . $script['path'] . '.js',
+							$script['depends'],
+							STAX_EL_VERSION,
+							true
+						);
+					}
+				}
+
+				if ( isset( $dependencies['css'] ) && is_array( $dependencies['css'] ) ) {
+					$css_dep = $dependencies['css'];
+				}
+
+				if ( isset( $dependencies['extra_styles'] ) && is_array( $dependencies['extra_styles'] ) ) {
+					foreach ( $dependencies['extra_styles'] as $style ) {
+						$css_dep[] = $style['name'];
+
+						wp_register_style(
+							$style['name'],
+							isset( $style['fullpath'] ) ? $style['fullpath'] : STAX_EL_WIDGET_URL . $folder . '/' . $style['path'] . '.css',
+							$style['depends'],
+							STAX_EL_VERSION
+						);
+					}
 				}
 
 				$widget_script = STAX_EL_WIDGET_PATH . $folder . '/component' . $suffix . '.js';
@@ -80,12 +99,6 @@ abstract class Base extends Widget_Base {
 				}
 
 				if ( file_exists( $widget_style ) ) {
-					$css_dep = [];
-
-					if ( isset( $dependencies['css'] ) && is_array( $dependencies['css'] ) ) {
-						$css_dep = $dependencies['css'];
-					}
-
 					wp_register_style(
 						$this->get_widget_style_handle(),
 						STAX_EL_WIDGET_URL . $folder . '/component' . $suffix . '.css',

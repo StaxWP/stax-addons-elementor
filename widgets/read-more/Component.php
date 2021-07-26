@@ -92,6 +92,7 @@ class Component extends Base {
 				'default' => 'Read more',
 			]
 		);
+
 		$this->add_control(
 			'read_more_icon',
 			[

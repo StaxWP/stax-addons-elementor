@@ -19,14 +19,15 @@ class Component extends Base {
 		parent::__construct( $data, $args, $resources );
 
 		$this->register_widget_resources(
-			[],
 			[
-				[
-					'name'    => 'stx-typed',
-					'path'    => 'js/typed',
-					'depends' => [],
+				'extra_scripts' => [
+					[
+						'name'    => 'stx-typed',
+						'path'    => 'js/typed',
+						'depends' => [],
+					],
 				],
-			]
+			],
 		);
 	}
 

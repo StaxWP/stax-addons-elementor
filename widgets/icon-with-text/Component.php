@@ -13,6 +13,22 @@ use StaxAddons\Utils;
 
 class Component extends Base {
 
+	public function __construct( $data = [], $args = null, $resources = false ) {
+		parent::__construct( $data, $args, $resources );
+
+		$this->register_widget_resources(
+			[
+				'extra_styles' => [
+					[
+						'name'     => 'stx-common',
+						'fullpath' => STAX_EL_ASSETS_URL . 'css/common.css',
+						'depends'  => [],
+					],
+				],
+			],
+		);
+	}
+
 	public function get_name() {
 		return 'stax-el-icon-with-text';
 	}

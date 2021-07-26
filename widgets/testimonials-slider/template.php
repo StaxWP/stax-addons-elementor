@@ -1,4 +1,4 @@
-<div <?php qi_addons_for_elementor_framework_class_attribute( $holder_classes ); ?> <?php qi_addons_for_elementor_framework_inline_attr( $slider_attr, 'data-options' ); ?>>
+<div class="stx-testimonials-slider-wrapper" <?php qi_addons_for_elementor_framework_inline_attr( $slider_attr, 'data-options' ); ?>>
 	<div class="swiper-wrapper">
 		<?php
 		foreach ( $items as $item ) {
