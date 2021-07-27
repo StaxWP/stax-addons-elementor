@@ -15,6 +15,18 @@ use StaxAddons\Utils;
 
 class Component extends Base {
 
+	public function __construct( $data = [], $args = null, $resources = false ) {
+		parent::__construct( $data, $args, $resources );
+
+		$this->register_widget_resources(
+			[
+				'js' => [
+					'swiper',
+				],
+			],
+		);
+	}
+
 	public function get_name() {
 		return 'stax-el-testimonials-slider';
 	}

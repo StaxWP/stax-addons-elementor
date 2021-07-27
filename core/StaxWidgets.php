@@ -160,6 +160,12 @@ class StaxWidgets {
 			'slug'  => 'stax-el-info-box',
 		];
 
+		$widgets['accordion'] = [
+			'scope' => 'Accordion',
+			'name'  => 'Accordion & Toggle',
+			'slug'  => 'stax-el-accordion',
+		];
+
 		// Remove disabled widgets.
 		if ( $active && ! $with_status ) {
 			$disabled_widgets = get_option( '_stax_addons_disabled_widgets', [] );
