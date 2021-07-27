@@ -1,5 +1,5 @@
 <div class="stx-info-box-wrapper">
-	<?php if ( isset( $icon_type ) && ! empty( $icon_type['value'] ) ) : ?>
+	<?php if ( isset( $settings['icon'] ) && ! empty( $settings['icon']['value'] ) ) : ?>
 		<div class="stx-m-icon-wrapper">
 			<?php
 			\StaxAddons\Utils::load_template(

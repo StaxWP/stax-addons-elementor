@@ -199,7 +199,7 @@ class Component extends Base {
 		$this->add_control(
 			'button_show',
 			[
-				'label'   => __( 'Show Button', 'stax-addons-for-elementor' ),
+				'label'   => __( 'Show', 'stax-addons-for-elementor' ),
 				'type'    => Controls_Manager::SWITCHER,
 				'default' => 'yes',
 			]

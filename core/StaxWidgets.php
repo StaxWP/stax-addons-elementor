@@ -154,6 +154,12 @@ class StaxWidgets {
 			'slug'  => 'stax-el-testimonials-slider',
 		];
 
+		$widgets['info-box'] = [
+			'scope' => 'InfoBox',
+			'name'  => 'Info Box',
+			'slug'  => 'stax-el-info-box',
+		];
+
 		// Remove disabled widgets.
 		if ( $active && ! $with_status ) {
 			$disabled_widgets = get_option( '_stax_addons_disabled_widgets', [] );
