@@ -1,6 +1,6 @@
 <?php
 
-namespace StaxAddons\Widgets\TeamMember;
+namespace StaxAddons\Widgets\InfoBox;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -16,11 +16,11 @@ use StaxAddons\Utils;
 class Component extends Base {
 
 	public function get_name() {
-		return 'stax-el-team-member';
+		return 'stax-el-info-box';
 	}
 
 	public function get_title() {
-		return __( 'Team Member', 'stax-addons-for-elementor' );
+		return __( 'Info Box', 'stax-addons-for-elementor' );
 	}
 
 	public function get_icon() {
@@ -43,7 +43,7 @@ class Component extends Base {
 		$settings = $this->get_settings_for_display();
 
 		Utils::load_template(
-			'widgets/team-member/template',
+			'widgets/info-box/template',
 			[
 				'settings' => $settings,
 			]
