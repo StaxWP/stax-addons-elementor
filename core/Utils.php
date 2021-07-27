@@ -8,6 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /**
  * Class Utils
+ *
  * @package StaxAddons
  */
 class Utils {
@@ -156,7 +157,7 @@ class Utils {
 	 *
 	 * @param $name
 	 * @param array $args
-	 * @param bool $echo
+	 * @param bool  $echo
 	 *
 	 * @return false|string|void
 	 */
@@ -168,12 +169,40 @@ class Utils {
 		extract( $args );
 
 		ob_start();
-		include( STAX_EL_PATH . trim( $name ) . '.php' );
+		include STAX_EL_PATH . trim( $name ) . '.php';
 
 		if ( $echo ) {
 			echo ob_get_clean();
 		} else {
 			return ob_get_clean();
+		}
+	}
+
+	/**
+	 * Load multiple templates
+	 *
+	 * @param $name
+	 * @param array $args
+	 * @param bool  $echo
+	 *
+	 * @return false|string|void
+	 */
+	public static function load_templates( $names = [], $args = [], $echo = true ) {
+		if ( empty( $names ) ) {
+			return;
+		}
+
+		$result = '';
+		foreach ( $names as $name ) {
+			if ( $echo ) {
+				self::load_template( $name, $args, $echo );
+			} else {
+				$result .= self::load_template( $name, $args, $echo );
+			}
+		}
+
+		if ( ! $echo ) {
+			return $result;
 		}
 	}
 

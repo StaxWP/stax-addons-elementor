@@ -21,16 +21,11 @@
 			?>
 			<div class="stx-e-bottom-info">
 				<?php
-				\StaxAddons\Utils::load_template(
-					'widgets/testimonials/templates/parts/image',
+				\StaxAddons\Utils::load_templates(
 					[
-						'item'     => $item,
-						'settings' => $settings,
-					]
-				);
-
-				\StaxAddons\Utils::load_template(
-					'widgets/testimonials/templates/parts/author',
+						'widgets/testimonials/templates/parts/image',
+						'widgets/testimonials/templates/parts/author',
+					],
 					[
 						'item'     => $item,
 						'settings' => $settings,

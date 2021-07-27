@@ -8,6 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /**
  * Class Settings
+ *
  * @package StaxAddons
  */
 class Settings {
@@ -58,7 +59,8 @@ class Settings {
 			'58.7'
 		);
 
-		/*add_submenu_page(
+		/*
+		add_submenu_page(
 			Plugin::instance()->get_slug(),
 			__( 'STAX Elementor - Widgets', 'stax-addons-for-elementor' ),
 			__( 'Widgets', 'stax-addons-for-elementor' ),
@@ -141,17 +143,23 @@ class Settings {
 		$has_pro       = '#';
 
 		if ( ! empty( $menu ) ) {
-			usort( $menu, static function ( $a, $b ) {
-				return $a['priority'] - $b['priority'];
-			} );
+			usort(
+				$menu,
+				static function ( $a, $b ) {
+					return $a['priority'] - $b['priority'];
+				}
+			);
 		}
 
-		Utils::load_template( 'core/admin/layout', [
-			'site_url'      => $site_url,
-			'wrapper_class' => $wrapper_class,
-			'menu'          => $menu,
-			'has_pro'       => $has_pro
-		] );
+		Utils::load_template(
+			'core/admin/layout',
+			[
+				'site_url'      => $site_url,
+				'wrapper_class' => $wrapper_class,
+				'menu'          => $menu,
+				'has_pro'       => $has_pro,
+			]
+		);
 	}
 
 	/**
@@ -160,9 +168,12 @@ class Settings {
 	public function main_panel() {
 		$current_slug = apply_filters( STAX_EL_HOOK_PREFIX . 'current_slug', $this->current_slug );
 
-		Utils::load_template( 'core/admin/actions', [
-			'current_slug' => $current_slug
-		] );
+		Utils::load_template(
+			'core/admin/actions',
+			[
+				'current_slug' => $current_slug,
+			]
+		);
 	}
 
 	/**

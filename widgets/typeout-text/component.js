@@ -1,17 +1,17 @@
-var TypedoutText = TypedoutText || {};
+var StaxTypedoutText = StaxTypedoutText || {};
 
 (function ($) {
   // USE STRICT
   "use strict";
 
-  TypedoutText.fn = {
+  StaxTypedoutText.fn = {
     init: function () {
-      TypedoutText.fn.init();
+      StaxTypedoutText.fn.init();
     },
 
     init: function () {
       $(".stx-typeout-text-wrapper").each(function () {
-        TypedoutText.fn.initItem($(this));
+        StaxTypedoutText.fn.initItem($(this));
       });
     },
 
@@ -43,5 +43,5 @@ var TypedoutText = TypedoutText || {};
     },
   };
 
-  TypedoutText.fn.init();
+  StaxTypedoutText.fn.init();
 })(jQuery);

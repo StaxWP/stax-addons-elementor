@@ -1,7 +1,5 @@
-<?php
-if ( ! empty( $item_title ) ) { ?>
-	<<?php echo esc_attr( $item_title_tag ); ?> class="qodef-e-title">
-		<?php echo esc_html( $item_title ); ?>
-	</<?php echo esc_attr( $item_title_tag ); ?>>
-	<?php
-}
+<?php if ( ! empty( $item['item_title'] ) ) : ?>
+	<h2 class="stx-e-title">
+		<?php echo esc_html( $item['item_title'] ); ?>
+	</h2>
+<?php endif; ?>

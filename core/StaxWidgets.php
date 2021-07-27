@@ -148,6 +148,12 @@ class StaxWidgets {
 			'slug'  => 'stax-el-testimonials',
 		];
 
+		$widgets['testimonials-slider'] = [
+			'scope' => 'TestimonialsSlider',
+			'name'  => 'Testimonials Slider',
+			'slug'  => 'stax-el-testimonials-slider',
+		];
+
 		// Remove disabled widgets.
 		if ( $active && ! $with_status ) {
 			$disabled_widgets = get_option( '_stax_addons_disabled_widgets', [] );

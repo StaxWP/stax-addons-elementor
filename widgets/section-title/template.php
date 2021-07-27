@@ -25,15 +25,12 @@
 		);
 	}
 
-	\StaxAddons\Utils::load_template(
-		'widgets/section-title/templates/parts/text',
-		[
-			'settings' => $settings,
-		]
-	);
 
-	\StaxAddons\Utils::load_template(
-		'widgets/section-title/templates/parts/button',
+	\StaxAddons\Utils::load_templates(
+		[
+			'widgets/section-title/templates/parts/text',
+			'widgets/section-title/templates/parts/button',
+		],
 		[
 			'settings' => $settings,
 		]

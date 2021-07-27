@@ -22,24 +22,12 @@
 		</div>
 		<div class="stx-e-content">
 			<?php
-			\StaxAddons\Utils::load_template(
-				'widgets/testimonials/templates/parts/title',
+			\StaxAddons\Utils::load_templates(
 				[
-					'item'     => $item,
-					'settings' => $settings,
-				]
-			);
-
-			\StaxAddons\Utils::load_template(
-				'widgets/testimonials/templates/parts/text',
-				[
-					'item'     => $item,
-					'settings' => $settings,
-				]
-			);
-
-			\StaxAddons\Utils::load_template(
-				'widgets/testimonials/templates/parts/author',
+					'widgets/testimonials/templates/parts/title',
+					'widgets/testimonials/templates/parts/text',
+					'widgets/testimonials/templates/parts/author',
+				],
 				[
 					'item'     => $item,
 					'settings' => $settings,

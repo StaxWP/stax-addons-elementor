@@ -14,15 +14,11 @@
 	</div>
 	<div class="stx-m-content">
 		<?php
-		\StaxAddons\Utils::load_template(
-			'widgets/counter/templates/parts/title',
+		\StaxAddons\Utils::load_templates(
 			[
-				'settings' => $settings,
-			]
-		);
-
-		\StaxAddons\Utils::load_template(
-			'widgets/counter/templates/parts/text',
+				'widgets/counter/templates/parts/title',
+				'widgets/counter/templates/parts/text',
+			],
 			[
 				'settings' => $settings,
 			]
