@@ -1,8 +1,6 @@
 <?php
-$size = isset( $size ) ? $size : 'thumbnail';
-
-if ( ! empty( $item_author_image ) ) { ?>
+if ( ! empty( $item['item_author_avatar'] ) ) : ?>
 	<div class="stx-e-media-image">
-		<?php echo wp_get_attachment_image( $item_author_image, $size ); ?>
+		<img src="<?php echo esc_url( $item['item_author_avatar']['url'] ); ?>">
 	</div>
-<?php } ?>
+<?php endif; ?>
