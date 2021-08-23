@@ -14,7 +14,14 @@
     font-family: "Open Sans", Roboto, Helvetica, Arial, sans-serif;
 }
 
-.elementor-editor-dark-mode .sq-widget-label:after {
-    color: #404349;
-    background: #9e9e9e;
+/*.elementor-editor-dark-mode .sq-widget-label:after {
+    color: #E0E1E3;
+    background: #34383c;
+}*/
+
+@media (prefers-color-scheme: dark) {
+    .sq-widget-label:after {
+        color: #E0E1E3 !important;
+        background: #34383c !important;
+    }
 }
