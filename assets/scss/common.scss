@@ -1,0 +1,67 @@
+
+
+// If some items use this style, the resources must be registered in their component file.
+// See "$this->register_widget_resources" section.
+
+// Buttons
+.stx-button.stx-layout--filled {
+  color: #111;
+  background-color: #f4f4f4;
+  border: 0;
+  font-size: 1rem;
+  border-style: solid;
+}
+
+// Grids
+.stx-grid {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  > .stx-grid-inner {
+    margin: 0 -15px;
+    > .stx-grid-item {
+      padding: 0 15px;
+      margin: 0 0 30px;
+    }
+  }
+
+  .stx-grid-item {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    min-height: 1px;
+    float: left;
+  }
+}
+
+// Small resolution
+.stx-columns-small-1,
+.stx-columns-medium-1,
+.stx-columns-large-1 {
+  .stx-grid-item {
+    width: 100%;
+  }
+}
+
+// Large resolution
+.stx-columns-small-2,
+.stx-columns-medium-2,
+.stx-columns-large-2 {
+  .stx-grid-item {
+    width: 50%;
+  }
+}
+
+// Medium resolution
+.stx-columns-small-3,
+.stx-columns-medium-3,
+.stx-columns-large-3 {
+  .stx-grid-item {
+    width: 33.33333%;
+  }
+}
+
+
+

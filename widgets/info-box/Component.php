@@ -24,7 +24,7 @@ class Component extends Base {
 	}
 
 	public function get_icon() {
-		return 'eicon-post-slider sq-widget-label';
+		return 'stx-icon-info-box sq-widget-label';
 	}
 
 	protected function _register_controls() {

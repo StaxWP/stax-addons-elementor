@@ -26,7 +26,7 @@ class Component extends Base {
 	}
 
 	public function get_icon() {
-		return 'sq-icon-button sq-widget-label';
+		return 'stx-icon-button sq-widget-label';
 	}
 
 	public function get_categories() {

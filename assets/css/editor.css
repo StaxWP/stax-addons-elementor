@@ -1,18 +1,19 @@
+
 @font-face {
-    font-family: 'sq-icons-v-1-1-3';
-    src:  url('../fonts/sq-icons-v-1-1-3.eot?wefi5k');
-    src:  url('../fonts/sq-icons-v-1-1-3.eot?wefi5k#iefix') format('embedded-opentype'),
-    url('../fonts/sq-icons-v-1-1-3.ttf?wefi5k') format('truetype'),
-    url('../fonts/sq-icons-v-1-1-3.woff?wefi5k') format('woff'),
-    url('../fonts/sq-icons-v-1-1-3.svg?wefi5k#sq-icons-v-1-1-3') format('svg');
+    font-family: 'stx-elementor-icons';
+    src:  url('../fonts/stx-elementor-icons.eot?eqaf4u');
+    src:  url('../fonts/stx-elementor-icons.eot?eqaf4u#iefix') format('embedded-opentype'),
+    url('../fonts/stx-elementor-icons.ttf?eqaf4u') format('truetype'),
+    url('../fonts/stx-elementor-icons.woff?eqaf4u') format('woff'),
+    url('../fonts/stx-elementor-icons.svg?eqaf4u#stx-elementor-icons') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
 }
 
-[class^="sq-icon-"], [class*=" sq-icon-"] {
+[class^="stx-icon-"], [class*=" stx-icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'sq-icons-v-1-1-3' !important;
+    font-family: 'stx-elementor-icons' !important;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -25,117 +26,63 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.sq-icon-bp_messages:before {
-    content: "\e925";
-}
-.sq-icon-bp_site_details:before {
-    content: "\e922";
-}
-.sq-icon-bp_profile_details:before {
-    content: "\e923";
-}
-.sq-icon-bp_account_details:before {
-    content: "\e924";
-}
-.sq-icon-bp_notifications:before {
-    content: "\e91f";
-}
-.sq-icon-bp_xprofile:before {
-    content: "\e920";
-}
-.sq-icon-bp_status:before {
-    content: "\e921";
-}
-.sq-icon-bp_hidden:before {
-    content: "\e91c";
-}
-.sq-icon-bp_lock:before {
-    content: "\e91d";
-}
-.sq-icon-bp_check:before {
-    content: "\e91e";
-}
-.sq-icon-bp_forms:before {
-    content: "\e91a";
-}
-.sq-icon-bp_actions:before {
-    content: "\e900";
-}
-.sq-icon-woo_products:before {
+.stx-icon-info-box:before {
     content: "\e919";
 }
-.sq-icon-stax_desh:before {
-    content: "\e90f";
+.stx-icon-dropdown:before {
+    content: "\e900";
 }
-.sq-icon-bp_buddypress:before {
-    content: "\e90c";
-}
-.sq-icon-bp_visibility:before {
-    content: "\e90d";
-}
-.sq-icon-bp_stax:before {
-    content: "\e90e";
-}
-.sq-icon-bp_image:before {
-    content: "\e90a";
-}
-.sq-icon-bp_slide_down_more:before {
-    content: "\e91b";
-}
-.sq-icon-bp_groups:before {
-    content: "\e908";
-}
-.sq-icon-bp_chat:before {
-    content: "\e907";
-}
-.sq-icon-bp_user:before {
-    content: "\e909";
-}
-.sq-icon-bp_avatar:before {
-    content: "\e906";
-}
-.sq-icon-bp_filter:before {
-    content: "\e90b";
-}
-.sq-icon-bp_info:before {
-    content: "\e910";
-}
-.sq-icon-bp_listing:before {
-    content: "\e911";
-}
-.sq-icon-bp_members:before {
-    content: "\e912";
-}
-.sq-icon-bp_menu:before {
-    content: "\e913";
-}
-.sq-icon-bp_name:before {
-    content: "\e914";
-}
-.sq-icon-bp_section:before {
-    content: "\e915";
-}
-.sq-icon-bp_settings:before {
-    content: "\e916";
-}
-.sq-icon-bp_time:before {
-    content: "\e917";
-}
-.sq-icon-bp_tittle:before {
-    content: "\e918";
-}
-.sq-icon-breadcrumb:before {
-    content: "\e905";
-}
-.sq-icon-button:before {
+.stx-icon-info-button:before {
     content: "\e901";
 }
-.sq-icon-dropdown:before {
+.stx-icon-button:before {
     content: "\e902";
 }
-.sq-icon-title:before {
+.stx-icon-accordion-toggle:before {
     content: "\e903";
 }
-.sq-icon-up:before {
+.stx-icon-blockquote:before {
     content: "\e904";
+}
+.stx-icon-breadcrumb:before {
+    content: "\e905";
+}
+.stx-icon-counter:before {
+    content: "\e906";
+}
+.stx-icon-divider:before {
+    content: "\e907";
+}
+.stx-icon-headings:before {
+    content: "\e908";
+}
+.stx-icon-icon-with-text:before {
+    content: "\e909";
+}
+.stx-icon-interval-image:before {
+    content: "\e913";
+}
+.stx-icon-read-more:before {
+    content: "\e914";
+}
+.stx-icon-scroll-top:before {
+    content: "\e915";
+}
+.stx-icon-section-title:before {
+    content: "\e916";
+}
+.stx-icon-slider:before {
+    content: "\e917";
+}
+.stx-icon-testimonials_1:before {
+    content: "\e918";
+}
+.stx-icon-testimonials-slider:before {
+    content: "\e910";
+}
+.stx-icon-testimonials:before {
+    content: "\e911";
+}
+.stx-icon-typeout-text:before {
+    content: "\e912";
 }
