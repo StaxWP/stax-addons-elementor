@@ -89,6 +89,15 @@ class Component extends Base {
 			]
 		);
 
+		$this->add_control(
+			'new_line',
+			[
+				'label'   => __( 'Strings on new line', 'stax-addons-for-elementor' ),
+				'type'    => Controls_Manager::SWITCHER,
+				'default' => '',
+			]
+		);
+
 		$repeater = new Repeater();
 
 		$repeater->add_control(

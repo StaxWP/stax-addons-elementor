@@ -3,6 +3,9 @@
 		<?php if ( ! empty( $settings['text'] ) ) : ?>
 			<?php echo esc_html( $settings['text'] ); ?>
 		<?php endif; ?>
+		<?php if ( $settings['new_line'] ) : ?>
+			<br />
+		<?php endif; ?>
 		<span class="stx-typeout-holder">
 			<span class="stx-typeout"></span>
 		</span>
