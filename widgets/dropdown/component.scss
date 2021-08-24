@@ -8,12 +8,14 @@
     left: 0;
     top: 100%;
     z-index: 10;
+    animation: dropdown 0.15s ease-in-out;
 
     .stx-dropdown-content {
       background: #fff;
       padding: 10px 20px;
       margin-top: 10px;
       border: 1px solid #f3f3f3;
+      box-shadow: 3px 7px 7px rgba(0,0,0,0.1);
 
       ul {
         list-style: none;
@@ -127,4 +129,37 @@
 
 .stx-dropdown-content {
   width: 100%;
+}
+
+@-webkit-keyframes dropdown {
+
+  from {
+    top: 90%;
+  }
+
+  to {
+    top: 100%;
+  }
+}
+
+@-moz-keyframes dropdown {
+
+  from {
+    top: 90%;
+  }
+
+  to {
+    top: 100%;
+  }
+}
+
+@keyframes dropdown {
+
+  from {
+    top: 90%;
+  }
+
+  to {
+    top: 100%;
+  }
 }

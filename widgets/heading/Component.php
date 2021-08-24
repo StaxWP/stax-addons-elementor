@@ -23,7 +23,7 @@ class Component extends Base {
 	}
 
 	public function get_title() {
-		return __( 'Heading (Stax)', 'stax-addons-for-elementor' );
+		return __( 'Heading', 'stax-addons-for-elementor' );
 	}
 
 	public function get_icon() {
