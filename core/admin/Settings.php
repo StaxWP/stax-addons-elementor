@@ -133,7 +133,6 @@ class Settings {
 	 * Load scripts & styles
 	 */
 	public function admin_scripts() {
-
 		if ( isset( $_GET['page'] ) && strpos( $_GET['page'], STAX_EL_SLUG_PREFIX ) !== false ) {
 			wp_register_style(
 				'stax-addons-tw',

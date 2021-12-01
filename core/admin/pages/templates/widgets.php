@@ -1,11 +1,10 @@
 <h2 class="ste-my-0 ste-leading-none ste-text-2xl ste-text-gray-900 ste-font-bold ste-tracking-wide">
-	<?php _e( 'Widgets', 'stax-addons-for-elementor' ); ?>
+	<?php esc_html_e( 'Widgets', 'stax-addons-for-elementor' ); ?>
 </h2>
 
 <div class="ste-text-sm ste-text-gray-600 ste-mt-2">
-	<?php esc_html_e( 'Choose which widgets should be enabled in Elementor.', 'visibility-logic-elementor' ); ?>
+	<?php esc_html_e( 'Choose which widgets should be enabled in Elementor.', 'stax-addons-for-elementor' ); ?>
 </div>
-
 
 <div class="ste-mt-5">
 	<form action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" method="POST">
