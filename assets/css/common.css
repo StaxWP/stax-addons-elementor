@@ -1,3 +1,5 @@
+/* purgecss start ignore */
+
 .stx-button.stx-layout--filled {
   color: #111;
   background-color: #f4f4f4;
@@ -48,3 +50,5 @@
 .stx-columns-large-3 .stx-grid-item {
   width: 33.33333%;
 }
+
+/* purgecss end ignore */

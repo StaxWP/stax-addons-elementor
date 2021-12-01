@@ -26,8 +26,8 @@
 
 .stax-elementor-admin-page {
   .ste-toggle-dot {
-    top: -.25rem;
-    left: -.25rem;
+    top: -0.25rem;
+    left: -0.25rem;
     transition: all 0.3s ease-in-out;
   }
 
@@ -35,10 +35,10 @@
     transform: translateX(100%);
     background-color: #48bb78;
   }
+
   .ste-toggle-input {
     @apply ste-hidden;
   }
 }
 
 @tailwind utilities;
-
