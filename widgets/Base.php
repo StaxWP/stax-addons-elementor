@@ -133,12 +133,6 @@ abstract class Base extends Widget_Base {
 	}
 
 	/**
-	 * Content template
-	 */
-	protected function _content_template() {
-	}
-
-	/**
 	 * Enqueue resources (CSS/JS)
 	 */
 	protected function enqueue_resources() {

@@ -4,10 +4,10 @@
   "description": "Awesome Elementor widgets",
   "main": "index.js",
   "scripts": {
-    "build-tw": "postcss assets/scss/admin.scss -o assets/css/admin.css",
-    "watch-scss": "gulp watch:styles",
-    "build-scss": "gulp build:styles",
-    "build-js": "gulp build:scripts"
+    "build:admin:css": "postcss assets/scss/admin.scss -o assets/css/admin.css",
+    "watch:scss": "gulp watch:styles",
+    "build:scss": "gulp build:styles",
+    "build:js": "gulp build:scripts"
   },
   "repository": {
     "type": "git",
@@ -33,10 +33,10 @@
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",
     "path": "^0.12.7",
-    "postcss": "^8.2.10",
+    "postcss": "^8.4.5",
+    "postcss-cli": "^9.1.0",
     "postcss-import": "^14.0.1",
-    "postcss-cli": "^8.0.0",
-    "tailwindcss": "^2.0.4",
+    "tailwindcss": "^3.0.16",
     "tailwindcss-cli": "^0.1.2"
   },
   "browserslist": [

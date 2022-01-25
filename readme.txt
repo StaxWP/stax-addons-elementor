@@ -1,10 +1,10 @@
 === Elementor Addons, Widgets and Enhancements - Stax ===
 Contributors: seventhqueen, codezz, geowrge, rtynio, staxwp
 Tags: elementor addons, elementor enhancements, elementor widgets, elementor, light addons, fast elementor addons
-Requires at least: 4.0
+Requires at least: 5.0
 Requires PHP: 5.6
-Tested up to: 5.4.0
-Stable tag: 1.4.0
+Tested up to: 5.8
+Stable tag: 1.4.1
 License: GLPv2 or later
 
 Beautiful & Fast add-ons for Elementor. Enhance your site building experience with Stax Elementor Addons
@@ -15,14 +15,26 @@ We use a super modular approach so any CSS or Javascript for a module is added t
 Also you can enable just the modules you want to see and use in the Elementor interface.
 
 Current Elementor add-on widgets:
-- **Elementor Slider Widget** - Easily create a content Slider with Title, Subtitle, Description, Image and Button
+- **Slider Widget** - Easily create a content Slider with Title, Subtitle, Description, Image and Button
 - **Scroll Top Widget** - Adds a scroll to top button that appears at the bottom of the page when you scroll the page
 - **Read More(Expand text) Widget** - Show content that can be extended with the help of a button to show more text.
 - **Breadcrumbs Widget** - Automatically generate breadcrumb structure. Can be used in single posts, pages, archives, etc
 - **Dropdown Button Widget** - Allows you to have a button with dropdown functionality. Dropdown entries are added and configured from the widget
 - **Heading Widget** - Allows you to have a highlight word or phrase in your heading. Define different text color/ background. Also you can add a subtitle, description and separator
 - **Button Widget** - Adds Box Shadow on hover option
-- **Image interval Widget** - This Widget allows you to show a different image by different date intervals and also define a default image. Example: Show for Christmas or Easter a different image
+- **Image Interval Widget** - This Widget allows you to show a different image by different date intervals and also define a default image. Example: Show for Christmas or Easter a different image
+- **Typeout Text** -
+- **Blockquote** -
+- **Icon With Text** -
+- **Info Button** -
+- **Section Title** -
+- **Divider** -
+- **Counter** -
+- **Counter** -
+- **Testimonials** -
+- **Testimonials Slider** -
+- **Info Box** -
+- **Accordion & Toggle** -
 
 Current Elementor widget enhancements:
 * Accordion - Box shadow, Item Spacing, Item border & Border radius
@@ -46,8 +58,13 @@ When editing a page with Elementor you will see the New elements added at the en
 
 == Changelog ==
 
+ 1.4.1 =
+* New elements: Typeout Text, Blockquote, Icon With Text, Info Button, Section Title, Divider, Counter, Testimonials, Testimonials Slider, Info Box, Accordion & Toggle
+* Fixed minor bugs
+* Admin panel UI update
+
  1.4.0 =
- * New element: Image interval
+* New element: Image interval
 * Updated font icons
 * Fix slider widget alignment
 
