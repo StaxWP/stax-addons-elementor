@@ -10,7 +10,8 @@ License: GLPv2 or later
 Beautiful & Fast add-ons for Elementor. Enhance your site building experience with Stax Elementor Addons
 
 == Description ==
-Stax Elementor Addons is a very fast and lightweight plugin that adds new widgets and enhancements to existing Elementor.
+Stax Elementor Addons is a very fast and lightweight plugin that adds new widgets and enhancements to Elementor.
+
 We use a super modular approach so any CSS or Javascript for a module is added to the page only if you use that widget.
 Also you can enable just the modules you want to see and use in the Elementor interface.
 
@@ -41,7 +42,13 @@ Current Elementor widget enhancements:
 * Counter - Alignment
 * Text Editor - Set a maximum height for the content and make it scrollable
 
-Many more elements and options coming soon...
+= More from StaxWP =
+- [BuddyBuilder - BuddyPress Builder for Elementor - Plugin](https://staxwp.com/go/buddybuilder)
+Create stunning communities on your site powered by Elementor and BuddyPress
+- [Visibility Logic for Elementor – Plugin](https://wordpress.org/plugins/visibility-logic-elementor/)
+Hide or show Elementor widgets or section based on various conditions: User Meta, User IP, Browser, etc.
+- [Woo Addons for Elementor - Plugin](https://staxwp.com/go/woo-addons-for-elementor/)
+Elementor enhancements for Woocommerce to help you build awesome e-commerce sites
 
 == Installation ==
 

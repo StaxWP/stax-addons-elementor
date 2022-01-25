@@ -1,7 +1,7 @@
 <div class="ste-m-0 stax-main <?php echo esc_attr( implode( ' ', $wrapper_class ) ); ?>">
-	<div class="ste-pt-10 ste-mt-5 ste-mb-10">
-		<div class="ste-container ste-mx-auto">
-			<div class="ste-flex ste-justify-between ste-items-center">
+	<div class="ste-mt-5 ste-mb-4">
+		<div class="ste-container ste-mx-auto ste-bg-white ste-rounded ste-shadow-lg ste-overflow-hidden">
+			<div class="ste-flex ste-justify-between ste-items-center ste-p-10">
 				<a href="<?php echo esc_url( $site_url ); ?>" target="_blank" rel="noopener"
 				   class="ste-text-base ste-flex ste-items-center ste-content-center ste-no-underline">
 					<span class="ste-inline-block ste-w-32">
@@ -25,7 +25,7 @@
 
 	<div class="ste-container ste-mx-auto ste-my-10">
 		<div class="ste-flex ste-justify-center">
-			<div class="ste-text-gray-400 ste-text-sm ste-font-medium ste-uppercase">
+			<div class="ste-text-gray-400 ste-text-sm">
 				<?php printf( __( 'Version %s', 'stax-addons-for-elementor' ), STAX_EL_VERSION ); ?>
 			</div>
 		</div>

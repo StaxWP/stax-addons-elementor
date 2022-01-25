@@ -2,43 +2,32 @@
 
 @tailwind components;
 
-.stax-elementor-admin-page #contextual-help-link-wrap {
+.stax-addons-elementor-admin-page #contextual-help-link-wrap {
   display: none !important;
 }
 
-.stax-elementor-admin-page .stax-main ul li {
+.stax-addons-elementor-admin-page .stax-main ul li {
   margin-bottom: 0;
 }
 
-.stax-elementor-admin-page .stax-main #go-pro-rocket-icon {
-  width: 100px;
-  transform: rotate(-45deg);
-}
-
-.stax-elementor-admin-page .stax-main .rocket-flame {
-  transform-origin: 15px 37.5px;
-}
-
-.stax-elementor-admin-page .stax-main a:focus {
+.stax-addons-elementor-admin-page .stax-main a:focus {
   outline: 0 !important;
   box-shadow: none !important;
 }
 
-.stax-elementor-admin-page {
-  .ste-toggle-dot {
-    top: -0.25rem;
-    left: -0.25rem;
-    transition: all 0.3s ease-in-out;
-  }
+.stax-addons-elementor-admin-page .ste-toggle-dot {
+  top: -0.25rem;
+  left: -0.25rem;
+  transition: all 0.3s ease-in-out;
+}
 
-  input:checked ~ .ste-toggle-dot {
-    transform: translateX(100%);
-    background-color: #48bb78;
-  }
+.stax-addons-elementor-admin-page input:checked ~ .ste-toggle-dot {
+  transform: translateX(100%);
+  background-color: #48bb78;
+}
 
-  .ste-toggle-input {
-    @apply ste-hidden;
-  }
+.stax-addons-elementor-admin-page .ste-toggle-input {
+  @apply ste-hidden;
 }
 
 @tailwind utilities;

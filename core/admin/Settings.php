@@ -80,7 +80,7 @@ class Settings {
 	 */
 	public function add_admin_body_class( $classes ) {
 		if ( isset( $_GET['page'] ) && strpos( $_GET['page'], 'stax-elementor' ) !== false ) {
-			$classes .= ' stax-elementor-admin-page';
+			$classes .= ' stax-addons-elementor-admin-page';
 		}
 
 		return $classes;
@@ -90,7 +90,7 @@ class Settings {
 	 * Settings template
 	 */
 	public function settings_template() {
-		$site_url      = apply_filters( STAX_EL_HOOK_PREFIX . 'admin_site_url', 'https://seventhqueen.com' );
+		$site_url      = apply_filters( STAX_EL_HOOK_PREFIX . 'admin_site_url', 'https://staxwp.com' );
 		$wrapper_class = apply_filters( STAX_EL_HOOK_PREFIX . 'welcome_wrapper_class', [ $this->current_slug ] );
 		$menu          = apply_filters( STAX_EL_HOOK_PREFIX . 'admin_menu', [] );
 		$has_pro       = '#';
@@ -136,7 +136,7 @@ class Settings {
 		if ( isset( $_GET['page'] ) && strpos( $_GET['page'], STAX_EL_SLUG_PREFIX ) !== false ) {
 			wp_register_style(
 				'stax-addons-tw',
-				STAX_EL_ASSETS_URL . 'css/admin.min.css',
+				STAX_EL_ASSETS_URL . 'css/admin.css',
 				[],
 				STAX_EL_VERSION,
 				'all'

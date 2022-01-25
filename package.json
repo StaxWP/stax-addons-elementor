@@ -4,7 +4,7 @@
   "description": "Awesome Elementor widgets",
   "main": "index.js",
   "scripts": {
-    "build:admin:css": "postcss assets/scss/admin.scss -o assets/css/admin.css",
+    "build:admin:css": "npx tailwindcss -i ./assets/scss/admin.scss -o ./assets/css/admin.css --minify",
     "watch:scss": "gulp watch:styles",
     "build:scss": "gulp build:styles",
     "build:js": "gulp build:scripts"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+ssh://git@gitlab.com/sq-plugins/stax-elementor.git"
   },
-  "author": "SeventhQueen",
+  "author": "StaxWP",
   "license": "MIT",
   "bugs": {
     "url": "https://gitlab.com/sq-plugins/stax-elementor/issues"
