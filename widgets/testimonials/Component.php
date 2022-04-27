@@ -15,21 +15,21 @@ use StaxAddons\Utils;
 
 class Component extends Base {
 
-    public function __construct( $data = [], $args = null, $resources = false ) {
-        parent::__construct( $data, $args, $resources );
+	public function __construct( $data = [], $args = null, $resources = false ) {
+		parent::__construct( $data, $args, $resources );
 
-        $this->register_widget_resources(
-            [
-                'extra_styles' => [
-                    [
-                        'name'     => 'stx-common',
-                        'fullpath' => STAX_EL_ASSETS_URL . 'css/common.css',
-                        'depends'  => [],
-                    ],
-                ],
-            ]
+		$this->register_widget_resources(
+			[
+				'extra_styles' => [
+					[
+						'name'     => 'stx-common',
+						'fullpath' => STAX_EL_ASSETS_URL . 'css/common.css',
+						'depends'  => [],
+					],
+				],
+			]
 		);
-    }
+	}
 
 	public function get_name() {
 		return 'stax-el-testimonials';
@@ -43,7 +43,7 @@ class Component extends Base {
 		return 'stx-icon-testimonials sq-widget-label';
 	}
 
-	protected function _register_controls() {
+	protected function register_controls() {
 		$this->start_controls_section(
 			'content_section',
 			[

@@ -39,7 +39,7 @@ class Component extends Base {
 		return 'stx-icon-testimonials-slider sq-widget-label';
 	}
 
-	protected function _register_controls() {
+	protected function register_controls() {
 		$this->start_controls_section(
 			'content_section',
 			[
@@ -519,11 +519,11 @@ class Component extends Base {
 
 		$slider_options = [
 			'slidesPerView'       => $settings['slider_columns'],
-			'slidesPerViewTablet' => $settings['slider_columns_tablet'],
-			'slidesPerViewMobile' => $settings['slider_columns_mobile'],
+			'slidesPerViewTablet' => isset( $settings['slider_columns_tablet'] ) ? $settings['slider_columns_tablet'] : $settings['slider_columns'],
+			'slidesPerViewMobile' => isset( $settings['slider_columns_mobile'] ) ? $settings['slider_columns_mobile'] : $settings['slider_columns'],
 			'spaceBetween'        => $settings['slider_columns_spacing']['size'],
-			'spaceBetweenTablet'  => $settings['slider_columns_spacing_tablet']['size'],
-			'spaceBetweenMobile'  => $settings['slider_columns_spacing_mobile']['size'],
+			'spaceBetweenTablet'  => isset( $settings['slider_columns_spacing_tablet'] ) ? $settings['slider_columns_spacing_tablet']['size'] : $settings['slider_columns_spacing']['size'],
+			'spaceBetweenMobile'  => isset( $settings['slider_columns_spacing_mobile'] ) ? $settings['slider_columns_spacing_mobile']['size'] : $settings['slider_columns_spacing']['size'],
 			'loop'                => (bool) $settings['slider_loop'],
 			'autoplay'            => (bool) $settings['slider_autoplay'],
 			'centeredSlides'      => (bool) $settings['centered_slides'],

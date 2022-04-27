@@ -3,8 +3,8 @@
 $wrapper_classes   = [];
 $wrapper_classes[] = 'stx-layout-' . $settings['layout'];
 $wrapper_classes[] = 'stx-grid';
-$wrapper_classes[] = 'stx-columns-small-' . $settings['columns_mobile'];
-$wrapper_classes[] = 'stx-columns-medium-' . $settings['columns_tablet'];
+$wrapper_classes[] = 'stx-columns-small-' . ( isset( $settings['columns_mobile'] ) ? $settings['columns_mobile'] : $settings['columns'] );
+$wrapper_classes[] = 'stx-columns-medium-' . ( isset( $settings['columns_tablet'] ) ? $settings['columns_tablet'] : $settings['columns'] );
 $wrapper_classes[] = 'stx-columns-large-' . $settings['columns'];
 $wrapper_classes   = implode( ' ', $wrapper_classes );
 

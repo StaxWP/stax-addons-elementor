@@ -41,7 +41,7 @@ class Component extends Base {
 		return 'stx-icon-info-button sq-widget-label';
 	}
 
-	protected function _register_controls() {
+	protected function register_controls() {
 		$this->start_controls_section(
 			'content_section',
 			[
