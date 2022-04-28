@@ -4,7 +4,7 @@
  * Description: Beautiful & Fast add-ons for Elementor. Enhance your site building experience with Stax Elementor Addons
  * Plugin URI: https://staxwp.com
  * Author: StaxWP
- * Version: 1.4.2
+ * Version: 1.4.3
  * Author URI: https://staxwp.com
  *
  * Elementor tested up to: 3.7.0
@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-define( 'STAX_EL_VERSION', '1.4.2' );
+define( 'STAX_EL_VERSION', '1.4.3' );
 define( 'STAX_EL_DOMAIN', 'stax-addons-for-elementor' );
 define( 'STAX_EL_HOOK_PREFIX', 'stax_el_' );
 define( 'STAX_EL_SLUG_PREFIX', 'stax-elementor-' );
@@ -58,7 +58,7 @@ require_once STAX_EL_CORE_PATH . 'Plugin.php';
 function appsero_init_tracker_stax_addons_for_elementor() {
 
 	if ( ! class_exists( 'Appsero\Client' ) ) {
-		require_once __DIR__ . '/appsero/src/Client.php';
+		require_once __DIR__ . '/vendor/appsero/client/src/Client.php';
 	}
 
 	$client = new Appsero\Client( '4b0c9337-336f-40f4-a089-37a2481a2655', 'Elementor Addons, Widgets and Enhancements - Stax', __FILE__ );

@@ -4,7 +4,7 @@ Tags: elementor addons, elementor enhancements, elementor widgets, elementor, li
 Requires at least: 5.0
 Requires PHP: 7.0
 Tested up to: 5.9
-Stable tag: 1.4.2
+Stable tag: 1.4.3
 License: GLPv2 or later
 
 Beautiful & Fast add-ons for Elementor. Enhance your site building experience with Stax Elementor Addons
@@ -42,13 +42,20 @@ Current Elementor widget enhancements:
 * Counter - Alignment
 * Text Editor - Set a maximum height for the content and make it scrollable
 
-= More from StaxWP =
+## More from StaxWP
 - [BuddyBuilder - BuddyPress Builder for Elementor - Plugin](https://staxwp.com/go/buddybuilder)
 Create stunning communities on your site powered by Elementor and BuddyPress
 - [Visibility Logic for Elementor – Plugin](https://wordpress.org/plugins/visibility-logic-elementor/)
 Hide or show Elementor widgets or section based on various conditions: User Meta, User IP, Browser, etc.
 - [Woo Addons for Elementor - Plugin](https://staxwp.com/go/woo-addons-for-elementor/)
 Elementor enhancements for Woocommerce to help you build awesome e-commerce sites
+
+## Privacy Policy
+Elementor Addons, Widgets and Enhancements - Stax uses Appsero SDK to collect some telemetry data upon user's confirmation. This helps us to troubleshoot problems faster & make product improvements.
+
+Appsero SDK **does not gather any data by default.** The SDK only starts gathering basic telemetry data **when a user allows it via the admin notice**. We collect the data to ensure a great user experience for all our users.
+
+Integrating Appsero SDK **DOES NOT IMMEDIATELY** start gathering data, **without confirmation from users in any case.**
 
 == Installation ==
 
@@ -64,6 +71,9 @@ Elementor enhancements for Woocommerce to help you build awesome e-commerce site
 When editing a page with Elementor you will see the New elements added at the end of default elementor widget area.
 
 == Changelog ==
+
+= 1.4.3 =
+* Add Appsero integration
 
 = 1.4.2 =
 * Fix Elementor deprecated functions
@@ -94,3 +104,4 @@ When editing a page with Elementor you will see the New elements added at the en
 If you want to contribute, go to our [GitHub Repository](https://github.com/seventhqueen/stax-elementor-kit).
 
 You can also add a new language via [translate.wordpress.org](https://translate.wordpress.org/projects/wp-plugins/stax-elementor-kit).
+
