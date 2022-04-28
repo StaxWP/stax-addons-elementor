@@ -2,9 +2,9 @@
 Contributors: seventhqueen, codezz, geowrge, rtynio, staxwp
 Tags: elementor addons, elementor enhancements, elementor widgets, elementor, light addons, fast elementor addons
 Requires at least: 5.0
-Requires PHP: 5.6
-Tested up to: 5.8
-Stable tag: 1.4.1
+Requires PHP: 7.0
+Tested up to: 5.9
+Stable tag: 1.4.2
 License: GLPv2 or later
 
 Beautiful & Fast add-ons for Elementor. Enhance your site building experience with Stax Elementor Addons
@@ -65,23 +65,26 @@ When editing a page with Elementor you will see the New elements added at the en
 
 == Changelog ==
 
- 1.4.1 =
+= 1.4.2 =
+* Fix Elementor deprecated functions
+
+= 1.4.1 =
 * New elements: Typeout Text, Blockquote, Icon With Text, Info Button, Section Title, Divider, Counter, Testimonials, Testimonials Slider, Info Box, Accordion & Toggle
 * Fixed minor bugs
 * Admin panel UI update
 
- 1.4.0 =
+= 1.4.0 =
 * New element: Image interval
 * Updated font icons
 * Fix slider widget alignment
 
- 1.3.0 =
+= 1.3.0 =
 * Added header separator styles
 
- 1.2.0 =
+= 1.2.0 =
 * Refactor the admin dashboard
 
- 1.1.0 =
+= 1.1.0 =
 * Added Read more(Expand text) widget
 
 = 1.0.0 =
