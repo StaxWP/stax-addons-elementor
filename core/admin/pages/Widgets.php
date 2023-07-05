@@ -46,6 +46,7 @@ class Widgets extends Base {
 
 		if ( ! $is_safe ) {
 			wp_redirect( admin_url( 'admin.php?page=' . STAX_EL_SLUG_PREFIX . $this->current_slug ) );
+			exit;
 		}
 
 		$options = [];
