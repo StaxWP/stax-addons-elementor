@@ -4,7 +4,7 @@ Tags: elementor addons, elementor enhancements, elementor widgets, elementor, li
 Requires at least: 5.0
 Requires PHP: 7.0
 Tested up to: 6.2
-Stable tag: 1.4.4
+Stable tag: 1.4.4.1
 License: GLPv2 or later
 
 Beautiful & Fast add-ons for Elementor. Enhance your site building experience with Stax Elementor Addons
