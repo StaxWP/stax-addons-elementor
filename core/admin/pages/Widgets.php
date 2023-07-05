@@ -29,7 +29,22 @@ class Widgets extends Base {
 	}
 
 	public function toggle_widget() {
+
+		$is_safe = true;
+
+		if ( ! current_user_can( 'manage_options' ) ) {
+			$is_safe = false;
+		}
+
+		if ( ! isset( $_POST['_wpnonce'] ) || ! wp_verify_nonce( $_POST['_wpnonce'], 'stax_widget_activation' ) ) {
+			$is_safe = false;
+		}
+
 		if ( ! isset( $_POST['action'] ) || $_POST['action'] !== 'stax_widget_activation' ) {
+			$is_safe = false;
+		}
+
+		if ( ! $is_safe ) {
 			wp_redirect( admin_url( 'admin.php?page=' . STAX_EL_SLUG_PREFIX . $this->current_slug ) );
 		}
 

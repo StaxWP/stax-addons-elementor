@@ -29,8 +29,9 @@
 			<?php endforeach; ?>
 		</div>
 		<input type="hidden" name="action" value="stax_widget_activation">
+		<?php wp_nonce_field( 'stax_widget_activation' ); ?>
 
-		<div class="ste-mt-5">
+        <div class="ste-mt-5">
 			<button type="submit"
 					class="ste-bg-gradient-to-r ste-from-green-500 ste-to-green-400 ste-text-md ste-text-white ste-py-3 ste-px-6 ste-rounded ste-border-0 ste-shadow-xl hover:ste-shadow-lg ste-cursor-pointer">
 				<span class="ste-flex ste-items-center">

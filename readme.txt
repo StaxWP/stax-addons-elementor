@@ -3,8 +3,8 @@ Contributors: seventhqueen, codezz, geowrge, rtynio, staxwp
 Tags: elementor addons, elementor enhancements, elementor widgets, elementor, light addons, fast elementor addons
 Requires at least: 5.0
 Requires PHP: 7.0
-Tested up to: 5.9
-Stable tag: 1.4.3
+Tested up to: 6.2
+Stable tag: 1.4.4
 License: GLPv2 or later
 
 Beautiful & Fast add-ons for Elementor. Enhance your site building experience with Stax Elementor Addons
@@ -71,6 +71,9 @@ Integrating Appsero SDK **DOES NOT IMMEDIATELY** start gathering data, **without
 When editing a page with Elementor you will see the New elements added at the end of default elementor widget area.
 
 == Changelog ==
+
+= 1.4.4 =
+* Add security checks when saving options data.
 
 = 1.4.3 =
 * Add Appsero integration
