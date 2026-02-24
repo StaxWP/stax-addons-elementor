@@ -37,7 +37,7 @@ class StaxWidgets {
 	 */
 	public function __construct() {
 		add_action( 'elementor/elements/categories_registered', [ $this, 'register_elementor_category' ] );
-		add_action( 'elementor/widgets/widgets_registered', [ $this, 'register_widgets' ] );
+		add_action( 'elementor/widgets/register', [ $this, 'register_widgets' ] );
 		add_action( 'elementor/editor/after_enqueue_styles', [ $this, 'editor_css' ] );
 	}
 
@@ -193,12 +193,15 @@ class StaxWidgets {
 	/**
 	 * Register Elementor widgets
 	 */
-	public function register_widgets() {
+	public function register_widgets( $widgets_manager = null ) {
 		// get our own widgets up and running:
 		if ( defined( 'ELEMENTOR_PATH' ) && class_exists( Widget_Base::class ) && class_exists( Plugin::class ) && is_callable( Plugin::class, 'instance' ) ) {
-			$elementor = \Elementor\Plugin::instance();
 
-			if ( isset( $elementor->widgets_manager ) && method_exists( $elementor->widgets_manager, 'register_widget_type' ) ) {
+			if ( $widgets_manager === null ) {
+				$widgets_manager = \Elementor\Plugin::instance()->widgets_manager;
+			}
+
+			if ( $widgets_manager ) {
 				// Require Base class for widgets
 				require_once STAX_EL_PATH . '/widgets/Base.php';
 
@@ -208,7 +211,12 @@ class StaxWidgets {
 
 						require_once $widget_file;
 						$class_name = '\StaxAddons\Widgets\\' . $element['scope'] . '\Component';
-						$elementor->widgets_manager->register_widget_type( new $class_name() );
+
+						if ( method_exists( $widgets_manager, 'register' ) ) {
+							$widgets_manager->register( new $class_name() );
+						} else {
+							$widgets_manager->register_widget_type( new $class_name() );
+						}
 					}
 				}
 			}
