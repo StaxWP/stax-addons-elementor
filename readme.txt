@@ -3,7 +3,7 @@ Contributors: staxwp, codezz, geowrge, rtynio
 Tags: widgets, addons, page builder, enhancements
 Requires at least: 5.8
 Requires PHP: 7.4
-Tested up to: 6.7
+Tested up to: 6.9
 Stable tag: 1.5.0
 Requires Plugins: elementor
 License: GPLv2 or later
