@@ -197,9 +197,8 @@ class Component extends Base {
 				'selectors' => [
 					'{{WRAPPER}}' => 'color: {{VALUE}};',
 				],
-				'scheme'    => [
-					
-					'global' => ['default' => Global_Colors::COLOR_TEXT],
+				'global'    => [
+					'default' => Global_Colors::COLOR_TEXT,
 				],
 			]
 		);
@@ -295,9 +294,8 @@ class Component extends Base {
 					'{{WRAPPER}}.elementor-drop-cap-view-stacked .elementor-drop-cap'                                                                 => 'background-color: {{VALUE}};',
 					'{{WRAPPER}}.elementor-drop-cap-view-framed .elementor-drop-cap, {{WRAPPER}}.elementor-drop-cap-view-default .elementor-drop-cap' => 'color: {{VALUE}}; border-color: {{VALUE}};',
 				],
-				'scheme'    => [
-					
-					'global' => ['default' => Global_Colors::COLOR_PRIMARY],
+				'global'    => [
+					'default' => Global_Colors::COLOR_PRIMARY,
 				],
 			]
 		);
@@ -505,9 +503,8 @@ class Component extends Base {
 			[
 				'label'     => __( 'Background Color', 'elementor' ),
 				'type'      => Controls_Manager::COLOR,
-				'scheme'    => [
-					
-					'global' => ['default' => Global_Colors::COLOR_ACCENT],
+				'global'    => [
+					'default' => Global_Colors::COLOR_ACCENT,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .stx-read-more-toggle' => 'background-color: {{VALUE}};',
