@@ -195,7 +195,7 @@ class StaxWidgets {
 	 */
 	public function register_widgets( $widgets_manager = null ) {
 		// get our own widgets up and running:
-		if ( defined( 'ELEMENTOR_PATH' ) && class_exists( Widget_Base::class ) && class_exists( Plugin::class ) && is_callable( Plugin::class, 'instance' ) ) {
+		if ( defined( 'ELEMENTOR_PATH' ) && class_exists( Widget_Base::class ) && class_exists( Plugin::class ) && is_callable( [ Plugin::class, 'instance' ] ) ) {
 
 			if ( $widgets_manager === null ) {
 				$widgets_manager = \Elementor\Plugin::instance()->widgets_manager;
@@ -227,7 +227,7 @@ class StaxWidgets {
 	 * Register new Elementor category
 	 */
 	public function register_elementor_category() {
-		if ( defined( 'ELEMENTOR_PATH' ) && class_exists( Widget_Base::class ) && class_exists( Plugin::class ) && is_callable( Plugin::class, 'instance' ) ) {
+		if ( defined( 'ELEMENTOR_PATH' ) && class_exists( Widget_Base::class ) && class_exists( Plugin::class ) && is_callable( [ Plugin::class, 'instance' ] ) ) {
 			\Elementor\Plugin::instance()->elements_manager->add_category(
 				'stax-elementor',
 				[
