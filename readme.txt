@@ -1,6 +1,6 @@
 === Stax Addons for Elementor ===
 Contributors: staxwp, codezz, geowrge, rtynio
-Tags: widgets, addons, page builder, enhancements
+Tags: elementor widgets, page builder addons, slider widget, accordion widget, testimonials
 Requires at least: 5.8
 Requires PHP: 7.4
 Tested up to: 6.9
@@ -9,79 +9,115 @@ Requires Plugins: elementor
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Lightweight widgets and enhancements for your page builder. Modular, fast, and easy to use.
+20+ lightweight widgets and enhancements for Elementor. Modular, fast, and zero bloat — assets load only when used.
 
 == Description ==
 
-Stax Addons is a lightweight plugin that adds new widgets and enhancements to your page building workflow.
+**Stax Addons for Elementor** adds 20+ professionally designed widgets to your Elementor page builder — without slowing down your site.
 
-We use a super modular approach so any CSS or Javascript for a module is added to the page only if you use that widget. You can enable just the modules you want to see and use.
+= Why Stax? =
 
-= Widgets =
+* **Lightweight & Fast** — CSS and JavaScript are loaded only for widgets actually used on the page. No unnecessary scripts, no bloat.
+* **Modular** — Enable only the widgets you need from the admin panel. Keep your Elementor editor clean.
+* **Developer Friendly** — Clean code, well-structured, and easy to extend.
 
-- **Slider** - Content slider with title, subtitle, description, image and button
-- **Scroll Top** - Scroll to top button that appears when you scroll down
-- **Read More / Expand Text** - Expandable content with a toggle button
-- **Breadcrumbs** - Automatic breadcrumb navigation for posts, pages and archives
-- **Dropdown Button** - Button with dropdown menu functionality
-- **Heading** - Highlighted words/phrases, subtitle, description and separator
-- **Button** - Enhanced button with box shadow on hover
-- **Image Interval** - Show different images based on date intervals
-- **Typeout Text** - Animated typing text effect
-- **Blockquote** - Styled blockquote element
-- **Icon With Text** - Icon paired with descriptive text
-- **Info Button** - Informational button with extra details
-- **Section Title** - Styled section title element
-- **Divider** - Custom divider with icon support
-- **Counter** - Animated number counter
-- **Testimonials** - Customer testimonial layouts
-- **Testimonials Slider** - Testimonial carousel
-- **Info Box** - Information box with icon, title and description
-- **Accordion & Toggle** - Collapsible content sections
+= 20+ Widgets Included =
+
+* **Slider** — Content slider with title, subtitle, description, image, and button
+* **Testimonials** — Customer testimonial layouts with multiple styles
+* **Testimonials Slider** — Testimonial carousel with navigation and pagination
+* **Accordion & Toggle** — Collapsible content sections with smooth animations
+* **Counter** — Animated number counter for statistics and milestones
+* **Heading** — Advanced heading with highlighted words, subtitle, and separator
+* **Section Title** — Styled section title with subtitle, description, and button
+* **Info Box** — Information box with icon, title, and description
+* **Icon With Text** — Icon paired with descriptive text in multiple layouts
+* **Breadcrumbs** — Automatic breadcrumb navigation for posts, pages, and archives
+* **Typeout Text** — Animated typing text effect for dynamic headlines
+* **Read More / Expand Text** — Expandable content with a toggle button
+* **Scroll Top** — Scroll-to-top button that appears on scroll
+* **Button** — Enhanced button with box shadow on hover
+* **Info Button** — Informational button with extra details
+* **Dropdown Button** — Button with dropdown menu functionality
+* **Blockquote** — Styled blockquote element
+* **Divider** — Custom divider with icon support
+* **Image Interval** — Show different images based on date intervals
 
 = Widget Enhancements =
 
-* Accordion - Box shadow, item spacing, item border & border radius
-* Counter - Alignment options
-* Text Editor - Scrollable content with max height
+Stax also enhances existing Elementor widgets:
+
+* **Accordion** — Box shadow, item spacing, item border and border radius
+* **Counter** — Extended alignment options
+* **Text Editor** — Scrollable content with max height setting
+
+= Performance First =
+
+Unlike heavy all-in-one addons that load dozens of scripts on every page, Stax only loads assets for widgets you actually use. Your PageSpeed score stays high.
+
+= Who Is This For? =
+
+* Website owners who want more Elementor widgets without the bloat
+* Designers and developers building landing pages, portfolios, or business sites
+* Anyone who values page speed and clean code
 
 = More from StaxWP =
 
-- [BuddyBuilder](https://staxwp.com/go/buddybuilder) - Community builder plugin
-- [Visibility Logic](https://wordpress.org/plugins/visibility-logic-elementor/) - Show/hide widgets based on conditions
+* [BuddyBuilder](https://staxwp.com/go/buddybuilder) — BuddyPress builder for Elementor
+* [Visibility Logic](https://wordpress.org/plugins/visibility-logic-elementor/) — Show/hide Elementor widgets based on conditions
 
-== Privacy Policy ==
+= Third-Party Services =
 
-Stax Addons for Elementor uses Appsero SDK to collect some telemetry data upon user's confirmation. This helps us to troubleshoot problems faster & make product improvements.
-
-Appsero SDK **does not gather any data by default.** The SDK only starts gathering basic telemetry data **when a user allows it via the admin notice**.
+This plugin uses [Appsero](https://appsero.com/) SDK to collect optional, anonymized telemetry data upon user confirmation. This helps us troubleshoot issues faster and improve the plugin. See the [Appsero Privacy Policy](https://appsero.com/privacy-policy/).
 
 == Installation ==
 
-1. Upload the plugin to your 'wp-content/plugins' directory
-2. Activate the plugin from the Plugins page
-3. Edit a page using the page builder
-4. See the new Stax widgets in the left panel
+1. Make sure **Elementor** is installed and active.
+2. Upload the plugin to your `wp-content/plugins` directory, or install it directly from the WordPress plugin directory.
+3. Activate the plugin from the Plugins page.
+4. Edit any page with Elementor — you'll find the new widgets in the **Stax** category in the widget panel.
 
 == Frequently Asked Questions ==
 
-= Where can I find the new widgets? =
+= Where can I find the Stax widgets in Elementor? =
 
-When editing a page you will see the new Stax widgets in the widget panel.
+Open any page with Elementor, and look for the **Stax Elements** category in the widget panel on the left side. All widgets from this plugin are grouped there.
+
+= Will this slow down my site? =
+
+No. The plugin only loads CSS and JavaScript for widgets that are actively used on the page. If a widget isn't placed on the page, its assets are not loaded at all.
+
+= Does this work with the free version of Elementor? =
+
+Yes. Stax Addons works with both the free and Pro versions of Elementor.
+
+= Can I disable widgets I don't use? =
+
+Yes. Go to the Stax Addons settings page in your WordPress admin to enable or disable individual widgets. Only active widgets appear in the Elementor editor.
+
+= Can I use this alongside other Elementor addons? =
+
+Absolutely. The plugin is designed to be lightweight and conflict-free. It works alongside other Elementor addon plugins without issues.
+
+= Is there a Pro version? =
+
+Currently all widgets are free. We focus on keeping the plugin lightweight and reliable.
 
 == Changelog ==
 
 = 1.5.0 =
-* Updated plugin name for compliance with directory guidelines
+* Renamed plugin for WordPress.org guidelines compliance
+* Fixed compatibility with Elementor 3.5+ (updated widget registration API)
+* Replaced deprecated Elementor Schemes with Global Colors and Typography
 * Added Requires Plugins header for dependency management
 * Added ABSPATH security checks to all PHP files
 * Deferred Appsero tracker initialization to init hook
-* Removed unnecessary load_plugin_textdomain call (handled by WordPress since 4.6)
-* Updated tested versions
-* Code quality improvements
+* Removed unnecessary load_plugin_textdomain call
+* Updated Appsero SDK to v1.4.0
+* Updated tested versions (WP 6.9, Elementor 3.25)
 
 = 1.4.4 =
-* Add security checks when saving options data.
+* Add security checks when saving options data
 
 = 1.4.3 =
 * Add Appsero integration
