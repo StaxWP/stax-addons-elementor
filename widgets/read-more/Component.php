@@ -11,7 +11,8 @@ use Elementor\Group_Control_Border;
 use Elementor\Group_Control_Box_Shadow;
 use Elementor\Group_Control_Text_Shadow;
 use Elementor\Group_Control_Typography;
-use Elementor\Core\Schemes;
+use Elementor\Core\Kits\Documents\Tabs\Global_Colors;
+use Elementor\Core\Kits\Documents\Tabs\Global_Typography;
 
 use StaxAddons\Widgets\Base;
 use StaxAddons\Utils;
@@ -197,8 +198,8 @@ class Component extends Base {
 					'{{WRAPPER}}' => 'color: {{VALUE}};',
 				],
 				'scheme'    => [
-					'type'  => Schemes\Color::get_type(),
-					'value' => Schemes\Color::COLOR_3,
+					
+					'global' => ['default' => Global_Colors::COLOR_TEXT],
 				],
 			]
 		);
@@ -207,7 +208,7 @@ class Component extends Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name'   => 'typography',
-				'scheme' => Schemes\Typography::TYPOGRAPHY_3,
+				'global' => ['default' => Global_Typography::TYPOGRAPHY_TEXT],
 			]
 		);
 
@@ -295,8 +296,8 @@ class Component extends Base {
 					'{{WRAPPER}}.elementor-drop-cap-view-framed .elementor-drop-cap, {{WRAPPER}}.elementor-drop-cap-view-default .elementor-drop-cap' => 'color: {{VALUE}}; border-color: {{VALUE}};',
 				],
 				'scheme'    => [
-					'type'  => Schemes\Color::get_type(),
-					'value' => Schemes\Color::COLOR_1,
+					
+					'global' => ['default' => Global_Colors::COLOR_PRIMARY],
 				],
 			]
 		);
@@ -505,8 +506,8 @@ class Component extends Base {
 				'label'     => __( 'Background Color', 'elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'scheme'    => [
-					'type'  => Schemes\Color::get_type(),
-					'value' => Schemes\Color::COLOR_4,
+					
+					'global' => ['default' => Global_Colors::COLOR_ACCENT],
 				],
 				'selectors' => [
 					'{{WRAPPER}} .stx-read-more-toggle' => 'background-color: {{VALUE}};',
