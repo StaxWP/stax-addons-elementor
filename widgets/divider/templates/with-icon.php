@@ -1,3 +1,4 @@
+<?php if ( ! defined( 'ABSPATH' ) ) exit; ?>
 <div class="stx-divider-with-icon">
 	<div class="stx-m-line">
 		<div class="stx-m-inner-line"></div>

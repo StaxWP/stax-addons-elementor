@@ -1,3 +1,4 @@
+<?php if ( ! defined( 'ABSPATH' ) ) exit; ?>
 <div class="stx-typeout-text-wrapper" data-strings="<?php echo esc_attr( $items ); ?>" data-cursor="<?php echo esc_attr( $settings['separator'] ); ?>">
 	<<?php echo esc_attr( $settings['text_tag'] ); ?> class="stx-m-text">
 		<?php if ( ! empty( $settings['text'] ) ) : ?>

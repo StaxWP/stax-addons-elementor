@@ -1,4 +1,6 @@
 <?php if ( is_array( $items ) && count( $items ) ) : ?>
+
+if ( ! defined( 'ABSPATH' ) ) exit;
 	<div class="stx-m-social-icons">
 		<?php
 		foreach ( $items as $item ) {
@@ -19,3 +21,5 @@
 		?>
 	</div>
 <?php endif; ?>
+
+if ( ! defined( 'ABSPATH' ) ) exit;

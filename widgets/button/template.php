@@ -1,3 +1,4 @@
+<?php if ( ! defined( 'ABSPATH' ) ) exit; ?>
 <div class="stx-btn-wrapper">
 	<a <?php echo $button_attribute; ?>>
 		<span class="stx-btn-content-wrapper">

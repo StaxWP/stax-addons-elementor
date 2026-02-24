@@ -1,3 +1,4 @@
+<?php if ( ! defined( 'ABSPATH' ) ) exit; ?>
 <div class="stx-blockquote-wrapper">
 	<?php if ( ! empty( $settings['text'] ) ) : ?>
 		<<?php echo esc_attr( $settings['text_tag'] ); ?> class="stx-m-text">

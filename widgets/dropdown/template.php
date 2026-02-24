@@ -1,3 +1,4 @@
+<?php if ( ! defined( 'ABSPATH' ) ) exit; ?>
 <div class="stx-dropdown-wrapper">
 	<a <?php echo $button_attribute; ?> href="#">
 		<span class="stx-btn-content-wrapper">

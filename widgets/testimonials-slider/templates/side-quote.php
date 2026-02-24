@@ -1,3 +1,4 @@
+<?php if ( ! defined( 'ABSPATH' ) ) exit; ?>
 <div class="swiper-slide <?php echo esc_attr( 'elementor-repeater-item-' . $item['_id'] ); ?>">
 	<div class="stx-e-inner">
 		<?php

@@ -1,5 +1,7 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 $wrapper_classes   = [];
 $wrapper_classes[] = 'stx-layout-' . $settings['layout'];
 $wrapper_classes[] = 'stx-grid';

@@ -1,3 +1,4 @@
+<?php if ( ! defined( 'ABSPATH' ) ) exit; ?>
 <div class="stax-read-more-editor">
 	<div <?php echo $editor_attribute; ?>>
 		<?php echo $editor_content; ?>

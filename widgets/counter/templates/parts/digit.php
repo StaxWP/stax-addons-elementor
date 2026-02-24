@@ -1,3 +1,4 @@
+<?php if ( ! defined( 'ABSPATH' ) ) exit; ?>
 <div class="stx-m-digit"></div>
 <?php if ( 'yes' === $settings['icon_enabled'] ) : ?>
 	<div class="stx-m-icon">

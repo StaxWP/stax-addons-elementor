@@ -1,3 +1,4 @@
+<?php if ( ! defined( 'ABSPATH' ) ) exit; ?>
 <div class="stx-counter-wrapper" 
 	data-start-digit="<?php echo (int) esc_html( $settings['start_digit'] ); ?>" 
 	data-end-digit="<?php echo (int) esc_html( $settings['end_digit'] ); ?>"

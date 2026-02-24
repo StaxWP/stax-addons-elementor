@@ -1,3 +1,4 @@
+<?php if ( ! defined( 'ABSPATH' ) ) exit; ?>
 <div class="stx-section-title-wrapper">
 	<?php
 	if ( 'above' === $settings['subtitle_position'] ) {

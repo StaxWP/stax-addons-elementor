@@ -50,8 +50,8 @@ class Settings {
 	 */
 	public function register_menu() {
 		add_menu_page(
-			__( 'STAX Elementor - Dashboard', 'stax-addons-for-elementor' ),
-			__( 'Elementor Addons', 'stax-addons-for-elementor' ),
+			__( 'Stax Addons', 'stax-addons-for-elementor' ),
+			__( 'Stax Addons', 'stax-addons-for-elementor' ),
 			'manage_options',
 			'stax-elementor-widgets',
 			[ $this, 'settings_template' ],

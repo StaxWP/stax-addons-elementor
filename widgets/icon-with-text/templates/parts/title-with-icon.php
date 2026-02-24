@@ -1,4 +1,6 @@
 <?php if ( ! empty( $settings['title_text'] ) ) { ?>
+
+if ( ! defined( 'ABSPATH' ) ) exit;
 	<<?php echo esc_attr( $settings['title_tag'] ); ?> class="stx-m-title">
 		<?php if ( ! empty( $settings['title_link']['url'] ) ) : ?>
 			<a itemprop="url" href="<?php echo esc_url( $settings['title_link']['url'] ); ?>">
@@ -22,3 +24,5 @@
 		<?php endif; ?>
 	</<?php echo esc_attr( $settings['title_tag'] ); ?>>
 <?php } ?>
+
+if ( ! defined( 'ABSPATH' ) ) exit;

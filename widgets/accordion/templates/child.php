@@ -1,3 +1,4 @@
+<?php if ( ! defined( 'ABSPATH' ) ) exit; ?>
 <<?php echo esc_attr( $settings['title_tag'] ); ?> class="stx-e-title-holder">
 	<span class="stx-e-title"><?php echo esc_html( $item['item_title'] ); ?></span>
 	<span class="stx-e-mark">

@@ -1,3 +1,4 @@
+<?php if ( ! defined( 'ABSPATH' ) ) exit; ?>
 <div class="stx-icon-with-text stx-variation-before-title">
 	<div class="stx-m-content">
 		<?php

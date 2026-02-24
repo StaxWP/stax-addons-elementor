@@ -1,4 +1,6 @@
 <?php if ( 'no' !== $settings['slider_navigation'] ) : ?>
+
+if ( ! defined( 'ABSPATH' ) ) exit;
 	<div class="swiper-button-prev">
 		<?php
 		\StaxAddons\Utils::load_template(
@@ -20,3 +22,5 @@
 		?>
 	</div>
 <?php endif; ?>
+
+if ( ! defined( 'ABSPATH' ) ) exit;

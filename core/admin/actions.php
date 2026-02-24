@@ -1,3 +1,4 @@
+<?php if ( ! defined( 'ABSPATH' ) ) exit; ?>
 <div class="ste-container ste-mx-auto">
 	<div class="ste-bg-white ste-p-6 lg:ste-p-10 ste-rounded ste-shadow-lg">
 		<?php do_action( STAX_EL_HOOK_PREFIX . $current_slug . '_page_content_before' ); ?>

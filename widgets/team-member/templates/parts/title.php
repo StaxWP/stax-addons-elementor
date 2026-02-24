@@ -1,4 +1,6 @@
 <?php
+
+if ( ! defined( 'ABSPATH' ) ) exit;
 $title_tag = isset( $name_tag ) && ! empty( $name_tag ) ? $name_tag : 'h4';
 
 if ( ! empty( $name ) ) {

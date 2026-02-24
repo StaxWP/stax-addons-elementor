@@ -1,3 +1,4 @@
+<?php if ( ! defined( 'ABSPATH' ) ) exit; ?>
 <div class="swiper-container" <?php echo $autoplay; ?>>
 	<div class="swiper-wrapper">
 		<?php foreach ( $settings['list'] as $item ) : ?>

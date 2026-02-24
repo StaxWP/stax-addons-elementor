@@ -1,3 +1,4 @@
+<?php if ( ! defined( 'ABSPATH' ) ) exit; ?>
 <div class="stx-info-on-hover">
 	<div class="stx-m-inner">
 		<div class="stx-m-image">

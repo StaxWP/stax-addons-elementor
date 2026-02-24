@@ -1,3 +1,4 @@
+<?php if ( ! defined( 'ABSPATH' ) ) exit; ?>
 <a class="stx-info-button-standard" href="<?php echo esc_url( $settings['link']['url'] ); ?>">
 	<div class="stx-m-text-holder">
 	<span class="stx-m-text"><?php echo esc_html( $settings['text'] ); ?></span>

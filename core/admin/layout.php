@@ -1,3 +1,4 @@
+<?php if ( ! defined( 'ABSPATH' ) ) exit; ?>
 <div class="ste-m-0 stax-main <?php echo esc_attr( implode( ' ', $wrapper_class ) ); ?>">
 	<div class="ste-mt-5 ste-mb-4">
 		<div class="ste-container ste-mx-auto ste-bg-white ste-rounded ste-shadow-lg ste-overflow-hidden">

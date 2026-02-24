@@ -1,4 +1,6 @@
 <?php
+
+if ( ! defined( 'ABSPATH' ) ) exit;
 $separator_image = isset( $settings['border_image'] ) ? 'background-image: url(' . $settings['border_image']['url'] . ')' : '';
 ?>
 <div class="stx-divider-border-image">

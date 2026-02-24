@@ -1,4 +1,6 @@
 <?php
+
+if ( ! defined( 'ABSPATH' ) ) exit;
 $image_proportion = isset( $image_proportion ) ? $image_proportion : 'full';
 
 if ( ! empty( $image ) ) {
@@ -7,3 +9,5 @@ if ( ! empty( $image ) ) {
 		<?php echo wp_get_attachment_image( $image, $image_proportion ); ?>
 	</div>
 <?php } ?>
+
+if ( ! defined( 'ABSPATH' ) ) exit;

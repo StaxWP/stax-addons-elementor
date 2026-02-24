@@ -1,3 +1,4 @@
+<?php if ( ! defined( 'ABSPATH' ) ) exit; ?>
 <div class="stx-grid-item <?php echo esc_attr( $item['item_classes'] ); ?>">
 	<div class="stx-e-inner">
 		<?php

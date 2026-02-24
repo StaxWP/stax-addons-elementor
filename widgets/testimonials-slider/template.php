@@ -34,6 +34,8 @@
 </div>
 
 <?php
+
+if ( ! defined( 'ABSPATH' ) ) exit;
 if ( 'outside' === $settings['slider_navigation_position'] || 'together' === $settings['slider_navigation_position'] ) {
 	\StaxAddons\Utils::load_template(
 		'widgets/testimonials-slider/templates/parts/swiper-nav',

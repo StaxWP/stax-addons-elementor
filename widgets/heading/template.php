@@ -1,3 +1,4 @@
+<?php if ( ! defined( 'ABSPATH' ) ) exit; ?>
 <div <?php echo $wrapper_attribute; ?>>
 	<?php
 
