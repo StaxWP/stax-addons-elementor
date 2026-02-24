@@ -1,5 +1,4 @@
 <?php
-
 namespace StaxAddons\Widgets\Accordion;
 
 if ( ! defined( 'ABSPATH' ) ) {

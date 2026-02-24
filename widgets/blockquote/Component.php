@@ -1,5 +1,4 @@
 <?php
-
 namespace StaxAddons\Widgets\BlockQuote;
 
 if ( ! defined( 'ABSPATH' ) ) {

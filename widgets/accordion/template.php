@@ -1,7 +1,6 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-
 $wrapper_classes   = [];
 $wrapper_classes[] = 'stx-behaviour-' . $settings['type'];
 $wrapper_classes[] = 'stx-style-' . $settings['style'];

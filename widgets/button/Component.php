@@ -1,5 +1,4 @@
 <?php
-
 namespace StaxAddons\Widgets\Button;
 
 if ( ! defined( 'ABSPATH' ) ) {

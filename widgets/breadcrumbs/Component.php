@@ -1,5 +1,4 @@
 <?php
-
 namespace StaxAddons\Widgets\Breadcrumbs;
 
 if ( ! defined( 'ABSPATH' ) ) {
