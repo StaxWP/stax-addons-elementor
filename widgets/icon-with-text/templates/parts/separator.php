@@ -1,6 +1,6 @@
+<?php if ( ! defined( 'ABSPATH' ) ) exit; ?>
 <?php if ( ! empty( $settings['separator_show'] ) ) : ?>
 
-if ( ! defined( 'ABSPATH' ) ) exit;
 	<div class="stx-m-separator stx-clear">
 		<div class="stx-separator-container">
 			<div class="stx-m-line"></div>
@@ -8,4 +8,3 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 	</div>
 <?php endif; ?>
 
-if ( ! defined( 'ABSPATH' ) ) exit;

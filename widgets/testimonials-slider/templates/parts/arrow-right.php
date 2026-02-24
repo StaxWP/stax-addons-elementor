@@ -1,6 +1,6 @@
 <?php
-
 if ( ! defined( 'ABSPATH' ) ) exit;
+
 $icon = isset( $slider_navigation_arrow_next ) ? $slider_navigation_arrow_next : [];
 
 if ( isset( $settings['next_icon'] ) && ! empty( $settings['next_icon']['value'] ) ) {

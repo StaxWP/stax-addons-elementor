@@ -1,6 +1,6 @@
 <?php
-
 if ( ! defined( 'ABSPATH' ) ) exit;
+
 
 if ( ! empty( $item['item_author_name'] ) ) : ?>
 	<div class="stx-e-author">
@@ -11,4 +11,3 @@ if ( ! empty( $item['item_author_name'] ) ) : ?>
 	</div>
 <?php endif; ?>
 
-if ( ! defined( 'ABSPATH' ) ) exit;

@@ -1,6 +1,6 @@
 <?php if ( 'no' !== $settings['slider_navigation'] ) {
-
 if ( ! defined( 'ABSPATH' ) ) exit;
+
 	$nav_next_classes = '';
 	$nav_prev_classes = '';
 
@@ -40,4 +40,3 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 	<?php endif; ?>
 <?php } ?>
 
-if ( ! defined( 'ABSPATH' ) ) exit;

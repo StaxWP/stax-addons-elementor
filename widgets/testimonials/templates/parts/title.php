@@ -1,6 +1,6 @@
 <?php
-
 if ( ! defined( 'ABSPATH' ) ) exit;
+
 
 if ( ! empty( $item['item_title'] ) ) : ?>
 	<h2 class="stx-e-title">

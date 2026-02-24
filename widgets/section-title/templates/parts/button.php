@@ -1,6 +1,6 @@
+<?php if ( ! defined( 'ABSPATH' ) ) exit; ?>
 <?php if ( ! empty( $settings['button_show'] ) ) : ?>
 
-if ( ! defined( 'ABSPATH' ) ) exit;
 	<div class="stx-m-button stx-clear">
 		<a href="<?php echo esc_url( $settings['button_link']['url'] ); ?>">
 			<span class="stx-m-text"><?php echo esc_html( $settings['button_text'] ); ?></span>
@@ -16,4 +16,3 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 	</div>
 <?php endif; ?>
 
-if ( ! defined( 'ABSPATH' ) ) exit;

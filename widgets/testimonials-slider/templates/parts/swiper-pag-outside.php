@@ -1,6 +1,6 @@
 <?php
-
 if ( ! defined( 'ABSPATH' ) ) exit;
+
 if ( 'no' !== $settings['slider_pagination'] ) {
 
 	if ( isset( $unique ) && ! empty( $unique ) ) {
@@ -10,4 +10,3 @@ if ( 'no' !== $settings['slider_pagination'] ) {
 	<div class="swiper-pagination <?php echo esc_attr( $pagination_classes ); ?>"></div>
 <?php } ?>
 
-if ( ! defined( 'ABSPATH' ) ) exit;
