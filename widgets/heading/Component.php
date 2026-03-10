@@ -1028,7 +1028,10 @@ class Component extends Base {
 		$settings = $this->get_settings_for_display();
 
 		if ( $settings['subtitle_position'] === $position && ! empty( $settings['subtitle'] ) && $settings['subtitle_show'] === 'yes' ) {
-			return '<' . $settings['subtitle_tag'] . ' class="stx-subtitle">' . esc_html( $settings['subtitle'] ) . '</' . $settings['subtitle_tag'] . '>';
+			// Validate HTML tag against whitelist to prevent XSS
+			$allowed_tags = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div', 'span', 'p'];
+			$subtitle_tag = in_array($settings['subtitle_tag'], $allowed_tags, true) ? $settings['subtitle_tag'] : 'h3';
+			return '<' . $subtitle_tag . ' class="stx-subtitle">' . esc_html( $settings['subtitle'] ) . '</' . $subtitle_tag . '>';
 		}
 	}
 

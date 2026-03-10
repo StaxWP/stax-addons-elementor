@@ -4,7 +4,7 @@
  * Description: Beautiful & Fast add-ons for Elementor. Lightweight widgets and enhancements by StaxWP.
  * Plugin URI: https://staxwp.com
  * Author: StaxWP
- * Version: 1.5.0
+ * Version: 1.5.1
  * Author URI: https://staxwp.com
  * Requires Plugins: elementor
  *
@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-define( 'STAX_EL_VERSION', '1.5.0' );
+define( 'STAX_EL_VERSION', '1.5.1' );
 define( 'STAX_EL_DOMAIN', 'stax-addons-for-elementor' );
 define( 'STAX_EL_HOOK_PREFIX', 'stax_el_' );
 define( 'STAX_EL_SLUG_PREFIX', 'stax-elementor-' );

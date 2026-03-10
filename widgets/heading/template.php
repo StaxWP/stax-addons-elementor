@@ -1,4 +1,9 @@
-<?php if ( ! defined( 'ABSPATH' ) ) exit; ?>
+<?php if ( ! defined( 'ABSPATH' ) ) exit; 
+
+// Validate HTML tags against whitelist to prevent XSS
+$allowed_tags = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div', 'span', 'p'];
+$title_tag = in_array($settings['title_tag'], $allowed_tags, true) ? $settings['title_tag'] : 'h2';
+?>
 <div <?php echo $wrapper_attribute; ?>>
 	<?php
 
@@ -11,9 +16,9 @@
 	<?php
 
 	if ( ! empty( $settings['title'] ) ) {
-		echo '<' . $settings['title_tag'] . ' class="stx-title"><span class="' . esc_attr__( $settings['title_ornament'] ) . '">
+		echo '<' . $title_tag . ' class="stx-title"><span class="' . esc_attr__( $settings['title_ornament'] ) . '">
             ' . \StaxAddons\Utils::curly( $settings['title'] ) . '
-        </span></' . $settings['title_tag'] . '>';
+        </span></' . $title_tag . '>';
 	}
 
 	?>

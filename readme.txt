@@ -105,6 +105,11 @@ Currently all widgets are free. We focus on keeping the plugin lightweight and r
 
 == Changelog ==
 
+= 1.5.1 =
+* Security: Fixed Stored Cross-Site Scripting vulnerability (CVE-2024-3064)
+* Security: Added HTML tag whitelist validation for all widgets with custom tag controls
+* Security: Hardened 8 widgets against XSS: Heading, Typeout Text, Blockquote, Counter, Accordion, Section Title, Info Box, Icon with Text
+
 = 1.5.0 =
 * Renamed plugin for WordPress.org guidelines compliance
 * Fixed compatibility with Elementor 3.5+ (updated widget registration API)
