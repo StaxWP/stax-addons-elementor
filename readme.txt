@@ -3,7 +3,7 @@ Contributors: staxwp, codezz, geowrge, rtynio
 Tags: elementor widgets, page builder addons, slider widget, accordion widget, testimonials
 Requires at least: 5.8
 Requires PHP: 7.4
-Tested up to: 7.0
+Tested up to: 7.1
 Stable tag: 1.5.1
 Requires Plugins: elementor
 License: GPLv2 or later

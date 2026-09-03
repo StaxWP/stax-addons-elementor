@@ -8,8 +8,8 @@
  * Author URI: https://staxwp.com
  * Requires Plugins: elementor
  *
- * Elementor tested up to: 3.35
- * Elementor Pro tested up to: 3.35
+ * Elementor tested up to: 4.2.4
+ * Elementor Pro tested up to: 4.2.4
  *
  * Text Domain: stax-addons-for-elementor
  * Domain Path: /languages
