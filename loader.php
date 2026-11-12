@@ -35,29 +35,24 @@ define( 'STAX_EL_EXTRA_PATH', STAX_EL_PATH . 'extra/' );
 define( 'STAX_EL_WIDGET_URL', STAX_EL_URL . 'widgets/' );
 define( 'STAX_EL_ASSETS_URL', STAX_EL_URL . 'assets/' );
 
-if ( file_exists( STAX_EL_PATH . 'vendor/autoload.php' ) ) {
-	require STAX_EL_PATH . 'vendor/autoload.php';
-}
-
 // Init plugin
 require_once STAX_EL_CORE_PATH . 'Plugin.php';
+require_once STAX_EL_CORE_PATH . 'remove-appsero.php';
 
 /**
- * Initialize the plugin tracker
+ * Once per version: remove what the Appsero usage tracker (bundled until 1.5.1) stored on the site.
  *
  * @return void
  */
-function appsero_init_tracker_stax_addons_for_elementor() {
-
-	if ( ! class_exists( 'Appsero\Client' ) ) {
-		require_once __DIR__ . '/vendor/appsero/client/src/Client.php';
+function stax_el_maybe_upgrade() {
+	if ( STAX_EL_VERSION === get_option( 'stax_el_version' ) ) {
+		return;
 	}
 
-	$client = new Appsero\Client( '4b0c9337-336f-40f4-a089-37a2481a2655', 'Stax Addons for Elementor', __FILE__ );
+	stax_el_remove_appsero_data( dirname( STAX_EL_PLUGIN_BASE ) );
 
-	// Active insights
-	$client->insights()->init();
-
+	update_option( 'stax_el_version', STAX_EL_VERSION );
 }
 
-add_action( 'init', 'appsero_init_tracker_stax_addons_for_elementor' );
+add_action( 'init', 'stax_el_maybe_upgrade' );
+

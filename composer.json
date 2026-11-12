@@ -1,5 +1,6 @@
 {
-    "require": {
-        "appsero/client": "^1.2"
-    }
+  "name": "staxwp/stax-addons-for-elementor",
+  "description": "Stax Addons for Elementor (no runtime dependencies; vendor/ is not shipped).",
+  "type": "wordpress-plugin",
+  "license": "GPL-3.0-or-later"
 }

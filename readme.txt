@@ -66,9 +66,9 @@ Unlike heavy all-in-one addons that load dozens of scripts on every page, Stax o
 * [BuddyBuilder](https://staxwp.com/go/buddybuilder) — BuddyPress builder for Elementor
 * [Visibility Logic](https://wordpress.org/plugins/visibility-logic-elementor/) — Show/hide Elementor widgets based on conditions
 
-= Third-Party Services =
+= Privacy Policy =
 
-This plugin uses [Appsero](https://appsero.com/) SDK to collect optional, anonymized telemetry data upon user confirmation. This helps us troubleshoot issues faster and improve the plugin. See the [Appsero Privacy Policy](https://appsero.com/privacy-policy/).
+Stax Addons for Elementor collects no usage data and makes no requests to external services. The usage tracker (Appsero) bundled until version 1.5.1 was removed, and what it stored is deleted on update.
 
 == Installation ==
 
@@ -104,6 +104,10 @@ Absolutely. The plugin is designed to be lightweight and conflict-free. It works
 Currently all widgets are free. We focus on keeping the plugin lightweight and reliable.
 
 == Changelog ==
+
+= Unreleased =
+* Removed: usage tracker (Appsero) and its opt-in notice; its stored options and scheduled event are deleted on update and on uninstall. No usage data is collected.
+* Added: uninstall.php removes the plugin's options.
 
 = 1.5.1 =
 * Security: Fixed Stored Cross-Site Scripting vulnerability (CVE-2024-3064)
